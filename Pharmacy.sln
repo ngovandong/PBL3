@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy", "Pharmacy\Pharmacy.csproj", "{45ACEC1B-DFB0-4635-9E7F-9147E62BF614}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "Pharmacy\GUI.csproj", "{45ACEC1B-DFB0-4635-9E7F-9147E62BF614}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{2C1AB7FD-0893-4B4D-B8D8-CB2288DF50F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{3067E21F-F7CD-4326-B572-9B129B79DD4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{45ACEC1B-DFB0-4635-9E7F-9147E62BF614}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45ACEC1B-DFB0-4635-9E7F-9147E62BF614}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45ACEC1B-DFB0-4635-9E7F-9147E62BF614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C1AB7FD-0893-4B4D-B8D8-CB2288DF50F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1AB7FD-0893-4B4D-B8D8-CB2288DF50F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1AB7FD-0893-4B4D-B8D8-CB2288DF50F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1AB7FD-0893-4B4D-B8D8-CB2288DF50F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3067E21F-F7CD-4326-B572-9B129B79DD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3067E21F-F7CD-4326-B572-9B129B79DD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3067E21F-F7CD-4326-B572-9B129B79DD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3067E21F-F7CD-4326-B572-9B129B79DD4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

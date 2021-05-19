@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL;
 namespace Pharmacy
 {
     public partial class Login : Form
@@ -43,18 +43,18 @@ namespace Pharmacy
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (guna2TextBox2.Text.Equals("1"))
+            if (_BLL.Instance.checkUser(guna2TextBox1.Text,guna2TextBox2.Text)==1)
             {
                 Admin f = new Admin(guna2TextBox1.Text);
                 f.Show();
                 this.Hide();
             }
-            else if(guna2TextBox2.Text.Equals("2"))
-            {
-                Staff f = new Staff(guna2TextBox1.Text);
-                f.Show();
-                this.Hide();
-            }
+            //else if(guna2TextBox2.Text.Equals("2"))
+            //{
+            //    Staff f = new Staff(guna2TextBox1.Text);
+            //    f.Show();
+            //    this.Hide();
+            //}
             else
             {
                 MessageBox.Show("Wrong user or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

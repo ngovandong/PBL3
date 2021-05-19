@@ -53,19 +53,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CUSTOMER.cs" />
+    <Compile Include="DTO\CUSTOMER.cs" />
     <Compile Include="InitailorPharmacyModel.cs" />
-    <Compile Include="INVOICE.cs" />
-    <Compile Include="INVOICE_DETAIL.cs" />
-    <Compile Include="LISTMEDICINE.cs" />
-    <Compile Include="MEDICINE.cs" />
-    <Compile Include="MEDICINE_TYPE.cs" />
+    <Compile Include="DTO\INVOICE.cs" />
+    <Compile Include="DTO\INVOICE_DETAIL.cs" />
+    <Compile Include="DTO\LISTMEDICINE.cs" />
+    <Compile Include="DTO\MEDICINE.cs" />
+    <Compile Include="DTO\MEDICINE_TYPE.cs" />
     <Compile Include="PharmacyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="STAFF.cs" />
-    <Compile Include="STOCK.cs" />
-    <Compile Include="STOCK_DETAIL.cs" />
-    <Compile Include="UNIT.cs" />
+    <Compile Include="DTO\STAFF.cs" />
+    <Compile Include="DTO\STOCK.cs" />
+    <Compile Include="DTO\STOCK_DETAIL.cs" />
+    <Compile Include="DTO\UNIT.cs" />
     <Compile Include="_DAL.cs" />
   </ItemGroup>
   <ItemGroup>

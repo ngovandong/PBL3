@@ -33,6 +33,7 @@ namespace DAL
         public virtual DbSet<STOCK> STOCKs { get; set; }
         public virtual DbSet<STOCK_DETAIL> STOCK_DETAIL { get; set; }
         public virtual DbSet<UNIT> UNITs { get; set; }
+        public virtual DbSet<SUPPLIER> SUPPLIERs { get; set; }
         public virtual DbSet<PHARMACY_PROFILE> PHARMARCY_PROFILEs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

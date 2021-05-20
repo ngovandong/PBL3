@@ -1,5 +1,6 @@
 namespace DAL
 {
+    using DAL.DTO;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -29,5 +30,9 @@ namespace DAL
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
+
+        [ForeignKey("SUPPLIER")]
+        public int? supplierId { get; set; }
+        public virtual SUPPLIER SUPPLIER { get; set; }
     }
 }

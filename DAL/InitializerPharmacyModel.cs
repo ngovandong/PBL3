@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 namespace DAL
 {
-    class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
+    class InitializerPharmacyModel:DropCreateDatabaseIfModelChanges<PharmacyModel>
     {
         protected override void Seed(PharmacyModel context)
         {
@@ -17,6 +17,7 @@ namespace DAL
                 PASSWORD = "1234",
                 USER_NAME = "admin1",
                 NAME = "Ngô Văn Đông",
+                DateOfBirth = DateTime.Now,
                 PHONE = "0935351453",
                 ROLE = true
             };
@@ -26,6 +27,7 @@ namespace DAL
                 PASSWORD = "1234",
                 USER_NAME = "staff1",
                 NAME = "Nguyễn Minh Đức",
+                DateOfBirth = DateTime.Now,
                 PHONE = "0935351453",
                 ROLE = false
             };

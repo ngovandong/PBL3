@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Pharmacy.AdminTab
 {
     public partial class AddUser : Form
     {
+        public delegate void Mydel();
+        public Mydel d;
         public AddUser()
         {
             InitializeComponent();
@@ -24,24 +28,77 @@ namespace Pharmacy.AdminTab
             this.guna2TextBox3.Text = "";
             this.guna2TextBox4.Text = "";
             this.guna2TextBox5.Text = "";
+            this.guna2TextBox6.Text = "";
             this.guna2DateTimePicker1.ResetText();
             this.guna2ComboBox1.SelectedIndex = -1;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (guna2TextBox4.Text.Equals("1"))
+            if (guna2TextBox1.Text != ""
+                && guna2TextBox2.Text != ""
+                && guna2TextBox3.Text != ""
+                && guna2TextBox4.Text != ""
+                && guna2TextBox5.Text != ""
+                && guna2TextBox6.Text != ""
+                && guna2ComboBox1.SelectedIndex != -1
+                &&guna2CheckBox1.Checked)
             {
-                this.guna2CheckBox1.Checked = true;
+                USER u = getInforOnForm();
+                if (u != null)
+                {
+                    _BLL.Instance.AddUser(u);
+                    MessageBox.Show("Success!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    d();
+                    this.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Fail! Please check all property.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                this.guna2CheckBox1.Checked = false;
-
-
+                MessageBox.Show("Please enter all property!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private USER getInforOnForm()
+        {
+            try
+            {
+                Convert.ToInt64(guna2TextBox2.Text);
+                Convert.ToInt64(guna2TextBox6.Text);
+                return  new USER
+                {
+                    ROLE = (guna2ComboBox1.SelectedIndex == 0),
+                    NAME = guna2TextBox1.Text,
+                    DateOfBirth = guna2DateTimePicker1.Value,
+                    PHONE = guna2TextBox2.Text,
+                    ID_CMND = guna2TextBox6.Text,
+                    ADDRESS = guna2TextBox3.Text,
+                    USER_NAME = guna2TextBox4.Text.ToLower(),
+                    PASSWORD = guna2TextBox5.Text.ToLower(),
+                };
+            }
+            catch (Exception)
+            {
+                return null;
+            }
 
+        }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (_BLL.Instance.checkUserHasAlready(guna2TextBox4.Text.ToLower()) && !(guna2TextBox4.Text==""))
+            {
+                guna2CheckBox1.Checked = true;
+            }
+            else
+            {
+                guna2CheckBox1.Checked = false;
+            }
+        }
     }
 }

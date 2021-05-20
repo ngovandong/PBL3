@@ -62,7 +62,7 @@ namespace Pharmacy.AdminTab
             this.ButtonDashBoard.ShadowDecoration.Parent = this.ButtonDashBoard;
             this.ButtonDashBoard.Size = new System.Drawing.Size(201, 48);
             this.ButtonDashBoard.TabIndex = 2;
-            this.ButtonDashBoard.Text = "DashBoard";
+            this.ButtonDashBoard.Text = "General";
             this.ButtonDashBoard.Click += new System.EventHandler(this.ButtonDashBoard_Click);
             // 
             // guna2Button10

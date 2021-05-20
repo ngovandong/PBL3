@@ -99,9 +99,9 @@ namespace Pharmacy.AdminTab
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label6.Location = new System.Drawing.Point(486, 177);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 18);
+            this.label6.Size = new System.Drawing.Size(69, 18);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Email";
+            this.label6.Text = "Address";
             // 
             // label7
             // 

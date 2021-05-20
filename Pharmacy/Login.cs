@@ -43,13 +43,14 @@ namespace Pharmacy
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (_BLL.Instance.checkUser(guna2TextBox1.Text,guna2TextBox2.Text)==1)
+            int c = _BLL.Instance.checkUser(guna2TextBox1.Text.ToLower(), guna2TextBox2.Text.ToLower());
+            if (c==1)
             {
                 Admin f = new Admin(guna2TextBox1.Text);
                 f.Show();
                 this.Hide();
             }
-            else if (_BLL.Instance.checkUser(guna2TextBox1.Text, guna2TextBox2.Text) == 2)
+            else if (c == 2)
             {
                 Staff f = new Staff(guna2TextBox1.Text);
                 f.Show();

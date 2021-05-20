@@ -32,5 +32,39 @@ namespace DAL
                 return P.USERs.ToList();
             }
         }
+
+        public void AddUser(USER u)
+        {
+            using(PharmacyModel p= new PharmacyModel())
+            {
+                p.USERs.Add(u);
+                p.SaveChanges();
+            }
+        }
+
+        public void DelUser(int i)
+        {
+            using(PharmacyModel P= new PharmacyModel())
+            {
+                USER u = P.USERs.Find(i);
+                P.USERs.Remove(u);
+                P.SaveChanges();
+            }
+            
+        }
+
+        public void UpdateUser(USER u)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                USER uNew = P.USERs.Find(u.ID);
+                uNew.NAME = u.NAME;
+                uNew.PASSWORD = u.PASSWORD;
+                uNew.PHONE = u.PHONE;
+                uNew.ADDRESS = u.ADDRESS;
+                uNew.DateOfBirth = u.DateOfBirth;
+                P.SaveChanges();
+            }
+        }
     }
 }

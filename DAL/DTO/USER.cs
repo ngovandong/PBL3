@@ -23,7 +23,7 @@ namespace DAL
 
         public DateTime? DateOfBirth { get; set; }
 
-        [StringLength(15)]
+        [StringLength(20)]
         public string PHONE { get; set; }
 
         [StringLength(100)]
@@ -32,7 +32,7 @@ namespace DAL
         [Column(TypeName = "image")]
         public byte?[] IMAGE { get; set; }
 
-        [StringLength(10)]
+        [StringLength(20)]
         public string ID_CMND { get; set; }
 
         [Required]
@@ -43,6 +43,7 @@ namespace DAL
         [StringLength(20)]
         public string PASSWORD { get; set; }
 
+        [Required]
         public bool ROLE { get; set; } // true is addmin false is staff
         //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INVOICE> INVOICEs { get; set; }

@@ -15,9 +15,8 @@ namespace DAL
             INVOICE_DETAIL = new HashSet<INVOICE_DETAIL>();
             STOCK_DETAIL = new HashSet<STOCK_DETAIL>();
         }
-
-        [StringLength(10)]
-        public string ID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
         [StringLength(10)]
         public string BARCODE { get; set; }
@@ -25,8 +24,8 @@ namespace DAL
         [StringLength(350)]
         public string MEDICINE_NAME { get; set; }
 
-        [StringLength(10)]
-        public string TYPEID { get; set; }
+        [StringLength(20)]
+        public string MEDICINE_CODE { get; set; }
 
         [StringLength(100)]
         public string LOCATION { get; set; }
@@ -43,8 +42,7 @@ namespace DAL
         [StringLength(100)]
         public string BRAND { get; set; }
 
-        [StringLength(10)]
-        public string UNIT_ID { get; set; }
+        
 
         public int? QUANTITY { get; set; }
 
@@ -55,8 +53,11 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INVOICE_DETAIL> INVOICE_DETAIL { get; set; }
 
+        public int? TYPEID { get; set; }
         public virtual MEDICINE_TYPE MEDICINE_TYPE { get; set; }
 
+        [Required]
+        public int UNIT_ID { get; set; }
         public virtual UNIT UNIT { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

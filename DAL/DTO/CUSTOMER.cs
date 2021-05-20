@@ -15,8 +15,8 @@ namespace DAL
             INVOICEs = new HashSet<INVOICE>();
         }
 
-        [StringLength(10)]
-        public string ID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
         [StringLength(40)]
         public string Customer_name { get; set; }

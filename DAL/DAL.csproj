@@ -54,7 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\CUSTOMER.cs" />
-    <Compile Include="InitailorPharmacyModel.cs" />
+    <Compile Include="DTO\PHARMACY_PROFILE.cs" />
+    <Compile Include="InitializerPharmacyModel.cs" />
     <Compile Include="DTO\INVOICE.cs" />
     <Compile Include="DTO\INVOICE_DETAIL.cs" />
     <Compile Include="DTO\LISTMEDICINE.cs" />
@@ -62,7 +63,7 @@
     <Compile Include="DTO\MEDICINE_TYPE.cs" />
     <Compile Include="PharmacyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DTO\STAFF.cs" />
+    <Compile Include="DTO\USER.cs" />
     <Compile Include="DTO\STOCK.cs" />
     <Compile Include="DTO\STOCK_DETAIL.cs" />
     <Compile Include="DTO\UNIT.cs" />

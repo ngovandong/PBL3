@@ -29,7 +29,14 @@ namespace BLL
             {
                 if (item.PASSWORD.Equals(pass) && username.Equals(item.USER_NAME))
                 {
-                    i = 1;
+                    if (item.ROLE)
+                    {
+                        i = 1;
+                    }
+                    else
+                    {
+                        i = 2;
+                    }
                 }
             }
             return i;

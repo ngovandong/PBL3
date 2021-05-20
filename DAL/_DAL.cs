@@ -8,6 +8,7 @@ namespace DAL
 {
     public class _DAL
     {
+
         private static _DAL _Instance;
         public static _DAL Instance
         {
@@ -21,13 +22,14 @@ namespace DAL
             }
         }
         public _DAL() { }
-        public List<STAFF> getListUser()
+
+        public List<USER> getListUser()
         {
-            List<STAFF> l = new List<STAFF>();
+            List<USER> l = new List<USER>();
 
             using (PharmacyModel P = new PharmacyModel())
             {
-                return P.STAFFs.ToList();
+                return P.USERs.ToList();
             }
         }
     }

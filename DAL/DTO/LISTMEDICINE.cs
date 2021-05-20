@@ -9,8 +9,8 @@ namespace DAL
     [Table("LISTMEDICINE")]
     public partial class LISTMEDICINE
     {
-        [StringLength(20)]
-        public string id { get; set; }
+        [Key]
+        public int id { get; set; }
 
         [StringLength(300)]
         public string medicine_name { get; set; }

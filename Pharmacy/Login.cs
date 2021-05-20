@@ -49,12 +49,12 @@ namespace Pharmacy
                 f.Show();
                 this.Hide();
             }
-            //else if(guna2TextBox2.Text.Equals("2"))
-            //{
-            //    Staff f = new Staff(guna2TextBox1.Text);
-            //    f.Show();
-            //    this.Hide();
-            //}
+            else if (_BLL.Instance.checkUser(guna2TextBox1.Text, guna2TextBox2.Text) == 2)
+            {
+                Staff f = new Staff(guna2TextBox1.Text);
+                f.Show();
+                this.Hide();
+            }
             else
             {
                 MessageBox.Show("Wrong user or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

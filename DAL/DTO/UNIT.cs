@@ -14,9 +14,8 @@ namespace DAL
         {
             MEDICINEs = new HashSet<MEDICINE>();
         }
-
-        [StringLength(10)]
-        public string ID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
         [StringLength(20)]
         public string NAME { get; set; }

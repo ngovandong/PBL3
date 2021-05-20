@@ -14,9 +14,8 @@ namespace DAL
         {
             STOCK_DETAIL = new HashSet<STOCK_DETAIL>();
         }
-
-        [StringLength(10)]
-        public string ID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
         public DateTime? DATE { get; set; }
 

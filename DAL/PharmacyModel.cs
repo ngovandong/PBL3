@@ -1,3 +1,4 @@
+using DAL.DTO;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
@@ -19,7 +20,7 @@ namespace DAL
         public PharmacyModel()
             : base("name=PharmacyModel")
         {
-            Database.SetInitializer<PharmacyModel>(new InitailorPharmacyModel());
+            Database.SetInitializer<PharmacyModel>(new InitializerPharmacyModel());
         }
 
         public virtual DbSet<CUSTOMER> CUSTOMERs { get; set; }
@@ -28,22 +29,18 @@ namespace DAL
         public virtual DbSet<LISTMEDICINE> LISTMEDICINEs { get; set; }
         public virtual DbSet<MEDICINE> MEDICINEs { get; set; }
         public virtual DbSet<MEDICINE_TYPE> MEDICINE_TYPE { get; set; }
-        public virtual DbSet<STAFF> STAFFs { get; set; }
+        public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<STOCK> STOCKs { get; set; }
         public virtual DbSet<STOCK_DETAIL> STOCK_DETAIL { get; set; }
         public virtual DbSet<UNIT> UNITs { get; set; }
-
+        public virtual DbSet<PHARMACY_PROFILE> PHARMARCY_PROFILEs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CUSTOMER>()
                 .HasMany(e => e.INVOICEs)
-                .WithRequired(e => e.CUSTOMER)
+                .WithOptional(e => e.CUSTOMER)
                 .HasForeignKey(e => e.ID_CUSTOMER)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<INVOICE>()
-                .Property(e => e.DATE)
-                .IsFixedLength();
 
             modelBuilder.Entity<INVOICE>()
                 .HasMany(e => e.INVOICE_DETAIL)
@@ -67,35 +64,15 @@ namespace DAL
                 .WithOptional(e => e.MEDICINE_TYPE)
                 .HasForeignKey(e => e.TYPEID);
 
-            modelBuilder.Entity<STAFF>()
-                .Property(e => e.PHONE)
-                .IsFixedLength();
 
-            modelBuilder.Entity<STAFF>()
-                .Property(e => e.ADDRESS)
-                .IsFixedLength();
 
-            modelBuilder.Entity<STAFF>()
-                .Property(e => e.ID_CMND)
-                .IsFixedLength();
-
-            modelBuilder.Entity<STAFF>()
-                .Property(e => e.USER_NAME)
-                .IsFixedLength();
-
-            modelBuilder.Entity<STAFF>()
-                .Property(e => e.PASSWORD)
-                .IsFixedLength();
-
-            modelBuilder.Entity<STAFF>()
+            modelBuilder.Entity<USER>()
                 .HasMany(e => e.INVOICEs)
-                .WithRequired(e => e.STAFF)
-                .HasForeignKey(e => e.ID_STAFF)
+                .WithRequired(e => e.USER)
+                .HasForeignKey(e => e.User_ID)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<STOCK>()
-                .Property(e => e.ID)
-                .IsFixedLength();
+
 
             modelBuilder.Entity<STOCK>()
                 .Property(e => e.NOTE)
@@ -107,13 +84,10 @@ namespace DAL
                 .HasForeignKey(e => e.ID_STOCK)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<STOCK_DETAIL>()
-                .Property(e => e.ID_STOCK)
-                .IsFixedLength();
 
             modelBuilder.Entity<UNIT>()
                 .HasMany(e => e.MEDICINEs)
-                .WithOptional(e => e.UNIT)
+                .WithRequired(e => e.UNIT)
                 .HasForeignKey(e => e.UNIT_ID);
         }
     }

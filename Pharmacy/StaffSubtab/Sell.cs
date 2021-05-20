@@ -59,7 +59,7 @@ namespace Pharmacy.StaffSubtab
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)

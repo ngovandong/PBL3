@@ -8,23 +8,23 @@ namespace DAL
 
     public partial class INVOICE_DETAIL
     {
-        [StringLength(10)]
-        public string ID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
-        [Required]
-        [StringLength(10)]
-        public string ID_INVOICE { get; set; }
+        
 
-        [Required]
-        [StringLength(10)]
-        public string ID_MEDICINE { get; set; }
+        
 
         public int? SALE_PRICE { get; set; }
 
         public int? QUANTITY { get; set; }
 
+        [Required]
+        public int ID_INVOICE { get; set; }
         public virtual INVOICE INVOICE { get; set; }
 
+        [Required]
+        public int ID_MEDICINE { get; set; }
         public virtual MEDICINE MEDICINE { get; set; }
     }
 }

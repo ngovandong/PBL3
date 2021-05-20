@@ -8,16 +8,10 @@ namespace DAL
 
     public partial class STOCK_DETAIL
     {
-        [StringLength(10)]
-        public string ID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
-        [Required]
-        [StringLength(10)]
-        public string ID_STOCK { get; set; }
 
-        [Required]
-        [StringLength(10)]
-        public string ID_MEDICINE { get; set; }
 
         public int? ORGIGINAL_PRICE { get; set; }
 
@@ -26,8 +20,13 @@ namespace DAL
         [StringLength(20)]
         public string NAME { get; set; }
 
+
+        [Required]
+        public int ID_MEDICINE { get; set; }
         public virtual MEDICINE MEDICINE { get; set; }
 
+        [Required]
+        public int ID_STOCK { get; set; }
         public virtual STOCK STOCK { get; set; }
     }
 }

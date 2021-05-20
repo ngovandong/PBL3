@@ -16,19 +16,9 @@ namespace DAL
         }
 
         [Key]
-        [StringLength(10)]
-        public string ID_INVOICE { get; set; }
+        public int ID_INVOICE { get; set; }
 
-        [StringLength(10)]
-        public string DATE { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string ID_CUSTOMER { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string ID_STAFF { get; set; }
+        public DateTime DATE { get; set; }
 
         public int? TOTAL { get; set; }
 
@@ -36,11 +26,13 @@ namespace DAL
 
         public string PRESCRIPTION { get; set; }
 
+        public int? ID_CUSTOMER { get; set; }
         public virtual CUSTOMER CUSTOMER { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INVOICE_DETAIL> INVOICE_DETAIL { get; set; }
 
-        public virtual STAFF STAFF { get; set; }
+        public int? User_ID { get; set; }
+        public virtual USER USER { get; set; }
     }
 }

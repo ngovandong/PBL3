@@ -18,7 +18,7 @@ namespace DAL
             var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
         public PharmacyModel()
-            : base("name=PharmacyModel")
+            : base("data source=DONGDONG\\SQLEXPRESS;initial catalog=doan3;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
         {
             Database.SetInitializer<PharmacyModel>(new InitializerPharmacyModel());
         }
@@ -33,6 +33,7 @@ namespace DAL
         public virtual DbSet<STOCK> STOCKs { get; set; }
         public virtual DbSet<STOCK_DETAIL> STOCK_DETAIL { get; set; }
         public virtual DbSet<UNIT> UNITs { get; set; }
+        public virtual DbSet<SUPPLIER> SUPPLIERs { get; set; }
         public virtual DbSet<PHARMACY_PROFILE> PHARMARCY_PROFILEs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

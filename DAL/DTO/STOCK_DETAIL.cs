@@ -17,9 +17,8 @@ namespace DAL
 
         public int? QUANTITY { get; set; }
 
-        [StringLength(20)]
-        public string NAME { get; set; }
-
+        [Required] 
+        public DateTime dateExpire { get; set; }
 
         [Required]
         public int ID_MEDICINE { get; set; }

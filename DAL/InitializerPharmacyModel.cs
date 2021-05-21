@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 namespace DAL
 {
-    class InitializerPharmacyModel:DropCreateDatabaseIfModelChanges<PharmacyModel>
+    class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
     {
         protected override void Seed(PharmacyModel context)
         {
@@ -107,6 +107,7 @@ namespace DAL
 
             STOCK s1 = new STOCK
             {
+                Name="lo B",
                 NOTE = "nhap ngay hom qua",
                 DATE = DateTime.Now,
                 PRICETOTAL = 1000000,
@@ -146,7 +147,7 @@ namespace DAL
             });
             s2.STOCK_DETAIL.Add(new STOCK_DETAIL
             {
-                MEDICINE = m2,
+                MEDICINE = m3,
                 dateExpire = DateTime.Now,
                 ORGIGINAL_PRICE = 1000,
                 QUANTITY = 20,

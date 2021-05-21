@@ -27,5 +27,10 @@ namespace DAL
         [Required]
         public int ID_STOCK { get; set; }
         public virtual STOCK STOCK { get; set; }
+
+        public override string ToString()
+        {
+            return STOCK.Name;
+        }
     }
 }

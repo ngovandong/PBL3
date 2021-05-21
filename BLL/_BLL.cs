@@ -53,6 +53,8 @@ namespace BLL
             return i;
         }
 
+
+
         public void UpdateUser(USER u)
         {
             _DAL.Instance.UpdateUser(u);
@@ -120,5 +122,30 @@ namespace BLL
             }
             return l;
         }
+
+        public List<medicineSell> getlistMedicineSearch(string s)
+        {
+            List<medicineSell> l = new List<medicineSell>();
+            foreach (var item in _DAL.Instance.getListMedicine())
+            {
+                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                {
+                    l.Add(new medicineSell
+                    {
+                        ID = item.ID,
+                        code = item.MEDICINE_CODE,
+                        name = item.MEDICINE_NAME,
+                        Qty = item.QUANTITY,
+                        sell_price = item.SALE_PRICE,
+                        unit = item.UNIT.NAME,
+                        STOCK_DETAIL=item.STOCK_DETAIL,
+                        
+                    });
+                }
+            }
+            return l;
+        }
+
+
     }
 }

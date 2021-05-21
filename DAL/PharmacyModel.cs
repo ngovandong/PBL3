@@ -21,6 +21,7 @@ namespace DAL
             : base("data source=DONGDONG\\SQLEXPRESS;initial catalog=doan3;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
         {
             Database.SetInitializer<PharmacyModel>(new InitializerPharmacyModel());
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<CUSTOMER> CUSTOMERs { get; set; }

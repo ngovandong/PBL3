@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace DAL
 {
@@ -25,7 +26,6 @@ namespace DAL
 
         public List<USER> getListUser()
         {
-            List<USER> l = new List<USER>();
 
             using (PharmacyModel P = new PharmacyModel())
             {
@@ -66,5 +66,15 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+
+        public List<MEDICINE> getListMedicine()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.MEDICINEs.Include("UNIT").Include("STOCK_DETAIL.STOCK").Include("MEDICINE_TYPE").ToList();
+            }
+        }
+
+        
     }
 }

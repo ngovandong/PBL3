@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Pharmacy.AdminTab.Manage_Medicine
 {
-    public partial class AddMedicine : Form
+    public partial class AddSupplier : Form
     {
-        public AddMedicine()
+        public AddSupplier()
         {
             InitializeComponent();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

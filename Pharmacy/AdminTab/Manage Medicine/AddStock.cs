@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace Pharmacy.AdminTab.Manage_Medicine
 {
-    public partial class AddMedicine : Form
+    public partial class AddStock : Form
     {
-        public AddMedicine()
+        public AddStock()
         {
             InitializeComponent();
+        }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+            AddSupplier sup = new AddSupplier();
+            sup.ShowDialog();
         }
     }
 }

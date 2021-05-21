@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pharmacy.AdminTab.Manage_Medicine
 {
-    public partial class AddMedicine : Form
+    public partial class StockDetail : Form
     {
-        public AddMedicine()
+        public StockDetail()
         {
             InitializeComponent();
         }

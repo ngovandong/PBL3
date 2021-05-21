@@ -29,5 +29,16 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             sample1.Visible = true;
             sample1.BringToFront();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            importMedicine1.Visible = true;
+            importMedicine1.BringToFront();
+        }
+
+        private void sample1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 namespace DAL
 {
-    class InitializerPharmacyModel:DropCreateDatabaseIfModelChanges<PharmacyModel>
+    class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
     {
         protected override void Seed(PharmacyModel context)
         {
@@ -31,9 +31,33 @@ namespace DAL
                 PHONE = "0935351453",
                 ROLE = false
             };
-
             context.USERs.Add(addmin1);
             context.USERs.Add(staff1);
+
+            context.MEDICINE_TYPE.Add(new MEDICINE_TYPE
+            {
+                TypeName = "Thuốc cảm lạnh, ho"
+            });
+            
+            context.MEDICINE_TYPE.Add(new MEDICINE_TYPE
+            {
+                TypeName = "Giảm đau, hạ sốt"
+            });
+
+            context.UNITs.AddRange(new UNIT[] { 
+                new UNIT
+                {
+                    NAME="Viên",
+                },
+                new UNIT
+                {
+                    NAME="Hộp"
+                },
+                new UNIT
+                {
+                    NAME="Chai",
+                }
+            });
         }
     }
 }

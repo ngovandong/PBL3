@@ -120,5 +120,35 @@ namespace BLL
             }
             return l;
         }
+
+        public List<COMBOBOX_ITEM> getListCBBMedicine_Type()
+        {
+            List<COMBOBOX_ITEM> l = new List<COMBOBOX_ITEM>();
+
+            foreach(MEDICINE_TYPE mt in _DAL.Instance.getListMedicine_Type())
+            {
+                l.Add(new COMBOBOX_ITEM
+                {
+                    ID = mt.ID,
+                    Text = mt.TypeName,
+                });
+            }
+            return l;
+        }
+
+        public List<COMBOBOX_ITEM> getListCBBUnit()
+        {
+            List<COMBOBOX_ITEM> l = new List<COMBOBOX_ITEM>();
+
+            foreach(UNIT unit in _DAL.Instance.getListUnit())
+            {
+                l.Add(new COMBOBOX_ITEM
+                {
+                    ID = unit.ID,
+                    Text = unit.NAME,
+                });
+            }
+            return l;
+        }
     }
 }

@@ -66,5 +66,21 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+         
+        public List<MEDICINE_TYPE> getListMedicine_Type()
+        {
+            using(PharmacyModel P = new PharmacyModel())
+            {
+                return P.MEDICINE_TYPE.ToList();
+            }
+        }
+
+        public List<UNIT> getListUnit()
+        {
+            using(PharmacyModel P = new PharmacyModel())
+            {
+                return P.UNITs.ToList();
+            }
+        }
     }
 }

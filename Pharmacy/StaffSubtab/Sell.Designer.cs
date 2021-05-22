@@ -540,7 +540,6 @@ namespace Pharmacy.StaffSubtab
             this.searchList1.Name = "searchList1";
             this.searchList1.Size = new System.Drawing.Size(449, 46);
             this.searchList1.TabIndex = 1;
-            this.searchList1.Load += new System.EventHandler(this.searchList1_Load);
             // 
             // guna2ShadowPanel2
             // 

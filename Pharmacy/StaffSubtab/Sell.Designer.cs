@@ -64,6 +64,7 @@ namespace Pharmacy.StaffSubtab
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.searchList1 = new Pharmacy.StaffSubtab.SearchList();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -531,6 +532,16 @@ namespace Pharmacy.StaffSubtab
             this.panel2.Size = new System.Drawing.Size(449, 1);
             this.panel2.TabIndex = 2;
             // 
+            // searchList1
+            // 
+            this.searchList1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.searchList1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchList1.Location = new System.Drawing.Point(0, 0);
+            this.searchList1.Name = "searchList1";
+            this.searchList1.Size = new System.Drawing.Size(449, 46);
+            this.searchList1.TabIndex = 1;
+            this.searchList1.Load += new System.EventHandler(this.searchList1_Load);
+            // 
             // guna2ShadowPanel2
             // 
             this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -648,6 +659,14 @@ namespace Pharmacy.StaffSubtab
             this.panel10.TabIndex = 0;
             // 
             // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(4, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(4, 23);
@@ -784,7 +803,7 @@ namespace Pharmacy.StaffSubtab
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1036, 714);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
-            // searchList1
+            // guna2ShadowPanel4
             // 
             this.searchList1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchList1.Dock = System.Windows.Forms.DockStyle.Top;

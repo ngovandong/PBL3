@@ -150,5 +150,63 @@ namespace BLL
             }
             return l;
         }
+        
+        public void addMedicine(MEDICINE m)
+        {
+            _DAL.Instance.addMedicine(m);
+        }
+        
+        public List<MEDICINE_VIEW> getListMedicineView()
+        {
+            List<MEDICINE_VIEW> l = new List<MEDICINE_VIEW>();
+            foreach(var item in _DAL.Instance.getListMedicine())
+            {
+                l.Add(new MEDICINE_VIEW
+                {
+                    ID = item.ID,
+                    Name = item.MEDICINE_NAME,
+                    original_Price = item.ORIGINAL_PRICE,
+                    sale_Price = item.SALE_PRICE,
+                });
+            }
+            return l;
+        }
+
+        public MEDICINE getMedicineByID(int ID)
+        {
+            foreach(var u in _DAL.Instance.getListMedicine())
+            {
+                if (u.ID == ID)
+                {
+                    return u;
+                }
+            }
+            return null;
+        }
+
+        public MEDICINE_TYPE getMedicineTypeByID(int id)
+        {
+            foreach(var item in _DAL.Instance.getListMedicine_Type())
+            {
+                if (item.ID == id)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
+        public void deleteMedicine(List<int> listIDOfDeletedItems)
+        {
+            foreach(int id in listIDOfDeletedItems)
+            {
+                _DAL.Instance.deleteMedicine(id);
+            }
+        }
+
+        public void updateMedicine(MEDICINE md)
+        {
+            _DAL.Instance.updateMedicine(md);
+        }
     }
 }

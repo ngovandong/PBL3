@@ -34,7 +34,7 @@ namespace DAL
             context.USERs.Add(addmin1);
             context.USERs.Add(staff1);
 
-<<<<<<< HEAD
+
             context.MEDICINE_TYPE.Add(new MEDICINE_TYPE
             {
                 TypeName = "Thuốc cảm lạnh, ho"
@@ -59,7 +59,7 @@ namespace DAL
                     NAME="Chai",
                 }
             });
-=======
+
             MEDICINE_TYPE t1 = new MEDICINE_TYPE
             {
                 TypeName = "thuoc ke don"
@@ -71,29 +71,10 @@ namespace DAL
 
             UNIT u1 = new UNIT
             {
-                NAME = "ống"
-            };
-            UNIT u2 = new UNIT
-            {
-                NAME = "viên"
+                NAME = "Ống",
             };
 
-            MEDICINE m1 = new MEDICINE
-            {
-                MEDICINE_NAME = "thuoc la",
-                BARCODE = "234556745",
-                BRAND = "china",
-                CONTENT = "nuoc mieng",
-                INGREDIENT = "thuoc loc 200 mL",
-                MEDICINE_CODE = "sdfg4532",
-                MEDICINE_TYPE = t2,
-                ORIGINAL_PRICE = 40000,
-                SALE_PRICE = 100000,
-                ID_SUB = "3945834",
-                LOCATION = "Ke A",
-                UNIT = u2,
-                QUANTITY = 0,
-            };
+    
             MEDICINE m2 = new MEDICINE
             {
                 MEDICINE_NAME = "thuoc chuot",
@@ -111,24 +92,25 @@ namespace DAL
                 QUANTITY = 0,
             };
 
-            MEDICINE m3 = new MEDICINE
+            MEDICINE m1 = new MEDICINE
             {
-                MEDICINE_NAME = "thuoc ray",
-                BARCODE = "3456243",
-                BRAND = "medico",
-                CONTENT = "nuoc mieng",
-                INGREDIENT = "thuoc loc 200 mL",
-                MEDICINE_CODE = "sfg23546",
-                MEDICINE_TYPE = t1,
-                ORIGINAL_PRICE = 4000,
-                SALE_PRICE = 5000,
-                ID_SUB = "3945834",
-                LOCATION = "Ke A",
-                UNIT = u2,
-                QUANTITY = 0,
+                BARCODE = "123456",
+                MEDICINE_NAME = "Thuốc ho Prospan",
+                MEDICINE_CODE = "acbs121",
+                LOCATION = "Kệ A",
+                ID_SUB = "145263",
+                INGREDIENT = "pllplpplllpl",
+                CONTENT = "ololololo",
+                BRAND = "Prospan",
+                QUANTITY = 1,
+                ORIGINAL_PRICE = 10000,
+                SALE_PRICE = 50000,
+                TYPEID = 1,
+                UNIT = u1,
             };
 
-            //context.MEDICINEs.AddRange(new MEDICINE[] { m1, m2, m3 });
+
+            context.MEDICINEs.AddRange(new MEDICINE[] { m1, m2 });
 
             STOCK s1 = new STOCK
             {
@@ -146,13 +128,7 @@ namespace DAL
                 Name="lo A"
             };
 
-            s1.STOCK_DETAIL.Add(new STOCK_DETAIL
-            {
-                MEDICINE = m1,
-                dateExpire = DateTime.Now,
-                ORGIGINAL_PRICE=10000,
-                QUANTITY=40,
-            });
+      
 
             s1.STOCK_DETAIL.Add(new STOCK_DETAIL
             {
@@ -162,13 +138,7 @@ namespace DAL
                 QUANTITY = 50,
             });
 
-            s2.STOCK_DETAIL.Add(new STOCK_DETAIL
-            {
-                MEDICINE = m1,
-                dateExpire = DateTime.Now,
-                ORGIGINAL_PRICE = 9000,
-                QUANTITY = 200,
-            });
+        
             s2.STOCK_DETAIL.Add(new STOCK_DETAIL
             {
                 MEDICINE = m2,
@@ -179,7 +149,7 @@ namespace DAL
 
             context.STOCKs.Add(s1);
             context.STOCKs.Add(s2);
->>>>>>> 06985f1798f8c0ab6fc17f896aef6eee682eb8fa
+
         }
     }
 }

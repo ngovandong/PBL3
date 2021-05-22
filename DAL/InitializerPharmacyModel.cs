@@ -72,7 +72,7 @@ namespace DAL
                 ID_SUB = "3945834",
                 LOCATION = "Ke A",
                 UNIT = u1,
-                QUANTITY = 0,
+                QUANTITY = 10,
             };
 
             MEDICINE m1 = new MEDICINE
@@ -102,7 +102,7 @@ namespace DAL
                 INGREDIENT = "pllplpplllpl",
                 CONTENT = "ololololo",
                 BRAND = "Prospan",
-                QUANTITY = 0,
+                QUANTITY = 20,
                 ORIGINAL_PRICE = 15000,
                 SALE_PRICE = 20000,
                 MEDICINE_TYPE=t2,
@@ -139,7 +139,22 @@ namespace DAL
                 QUANTITY = 50,
             });
 
-        
+            s1.STOCK_DETAIL.Add(new STOCK_DETAIL
+            {
+                MEDICINE = m1,
+                dateExpire = DateTime.Now,
+                ORGIGINAL_PRICE = 4000,
+                QUANTITY = 20,
+            });
+
+            s2.STOCK_DETAIL.Add(new STOCK_DETAIL
+            {
+                MEDICINE = m1,
+                dateExpire = DateTime.Now,
+                ORGIGINAL_PRICE = 10000,
+                QUANTITY = 35,
+            });
+
             s2.STOCK_DETAIL.Add(new STOCK_DETAIL
             {
                 MEDICINE = m3,

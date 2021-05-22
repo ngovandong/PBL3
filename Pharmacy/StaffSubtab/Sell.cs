@@ -14,6 +14,9 @@ namespace Pharmacy.StaffSubtab
 {
     public partial class Sell : Form
     {
+        private int Ntotal;
+        private int Ncharge;
+        private int Ndiscount;
         private List<MedicineItem> ListMe;
         public Sell()
         {
@@ -28,7 +31,7 @@ namespace Pharmacy.StaffSubtab
         }
         public void setStart()
         {
-            
+            Ndiscount = 0;
             ListMe = new List<MedicineItem>();
             guna2TextBox1_TextChanged(null, new EventArgs());
             
@@ -39,7 +42,9 @@ namespace Pharmacy.StaffSubtab
             
             Total.Text = Convert.ToDouble(Total.Text).ToString("#,##0");
             charge.Text = Convert.ToDouble(charge.Text).ToString("#,##0");
-            change.Text = Convert.ToDouble(change.Text).ToString("#,##0");
+            if (!"".Equals(change.Text)) {
+                change.Text = Convert.ToDouble(change.Text).ToString("#,##0");
+            }
             if (!"".Equals(receive.Text)){
                 receive.Text= Convert.ToDouble(receive.Text).ToString("#,##0");
             }
@@ -51,21 +56,31 @@ namespace Pharmacy.StaffSubtab
             {
                 tong += item.medicine.quantysell * item.medicine.sell_price;
             }
+            Ntotal = tong;
             Total.Text = tong.ToString();
         }
 
         public void addToSell(medicineSell m)
         {
-            var c = from p in ListMe where (m.ID == p.ID) select p ;
-            if (c.Count()==0) {
-                MedicineItem i = new MedicineItem(m);
-                i.d1 = new MedicineItem.Mydel1(delItem);
-                i.d2 = new MedicineItem.Mydel2(getTotal);
-                ListMe.Add(i);
-                i.No = (ListMe.Count).ToString();
-                flowLayoutPanel1.Controls.Add(i);
-                getTotal();
+            if (m.STOCK_DETAIL.Count > 0 && m.Qty > 0)
+            {
+                var c = from p in ListMe where (m.ID == p.ID) select p;
+                if (c.Count() == 0)
+                {
+                    MedicineItem i = new MedicineItem(m);
+                    i.d1 = new MedicineItem.Mydel1(delItem);
+                    i.d2 = new MedicineItem.Mydel2(getTotal);
+                    ListMe.Add(i);
+                    i.No = (ListMe.Count).ToString();
+                    flowLayoutPanel1.Controls.Add(i);
+                    getTotal();
+                }
             }
+            else
+            {
+                MessageBox.Show("Out of stock!");
+            }
+            
             
         }
         public void delItem(MedicineItem m)
@@ -111,8 +126,10 @@ namespace Pharmacy.StaffSubtab
 
         private void Total_TextChanged(object sender, EventArgs e)
         {
-            int s = (int)(Convert.ToInt32(Total.Text) -Convert.ToInt32(Total.Text) * (Convert.ToInt32(discount.Text) / 100.0));
+            int s = (int)(Ntotal -Ntotal * (Ndiscount / 100.0));
+            Ncharge = s;
             charge.Text = s.ToString();
+            changeNumber();
         }
 
         private void discount_TextChanged(object sender, EventArgs e)
@@ -126,9 +143,11 @@ namespace Pharmacy.StaffSubtab
                         a = 100;
                     if (a < 0)
                         a = 0;
+                    Ndiscount = a;
                     discount.Text = a.ToString();
-                    int s = (int)(Convert.ToInt32(Total.Text) - Convert.ToInt32(Total.Text) * (Convert.ToInt32(discount.Text) / 100.0));
+                    int s = (int)(Ntotal - Ntotal * (Ndiscount / 100.0));
                     charge.Text = s.ToString();
+                    changeNumber();
                 }
             }
             catch (Exception)
@@ -145,7 +164,9 @@ namespace Pharmacy.StaffSubtab
             {
                 if (!"".Equals(receive.Text))
                 {
-                    change.Text = (Convert.ToInt32(receive.Text)- Convert.ToInt32(charge.Text)).ToString();
+                    int a = Convert.ToInt32(receive.Text.Replace(",",""));
+                    change.Text = (a- Ncharge).ToString();
+                    changeNumber();
                 }
             }
             catch (Exception)

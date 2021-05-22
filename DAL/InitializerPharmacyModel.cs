@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using DAL.DTO;
+
 namespace DAL
 {
     class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
@@ -155,6 +157,17 @@ namespace DAL
 
             context.STOCKs.Add(s1);
             context.STOCKs.Add(s2);
+
+
+            context.PHARMARCY_PROFILEs.Add(new PHARMACY_PROFILE
+            {
+                Address = "",
+                BusinessHours="",
+                Email="",
+                PharmacyName="",
+                PhoneNumber=""
+            });
+
         }
     }
 }

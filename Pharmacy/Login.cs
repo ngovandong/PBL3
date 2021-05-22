@@ -46,13 +46,13 @@ namespace Pharmacy
             int c = _BLL.Instance.checkUser(guna2TextBox1.Text.ToLower(), guna2TextBox2.Text.ToLower());
             if (c==1)
             {
-                Admin f = new Admin(guna2TextBox1.Text);
+                Admin f = new Admin(guna2TextBox1.Text.ToLower());
                 f.Show();
                 this.Hide();
             }
             else if (c == 2)
             {
-                Staff f = new Staff(guna2TextBox1.Text);
+                Staff f = new Staff(guna2TextBox1.Text.ToLower());
                 f.Show();
                 this.Hide();
             }

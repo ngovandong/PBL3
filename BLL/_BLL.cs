@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BLL.Model_View;
 using DAL;
+using DAL.DTO;
+
 namespace BLL
 {
     public class _BLL
@@ -53,7 +55,17 @@ namespace BLL
             return i;
         }
 
-
+        public USER getUserByUserName(string username)
+        {
+            foreach (var item in _DAL.Instance.getListUser())
+            {
+                if (item.USER_NAME.Equals(username))
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
 
         public void UpdateUser(USER u)
         {
@@ -74,6 +86,11 @@ namespace BLL
                 });
             }
             return l;
+        }
+
+        public void UpdateProfile(PHARMACY_PROFILE f)
+        {
+            _DAL.Instance.UpdateProfile(f);
         }
 
         public void DelUser(List<int> lint)
@@ -117,7 +134,6 @@ namespace BLL
                         UserName=item.USER_NAME,
                         Role=item.ROLE?"Admin":"Staff"
                     });
-
                 }
             }
             return l;
@@ -146,6 +162,9 @@ namespace BLL
             return l;
         }
 
-
+        public PHARMACY_PROFILE getProfile()
+        {
+            return _DAL.Instance.getProfile();
+        }
     }
 }

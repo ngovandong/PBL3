@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using DAL.DTO;
 
 namespace DAL
 {
@@ -50,7 +51,6 @@ namespace DAL
                 P.USERs.Remove(u);
                 P.SaveChanges();
             }
-            
         }
 
         public void UpdateUser(USER u)
@@ -75,6 +75,21 @@ namespace DAL
             }
         }
 
-        
+        public PHARMACY_PROFILE getProfile()
+        {
+            using(PharmacyModel P= new PharmacyModel())
+            {
+                return P.PHARMARCY_PROFILEs.OrderByDescending(f => f.PHARMACY_PROFILEID).FirstOrDefault();
+            }
+        }
+
+        public void UpdateProfile(PHARMACY_PROFILE f)
+        {
+            using(PharmacyModel P=new PharmacyModel())
+            {
+                P.PHARMARCY_PROFILEs.Add(f);
+                P.SaveChanges();
+            }
+        }
     }
 }

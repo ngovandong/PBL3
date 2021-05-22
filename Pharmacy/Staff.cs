@@ -13,11 +13,13 @@ namespace Pharmacy
 {
     public partial class Staff : Form
     {
+        private string user_name;
         public Staff(string s)
         {
+            this.user_name = s;
             InitializeComponent();
-            NameStaffLabel.Text=s;
             ButtonDashBoard.PerformClick();
+            NameStaffLabel.Text = s;
         }
 
 

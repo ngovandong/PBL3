@@ -29,6 +29,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel6 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonCheckExpiryDate = new Guna.UI2.WinForms.Guna2Button();
@@ -37,6 +38,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel1 = new System.Windows.Forms.Panel();
             this.sample1 = new Pharmacy.AdminTab.Manage_Medicine.Sample();
             this.medicine1 = new Pharmacy.AdminTab.medicine();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,8 +52,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel6.Controls.Add(this.ButtonMedicine);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(959, 48);
+            this.panel6.Size = new System.Drawing.Size(719, 39);
             this.panel6.TabIndex = 10;
             // 
             // guna2Button1
@@ -61,15 +64,16 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
             this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(733, 0);
+            this.guna2Button1.Location = new System.Drawing.Point(550, 0);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(240, 48);
+            this.guna2Button1.Size = new System.Drawing.Size(169, 39);
             this.guna2Button1.TabIndex = 4;
             this.guna2Button1.Text = "Import Medicine";
             // 
@@ -85,10 +89,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.ButtonCheckExpiryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonCheckExpiryDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
             this.ButtonCheckExpiryDate.HoverState.Parent = this.ButtonCheckExpiryDate;
-            this.ButtonCheckExpiryDate.Location = new System.Drawing.Point(434, 0);
+            this.ButtonCheckExpiryDate.Location = new System.Drawing.Point(326, 0);
+            this.ButtonCheckExpiryDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ButtonCheckExpiryDate.Name = "ButtonCheckExpiryDate";
             this.ButtonCheckExpiryDate.ShadowDecoration.Parent = this.ButtonCheckExpiryDate;
-            this.ButtonCheckExpiryDate.Size = new System.Drawing.Size(299, 48);
+            this.ButtonCheckExpiryDate.Size = new System.Drawing.Size(224, 39);
             this.ButtonCheckExpiryDate.TabIndex = 3;
             this.ButtonCheckExpiryDate.Text = "Check Expiry Date";
             // 
@@ -104,10 +109,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.buttonSample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSample.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
             this.buttonSample.HoverState.Parent = this.buttonSample;
-            this.buttonSample.Location = new System.Drawing.Point(157, 0);
+            this.buttonSample.Location = new System.Drawing.Point(118, 0);
+            this.buttonSample.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSample.Name = "buttonSample";
             this.buttonSample.ShadowDecoration.Parent = this.buttonSample;
-            this.buttonSample.Size = new System.Drawing.Size(277, 48);
+            this.buttonSample.Size = new System.Drawing.Size(208, 39);
             this.buttonSample.TabIndex = 2;
             this.buttonSample.Text = "Prescription Sample";
             this.buttonSample.Click += new System.EventHandler(this.buttonSample_Click);
@@ -125,9 +131,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.ButtonMedicine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
             this.ButtonMedicine.HoverState.Parent = this.ButtonMedicine;
             this.ButtonMedicine.Location = new System.Drawing.Point(0, 0);
+            this.ButtonMedicine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ButtonMedicine.Name = "ButtonMedicine";
             this.ButtonMedicine.ShadowDecoration.Parent = this.ButtonMedicine;
-            this.ButtonMedicine.Size = new System.Drawing.Size(157, 48);
+            this.ButtonMedicine.Size = new System.Drawing.Size(118, 39);
             this.ButtonMedicine.TabIndex = 2;
             this.ButtonMedicine.Text = "Medicine";
             this.ButtonMedicine.Click += new System.EventHandler(this.ButtonMedicine_Click);
@@ -137,35 +144,39 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel1.Controls.Add(this.sample1);
             this.panel1.Controls.Add(this.medicine1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 48);
+            this.panel1.Location = new System.Drawing.Point(0, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(959, 626);
+            this.panel1.Size = new System.Drawing.Size(719, 509);
             this.panel1.TabIndex = 11;
             // 
             // sample1
             // 
             this.sample1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sample1.Location = new System.Drawing.Point(0, 0);
+            this.sample1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sample1.Name = "sample1";
-            this.sample1.Size = new System.Drawing.Size(959, 626);
+            this.sample1.Size = new System.Drawing.Size(719, 509);
             this.sample1.TabIndex = 1;
             // 
             // medicine1
             // 
             this.medicine1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.medicine1.Location = new System.Drawing.Point(0, 0);
+            this.medicine1.Margin = new System.Windows.Forms.Padding(2);
             this.medicine1.Name = "medicine1";
-            this.medicine1.Size = new System.Drawing.Size(959, 626);
+            this.medicine1.Size = new System.Drawing.Size(719, 509);
             this.medicine1.TabIndex = 0;
             // 
             // ManageMedicine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManageMedicine";
-            this.Size = new System.Drawing.Size(959, 674);
+            this.Size = new System.Drawing.Size(719, 548);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -182,5 +193,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private Sample sample1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button ButtonCheckExpiryDate;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }

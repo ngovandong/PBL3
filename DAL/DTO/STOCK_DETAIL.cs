@@ -17,9 +17,6 @@ namespace DAL
 
         public int? QUANTITY { get; set; }
 
-        [StringLength(20)]
-        public string NAME { get; set; }
-
         [Required] 
         public DateTime dateExpire { get; set; }
 
@@ -30,5 +27,10 @@ namespace DAL
         [Required]
         public int ID_STOCK { get; set; }
         public virtual STOCK STOCK { get; set; }
+
+        public override string ToString()
+        {
+            return STOCK.Name;
+        }
     }
 }

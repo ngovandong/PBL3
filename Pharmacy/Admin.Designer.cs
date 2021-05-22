@@ -42,9 +42,9 @@ namespace Pharmacy
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.manageMedicine1 = new Pharmacy.AdminTab.Manage_Medicine.ManageMedicine();
-            this.manageUser1 = new Pharmacy.AdminTab.ManageUser();
             this.editProfilecs1 = new Pharmacy.AdminTab.editProfilecs();
             this.dashBoard1 = new Pharmacy.AdminTab.dashBoard();
+            this.manageUser1 = new Pharmacy.AdminTab.ManageUser();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -234,8 +234,8 @@ namespace Pharmacy
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.manageMedicine1);
             this.panel3.Controls.Add(this.manageUser1);
+            this.panel3.Controls.Add(this.manageMedicine1);
             this.panel3.Controls.Add(this.editProfilecs1);
             this.panel3.Controls.Add(this.dashBoard1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -253,14 +253,6 @@ namespace Pharmacy
             this.manageMedicine1.Size = new System.Drawing.Size(959, 743);
             this.manageMedicine1.TabIndex = 3;
             // 
-            // manageUser1
-            // 
-            this.manageUser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.manageUser1.Location = new System.Drawing.Point(0, 0);
-            this.manageUser1.Name = "manageUser1";
-            this.manageUser1.Size = new System.Drawing.Size(959, 743);
-            this.manageUser1.TabIndex = 2;
-            // 
             // editProfilecs1
             // 
             this.editProfilecs1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -276,6 +268,14 @@ namespace Pharmacy
             this.dashBoard1.Name = "dashBoard1";
             this.dashBoard1.Size = new System.Drawing.Size(959, 743);
             this.dashBoard1.TabIndex = 0;
+            // 
+            // manageUser1
+            // 
+            this.manageUser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manageUser1.Location = new System.Drawing.Point(0, 0);
+            this.manageUser1.Name = "manageUser1";
+            this.manageUser1.Size = new System.Drawing.Size(959, 743);
+            this.manageUser1.TabIndex = 4;
             // 
             // Admin
             // 
@@ -310,8 +310,8 @@ namespace Pharmacy
         private Guna.UI2.WinForms.Guna2Button ButtonMangeUser;
         private Guna.UI2.WinForms.Guna2Button ButtonManageMedicine;
         private AdminTab.Manage_Medicine.ManageMedicine manageMedicine1;
-        private AdminTab.ManageUser manageUser1;
         private AdminTab.editProfilecs editProfilecs1;
         private AdminTab.dashBoard dashBoard1;
+        private AdminTab.ManageUser manageUser1;
     }
 }

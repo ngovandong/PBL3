@@ -19,9 +19,9 @@ namespace DAL
         public int ID { get; set; }
 
         public DateTime? DATE { get; set; }
-
-        [StringLength(100)]
-        public string SUPPLIERNAME { get; set; }
+        
+        [StringLength(40)]
+        public string Name { get; set; }
 
         [Column(TypeName = "text")]
         public string NOTE { get; set; }

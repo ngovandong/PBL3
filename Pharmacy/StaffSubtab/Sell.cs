@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL.Model_View;
 
 namespace Pharmacy.StaffSubtab
 {
@@ -15,10 +17,8 @@ namespace Pharmacy.StaffSubtab
         private List<MedicineItem> ListMe;
         public Sell()
         {
-            ListMe = new List<MedicineItem>();
             InitializeComponent();
             setStart();
-            
         }
 
         private void Sell_FormClosed(object sender, FormClosedEventArgs e)
@@ -28,19 +28,25 @@ namespace Pharmacy.StaffSubtab
         }
         public void setStart()
         {
-            guna2TextBox2.Text= Convert.ToDouble(guna2TextBox2.Text).ToString("#,##0");
-            guna2TextBox4.Text = Convert.ToDouble(guna2TextBox4.Text).ToString("#,##0");
-            guna2TextBox5.Text = Convert.ToDouble(guna2TextBox5.Text).ToString("#,##0");
+            //guna2TextBox2.Text= Convert.ToDouble(guna2TextBox2.Text).ToString("#,##0");
+            //guna2TextBox4.Text = Convert.ToDouble(guna2TextBox4.Text).ToString("#,##0");
+            //guna2TextBox5.Text = Convert.ToDouble(guna2TextBox5.Text).ToString("#,##0");
+            ListMe = new List<MedicineItem>();
+            guna2TextBox1_TextChanged(null, new EventArgs());
         }
 
-        public void delAddItem(SearchMedicineItem m)
+
+        public void addToSell(medicineSell m)
         {
-            flowLayoutPanel2.Controls.Remove(m);
-            MedicineItem i = new MedicineItem();
-            i.d = new MedicineItem.Mydel(delItem);
-            ListMe.Add(i);
-            i.No = (ListMe.Count).ToString();
-            flowLayoutPanel1.Controls.Add(i);
+            var c = from p in ListMe where (m.ID == p.ID) select p ;
+            if (c.Count()==0) {
+                MedicineItem i = new MedicineItem(m);
+                i.d = new MedicineItem.Mydel(delItem);
+                ListMe.Add(i);
+                i.No = (ListMe.Count).ToString();
+                flowLayoutPanel1.Controls.Add(i);
+            }
+            
         }
         public void delItem(MedicineItem m)
         {
@@ -68,10 +74,10 @@ namespace Pharmacy.StaffSubtab
             flowLayoutPanel2.SuspendLayout();
             try
             {
-                for (int i = 0; i < 5; i++)
+                foreach (var item in _BLL.Instance.getlistMedicineSearch(TextBoxSearchMedicine.Text))
                 {
-                    SearchMedicineItem s = new SearchMedicineItem();
-                    s.d = new SearchMedicineItem.Mydel(delAddItem);
+                    SearchMedicineItem s = new SearchMedicineItem(item);
+                    s.d = new SearchMedicineItem.Mydel(addToSell);
                     flowLayoutPanel2.Controls.Add(s);
                 }
             }

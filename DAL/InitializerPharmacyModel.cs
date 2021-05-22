@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using DAL.DTO;
+
 namespace DAL
 {
     class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
@@ -114,6 +116,7 @@ namespace DAL
 
             STOCK s1 = new STOCK
             {
+                Name="lo B",
                 NOTE = "nhap ngay hom qua",
                 DATE = DateTime.Now,
                 PRICETOTAL = 1000000,
@@ -141,7 +144,7 @@ namespace DAL
         
             s2.STOCK_DETAIL.Add(new STOCK_DETAIL
             {
-                MEDICINE = m2,
+                MEDICINE = m3,
                 dateExpire = DateTime.Now,
                 ORGIGINAL_PRICE = 1000,
                 QUANTITY = 20,
@@ -149,6 +152,17 @@ namespace DAL
 
             context.STOCKs.Add(s1);
             context.STOCKs.Add(s2);
+
+
+            context.PHARMARCY_PROFILEs.Add(new PHARMACY_PROFILE
+            {
+                Address = "",
+                BusinessHours="",
+                Email="",
+                PharmacyName="",
+                PhoneNumber=""
+            });
+
 
         }
     }

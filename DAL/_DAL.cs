@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using DAL.DTO;
 
 namespace DAL
 {
@@ -25,7 +27,6 @@ namespace DAL
 
         public List<USER> getListUser()
         {
-            List<USER> l = new List<USER>();
 
             using (PharmacyModel P = new PharmacyModel())
             {
@@ -50,7 +51,6 @@ namespace DAL
                 P.USERs.Remove(u);
                 P.SaveChanges();
             }
-            
         }
 
         public void UpdateUser(USER u)
@@ -66,6 +66,7 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+
          
         public List<MEDICINE_TYPE> getListMedicine_Type()
         {
@@ -92,13 +93,7 @@ namespace DAL
             }
         }
 
-        public List<MEDICINE> getListMedicine()
-        {
-            using(PharmacyModel P = new PharmacyModel())
-            {
-                return P.MEDICINEs.Include("UNIT").Include("MEDICINE_TYPE").ToList();
-            };
-        }
+
 
         public void deleteMedicine(int ID)
         {
@@ -128,6 +123,30 @@ namespace DAL
                 oldMedicine.QUANTITY = newMedicine.QUANTITY;
                 oldMedicine.ORIGINAL_PRICE = newMedicine.ORIGINAL_PRICE;
                 oldMedicine.SALE_PRICE = newMedicine.SALE_PRICE;
+
+
+        public List<MEDICINE> getListMedicine()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.MEDICINEs.Include("UNIT").Include("STOCK_DETAIL.STOCK").Include("MEDICINE_TYPE").ToList();
+            }
+        }
+
+        public PHARMACY_PROFILE getProfile()
+        {
+            using(PharmacyModel P= new PharmacyModel())
+            {
+                return P.PHARMARCY_PROFILEs.OrderByDescending(f => f.PHARMACY_PROFILEID).FirstOrDefault();
+            }
+        }
+
+        public void UpdateProfile(PHARMACY_PROFILE f)
+        {
+            using(PharmacyModel P=new PharmacyModel())
+            {
+                P.PHARMARCY_PROFILEs.Add(f);
+
                 P.SaveChanges();
             }
         }

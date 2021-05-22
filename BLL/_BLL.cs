@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BLL.Model_View;
 using DAL;
+using DAL.DTO;
+
 namespace BLL
 {
     public class _BLL
@@ -53,6 +55,18 @@ namespace BLL
             return i;
         }
 
+        public USER getUserByUserName(string username)
+        {
+            foreach (var item in _DAL.Instance.getListUser())
+            {
+                if (item.USER_NAME.Equals(username))
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
         public void UpdateUser(USER u)
         {
             _DAL.Instance.UpdateUser(u);
@@ -72,6 +86,11 @@ namespace BLL
                 });
             }
             return l;
+        }
+
+        public void UpdateProfile(PHARMACY_PROFILE f)
+        {
+            _DAL.Instance.UpdateProfile(f);
         }
 
         public void DelUser(List<int> lint)
@@ -115,7 +134,29 @@ namespace BLL
                         UserName=item.USER_NAME,
                         Role=item.ROLE?"Admin":"Staff"
                     });
+                }
+            }
+            return l;
+        }
 
+        public List<medicineSell> getlistMedicineSearch(string s)
+        {
+            List<medicineSell> l = new List<medicineSell>();
+            foreach (var item in _DAL.Instance.getListMedicine())
+            {
+                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                {
+                    l.Add(new medicineSell
+                    {
+                        ID = item.ID,
+                        code = item.MEDICINE_CODE,
+                        name = item.MEDICINE_NAME,
+                        Qty = item.QUANTITY,
+                        sell_price = item.SALE_PRICE,
+                        unit = item.UNIT.NAME,
+                        STOCK_DETAIL=item.STOCK_DETAIL,
+                        
+                    });
                 }
             }
             return l;
@@ -207,6 +248,11 @@ namespace BLL
         public void updateMedicine(MEDICINE md)
         {
             _DAL.Instance.updateMedicine(md);
+
+        public PHARMACY_PROFILE getProfile()
+        {
+            return _DAL.Instance.getProfile();
+
         }
     }
 }

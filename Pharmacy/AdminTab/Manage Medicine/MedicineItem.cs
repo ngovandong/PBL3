@@ -16,5 +16,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             InitializeComponent();
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -35,9 +35,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.buttonSample = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.importMedicine1 = new Pharmacy.AdminTab.Manage_Medicine.ImportMedicine();
             this.sample1 = new Pharmacy.AdminTab.Manage_Medicine.Sample();
             this.medicine1 = new Pharmacy.AdminTab.medicine();
-            this.importMedicine1 = new Pharmacy.AdminTab.Manage_Medicine.ImportMedicine();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -145,6 +145,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel1.Size = new System.Drawing.Size(959, 626);
             this.panel1.TabIndex = 11;
             // 
+            // importMedicine1
+            // 
+            this.importMedicine1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.importMedicine1.Location = new System.Drawing.Point(0, 0);
+            this.importMedicine1.Name = "importMedicine1";
+            this.importMedicine1.Size = new System.Drawing.Size(959, 626);
+            this.importMedicine1.TabIndex = 2;
+            // 
             // sample1
             // 
             this.sample1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -161,14 +169,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.medicine1.Name = "medicine1";
             this.medicine1.Size = new System.Drawing.Size(959, 626);
             this.medicine1.TabIndex = 0;
-            // 
-            // importMedicine1
-            // 
-            this.importMedicine1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.importMedicine1.Location = new System.Drawing.Point(0, 0);
-            this.importMedicine1.Name = "importMedicine1";
-            this.importMedicine1.Size = new System.Drawing.Size(959, 626);
-            this.importMedicine1.TabIndex = 2;
             // 
             // ManageMedicine
             // 

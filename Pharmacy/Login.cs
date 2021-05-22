@@ -30,10 +30,6 @@ namespace Pharmacy
             InitializeComponent();
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
@@ -41,10 +37,10 @@ namespace Pharmacy
             guna2TextBox2.Text = "";
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             int c = _BLL.Instance.checkUser(guna2TextBox1.Text.ToLower(), guna2TextBox2.Text.ToLower());
-            if (c==1)
+            if (c == 1)
             {
                 Admin f = new Admin(guna2TextBox1.Text.ToLower());
                 f.Show();
@@ -62,6 +58,9 @@ namespace Pharmacy
             }
         }
 
-
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

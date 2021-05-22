@@ -130,9 +130,9 @@ namespace BLL
                     l.Add(new USER_VIEW
                     {
                         ID = item.ID,
-                        Name=item.NAME,
-                        UserName=item.USER_NAME,
-                        Role=item.ROLE?"Admin":"Staff"
+                        Name = item.NAME,
+                        UserName = item.USER_NAME,
+                        Role = item.ROLE ? "Admin" : "Staff"
                     });
                 }
             }
@@ -154,8 +154,8 @@ namespace BLL
                         Qty = item.QUANTITY,
                         sell_price = item.SALE_PRICE,
                         unit = item.UNIT.NAME,
-                        STOCK_DETAIL=item.STOCK_DETAIL,
-                        
+                        STOCK_DETAIL = item.STOCK_DETAIL,
+
                     });
                 }
             }
@@ -166,7 +166,7 @@ namespace BLL
         {
             List<COMBOBOX_ITEM> l = new List<COMBOBOX_ITEM>();
 
-            foreach(MEDICINE_TYPE mt in _DAL.Instance.getListMedicine_Type())
+            foreach (MEDICINE_TYPE mt in _DAL.Instance.getListMedicine_Type())
             {
                 l.Add(new COMBOBOX_ITEM
                 {
@@ -181,7 +181,7 @@ namespace BLL
         {
             List<COMBOBOX_ITEM> l = new List<COMBOBOX_ITEM>();
 
-            foreach(UNIT unit in _DAL.Instance.getListUnit())
+            foreach (UNIT unit in _DAL.Instance.getListUnit())
             {
                 l.Add(new COMBOBOX_ITEM
                 {
@@ -191,16 +191,16 @@ namespace BLL
             }
             return l;
         }
-        
+
         public void addMedicine(MEDICINE m)
         {
             _DAL.Instance.addMedicine(m);
         }
-        
+
         public List<MEDICINE_VIEW> getListMedicineView()
         {
             List<MEDICINE_VIEW> l = new List<MEDICINE_VIEW>();
-            foreach(var item in _DAL.Instance.getListMedicine())
+            foreach (var item in _DAL.Instance.getListMedicine())
             {
                 l.Add(new MEDICINE_VIEW
                 {
@@ -215,7 +215,7 @@ namespace BLL
 
         public MEDICINE getMedicineByID(int ID)
         {
-            foreach(var u in _DAL.Instance.getListMedicine())
+            foreach (var u in _DAL.Instance.getListMedicine())
             {
                 if (u.ID == ID)
                 {
@@ -227,7 +227,7 @@ namespace BLL
 
         public MEDICINE_TYPE getMedicineTypeByID(int id)
         {
-            foreach(var item in _DAL.Instance.getListMedicine_Type())
+            foreach (var item in _DAL.Instance.getListMedicine_Type())
             {
                 if (item.ID == id)
                 {
@@ -239,7 +239,7 @@ namespace BLL
 
         public void deleteMedicine(List<int> listIDOfDeletedItems)
         {
-            foreach(int id in listIDOfDeletedItems)
+            foreach (int id in listIDOfDeletedItems)
             {
                 _DAL.Instance.deleteMedicine(id);
             }
@@ -248,6 +248,8 @@ namespace BLL
         public void updateMedicine(MEDICINE md)
         {
             _DAL.Instance.updateMedicine(md);
+
+        } 
 
         public PHARMACY_PROFILE getProfile()
         {

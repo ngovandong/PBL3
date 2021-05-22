@@ -104,10 +104,10 @@ namespace DAL
                 P.SaveChanges();
             }
         }
-        
+
         public void updateMedicine(MEDICINE newMedicine)
         {
-            using(PharmacyModel P = new PharmacyModel())
+            using (PharmacyModel P = new PharmacyModel())
             {
                 MEDICINE oldMedicine = P.MEDICINEs.Find(newMedicine.ID);
                 oldMedicine.MEDICINE_CODE = newMedicine.MEDICINE_CODE;
@@ -123,7 +123,8 @@ namespace DAL
                 oldMedicine.QUANTITY = newMedicine.QUANTITY;
                 oldMedicine.ORIGINAL_PRICE = newMedicine.ORIGINAL_PRICE;
                 oldMedicine.SALE_PRICE = newMedicine.SALE_PRICE;
-
+            }
+        }
 
         public List<MEDICINE> getListMedicine()
         {

@@ -37,30 +37,7 @@ namespace DAL
             context.USERs.Add(staff1);
 
 
-            context.MEDICINE_TYPE.Add(new MEDICINE_TYPE
-            {
-                TypeName = "Thuốc cảm lạnh, ho"
-            });
             
-            context.MEDICINE_TYPE.Add(new MEDICINE_TYPE
-            {
-                TypeName = "Giảm đau, hạ sốt"
-            });
-
-            context.UNITs.AddRange(new UNIT[] { 
-                new UNIT
-                {
-                    NAME="Viên",
-                },
-                new UNIT
-                {
-                    NAME="Hộp"
-                },
-                new UNIT
-                {
-                    NAME="Chai",
-                }
-            });
 
             MEDICINE_TYPE t1 = new MEDICINE_TYPE
             {
@@ -76,7 +53,11 @@ namespace DAL
                 NAME = "Ống",
             };
 
-    
+            UNIT u2 = new UNIT
+            {
+                NAME = "Viên",
+            };
+
             MEDICINE m2 = new MEDICINE
             {
                 MEDICINE_NAME = "thuoc chuot",
@@ -104,15 +85,32 @@ namespace DAL
                 INGREDIENT = "pllplpplllpl",
                 CONTENT = "ololololo",
                 BRAND = "Prospan",
-                QUANTITY = 1,
+                QUANTITY = 0,
                 ORIGINAL_PRICE = 10000,
                 SALE_PRICE = 50000,
                 TYPEID = 1,
-                UNIT = u1,
+                UNIT = u2,
+            };
+
+            MEDICINE m3 = new MEDICINE
+            {
+                BARCODE = "1234134",
+                MEDICINE_NAME = "Thuốc ho con cop",
+                MEDICINE_CODE = "acbs121",
+                LOCATION = "Kệ b",
+                ID_SUB = "145263",
+                INGREDIENT = "pllplpplllpl",
+                CONTENT = "ololololo",
+                BRAND = "Prospan",
+                QUANTITY = 0,
+                ORIGINAL_PRICE = 15000,
+                SALE_PRICE = 20000,
+                MEDICINE_TYPE=t2,
+                UNIT = u2,
             };
 
 
-            context.MEDICINEs.AddRange(new MEDICINE[] { m1, m2 });
+            context.MEDICINEs.AddRange(new MEDICINE[] { m1, m2,m3 });
 
             STOCK s1 = new STOCK
             {

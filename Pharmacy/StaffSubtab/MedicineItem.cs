@@ -38,9 +38,7 @@ namespace Pharmacy.StaffSubtab
             ComboBoxStock.Items.AddRange(medicine.STOCK_DETAIL.ToArray());
             ComboBoxStock.SelectedIndex = 0;
             Total.Text = medicine.sell_price.ToString();
-
             medicine.quantysell = 1;
-            medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
         }
         
         private string _no;
@@ -86,7 +84,6 @@ namespace Pharmacy.StaffSubtab
                     int t = a * medicine.sell_price;
                     this.Total.Text = t.ToString();
                     medicine.quantysell = a;
-                    medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
                     d2();
                 }
                 
@@ -96,7 +93,6 @@ namespace Pharmacy.StaffSubtab
                 this.Qty.Text = "1";
                 this.Total.Text = medicine.sell_price.ToString();
                 medicine.quantysell = 1;
-                medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
                 d2();
             }
             
@@ -109,9 +105,14 @@ namespace Pharmacy.StaffSubtab
                 this.Qty.Text = "1";
                 this.Total.Text = medicine.sell_price.ToString();
                 medicine.quantysell = 1;
-                medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
                 d2();
             }
+        }
+
+        private void ComboBoxStock_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            medicine.stock_detail = ((STOCK_DETAIL)ComboBoxStock.SelectedItem);
+            StockDetailLabel.Text = medicine.stock_detail.dateExpire.ToShortDateString() + " Tồn: " + medicine.stock_detail.QUANTITY.ToString();
         }
     }
 }

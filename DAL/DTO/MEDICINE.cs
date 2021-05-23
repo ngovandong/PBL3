@@ -1,5 +1,6 @@
 namespace DAL
 {
+    using DAL.DTO;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -62,5 +63,8 @@ namespace DAL
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
+
+        public virtual ICollection<SAMPLE_DETAIL> SAMPLE_DETAIL { get; set; }
+
     }
 }

@@ -20,7 +20,7 @@ namespace BLL.Model_View
         public string type { get; set; }
         public string Ingredient { get; set; }
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
-        public int stock_detail_Id{get;set;}
+        public virtual STOCK_DETAIL stock_detail{get;set;}
         public int quantysell { get; set; }
 
     }

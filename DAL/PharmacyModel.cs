@@ -36,6 +36,8 @@ namespace DAL
         public virtual DbSet<UNIT> UNITs { get; set; }
         public virtual DbSet<SUPPLIER> SUPPLIERs { get; set; }
         public virtual DbSet<PHARMACY_PROFILE> PHARMARCY_PROFILEs { get; set; }
+        public virtual DbSet<SAMPLE> SAMPLEs { get; set; }
+        public virtual DbSet<SAMPLE_DETAIL> SAMPLE_DETAILs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CUSTOMER>()

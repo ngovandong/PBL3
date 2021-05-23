@@ -41,12 +41,14 @@ namespace Pharmacy.StaffSubtab
             this.MedicinCode = new System.Windows.Forms.Label();
             this.NoMedicine = new System.Windows.Forms.Label();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.StockDetailLabel = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.StockDetailLabel);
             this.guna2ShadowPanel1.Controls.Add(this.ComboBoxStock);
             this.guna2ShadowPanel1.Controls.Add(this.Total);
             this.guna2ShadowPanel1.Controls.Add(this.price);
@@ -80,11 +82,12 @@ namespace Pharmacy.StaffSubtab
             this.ComboBoxStock.HoverState.Parent = this.ComboBoxStock;
             this.ComboBoxStock.ItemHeight = 23;
             this.ComboBoxStock.ItemsAppearance.Parent = this.ComboBoxStock;
-            this.ComboBoxStock.Location = new System.Drawing.Point(473, 32);
+            this.ComboBoxStock.Location = new System.Drawing.Point(473, 39);
             this.ComboBoxStock.Name = "ComboBoxStock";
             this.ComboBoxStock.ShadowDecoration.Parent = this.ComboBoxStock;
             this.ComboBoxStock.Size = new System.Drawing.Size(140, 29);
             this.ComboBoxStock.TabIndex = 15;
+            this.ComboBoxStock.SelectedIndexChanged += new System.EventHandler(this.ComboBoxStock_SelectedIndexChanged);
             this.ComboBoxStock.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.ComboBoxStock.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -159,7 +162,7 @@ namespace Pharmacy.StaffSubtab
             this.Qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.Qty.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Qty.HoverState.Parent = this.Qty;
-            this.Qty.Location = new System.Drawing.Point(643, 32);
+            this.Qty.Location = new System.Drawing.Point(643, 39);
             this.Qty.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Qty.Name = "Qty";
             this.Qty.PasswordChar = '\0';
@@ -178,7 +181,7 @@ namespace Pharmacy.StaffSubtab
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
-            this.label1.Location = new System.Drawing.Point(389, 43);
+            this.label1.Location = new System.Drawing.Point(389, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 36);
             this.label1.TabIndex = 7;
@@ -201,7 +204,7 @@ namespace Pharmacy.StaffSubtab
             // 
             this.Unit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
-            this.Unit.Location = new System.Drawing.Point(722, 43);
+            this.Unit.Location = new System.Drawing.Point(722, 54);
             this.Unit.Name = "Unit";
             this.Unit.Size = new System.Drawing.Size(126, 38);
             this.Unit.TabIndex = 9;
@@ -251,6 +254,15 @@ namespace Pharmacy.StaffSubtab
             this.guna2ImageButton1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.guna2ImageButton1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
+            // StockDetailLabel
+            // 
+            this.StockDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            this.StockDetailLabel.Location = new System.Drawing.Point(389, 8);
+            this.StockDetailLabel.Name = "StockDetailLabel";
+            this.StockDetailLabel.Size = new System.Drawing.Size(410, 28);
+            this.StockDetailLabel.TabIndex = 16;
+            // 
             // MedicineItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,5 +289,6 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.Label NoMedicine;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ComboBox ComboBoxStock;
+        private System.Windows.Forms.Label StockDetailLabel;
     }
 }

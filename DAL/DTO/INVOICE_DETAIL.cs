@@ -11,13 +11,10 @@ namespace DAL
         [Key]
         public int ID { get; set; }
 
-        
+        public int SALE_PRICE { get; set; }
+        public int ORIGINAL_PRICE { get; set; }
 
-        
-
-        public int? SALE_PRICE { get; set; }
-
-        public int? QUANTITY { get; set; }
+        public int QUANTITY { get; set; }
 
         [Required]
         public int ID_INVOICE { get; set; }

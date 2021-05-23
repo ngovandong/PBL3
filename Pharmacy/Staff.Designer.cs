@@ -43,7 +43,7 @@ namespace Pharmacy
             this.titleLabel = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.staffProfile1 = new Pharmacy.StaffSubtab.StaffProfile(this.user_name);
+            this.staffProfile1 = new Pharmacy.StaffSubtab.StaffProfile(this.user.USER_NAME);
             this.staffReport1 = new Pharmacy.StaffSubtab.StaffReport();
             this.staffDashBoard1 = new Pharmacy.StaffSubtab.StaffDashBoard();
             this.panel1.SuspendLayout();

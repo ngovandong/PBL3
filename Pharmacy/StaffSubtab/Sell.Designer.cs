@@ -40,7 +40,7 @@ namespace Pharmacy.StaffSubtab
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Note = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,7 +59,7 @@ namespace Pharmacy.StaffSubtab
             this.receive = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.checkoutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.searchList1 = new Pharmacy.StaffSubtab.SearchCustomer();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -166,7 +166,7 @@ namespace Pharmacy.StaffSubtab
             this.TextBoxSearchMedicine.Location = new System.Drawing.Point(8, 10);
             this.TextBoxSearchMedicine.Name = "TextBoxSearchMedicine";
             this.TextBoxSearchMedicine.PasswordChar = '\0';
-            this.TextBoxSearchMedicine.PlaceholderText = "Search Medicine\r\n";
+            this.TextBoxSearchMedicine.PlaceholderText = "Tìm thuốc";
             this.TextBoxSearchMedicine.SelectedText = "";
             this.TextBoxSearchMedicine.ShadowDecoration.Parent = this.TextBoxSearchMedicine;
             this.TextBoxSearchMedicine.Size = new System.Drawing.Size(426, 36);
@@ -214,21 +214,21 @@ namespace Pharmacy.StaffSubtab
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.Note);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 72);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(449, 335);
             this.panel9.TabIndex = 3;
             // 
-            // textBox1
+            // Note
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(449, 335);
-            this.textBox1.TabIndex = 2;
+            this.Note.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Note.Location = new System.Drawing.Point(0, 0);
+            this.Note.Multiline = true;
+            this.Note.Name = "Note";
+            this.Note.Size = new System.Drawing.Size(449, 335);
+            this.Note.TabIndex = 2;
             // 
             // panel8
             // 
@@ -245,18 +245,18 @@ namespace Pharmacy.StaffSubtab
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(64, 26);
+            this.label7.Location = new System.Drawing.Point(48, 26);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 25);
+            this.label7.Size = new System.Drawing.Size(104, 25);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Note";
+            this.label7.Text = "Chú thích";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -313,9 +313,9 @@ namespace Pharmacy.StaffSubtab
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 67);
+            this.label3.Size = new System.Drawing.Size(126, 67);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Discount(%)";
+            this.label3.Text = "Giảm giá (%)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -325,9 +325,9 @@ namespace Pharmacy.StaffSubtab
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 67);
+            this.label4.Size = new System.Drawing.Size(115, 67);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Charge";
+            this.label4.Text = "Thành tiền";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -337,9 +337,9 @@ namespace Pharmacy.StaffSubtab
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 67);
+            this.label5.Size = new System.Drawing.Size(100, 67);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Receive";
+            this.label5.Text = "Tiền nhận";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelChange
@@ -349,9 +349,9 @@ namespace Pharmacy.StaffSubtab
             this.labelChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelChange.Location = new System.Drawing.Point(3, 268);
             this.labelChange.Name = "labelChange";
-            this.labelChange.Size = new System.Drawing.Size(82, 67);
+            this.labelChange.Size = new System.Drawing.Size(87, 67);
             this.labelChange.TabIndex = 4;
-            this.labelChange.Text = "Change";
+            this.labelChange.Text = "Tiền thối";
             this.labelChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -361,9 +361,9 @@ namespace Pharmacy.StaffSubtab
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 67);
+            this.label2.Size = new System.Drawing.Size(94, 67);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Total";
+            this.label2.Text = "Tổng tiền";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // discount
@@ -520,28 +520,29 @@ namespace Pharmacy.StaffSubtab
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.guna2Button1);
+            this.panel3.Controls.Add(this.checkoutButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 790);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(449, 209);
             this.panel3.TabIndex = 3;
             // 
-            // guna2Button1
+            // checkoutButton
             // 
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(173)))), ((int)(((byte)(81)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(30, 57);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(392, 96);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Check out";
+            this.checkoutButton.BorderRadius = 5;
+            this.checkoutButton.CheckedState.Parent = this.checkoutButton;
+            this.checkoutButton.CustomImages.Parent = this.checkoutButton;
+            this.checkoutButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(173)))), ((int)(((byte)(81)))));
+            this.checkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.checkoutButton.ForeColor = System.Drawing.Color.White;
+            this.checkoutButton.HoverState.Parent = this.checkoutButton;
+            this.checkoutButton.Location = new System.Drawing.Point(30, 57);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.ShadowDecoration.Parent = this.checkoutButton;
+            this.checkoutButton.Size = new System.Drawing.Size(392, 96);
+            this.checkoutButton.TabIndex = 1;
+            this.checkoutButton.Text = "Thanh toán";
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
             // panel2
             // 
@@ -951,7 +952,7 @@ namespace Pharmacy.StaffSubtab
             this.guna2TextBox7.Location = new System.Drawing.Point(63, 23);
             this.guna2TextBox7.Name = "guna2TextBox7";
             this.guna2TextBox7.PasswordChar = '\0';
-            this.guna2TextBox7.PlaceholderText = "Prescription sample";
+            this.guna2TextBox7.PlaceholderText = "Đơn thuốc mẫu";
             this.guna2TextBox7.SelectedText = "";
             this.guna2TextBox7.ShadowDecoration.Parent = this.guna2TextBox7;
             this.guna2TextBox7.Size = new System.Drawing.Size(285, 36);
@@ -1057,7 +1058,7 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button checkoutButton;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label3;
@@ -1076,7 +1077,7 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Note;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private SearchCustomer searchList1;
         private System.Windows.Forms.Panel panel11;

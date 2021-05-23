@@ -26,7 +26,7 @@ namespace DAL
         [Column(TypeName = "text")]
         public string NOTE { get; set; }
 
-        public int? PRICETOTAL { get; set; }
+        public int PRICETOTAL { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }

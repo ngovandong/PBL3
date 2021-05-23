@@ -168,5 +168,14 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+
+        public void AddInvoice(INVOICE i)
+        {
+            using(PharmacyModel P=new PharmacyModel())
+            {
+                P.INVOICEs.Add(i);
+                P.SaveChanges();
+            }
+        }
     }
 }

@@ -266,6 +266,11 @@ namespace BLL
             }
         }
 
+        public void AddInvoice(INVOICE i)
+        {
+            _DAL.Instance.AddInvoice(i);
+        }
+
         public void updateMedicine(MEDICINE md)
         {
             _DAL.Instance.updateMedicine(md);

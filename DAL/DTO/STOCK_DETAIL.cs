@@ -13,9 +13,9 @@ namespace DAL
 
 
 
-        public int? ORGIGINAL_PRICE { get; set; }
+        public int ORGIGINAL_PRICE { get; set; }
 
-        public int? QUANTITY { get; set; }
+        public int QUANTITY { get; set; }
 
         [Required] 
         public DateTime dateExpire { get; set; }

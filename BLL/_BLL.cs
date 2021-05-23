@@ -55,6 +55,11 @@ namespace BLL
             return i;
         }
 
+        public CUSTOMER AddCustomer(CUSTOMER c)
+        {
+            return _DAL.Instance.getCus(c);
+        }
+
         public USER getUserByUserName(string username)
         {
             foreach (var item in _DAL.Instance.getListUser())
@@ -70,6 +75,19 @@ namespace BLL
         public void UpdateUser(USER u)
         {
             _DAL.Instance.UpdateUser(u);
+        }
+
+        public List<CUSTOMER> getListCus(string s)
+        {
+            List<CUSTOMER> l = new List<CUSTOMER>();
+            foreach (CUSTOMER item in _DAL.Instance.getListCus())
+            {
+                if (item.Customer_name.Contains(s) || item.Phone.Contains(s))
+                {
+                    l.Add(item);
+                }
+            }
+            return l;
         }
 
         public List<USER_VIEW> getListUser()
@@ -155,8 +173,11 @@ namespace BLL
                         sell_price = item.SALE_PRICE,
                         unit = item.UNIT.NAME,
                         STOCK_DETAIL = item.STOCK_DETAIL,
-
-                    });
+                        location = item.LOCATION,
+                        Barcode = item.BARCODE,
+                        Ingredient = item.INGREDIENT,
+                        type = item.MEDICINE_TYPE.TypeName
+                    }) ;
                 }
             }
             return l;

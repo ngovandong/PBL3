@@ -177,6 +177,24 @@ namespace DAL
             });
 
 
+            CUSTOMER c1 = new CUSTOMER
+            {
+                Customer_name = "Ngô Văn Đông",
+                Phone = "092347858"
+            };
+
+            CUSTOMER c2 = new CUSTOMER
+            {
+                Customer_name = "Nguyễn Minh Đức",
+                Phone = "012375834"
+            };
+            CUSTOMER c3 = new CUSTOMER
+            {
+                Customer_name = "Koh",
+                Phone = "093578747"
+            };
+
+            context.CUSTOMERs.AddRange(new CUSTOMER[] { c1, c2, c3 });
         }
     }
 }

@@ -67,7 +67,16 @@ namespace DAL
             }
         }
 
-         
+        public CUSTOMER getCus(CUSTOMER c)
+        {
+            using(PharmacyModel P= new PharmacyModel())
+            {
+                P.CUSTOMERs.Add(c);
+                P.SaveChanges();
+                return P.CUSTOMERs.OrderByDescending(f => f.ID).FirstOrDefault();
+            }
+        }
+
         public List<MEDICINE_TYPE> getListMedicine_Type()
         {
             using(PharmacyModel P = new PharmacyModel())
@@ -81,6 +90,14 @@ namespace DAL
             using(PharmacyModel P = new PharmacyModel())
             {
                 return P.UNITs.ToList();
+            }
+        }
+
+        public List<CUSTOMER> getListCus()
+        {
+            using (PharmacyModel P=new PharmacyModel())
+            {
+                return P.CUSTOMERs.ToList();
             }
         }
 

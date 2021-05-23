@@ -37,7 +37,6 @@ namespace Pharmacy.StaffSubtab
             price.Text = medicine.sell_price.ToString();
             ComboBoxStock.Items.AddRange(medicine.STOCK_DETAIL.ToArray());
             ComboBoxStock.SelectedIndex = 0;
-            Qty.Text = "1";
             Total.Text = medicine.sell_price.ToString();
 
             medicine.quantysell = 1;
@@ -79,8 +78,16 @@ namespace Pharmacy.StaffSubtab
                     int a = Convert.ToInt32(Qty.Text);
                     if (a < 1)
                         throw new Exception();
+                    if (a > ((STOCK_DETAIL)ComboBoxStock.SelectedItem).QUANTITY)
+                    {
+                        MessageBox.Show("Số lượng mua lớn hơn số lượng còn trong lô!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw new Exception();
+                    }
                     int t = a * medicine.sell_price;
                     this.Total.Text = t.ToString();
+                    medicine.quantysell = a;
+                    medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
+                    d2();
                 }
                 
             }
@@ -88,34 +95,23 @@ namespace Pharmacy.StaffSubtab
             {
                 this.Qty.Text = "1";
                 this.Total.Text = medicine.sell_price.ToString();
+                medicine.quantysell = 1;
+                medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
+                d2();
             }
+            
         }
 
-        private void Qty_Leave(object sender, EventArgs e)
+        private void Qty_Leave_1(object sender, EventArgs e)
         {
             if ("".Equals(this.Qty.Text))
             {
                 this.Qty.Text = "1";
                 this.Total.Text = medicine.sell_price.ToString();
+                medicine.quantysell = 1;
+                medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
+                d2();
             }
-        }
-
-        private void guna2ShadowPanel1_Leave(object sender, EventArgs e)
-        {
-            medicine.quantysell = Convert.ToInt32( Qty.Text);
-            medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
-            d2();
-        }
-
-
-
-        
-
-        private void Qty_Enter(object sender, EventArgs e)
-        {
-            medicine.quantysell = Convert.ToInt32(Qty.Text);
-            medicine.stock_detail_Id = ((STOCK_DETAIL)ComboBoxStock.SelectedItem).ID;
-            d2();
         }
     }
 }

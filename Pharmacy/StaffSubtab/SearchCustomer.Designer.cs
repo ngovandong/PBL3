@@ -1,7 +1,7 @@
 ﻿
 namespace Pharmacy.StaffSubtab
 {
-    partial class SearchList
+    partial class SearchCustomer
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,10 +29,10 @@ namespace Pharmacy.StaffSubtab
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchCustomer));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Searchbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -44,7 +44,7 @@ namespace Pharmacy.StaffSubtab
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.guna2TextBox1);
+            this.panel1.Controls.Add(this.Searchbox);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -63,30 +63,31 @@ namespace Pharmacy.StaffSubtab
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // guna2TextBox1
+            // Searchbox
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(45, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox1.PlaceholderText = "Search customer";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(361, 36);
-            this.guna2TextBox1.TabIndex = 4;
-            this.guna2TextBox1.Enter += new System.EventHandler(this.guna2TextBox1_Enter);
+            this.Searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Searchbox.DefaultText = "";
+            this.Searchbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Searchbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Searchbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Searchbox.DisabledState.Parent = this.Searchbox;
+            this.Searchbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Searchbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Searchbox.FocusedState.Parent = this.Searchbox;
+            this.Searchbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Searchbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Searchbox.HoverState.Parent = this.Searchbox;
+            this.Searchbox.Location = new System.Drawing.Point(45, 5);
+            this.Searchbox.Name = "Searchbox";
+            this.Searchbox.PasswordChar = '\0';
+            this.Searchbox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Searchbox.PlaceholderText = "Search customer";
+            this.Searchbox.SelectedText = "";
+            this.Searchbox.ShadowDecoration.Parent = this.Searchbox;
+            this.Searchbox.Size = new System.Drawing.Size(361, 36);
+            this.Searchbox.TabIndex = 4;
+            this.Searchbox.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.Searchbox.Enter += new System.EventHandler(this.Searchbox_Enter);
             // 
             // pictureBox1
             // 
@@ -116,7 +117,7 @@ namespace Pharmacy.StaffSubtab
             this.flowLayoutPanel1.Size = new System.Drawing.Size(454, 218);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
-            // SearchList
+            // SearchCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,7 +125,7 @@ namespace Pharmacy.StaffSubtab
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "SearchList";
+            this.Name = "SearchCustomer";
             this.Size = new System.Drawing.Size(454, 263);
             this.Leave += new System.EventHandler(this.SearchList_Leave);
             this.panel1.ResumeLayout(false);
@@ -141,6 +142,6 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox Searchbox;
     }
 }

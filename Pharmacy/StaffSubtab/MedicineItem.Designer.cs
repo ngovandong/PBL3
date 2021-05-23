@@ -64,7 +64,6 @@ namespace Pharmacy.StaffSubtab
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1145, 88);
             this.guna2ShadowPanel1.TabIndex = 0;
-            this.guna2ShadowPanel1.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.guna2ShadowPanel1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.guna2ShadowPanel1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -86,7 +85,6 @@ namespace Pharmacy.StaffSubtab
             this.ComboBoxStock.ShadowDecoration.Parent = this.ComboBoxStock;
             this.ComboBoxStock.Size = new System.Drawing.Size(140, 29);
             this.ComboBoxStock.TabIndex = 15;
-            this.ComboBoxStock.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.ComboBoxStock.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.ComboBoxStock.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -116,7 +114,6 @@ namespace Pharmacy.StaffSubtab
             this.Total.ShadowDecoration.Parent = this.Total;
             this.Total.Size = new System.Drawing.Size(120, 36);
             this.Total.TabIndex = 12;
-            this.Total.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.Total.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.Total.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -145,14 +142,13 @@ namespace Pharmacy.StaffSubtab
             this.price.ShadowDecoration.Parent = this.price;
             this.price.Size = new System.Drawing.Size(119, 36);
             this.price.TabIndex = 13;
-            this.price.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.price.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.price.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
             // Qty
             // 
             this.Qty.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Qty.DefaultText = "";
+            this.Qty.DefaultText = "1";
             this.Qty.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Qty.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Qty.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -169,12 +165,12 @@ namespace Pharmacy.StaffSubtab
             this.Qty.PasswordChar = '\0';
             this.Qty.PlaceholderText = "Qty";
             this.Qty.SelectedText = "";
+            this.Qty.SelectionStart = 1;
             this.Qty.ShadowDecoration.Parent = this.Qty;
             this.Qty.Size = new System.Drawing.Size(77, 36);
             this.Qty.TabIndex = 14;
             this.Qty.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            this.Qty.Enter += new System.EventHandler(this.Qty_Enter);
-            this.Qty.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
+            this.Qty.Leave += new System.EventHandler(this.Qty_Leave_1);
             this.Qty.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.Qty.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -187,7 +183,6 @@ namespace Pharmacy.StaffSubtab
             this.label1.Size = new System.Drawing.Size(96, 36);
             this.label1.TabIndex = 7;
             this.label1.Text = "Chọn lô";
-            this.label1.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.label1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.label1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -199,7 +194,6 @@ namespace Pharmacy.StaffSubtab
             this.NameMedicine.Size = new System.Drawing.Size(352, 38);
             this.NameMedicine.TabIndex = 8;
             this.NameMedicine.Text = "Thuoc so dau dau chong mat";
-            this.NameMedicine.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.NameMedicine.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.NameMedicine.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -212,7 +206,6 @@ namespace Pharmacy.StaffSubtab
             this.Unit.Size = new System.Drawing.Size(126, 38);
             this.Unit.TabIndex = 9;
             this.Unit.Text = "Đơn vị";
-            this.Unit.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.Unit.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.Unit.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -224,7 +217,6 @@ namespace Pharmacy.StaffSubtab
             this.MedicinCode.Size = new System.Drawing.Size(149, 38);
             this.MedicinCode.TabIndex = 10;
             this.MedicinCode.Text = "SP2212334";
-            this.MedicinCode.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.MedicinCode.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.MedicinCode.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -237,7 +229,6 @@ namespace Pharmacy.StaffSubtab
             this.NoMedicine.Size = new System.Drawing.Size(18, 20);
             this.NoMedicine.TabIndex = 6;
             this.NoMedicine.Text = "1";
-            this.NoMedicine.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.NoMedicine.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.NoMedicine.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
@@ -257,7 +248,6 @@ namespace Pharmacy.StaffSubtab
             this.guna2ImageButton1.Size = new System.Drawing.Size(66, 58);
             this.guna2ImageButton1.TabIndex = 5;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click_1);
-            this.guna2ImageButton1.Leave += new System.EventHandler(this.guna2ShadowPanel1_Leave);
             this.guna2ImageButton1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.guna2ImageButton1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 

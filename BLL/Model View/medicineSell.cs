@@ -15,6 +15,10 @@ namespace BLL.Model_View
         public string code { get; set; }
         public int sell_price { get; set; }
         public int Qty { get; set; }
+        public string Barcode { get; set; }
+        public string location { get; set; }
+        public string type { get; set; }
+        public string Ingredient { get; set; }
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
         public int stock_detail_Id{get;set;}
         public int quantysell { get; set; }

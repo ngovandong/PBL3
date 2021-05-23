@@ -180,17 +180,17 @@
     <Compile Include="StaffSubtab\addCustomer.Designer.cs">
       <DependentUpon>addCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffSubtab\searchItem.cs">
+    <Compile Include="StaffSubtab\CustomerItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffSubtab\searchItem.Designer.cs">
-      <DependentUpon>searchItem.cs</DependentUpon>
+    <Compile Include="StaffSubtab\CustomerItem.Designer.cs">
+      <DependentUpon>CustomerItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffSubtab\SearchList.cs">
+    <Compile Include="StaffSubtab\SearchCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffSubtab\SearchList.Designer.cs">
-      <DependentUpon>SearchList.cs</DependentUpon>
+    <Compile Include="StaffSubtab\SearchCustomer.Designer.cs">
+      <DependentUpon>SearchCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="StaffSubtab\SearchMedicineItem.cs">
       <SubType>UserControl</SubType>
@@ -294,11 +294,11 @@
     <EmbeddedResource Include="StaffSubtab\addCustomer.resx">
       <DependentUpon>addCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffSubtab\searchItem.resx">
-      <DependentUpon>searchItem.cs</DependentUpon>
+    <EmbeddedResource Include="StaffSubtab\CustomerItem.resx">
+      <DependentUpon>CustomerItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffSubtab\SearchList.resx">
-      <DependentUpon>SearchList.cs</DependentUpon>
+    <EmbeddedResource Include="StaffSubtab\SearchCustomer.resx">
+      <DependentUpon>SearchCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffSubtab\SearchMedicineItem.resx">
       <DependentUpon>SearchMedicineItem.cs</DependentUpon>

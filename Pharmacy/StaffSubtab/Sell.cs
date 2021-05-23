@@ -60,8 +60,22 @@ namespace Pharmacy.StaffSubtab
             Total.Text = tong.ToString();
         }
 
+        public void setDetail(medicineSell m)
+        {
+            MedicineNameLabel.Text = m.name;
+            MedicineCodeLabel.Text = m.code;
+            TypeMedicineLabel.Text = m.type;
+            QtyLabel.Text = m.Qty.ToString();
+            UnitLabel.Text = m.unit;
+            LocationLabel.Text = m.location;
+            PriceSellLabel.Text = m.sell_price.ToString();
+            IngredientTexbox.Text = m.Ingredient;
+            CodeBarLabel.Text = m.Barcode;
+        }
+
         public void addToSell(medicineSell m)
         {
+            setDetail(m);
             if (m.STOCK_DETAIL.Count > 0 && m.Qty > 0)
             {
                 var c = from p in ListMe where (m.ID == p.ID) select p;
@@ -75,13 +89,12 @@ namespace Pharmacy.StaffSubtab
                     flowLayoutPanel1.Controls.Add(i);
                     getTotal();
                 }
+                
             }
             else
             {
                 MessageBox.Show("Out of stock!");
             }
-            
-            
         }
         public void delItem(MedicineItem m)
         {
@@ -158,22 +171,27 @@ namespace Pharmacy.StaffSubtab
             }
         }
 
-        private void guna2TextBox6_TextChanged(object sender, EventArgs e)
+        private void receive_KeyPress(object sender, KeyPressEventArgs e)
         {
-            try
+            if (e.KeyChar == 13)
             {
-                if (!"".Equals(receive.Text))
+                try
                 {
-                    int a = Convert.ToInt32(receive.Text.Replace(",",""));
-                    change.Text = (a- Ncharge).ToString();
-                    changeNumber();
+                    if (!"".Equals(receive.Text))
+                    {
+                        int a = Convert.ToInt32(receive.Text.Replace(",", ""));
+                        change.Text = (a - Ncharge).ToString();
+                        changeNumber();
+                    }
+                }
+                catch (Exception)
+                {
+                    receive.Text = "";
+                    change.Text = "";
                 }
             }
-            catch (Exception)
-            {
-                receive.Text = "";
-                change.Text = "";
-            }
+            
         }
+
     }
 }

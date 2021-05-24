@@ -18,6 +18,5 @@ namespace BLL.Model_View
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
         public int stock_detail_Id{get;set;}
         public int quantysell { get; set; }
-
     }
 }

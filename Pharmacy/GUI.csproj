@@ -142,6 +142,18 @@
     <Compile Include="AdminTab\Manage Medicine\Sample.Designer.cs">
       <DependentUpon>Sample.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminTab\Manage Medicine\SearchMedicineItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\SearchMedicineItem.Designer.cs">
+      <DependentUpon>SearchMedicineItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\SearchSupplierItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\SearchSupplierItem.Designer.cs">
+      <DependentUpon>SearchSupplierItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminTab\Manage Medicine\StockDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +308,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\Sample.resx">
       <DependentUpon>Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\SearchMedicineItem.resx">
+      <DependentUpon>SearchMedicineItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\SearchSupplierItem.resx">
+      <DependentUpon>SearchSupplierItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\StockDetail.resx">
       <DependentUpon>StockDetail.cs</DependentUpon>

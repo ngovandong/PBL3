@@ -23,7 +23,7 @@ namespace BLL
                 return _Instance;
             }
         }
-        public _BLL() { }
+        private _BLL() { }
 
         public USER getUser(int ID)
         {
@@ -181,6 +181,82 @@ namespace BLL
                 }
             }
             return l;
+        }
+        public List<MedicineStock> getlistMedicineSearchinStock(string s)
+        {
+            List<MedicineStock> ls = new List<MedicineStock>();
+            foreach (var item in _DAL.Instance.getListMedicine())
+            {
+                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                {
+                    ls.Add(new MedicineStock
+                    {
+                        ID = item.ID,
+                        name = item.MEDICINE_NAME,
+                        original_price = item.ORIGINAL_PRICE,
+                        unit = item.UNIT.NAME,
+                        quantityInKho = item.QUANTITY,
+                        sale_price = item.SALE_PRICE
+                    });
+                }
+            }
+            return ls;
+        }
+        public void addSupplier(SUPPLIER m)
+        {
+            _DAL.Instance.addSupplier(m);
+        }
+        public List<SupplierView> getListSupplierView(string name)
+        {
+            return _DAL.Instance.getListSupplier().Where(p => p.NAME.ToLower().Contains(name.ToLower())).Select(p => new SupplierView() { ID = p.ID, Name = p.NAME, Phone = p.PHONE_NUMBER }).ToList();
+        }
+        public bool checkSupplier(int id)
+        {
+            foreach (var item in _DAL.Instance.getListSupplier())
+            {
+                if (id == item.ID)
+                    return true;
+            }
+            return false;
+        }
+        public bool checkSupplier(string name)
+        {
+            foreach (var item in _DAL.Instance.getListSupplier())
+            {
+                if (name == item.NAME)
+                    return true;
+            }
+            return false;
+        }
+        public SUPPLIER getSupplier(int id)
+        {
+            foreach (var item in _DAL.Instance.getListSupplier())
+            {
+                if (id == item.ID)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+        public void addStock(STOCK stock)
+        {
+            _DAL.Instance.addStock(stock);
+        }
+        public MEDICINE getMedicineStocktoMedicine(MedicineStock m)
+        {
+            return _DAL.Instance.getMedicine(m.ID)[0];
+        }
+        public bool checkNameStock(string name)
+        {
+            foreach (var item in _DAL.Instance.getListStock())
+            {
+                if (name == item.Name)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public List<COMBOBOX_ITEM> getListCBBMedicine_Type()

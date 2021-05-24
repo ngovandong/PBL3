@@ -158,6 +158,43 @@ namespace DAL
                 return P.PHARMARCY_PROFILEs.OrderByDescending(f => f.PHARMACY_PROFILEID).FirstOrDefault();
             }
         }
+        public void addSupplier(SUPPLIER s)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                P.SUPPLIERs.Add(s);
+                P.SaveChanges();
+            }
+        }
+        public List<SUPPLIER> getListSupplier()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.SUPPLIERs.ToList();
+            }
+        }
+        public void addStock(STOCK stock)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                P.STOCKs.Add(stock);
+                P.SaveChanges();
+            }
+        }
+        public List<STOCK> getListStock()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.STOCKs.ToList();
+            }
+        }
+        public List<MEDICINE> getMedicine(int id)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.MEDICINEs.Where(p => id == p.ID).ToList();
+            }
+        }
 
         public void UpdateProfile(PHARMACY_PROFILE f)
         {

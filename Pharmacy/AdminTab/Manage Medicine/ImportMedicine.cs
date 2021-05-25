@@ -34,5 +34,18 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             StockDetail stockDetail = new StockDetail();
             stockDetail.ShowDialog();
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void setCBBItem()
+        {
+
+        }
+        private void setDataGridView()
+        {
+
+        }
     }
 }

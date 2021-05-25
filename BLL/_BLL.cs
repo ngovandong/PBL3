@@ -401,5 +401,39 @@ namespace BLL
             return _DAL.Instance.getProfile();
 
         }
+        public STOCK_VIEW stockToStockView(STOCK temp)
+        {
+            return new STOCK_VIEW()
+            {
+                id = temp.ID,
+                nameStock = temp.Name,
+                nameSupplier = temp.SUPPLIER.NAME,
+                dateImport = temp.DATE.Value.Date,
+                priceTotal = temp.PRICETOTAL
+            };
+        }
+        public List<STOCK_VIEW> getListStockView(string name, string option)
+        {
+            List<STOCK_VIEW> results = new List<STOCK_VIEW>();
+            if ("NAME" == option)
+            {
+                foreach(var item in _DAL.Instance.getListStock().Where(p => p.Name.ToLower().Contains(name.ToLower())))
+                {
+                    results.Add(stockToStockView(item));
+                }
+            }
+            else if ("SUPPLIER" == option)
+            {
+                foreach(var item in _DAL.Instance.getListStock().Where(p => p.SUPPLIER.NAME.ToLower().Contains(name.ToLower())))
+                {
+                    results.Add(stockToStockView(item));
+                }
+            }
+            else
+            {
+                
+            }
+            return results;
+        }
     }
 }

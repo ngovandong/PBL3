@@ -185,7 +185,9 @@ namespace DAL
         {
             using (PharmacyModel P = new PharmacyModel())
             {
-                return P.STOCKs.ToList();
+                //return P.STOCKs.ToList();
+                return P.STOCKs.Include("SUPPLIER").Include("STOCK_DETAIL.MEDICINE").Include("UNIT").Include("MEDICINE_TYPE").ToList();
+                //return P.MEDICINEs.Include("UNIT").Include("STOCK_DETAIL.STOCK").Include("MEDICINE_TYPE").ToList();
             }
         }
         public List<MEDICINE> getMedicine(int id)

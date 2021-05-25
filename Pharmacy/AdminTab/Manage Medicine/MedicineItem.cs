@@ -65,6 +65,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private void textBoxDonGia_MouseLeave(object sender, EventArgs e)
         {
+
+            if (textBoxDonGia.Text == "")
+            {
+                textBoxDonGia.Text = "0";
+            }
             int don_gia = Convert.ToInt32(textBoxDonGia.Text);
             int so_luong = Convert.ToInt32(numericUpDownSoluong.Value);
             if(textboxGiamGia.Text == "")
@@ -77,7 +82,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 giam_gia = 100;
             }
             textBoxThanhTien.Text = (don_gia * so_luong * (100 - giam_gia) / 100).ToString();
-            medicine.final_price = don_gia * so_luong * (100 - giam_gia) / 100;
+            medicine.final_price = don_gia * (100 - giam_gia) / 100;
             d2();
         }
 
@@ -105,6 +110,12 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         }
 
         private void textboxGiamGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void textBoxDonGia_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;

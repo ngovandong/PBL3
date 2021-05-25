@@ -56,6 +56,7 @@
     <Compile Include="Model View\medicineSell.cs" />
     <Compile Include="Model View\MedicineStock.cs" />
     <Compile Include="Model View\SAMPLE_VIEW.cs" />
+    <Compile Include="Model View\STOCK_VIEW.cs" />
     <Compile Include="Model View\SupplierView.cs" />
     <Compile Include="Model View\USER_VIEW.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -80,6 +80,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxSale = new Guna.UI2.WinForms.Guna2TextBox();
             this.textboxPriceTotalBefore = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -394,6 +395,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxSearchMedicine.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxSearchMedicine.FocusedState.Parent = this.textBoxSearchMedicine;
             this.textBoxSearchMedicine.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxSearchMedicine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textBoxSearchMedicine.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxSearchMedicine.HoverState.Parent = this.textBoxSearchMedicine;
             this.textBoxSearchMedicine.IconLeft = ((System.Drawing.Image)(resources.GetObject("textBoxSearchMedicine.IconLeft")));
@@ -412,17 +414,18 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label5.Location = new System.Drawing.Point(3, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(430, 90);
+            this.label5.Size = new System.Drawing.Size(405, 90);
             this.label5.TabIndex = 34;
             this.label5.Text = "Nhập Hàng";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.guna2Separator2);
             this.panel2.Controls.Add(this.flowLayoutPanel3);
             this.panel2.Controls.Add(this.textboxSupplier);
             this.panel2.Controls.Add(this.lbRedName);
@@ -461,6 +464,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.textboxSupplier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textboxSupplier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textboxSupplier.BorderThickness = 0;
             this.textboxSupplier.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textboxSupplier.DefaultText = "";
             this.textboxSupplier.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -468,9 +472,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxSupplier.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textboxSupplier.DisabledState.Parent = this.textboxSupplier;
             this.textboxSupplier.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxSupplier.FillColor = System.Drawing.SystemColors.Control;
             this.textboxSupplier.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxSupplier.FocusedState.Parent = this.textboxSupplier;
             this.textboxSupplier.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxSupplier.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxSupplier.HoverState.Parent = this.textboxSupplier;
             this.textboxSupplier.IconLeft = ((System.Drawing.Image)(resources.GetObject("textboxSupplier.IconLeft")));
@@ -490,7 +496,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.lbRedName.AutoSize = true;
             this.lbRedName.ForeColor = System.Drawing.Color.Red;
-            this.lbRedName.Location = new System.Drawing.Point(37, 218);
+            this.lbRedName.Location = new System.Drawing.Point(43, 221);
             this.lbRedName.Name = "lbRedName";
             this.lbRedName.Size = new System.Drawing.Size(96, 17);
             this.lbRedName.TabIndex = 45;
@@ -501,7 +507,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(30, 152);
+            this.label15.Location = new System.Drawing.Point(38, 152);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(74, 22);
             this.label15.TabIndex = 44;
@@ -509,6 +515,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // textboxNameStock
             // 
+            this.textboxNameStock.BorderThickness = 0;
             this.textboxNameStock.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textboxNameStock.DefaultText = "";
             this.textboxNameStock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -516,9 +523,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxNameStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textboxNameStock.DisabledState.Parent = this.textboxNameStock;
             this.textboxNameStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxNameStock.FillColor = System.Drawing.SystemColors.Control;
             this.textboxNameStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxNameStock.FocusedState.Parent = this.textboxNameStock;
             this.textboxNameStock.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxNameStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxNameStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxNameStock.HoverState.Parent = this.textboxNameStock;
             this.textboxNameStock.Location = new System.Drawing.Point(34, 177);
@@ -587,7 +596,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // buttonAddSupplier
             // 
-            this.buttonAddSupplier.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonAddSupplier.BackColor = System.Drawing.SystemColors.Control;
             this.buttonAddSupplier.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.buttonAddSupplier.CheckedState.Parent = this.buttonAddSupplier;
             this.buttonAddSupplier.HoverState.ImageSize = new System.Drawing.Size(64, 64);
@@ -605,6 +614,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Location = new System.Drawing.Point(34, 553);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(372, 153);
@@ -653,6 +664,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // textboxPriceTotalAfter
             // 
+            this.textboxPriceTotalAfter.BorderThickness = 0;
             this.textboxPriceTotalAfter.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textboxPriceTotalAfter.DefaultText = "0";
             this.textboxPriceTotalAfter.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -660,9 +672,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxPriceTotalAfter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textboxPriceTotalAfter.DisabledState.Parent = this.textboxPriceTotalAfter;
             this.textboxPriceTotalAfter.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxPriceTotalAfter.FillColor = System.Drawing.SystemColors.Control;
             this.textboxPriceTotalAfter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxPriceTotalAfter.FocusedState.Parent = this.textboxPriceTotalAfter;
             this.textboxPriceTotalAfter.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxPriceTotalAfter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxPriceTotalAfter.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxPriceTotalAfter.HoverState.Parent = this.textboxPriceTotalAfter;
             this.textboxPriceTotalAfter.Location = new System.Drawing.Point(192, 463);
@@ -679,6 +693,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // textboxSale
             // 
+            this.textboxSale.BorderThickness = 0;
             this.textboxSale.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textboxSale.DefaultText = "0";
             this.textboxSale.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -686,9 +701,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxSale.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textboxSale.DisabledState.Parent = this.textboxSale;
             this.textboxSale.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxSale.FillColor = System.Drawing.SystemColors.Control;
             this.textboxSale.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxSale.FocusedState.Parent = this.textboxSale;
             this.textboxSale.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxSale.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxSale.HoverState.Parent = this.textboxSale;
             this.textboxSale.Location = new System.Drawing.Point(192, 386);
@@ -706,6 +723,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // textboxPriceTotalBefore
             // 
+            this.textboxPriceTotalBefore.BorderThickness = 0;
             this.textboxPriceTotalBefore.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textboxPriceTotalBefore.DefaultText = "0";
             this.textboxPriceTotalBefore.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -713,9 +731,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxPriceTotalBefore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textboxPriceTotalBefore.DisabledState.Parent = this.textboxPriceTotalBefore;
             this.textboxPriceTotalBefore.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxPriceTotalBefore.FillColor = System.Drawing.SystemColors.Control;
             this.textboxPriceTotalBefore.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxPriceTotalBefore.FocusedState.Parent = this.textboxPriceTotalBefore;
             this.textboxPriceTotalBefore.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxPriceTotalBefore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxPriceTotalBefore.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxPriceTotalBefore.HoverState.Parent = this.textboxPriceTotalBefore;
             this.textboxPriceTotalBefore.Location = new System.Drawing.Point(192, 327);
@@ -734,7 +754,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // guna2DateTimePicker1
             // 
             this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
@@ -746,6 +766,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(237, 36);
             this.guna2DateTimePicker1.TabIndex = 0;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 21, 10, 15, 19, 861);
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillColor = System.Drawing.Color.DimGray;
+            this.guna2Separator2.Location = new System.Drawing.Point(44, 210);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(316, 10);
+            this.guna2Separator2.TabIndex = 50;
             // 
             // AddStock
             // 
@@ -837,5 +865,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private System.Windows.Forms.Label lbRedName;
         private Guna.UI2.WinForms.Guna2TextBox textboxSupplier;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
     }
 }

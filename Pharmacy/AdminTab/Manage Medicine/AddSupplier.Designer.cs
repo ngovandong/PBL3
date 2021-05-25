@@ -160,6 +160,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxEmail.FocusedState.Parent = this.textboxEmail;
             this.textboxEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxEmail.HoverState.Parent = this.textboxEmail;
             this.textboxEmail.Location = new System.Drawing.Point(247, 14);
@@ -203,6 +204,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxAddress.FocusedState.Parent = this.textboxAddress;
             this.textboxAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxAddress.HoverState.Parent = this.textboxAddress;
             this.textboxAddress.Location = new System.Drawing.Point(247, 14);
@@ -246,6 +248,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxPhone.FocusedState.Parent = this.textboxPhone;
             this.textboxPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxPhone.HoverState.Parent = this.textboxPhone;
             this.textboxPhone.Location = new System.Drawing.Point(247, 14);
@@ -290,6 +293,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxName.FocusedState.Parent = this.textboxName;
             this.textboxName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxName.HoverState.Parent = this.textboxName;
             this.textboxName.Location = new System.Drawing.Point(247, 15);

@@ -149,6 +149,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxThanhTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxThanhTien.FocusedState.Parent = this.textBoxThanhTien;
             this.textBoxThanhTien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxThanhTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textBoxThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxThanhTien.HoverState.Parent = this.textBoxThanhTien;
             this.textBoxThanhTien.Location = new System.Drawing.Point(20, 20);
@@ -184,6 +185,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxGiamGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxGiamGia.FocusedState.Parent = this.textboxGiamGia;
             this.textboxGiamGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxGiamGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textboxGiamGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxGiamGia.HoverState.Parent = this.textboxGiamGia;
             this.textboxGiamGia.Location = new System.Drawing.Point(16, 22);
@@ -220,19 +222,20 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxDonGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxDonGia.FocusedState.Parent = this.textBoxDonGia;
             this.textBoxDonGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxDonGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textBoxDonGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxDonGia.HoverState.Parent = this.textBoxDonGia;
             this.textBoxDonGia.Location = new System.Drawing.Point(17, 20);
             this.textBoxDonGia.Name = "textBoxDonGia";
             this.textBoxDonGia.PasswordChar = '\0';
             this.textBoxDonGia.PlaceholderText = "";
-            this.textBoxDonGia.ReadOnly = true;
             this.textBoxDonGia.SelectedText = "";
             this.textBoxDonGia.SelectionStart = 1;
             this.textBoxDonGia.ShadowDecoration.Parent = this.textBoxDonGia;
             this.textBoxDonGia.Size = new System.Drawing.Size(147, 36);
             this.textBoxDonGia.TabIndex = 0;
             this.textBoxDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxDonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDonGia_KeyPress);
             this.textBoxDonGia.MouseLeave += new System.EventHandler(this.textBoxDonGia_MouseLeave);
             // 
             // panel11
@@ -274,6 +277,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // textBoxDonVi
             // 
+            this.textBoxDonVi.BorderThickness = 0;
             this.textBoxDonVi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxDonVi.DefaultText = "";
             this.textBoxDonVi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -281,9 +285,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxDonVi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBoxDonVi.DisabledState.Parent = this.textBoxDonVi;
             this.textBoxDonVi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxDonVi.FillColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxDonVi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxDonVi.FocusedState.Parent = this.textBoxDonVi;
             this.textBoxDonVi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxDonVi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.textBoxDonVi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxDonVi.HoverState.Parent = this.textBoxDonVi;
             this.textBoxDonVi.Location = new System.Drawing.Point(22, 20);

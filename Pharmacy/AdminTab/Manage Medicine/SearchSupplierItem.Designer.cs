@@ -31,6 +31,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             this.lbName = new System.Windows.Forms.Label();
             this.lbPhone = new System.Windows.Forms.Label();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.SuspendLayout();
             // 
             // lbName
@@ -57,14 +58,24 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.lbPhone.Click += new System.EventHandler(this.Mouse_Click);
             this.lbPhone.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click);
             // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillColor = System.Drawing.Color.DimGray;
+            this.guna2Separator2.Location = new System.Drawing.Point(0, 41);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(286, 10);
+            this.guna2Separator2.TabIndex = 51;
+            // 
             // SearchSupplierItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.guna2Separator2);
             this.Controls.Add(this.lbPhone);
             this.Controls.Add(this.lbName);
             this.Name = "SearchSupplierItem";
-            this.Size = new System.Drawing.Size(245, 44);
+            this.Size = new System.Drawing.Size(286, 48);
             this.Click += new System.EventHandler(this.Mouse_Click);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click);
             this.ResumeLayout(false);
@@ -76,5 +87,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbPhone;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
     }
 }

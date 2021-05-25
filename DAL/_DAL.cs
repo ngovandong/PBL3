@@ -214,5 +214,13 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+
+        public List<SAMPLE> getListSample()
+        {
+            using(PharmacyModel P= new PharmacyModel())
+            {
+                return P.SAMPLEs.Include("SAMPLE_DETAIL.MEDICINE.STOCK_DETAIL.STOCK").Include("SAMPLE_DETAIL.MEDICINE.UNIT").Include("SAMPLE_DETAIL.MEDICINE.MEDICINE_TYPE").ToList();
+            }
+        }
     }
 }

@@ -25,10 +25,9 @@ namespace Pharmacy.StaffSubtab
         {
             InitializeComponent();
             this.medicine = m;
-            setStart();
         }
 
-        public void setStart()
+        private void MedicineItem_Load(object sender, EventArgs e)
         {
             this.ID = medicine.ID;
             MedicinCode.Text = medicine.code;
@@ -38,9 +37,9 @@ namespace Pharmacy.StaffSubtab
             ComboBoxStock.Items.AddRange(medicine.STOCK_DETAIL.ToArray());
             ComboBoxStock.SelectedIndex = 0;
             Total.Text = medicine.sell_price.ToString();
-            medicine.quantysell = 1;
+            Qty.Text = medicine.quantysell.ToString();
         }
-        
+
         private string _no;
         [Category("Custom Prop")]
         public string No
@@ -114,5 +113,7 @@ namespace Pharmacy.StaffSubtab
             medicine.stock_detail = ((STOCK_DETAIL)ComboBoxStock.SelectedItem);
             StockDetailLabel.Text = medicine.stock_detail.dateExpire.ToShortDateString() + " Tồn: " + medicine.stock_detail.QUANTITY.ToString();
         }
+
+        
     }
 }

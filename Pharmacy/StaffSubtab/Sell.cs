@@ -38,8 +38,8 @@ namespace Pharmacy.StaffSubtab
             discount.Text = "0";
             Total.Text = "0";
             ListMe = new List<MedicineItem>();
-            guna2TextBox1_TextChanged(null, new EventArgs());
-            
+            guna2TextBox1_TextChanged(null, null);
+            SearchSampleTextbox_TextChanged(null, null);
         }
 
         public void refresh()
@@ -145,7 +145,7 @@ namespace Pharmacy.StaffSubtab
             flowLayoutPanel2.SuspendLayout();
             try
             {
-                foreach (var item in _BLL.Instance.getlistMedicineSearch(TextBoxSearchMedicine.Text))
+                foreach (medicineSell item in _BLL.Instance.getlistMedicineSearch(TextBoxSearchMedicine.Text))
                 {
                     SearchMedicineItem s = new SearchMedicineItem(item);
                     s.d = new SearchMedicineItem.Mydel(addToSell);
@@ -250,6 +250,39 @@ namespace Pharmacy.StaffSubtab
             else
             {
                 MessageBox.Show("Không có gì để thanh toán!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SearchSampleTextbox_TextChanged(object sender, EventArgs e)
+        {
+            SampleDataGridView.DataSource = _BLL.Instance.getListSampleView(SearchSampleTextbox.Text);
+            SampleDataGridView.Columns[0].Visible = false;
+        }
+
+
+        private void SampleDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            ListMe.Clear();
+            int id = (int)SampleDataGridView.SelectedRows[0].Cells[0].Value;
+            SAMPLE s = _BLL.Instance.getSample(id);
+            Note.Text = s.PRESCRIPTION;
+            foreach (var item in _BLL.Instance.getlistMedicineSearch(id))
+            {
+                if (item.STOCK_DETAIL.Count > 0 && item.Qty >item.quantysell)
+                {
+                        MedicineItem i = new MedicineItem(item);
+                        i.d1 = new MedicineItem.Mydel1(delItem);
+                        i.d2 = new MedicineItem.Mydel2(getTotal);
+                        ListMe.Add(i);
+                        i.No = (ListMe.Count).ToString();
+                        flowLayoutPanel1.Controls.Add(i);
+                        getTotal();
+                }
+                else
+                {
+                    MessageBox.Show("Hết hàng!");
+                }
             }
         }
     }

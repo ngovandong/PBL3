@@ -31,6 +31,7 @@ namespace Pharmacy.StaffSubtab
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicineItem));
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.StockDetailLabel = new System.Windows.Forms.Label();
             this.ComboBoxStock = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Total = new Guna.UI2.WinForms.Guna2TextBox();
             this.price = new Guna.UI2.WinForms.Guna2TextBox();
@@ -41,7 +42,6 @@ namespace Pharmacy.StaffSubtab
             this.MedicinCode = new System.Windows.Forms.Label();
             this.NoMedicine = new System.Windows.Forms.Label();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.StockDetailLabel = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,15 @@ namespace Pharmacy.StaffSubtab
             this.guna2ShadowPanel1.TabIndex = 0;
             this.guna2ShadowPanel1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.guna2ShadowPanel1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
+            // 
+            // StockDetailLabel
+            // 
+            this.StockDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            this.StockDetailLabel.Location = new System.Drawing.Point(389, 8);
+            this.StockDetailLabel.Name = "StockDetailLabel";
+            this.StockDetailLabel.Size = new System.Drawing.Size(410, 28);
+            this.StockDetailLabel.TabIndex = 16;
             // 
             // ComboBoxStock
             // 
@@ -254,15 +263,6 @@ namespace Pharmacy.StaffSubtab
             this.guna2ImageButton1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.guna2ImageButton1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
-            // StockDetailLabel
-            // 
-            this.StockDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StockDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
-            this.StockDetailLabel.Location = new System.Drawing.Point(389, 8);
-            this.StockDetailLabel.Name = "StockDetailLabel";
-            this.StockDetailLabel.Size = new System.Drawing.Size(410, 28);
-            this.StockDetailLabel.TabIndex = 16;
-            // 
             // MedicineItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -270,6 +270,7 @@ namespace Pharmacy.StaffSubtab
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Name = "MedicineItem";
             this.Size = new System.Drawing.Size(1145, 88);
+            this.Load += new System.EventHandler(this.MedicineItem_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);

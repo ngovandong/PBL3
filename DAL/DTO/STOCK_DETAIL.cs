@@ -11,8 +11,6 @@ namespace DAL
         [Key]
         public int ID { get; set; }
 
-
-
         public int ORGIGINAL_PRICE { get; set; }
 
         public int QUANTITY { get; set; }
@@ -25,6 +23,7 @@ namespace DAL
         public virtual MEDICINE MEDICINE { get; set; }
 
         [Required]
+        [ForeignKey("STOCK")]
         public int ID_STOCK { get; set; }
         public virtual STOCK STOCK { get; set; }
 

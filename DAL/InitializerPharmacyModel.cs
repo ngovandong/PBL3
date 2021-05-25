@@ -8,7 +8,7 @@ using DAL.DTO;
 
 namespace DAL
 {
-    class InitializerPharmacyModel:DropCreateDatabaseIfModelChanges<PharmacyModel>
+    class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
     {
         protected override void Seed(PharmacyModel context)
         {
@@ -72,7 +72,7 @@ namespace DAL
                 ID_SUB = "3945834",
                 LOCATION = "Ke A",
                 UNIT = u1,
-                QUANTITY = 10,
+                QUANTITY = 50,
             };
 
             MEDICINE m1 = new MEDICINE
@@ -85,7 +85,7 @@ namespace DAL
                 INGREDIENT = "pllplpplllpl",
                 CONTENT = "ololololo",
                 BRAND = "Prospan",
-                QUANTITY = 20,
+                QUANTITY = 55,
                 ORIGINAL_PRICE = 10000,
                 SALE_PRICE = 50000,
                 TYPEID = 1,
@@ -102,7 +102,7 @@ namespace DAL
                 INGREDIENT = "pllplpplllpl",
                 CONTENT = "ololololo",
                 BRAND = "Prospan",
-                QUANTITY = 0,
+                QUANTITY = 20,
                 ORIGINAL_PRICE = 15000,
                 SALE_PRICE = 20000,
                 MEDICINE_TYPE=t2,
@@ -195,6 +195,46 @@ namespace DAL
             };
 
             context.CUSTOMERs.AddRange(new CUSTOMER[] { c1, c2, c3 });
+
+            SAMPLE sa1 = new SAMPLE
+            {
+                NAME = "Thuốc ho",
+                PRESCRIPTION = "uống sáng tối, ăn trước khi uống"
+
+            };
+
+            sa1.SAMPLE_DETAIL.Add(new SAMPLE_DETAIL
+            {
+                MEDICINE = m1,
+                QTY = 3,
+            });
+            sa1.SAMPLE_DETAIL.Add(new SAMPLE_DETAIL
+            {
+                MEDICINE = m2,
+                QTY = 2
+            });
+
+            SAMPLE sa2 = new SAMPLE
+            {
+                NAME = "Thuốc dạ dày",
+                PRESCRIPTION = "uống trước khi ăn, sáng tối"
+            };
+
+            sa2.SAMPLE_DETAIL.Add(new SAMPLE_DETAIL
+            {
+                MEDICINE = m1,
+                QTY = 10
+            });
+            sa2.SAMPLE_DETAIL.Add(new SAMPLE_DETAIL
+            {
+                MEDICINE = m3,
+                QTY = 3
+            });
+
+            context.SAMPLEs.AddRange(new SAMPLE[] { sa1, sa2 });
+
+
+
         }
     }
 }

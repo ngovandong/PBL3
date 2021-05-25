@@ -176,7 +176,8 @@ namespace BLL
                         location = item.LOCATION,
                         Barcode = item.BARCODE,
                         Ingredient = item.INGREDIENT,
-                        type = item.MEDICINE_TYPE.TypeName
+                        type = item.MEDICINE_TYPE.TypeName,
+                        quantysell=1
                     }) ;
                 }
             }
@@ -288,6 +289,48 @@ namespace BLL
             }
             return l;
         }
+
+        public List<SAMPLE_VIEW> getListSampleView(string text)
+        {
+            return _DAL.Instance.getListSample().Where(p=>p.NAME.Contains(text)).Select(p=> new SAMPLE_VIEW { 
+                ID=p.SAMPLEID,
+                Name=p.NAME
+            }).ToList();
+
+        }
+
+        public SAMPLE getSample(int ID)
+        {
+            return _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
+        }
+
+        public List<medicineSell> getlistMedicineSearch(int  ID)
+        {
+            SAMPLE a = _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
+            List<medicineSell> l = new List<medicineSell>();
+
+            foreach (var item in a.SAMPLE_DETAIL)
+            {
+                l.Add(new medicineSell
+                {
+                    ID = item.MEDICINE.ID,
+                    code = item.MEDICINE.MEDICINE_CODE,
+                    name = item.MEDICINE.MEDICINE_NAME,
+                    Qty = item.MEDICINE.QUANTITY,
+                    sell_price = item.MEDICINE.SALE_PRICE,
+                    unit = item.MEDICINE.UNIT.NAME,
+                    STOCK_DETAIL = item.MEDICINE.STOCK_DETAIL,
+                    location = item.MEDICINE.LOCATION,
+                    Barcode = item.MEDICINE.BARCODE,
+                    Ingredient = item.MEDICINE.INGREDIENT,
+                    type = item.MEDICINE.MEDICINE_TYPE.TypeName,
+                    quantysell=item.QTY,
+                });
+            }
+            
+            return l;
+        }
+
 
         public void addMedicine(MEDICINE m)
         {

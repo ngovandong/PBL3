@@ -48,16 +48,18 @@ namespace Pharmacy.StaffSubtab
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 44);
+            this.panel1.Size = new System.Drawing.Size(340, 36);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(411, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(308, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(22, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -77,14 +79,15 @@ namespace Pharmacy.StaffSubtab
             this.Searchbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Searchbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Searchbox.HoverState.Parent = this.Searchbox;
-            this.Searchbox.Location = new System.Drawing.Point(45, 5);
+            this.Searchbox.Location = new System.Drawing.Point(34, 4);
+            this.Searchbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Searchbox.Name = "Searchbox";
             this.Searchbox.PasswordChar = '\0';
             this.Searchbox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.Searchbox.PlaceholderText = "Search customer";
             this.Searchbox.SelectedText = "";
             this.Searchbox.ShadowDecoration.Parent = this.Searchbox;
-            this.Searchbox.Size = new System.Drawing.Size(361, 36);
+            this.Searchbox.Size = new System.Drawing.Size(271, 29);
             this.Searchbox.TabIndex = 4;
             this.Searchbox.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             this.Searchbox.Enter += new System.EventHandler(this.Searchbox_Enter);
@@ -92,9 +95,10 @@ namespace Pharmacy.StaffSubtab
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(22, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -103,30 +107,33 @@ namespace Pharmacy.StaffSubtab
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 44);
+            this.panel2.Location = new System.Drawing.Point(0, 36);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(454, 1);
+            this.panel2.Size = new System.Drawing.Size(340, 1);
             this.panel2.TabIndex = 4;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 45);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 37);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(454, 218);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(340, 177);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // SearchCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SearchCustomer";
-            this.Size = new System.Drawing.Size(454, 263);
+            this.Size = new System.Drawing.Size(340, 214);
             this.Leave += new System.EventHandler(this.SearchList_Leave);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -141,7 +148,7 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2TextBox Searchbox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

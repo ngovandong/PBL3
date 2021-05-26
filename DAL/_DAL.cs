@@ -168,5 +168,14 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+
+        public void addSample(SAMPLE s)
+        {
+            using(PharmacyModel P =new PharmacyModel())
+            {
+                P.SAMPLEs.Add(s);
+                P.SaveChanges();
+            }
+        }
     }
 }

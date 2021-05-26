@@ -162,7 +162,7 @@ namespace BLL
             List<medicineSell> l = new List<medicineSell>();
             foreach (var item in _DAL.Instance.getListMedicine())
             {
-                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                if (item.MEDICINE_NAME.ToLower().Contains(s.ToLower()))
                 {
                     l.Add(new medicineSell
                     {
@@ -276,6 +276,11 @@ namespace BLL
         {
             return _DAL.Instance.getProfile();
 
+        }
+
+        public void addSample(SAMPLE s)
+        {
+            _DAL.Instance.addSample(s);
         }
     }
 }

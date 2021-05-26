@@ -114,5 +114,7 @@ namespace Pharmacy.StaffSubtab
             medicine.stock_detail = ((STOCK_DETAIL)ComboBoxStock.SelectedItem);
             StockDetailLabel.Text = medicine.stock_detail.dateExpire.ToShortDateString() + " Tồn: " + medicine.stock_detail.QUANTITY.ToString();
         }
+
+        
     }
 }

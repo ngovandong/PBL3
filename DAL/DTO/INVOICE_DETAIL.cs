@@ -8,19 +8,17 @@ namespace DAL
 
     public partial class INVOICE_DETAIL
     {
-        [Key]
-        public int ID { get; set; }
 
         public int SALE_PRICE { get; set; }
         public int ORIGINAL_PRICE { get; set; }
 
         public int QUANTITY { get; set; }
 
-        [Required]
+        [ForeignKey("INVOICE")]
         public int ID_INVOICE { get; set; }
         public virtual INVOICE INVOICE { get; set; }
 
-        [Required]
+        [ForeignKey("MEDICINE")]
         public int ID_MEDICINE { get; set; }
         public virtual MEDICINE MEDICINE { get; set; }
     }

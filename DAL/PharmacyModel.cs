@@ -99,16 +99,13 @@ namespace DAL
                 .IsUnique(true);
 
             modelBuilder.Entity<SAMPLE_DETAIL>()
-                .HasIndex(e => new { e.MEDICINE_ID, e.SAMPLE_ID })
-                .IsUnique(true);
+                .HasKey(e => new { e.MEDICINE_ID, e.SAMPLE_ID });
 
             modelBuilder.Entity<INVOICE_DETAIL>()
-                .HasIndex(e => new { e.ID_MEDICINE, e.ID_INVOICE })
-                .IsUnique(true);
+                .HasKey(e => new { e.ID_INVOICE, e.ID_MEDICINE });
 
             modelBuilder.Entity<STOCK_DETAIL>()
-                .HasIndex(e => new { e.ID_MEDICINE, e.ID_STOCK })
-                .IsUnique(true);
+                .HasKey(e => new { e.ID_MEDICINE, e.ID_STOCK });
 
 
         }

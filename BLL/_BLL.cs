@@ -454,5 +454,10 @@ namespace BLL
             }
             return results;
         }
+
+        public void addSample(SAMPLE sample)
+        {
+            _DAL.Instance.addSample(sample);
+        }
     }
 }

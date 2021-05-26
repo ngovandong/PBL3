@@ -16,6 +16,7 @@ namespace Pharmacy.StaffSubtab
 {
     public partial class Sell : Form
     {
+        private CUSTOMER customer;
         private USER user;
         private int Ntotal;
         private int Ncharge;
@@ -40,8 +41,16 @@ namespace Pharmacy.StaffSubtab
             ListMe = new List<MedicineItem>();
             guna2TextBox1_TextChanged(null, null);
             SearchSampleTextbox_TextChanged(null, null);
+            searchList1.d = new SearchCustomer.Mydel(setCus);
         }
 
+        public void setCus(CUSTOMER c)
+        {
+            this.customer = c;
+            NameCustomerLabel.Text = c.Customer_name;
+            customerInvoiceHistoryDatagridview.DataSource = this.customer.INVOICEs.Select(p => new INVOICE_VIEW  { ID = p.ID_INVOICE, date = p.DATE.ToString() }).ToList();
+            customerInvoiceHistoryDatagridview.Columns[0].Visible = false;
+        }
         public void refresh()
         {
             ListMe = new List<MedicineItem>();
@@ -220,16 +229,33 @@ namespace Pharmacy.StaffSubtab
         {
             if (ListMe.Count > 0)
             {
-                INVOICE I = new INVOICE
+                INVOICE I;
+                if (this.customer == null)
                 {
-                    DATE = DateTime.Now,
-                    DISCOUNT = Ndiscount / 100.0,
-                    CUSTOMER = searchList1.Customer,
-                    PRESCRIPTION = Note.Text,
-                    User_ID = this.user.ID,
-                    TOTAL = Ntotal,
-                    CHARGE = Ncharge,
-                };
+                    I = new INVOICE
+                    {
+                        DATE = DateTime.Now,
+                        DISCOUNT = Ndiscount / 100.0,
+                        PRESCRIPTION = Note.Text,
+                        User_ID = this.user.ID,
+                        TOTAL = Ntotal,
+                        CHARGE = Ncharge,
+                    };
+                }
+                else
+                {
+                    I = new INVOICE
+                    {
+                        DATE = DateTime.Now,
+                        DISCOUNT = Ndiscount / 100.0,
+                        ID_CUSTOMER = this.customer.ID,
+                        PRESCRIPTION = Note.Text,
+                        User_ID = this.user.ID,
+                        TOTAL = Ntotal,
+                        CHARGE = Ncharge,
+                    };
+                }
+                
                 foreach (MedicineItem item in ListMe)
                 {
                     int oprice = item.medicine.stock_detail.ORGIGINAL_PRICE * item.medicine.quantysell;
@@ -278,6 +304,33 @@ namespace Pharmacy.StaffSubtab
                         i.No = (ListMe.Count).ToString();
                         flowLayoutPanel1.Controls.Add(i);
                         getTotal();
+                }
+                else
+                {
+                    MessageBox.Show("Hết hàng!");
+                }
+            }
+        }
+
+        private void customerInvoiceHistoryDatagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            ListMe.Clear();
+            int id = (int)customerInvoiceHistoryDatagridview.SelectedRows[0].Cells[0].Value;
+
+            INVOICE I = customer.INVOICEs.Where(p => p.ID_INVOICE == id).Select(p => p).Single();
+            Note.Text = I.PRESCRIPTION;
+            foreach (var item in _BLL.Instance.getlistMedicineSearch2(id))
+            {
+                if (item.STOCK_DETAIL.Count > 0 && item.Qty > item.quantysell)
+                {
+                    MedicineItem i = new MedicineItem(item);
+                    i.d1 = new MedicineItem.Mydel1(delItem);
+                    i.d2 = new MedicineItem.Mydel2(getTotal);
+                    ListMe.Add(i);
+                    i.No = (ListMe.Count).ToString();
+                    flowLayoutPanel1.Controls.Add(i);
+                    getTotal();
                 }
                 else
                 {

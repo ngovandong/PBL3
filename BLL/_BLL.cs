@@ -320,10 +320,6 @@ namespace BLL
                     sell_price = item.MEDICINE.SALE_PRICE,
                     unit = item.MEDICINE.UNIT.NAME,
                     STOCK_DETAIL = item.MEDICINE.STOCK_DETAIL,
-                    location = item.MEDICINE.LOCATION,
-                    Barcode = item.MEDICINE.BARCODE,
-                    Ingredient = item.MEDICINE.INGREDIENT,
-                    type = item.MEDICINE.MEDICINE_TYPE.TypeName,
                     quantysell=item.QTY,
                 });
             }
@@ -350,6 +346,29 @@ namespace BLL
                     sale_Price = item.SALE_PRICE,
                 });
             }
+            return l;
+        }
+
+        public List<medicineSell> getlistMedicineSearch2(int id)
+        {
+            INVOICE I=_DAL.Instance.getListInvoice().Where(p=>p.ID_INVOICE==id).Select(p=>p).Single();
+            List<medicineSell> l = new List<medicineSell>();
+
+            foreach (var item in I.INVOICE_DETAIL)
+            {
+                l.Add(new medicineSell
+                {
+                    ID = item.MEDICINE.ID,
+                    code = item.MEDICINE.MEDICINE_CODE,
+                    name = item.MEDICINE.MEDICINE_NAME,
+                    Qty = item.MEDICINE.QUANTITY,
+                    sell_price = item.MEDICINE.SALE_PRICE,
+                    unit = item.MEDICINE.UNIT.NAME,
+                    STOCK_DETAIL = item.MEDICINE.STOCK_DETAIL,
+                    quantysell = item.QUANTITY,
+                });
+            }
+
             return l;
         }
 

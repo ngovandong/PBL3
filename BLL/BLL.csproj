@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model View\COMBOBOX_ITEM.cs" />
+    <Compile Include="Model View\INVOICE_VIEW.cs" />
     <Compile Include="Model View\MEDICINE_VIEW.cs" />
     <Compile Include="Model View\medicineSell.cs" />
     <Compile Include="Model View\MedicineStock.cs" />

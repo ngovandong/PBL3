@@ -93,6 +93,24 @@ namespace DAL
                 .HasMany(e => e.MEDICINEs)
                 .WithRequired(e => e.UNIT)
                 .HasForeignKey(e => e.UNIT_ID);
+
+            modelBuilder.Entity<INVOICE_DETAIL>()
+                .HasIndex(e => new { e.ID_MEDICINE, e.ID_INVOICE })
+                .IsUnique(true);
+
+            modelBuilder.Entity<SAMPLE_DETAIL>()
+                .HasIndex(e => new { e.MEDICINE_ID, e.SAMPLE_ID })
+                .IsUnique(true);
+
+            modelBuilder.Entity<INVOICE_DETAIL>()
+                .HasIndex(e => new { e.ID_MEDICINE, e.ID_INVOICE })
+                .IsUnique(true);
+
+            modelBuilder.Entity<STOCK_DETAIL>()
+                .HasIndex(e => new { e.ID_MEDICINE, e.ID_STOCK })
+                .IsUnique(true);
+
+
         }
     }
 }

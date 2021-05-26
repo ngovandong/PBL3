@@ -65,7 +65,7 @@ namespace Pharmacy.StaffSubtab
             Ncharge = 0;
             searchList1 = new SearchCustomer();
             Note.Text = "";
-            TextBoxSearchMedicine.Text = "";
+            guna2TextBox1_TextChanged(null, null);
         }
 
         public void changeNumber()
@@ -268,6 +268,7 @@ namespace Pharmacy.StaffSubtab
                         ORIGINAL_PRICE = oprice,
                         SALE_PRICE = sprice,
                     });
+                    _BLL.Instance.UpdateStockDetail(item.medicine.stock_detail,item.medicine.quantysell);
                 }
                 _BLL.Instance.AddInvoice(I);
                 MessageBox.Show("Thanh toán thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

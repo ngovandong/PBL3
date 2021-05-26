@@ -304,6 +304,13 @@ namespace BLL
             return _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
         }
 
+        public void UpdateStockDetail(STOCK_DETAIL stock_detail, int quantysell)
+        {
+            stock_detail.QUANTITY -= quantysell;
+            _DAL.Instance.UpdateStockDetail(stock_detail);
+            _DAL.Instance.UpdateMedicine(stock_detail.ID_MEDICINE, quantysell);
+        }
+
         public List<medicineSell> getlistMedicineSearch(int  ID)
         {
             SAMPLE a = _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();

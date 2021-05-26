@@ -230,5 +230,25 @@ namespace DAL
                 return P.INVOICEs.Include("INVOICE_DETAIL.MEDICINE.UNIT").Include("INVOICE_DETAIL.MEDICINE.STOCK_DETAIL.STOCK").ToList();
             }
         }
+
+        public void UpdateStockDetail(STOCK_DETAIL stock_detail)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                STOCK_DETAIL s= P.STOCK_DETAIL.Find(stock_detail.ID_MEDICINE, stock_detail.ID_STOCK);
+                s.QUANTITY = stock_detail.QUANTITY;
+                P.SaveChanges();
+            }
+        }
+
+        public void UpdateMedicine(int iD_MEDICINE, int quantysell)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                MEDICINE m=P.MEDICINEs.Find(iD_MEDICINE);
+                m.QUANTITY -= quantysell;
+                P.SaveChanges();
+            }
+        }
     }
 }

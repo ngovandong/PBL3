@@ -30,6 +30,12 @@ namespace Pharmacy.StaffSubtab
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
+<<<<<<< HEAD
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+>>>>>>> develop
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,7 +46,7 @@ namespace Pharmacy.StaffSubtab
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Note = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,12 +65,11 @@ namespace Pharmacy.StaffSubtab
             this.receive = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.checkoutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.NameCustomerLabel = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -91,12 +96,16 @@ namespace Pharmacy.StaffSubtab
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.SampleDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SearchSampleTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+<<<<<<< HEAD
+=======
+            this.customerInvoiceHistoryDatagridview = new Guna.UI2.WinForms.Guna2DataGridView();
+>>>>>>> develop
             this.searchList1 = new Pharmacy.StaffSubtab.SearchCustomer();
             this.panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -114,9 +123,10 @@ namespace Pharmacy.StaffSubtab
             this.panel13.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SampleDataGridView)).BeginInit();
             this.guna2ShadowPanel3.SuspendLayout();
             this.guna2ShadowPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerInvoiceHistoryDatagridview)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -169,7 +179,7 @@ namespace Pharmacy.StaffSubtab
             this.TextBoxSearchMedicine.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxSearchMedicine.Name = "TextBoxSearchMedicine";
             this.TextBoxSearchMedicine.PasswordChar = '\0';
-            this.TextBoxSearchMedicine.PlaceholderText = "Search Medicine\r\n";
+            this.TextBoxSearchMedicine.PlaceholderText = "Tìm thuốc";
             this.TextBoxSearchMedicine.SelectedText = "";
             this.TextBoxSearchMedicine.ShadowDecoration.Parent = this.TextBoxSearchMedicine;
             this.TextBoxSearchMedicine.Size = new System.Drawing.Size(320, 29);
@@ -220,7 +230,7 @@ namespace Pharmacy.StaffSubtab
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.Note);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 59);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
@@ -228,8 +238,9 @@ namespace Pharmacy.StaffSubtab
             this.panel9.Size = new System.Drawing.Size(337, 271);
             this.panel9.TabIndex = 3;
             // 
-            // textBox1
+            // Note
             // 
+<<<<<<< HEAD
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -237,6 +248,14 @@ namespace Pharmacy.StaffSubtab
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(337, 271);
             this.textBox1.TabIndex = 2;
+=======
+            this.Note.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Note.Location = new System.Drawing.Point(0, 0);
+            this.Note.Multiline = true;
+            this.Note.Name = "Note";
+            this.Note.Size = new System.Drawing.Size(449, 335);
+            this.Note.TabIndex = 2;
+>>>>>>> develop
             // 
             // panel8
             // 
@@ -254,20 +273,32 @@ namespace Pharmacy.StaffSubtab
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
+<<<<<<< HEAD
             this.label7.Location = new System.Drawing.Point(48, 21);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 20);
+=======
+            this.label7.Location = new System.Drawing.Point(48, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 25);
+>>>>>>> develop
             this.label7.TabIndex = 5;
-            this.label7.Text = "Note";
+            this.label7.Text = "Chú thích";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+<<<<<<< HEAD
             this.pictureBox1.Location = new System.Drawing.Point(10, 15);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 26);
+=======
+            this.pictureBox1.Location = new System.Drawing.Point(14, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 25);
+>>>>>>> develop
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -328,9 +359,13 @@ namespace Pharmacy.StaffSubtab
             this.label3.Location = new System.Drawing.Point(2, 54);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
+<<<<<<< HEAD
             this.label3.Size = new System.Drawing.Size(96, 54);
+=======
+            this.label3.Size = new System.Drawing.Size(126, 67);
+>>>>>>> develop
             this.label3.TabIndex = 1;
-            this.label3.Text = "Discount(%)";
+            this.label3.Text = "Giảm giá (%)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -341,9 +376,13 @@ namespace Pharmacy.StaffSubtab
             this.label4.Location = new System.Drawing.Point(2, 108);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
+<<<<<<< HEAD
             this.label4.Size = new System.Drawing.Size(67, 54);
+=======
+            this.label4.Size = new System.Drawing.Size(115, 67);
+>>>>>>> develop
             this.label4.TabIndex = 2;
-            this.label4.Text = "Charge";
+            this.label4.Text = "Thành tiền";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -354,9 +393,13 @@ namespace Pharmacy.StaffSubtab
             this.label5.Location = new System.Drawing.Point(2, 162);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
+<<<<<<< HEAD
             this.label5.Size = new System.Drawing.Size(66, 54);
+=======
+            this.label5.Size = new System.Drawing.Size(100, 67);
+>>>>>>> develop
             this.label5.TabIndex = 3;
-            this.label5.Text = "Receive";
+            this.label5.Text = "Tiền nhận";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelChange
@@ -367,9 +410,13 @@ namespace Pharmacy.StaffSubtab
             this.labelChange.Location = new System.Drawing.Point(2, 216);
             this.labelChange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelChange.Name = "labelChange";
+<<<<<<< HEAD
             this.labelChange.Size = new System.Drawing.Size(65, 56);
+=======
+            this.labelChange.Size = new System.Drawing.Size(87, 67);
+>>>>>>> develop
             this.labelChange.TabIndex = 4;
-            this.labelChange.Text = "Change";
+            this.labelChange.Text = "Tiền thối";
             this.labelChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -380,9 +427,13 @@ namespace Pharmacy.StaffSubtab
             this.label2.Location = new System.Drawing.Point(2, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
+<<<<<<< HEAD
             this.label2.Size = new System.Drawing.Size(44, 54);
+=======
+            this.label2.Size = new System.Drawing.Size(94, 67);
+>>>>>>> develop
             this.label2.TabIndex = 0;
-            this.label2.Text = "Total";
+            this.label2.Text = "Tổng tiền";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // discount
@@ -540,7 +591,7 @@ namespace Pharmacy.StaffSubtab
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.guna2Button1);
+            this.panel3.Controls.Add(this.checkoutButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 641);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
@@ -548,6 +599,7 @@ namespace Pharmacy.StaffSubtab
             this.panel3.Size = new System.Drawing.Size(337, 170);
             this.panel3.TabIndex = 3;
             // 
+<<<<<<< HEAD
             // guna2Button1
             // 
             this.guna2Button1.BorderRadius = 5;
@@ -564,6 +616,24 @@ namespace Pharmacy.StaffSubtab
             this.guna2Button1.Size = new System.Drawing.Size(294, 78);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Check out";
+=======
+            // checkoutButton
+            // 
+            this.checkoutButton.BorderRadius = 5;
+            this.checkoutButton.CheckedState.Parent = this.checkoutButton;
+            this.checkoutButton.CustomImages.Parent = this.checkoutButton;
+            this.checkoutButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(173)))), ((int)(((byte)(81)))));
+            this.checkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.checkoutButton.ForeColor = System.Drawing.Color.White;
+            this.checkoutButton.HoverState.Parent = this.checkoutButton;
+            this.checkoutButton.Location = new System.Drawing.Point(30, 57);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.ShadowDecoration.Parent = this.checkoutButton;
+            this.checkoutButton.Size = new System.Drawing.Size(392, 96);
+            this.checkoutButton.TabIndex = 1;
+            this.checkoutButton.Text = "Thanh toán";
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
+>>>>>>> develop
             // 
             // panel2
             // 
@@ -606,7 +676,7 @@ namespace Pharmacy.StaffSubtab
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.listBox1);
+            this.panel15.Controls.Add(this.customerInvoiceHistoryDatagridview);
             this.panel15.Controls.Add(this.NameCustomerLabel);
             this.panel15.Controls.Add(this.label16);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -616,6 +686,7 @@ namespace Pharmacy.StaffSubtab
             this.panel15.Size = new System.Drawing.Size(203, 255);
             this.panel15.TabIndex = 7;
             // 
+<<<<<<< HEAD
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -625,16 +696,23 @@ namespace Pharmacy.StaffSubtab
             this.listBox1.Size = new System.Drawing.Size(246, 147);
             this.listBox1.TabIndex = 2;
             // 
+=======
+>>>>>>> develop
             // NameCustomerLabel
             // 
             this.NameCustomerLabel.AutoSize = true;
             this.NameCustomerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.NameCustomerLabel.Location = new System.Drawing.Point(124, 56);
             this.NameCustomerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+=======
+            this.NameCustomerLabel.Location = new System.Drawing.Point(98, 59);
+>>>>>>> develop
             this.NameCustomerLabel.Name = "NameCustomerLabel";
             this.NameCustomerLabel.Size = new System.Drawing.Size(54, 17);
             this.NameCustomerLabel.TabIndex = 1;
             this.NameCustomerLabel.Text = "label17";
+            this.NameCustomerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
@@ -898,8 +976,8 @@ namespace Pharmacy.StaffSubtab
             // panel10
             // 
             this.panel10.Controls.Add(this.pictureBox2);
-            this.panel10.Controls.Add(this.guna2DataGridView1);
-            this.panel10.Controls.Add(this.guna2TextBox7);
+            this.panel10.Controls.Add(this.SampleDataGridView);
+            this.panel10.Controls.Add(this.SearchSampleTextbox);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
@@ -918,8 +996,9 @@ namespace Pharmacy.StaffSubtab
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // guna2DataGridView1
+            // SampleDataGridView
             // 
+<<<<<<< HEAD
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1001,6 +1080,91 @@ namespace Pharmacy.StaffSubtab
             this.guna2TextBox7.ShadowDecoration.Parent = this.guna2TextBox7;
             this.guna2TextBox7.Size = new System.Drawing.Size(214, 29);
             this.guna2TextBox7.TabIndex = 0;
+=======
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.SampleDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.SampleDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SampleDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.SampleDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SampleDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.SampleDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SampleDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.SampleDataGridView.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SampleDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.SampleDataGridView.EnableHeadersVisualStyles = false;
+            this.SampleDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SampleDataGridView.Location = new System.Drawing.Point(12, 76);
+            this.SampleDataGridView.MultiSelect = false;
+            this.SampleDataGridView.Name = "SampleDataGridView";
+            this.SampleDataGridView.ReadOnly = true;
+            this.SampleDataGridView.RowHeadersVisible = false;
+            this.SampleDataGridView.RowHeadersWidth = 51;
+            this.SampleDataGridView.RowTemplate.Height = 24;
+            this.SampleDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SampleDataGridView.Size = new System.Drawing.Size(415, 226);
+            this.SampleDataGridView.TabIndex = 1;
+            this.SampleDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.SampleDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.SampleDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.SampleDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.SampleDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.SampleDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.SampleDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.SampleDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SampleDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            this.SampleDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.SampleDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.SampleDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.SampleDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.SampleDataGridView.ThemeStyle.HeaderStyle.Height = 30;
+            this.SampleDataGridView.ThemeStyle.ReadOnly = true;
+            this.SampleDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.SampleDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.SampleDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.SampleDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SampleDataGridView.ThemeStyle.RowsStyle.Height = 24;
+            this.SampleDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SampleDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SampleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SampleDataGridView_CellContentClick);
+            // 
+            // SearchSampleTextbox
+            // 
+            this.SearchSampleTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchSampleTextbox.DefaultText = "";
+            this.SearchSampleTextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.SearchSampleTextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.SearchSampleTextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SearchSampleTextbox.DisabledState.Parent = this.SearchSampleTextbox;
+            this.SearchSampleTextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SearchSampleTextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SearchSampleTextbox.FocusedState.Parent = this.SearchSampleTextbox;
+            this.SearchSampleTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchSampleTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SearchSampleTextbox.HoverState.Parent = this.SearchSampleTextbox;
+            this.SearchSampleTextbox.Location = new System.Drawing.Point(63, 23);
+            this.SearchSampleTextbox.Name = "SearchSampleTextbox";
+            this.SearchSampleTextbox.PasswordChar = '\0';
+            this.SearchSampleTextbox.PlaceholderText = "Đơn thuốc mẫu";
+            this.SearchSampleTextbox.SelectedText = "";
+            this.SearchSampleTextbox.ShadowDecoration.Parent = this.SearchSampleTextbox;
+            this.SearchSampleTextbox.Size = new System.Drawing.Size(285, 36);
+            this.SearchSampleTextbox.TabIndex = 0;
+            this.SearchSampleTextbox.TextChanged += new System.EventHandler(this.SearchSampleTextbox_TextChanged);
+>>>>>>> develop
             // 
             // guna2ShadowPanel3
             // 
@@ -1051,14 +1215,82 @@ namespace Pharmacy.StaffSubtab
             this.flowLayoutPanel1.Size = new System.Drawing.Size(777, 556);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
+<<<<<<< HEAD
+=======
+            // customerInvoiceHistoryDatagridview
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.customerInvoiceHistoryDatagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.customerInvoiceHistoryDatagridview.BackgroundColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customerInvoiceHistoryDatagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.customerInvoiceHistoryDatagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customerInvoiceHistoryDatagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.customerInvoiceHistoryDatagridview.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.customerInvoiceHistoryDatagridview.DefaultCellStyle = dataGridViewCellStyle3;
+            this.customerInvoiceHistoryDatagridview.EnableHeadersVisualStyles = false;
+            this.customerInvoiceHistoryDatagridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.customerInvoiceHistoryDatagridview.Location = new System.Drawing.Point(22, 98);
+            this.customerInvoiceHistoryDatagridview.Name = "customerInvoiceHistoryDatagridview";
+            this.customerInvoiceHistoryDatagridview.RowHeadersVisible = false;
+            this.customerInvoiceHistoryDatagridview.RowHeadersWidth = 51;
+            this.customerInvoiceHistoryDatagridview.RowTemplate.Height = 24;
+            this.customerInvoiceHistoryDatagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.customerInvoiceHistoryDatagridview.Size = new System.Drawing.Size(345, 204);
+            this.customerInvoiceHistoryDatagridview.TabIndex = 2;
+            this.customerInvoiceHistoryDatagridview.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.Height = 25;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.ReadOnly = false;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.Height = 24;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.customerInvoiceHistoryDatagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerInvoiceHistoryDatagridview_CellContentClick);
+            // 
+>>>>>>> develop
             // searchList1
             // 
             this.searchList1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchList1.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchList1.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
             this.searchList1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchList1.Name = "searchList1";
             this.searchList1.Size = new System.Drawing.Size(337, 37);
+=======
+            this.searchList1.Name = "searchList1";
+            this.searchList1.Size = new System.Drawing.Size(449, 46);
+>>>>>>> develop
             this.searchList1.TabIndex = 1;
             // 
             // Sell
@@ -1096,9 +1328,10 @@ namespace Pharmacy.StaffSubtab
             this.panel13.PerformLayout();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SampleDataGridView)).EndInit();
             this.guna2ShadowPanel3.ResumeLayout(false);
             this.guna2ShadowPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customerInvoiceHistoryDatagridview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1117,7 +1350,7 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button checkoutButton;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label3;
@@ -1136,13 +1369,13 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Note;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel10;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private Guna.UI2.WinForms.Guna2DataGridView SampleDataGridView;
+        private Guna.UI2.WinForms.Guna2TextBox SearchSampleTextbox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label8;
@@ -1165,10 +1398,13 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label NameCustomerLabel;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+<<<<<<< HEAD
         private SearchCustomer searchList1;
+=======
+        private Guna.UI2.WinForms.Guna2DataGridView customerInvoiceHistoryDatagridview;
+>>>>>>> develop
     }
 }

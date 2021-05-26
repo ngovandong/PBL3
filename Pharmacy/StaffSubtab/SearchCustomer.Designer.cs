@@ -84,7 +84,7 @@ namespace Pharmacy.StaffSubtab
             this.Searchbox.Name = "Searchbox";
             this.Searchbox.PasswordChar = '\0';
             this.Searchbox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.Searchbox.PlaceholderText = "Search customer";
+            this.Searchbox.PlaceholderText = "Tìm khách hàng";
             this.Searchbox.SelectedText = "";
             this.Searchbox.ShadowDecoration.Parent = this.Searchbox;
             this.Searchbox.Size = new System.Drawing.Size(271, 29);

@@ -8,18 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DAL;
 namespace Pharmacy
 {
     public partial class Staff : Form
     {
-        private string user_name;
-        public Staff(string s)
+        private USER user;
+        public Staff(USER u)
         {
-            this.user_name = s;
+            this.user = u;
             InitializeComponent();
             ButtonDashBoard.PerformClick();
-            NameStaffLabel.Text = s;
+            NameStaffLabel.Text = u.USER_NAME;
         }
 
 
@@ -50,8 +50,8 @@ namespace Pharmacy
 
         private void ButtonSell_Click(object sender, EventArgs e)
         {
-            Sell f = new Sell();
-            f.Show();
+            Sell f = new Sell(this.user);
+            f.ShowDialog();
         }
 
         private void Staff_FormClosed(object sender, FormClosedEventArgs e)

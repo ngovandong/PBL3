@@ -88,6 +88,18 @@
     <Compile Include="AdminTab\Manage Medicine\AddMedicine.Designer.cs">
       <DependentUpon>AddMedicine.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminTab\Manage Medicine\AddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\AddStock.Designer.cs">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\AddSupplier.Designer.cs">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminTab\Manage Medicine\CheckExpiryDate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\DetailMedicine.Designer.cs">
       <DependentUpon>DetailMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\ImportMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\ImportMedicine.Designer.cs">
+      <DependentUpon>ImportMedicine.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\ManageMedicine.cs">
       <SubType>UserControl</SubType>
@@ -112,24 +130,48 @@
     <Compile Include="AdminTab\Manage Medicine\medicine.Designer.cs">
       <DependentUpon>medicine.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminTab\Manage Medicine\MedicineItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\MedicineItem.Designer.cs">
+      <DependentUpon>MedicineItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminTab\Manage Medicine\Sample.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\Sample.Designer.cs">
       <DependentUpon>Sample.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="AdminTab\Manage Medicine\SampleMedicineItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\SampleMedicineItem.Designer.cs">
       <DependentUpon>SampleMedicineItem.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> develop
     <Compile Include="AdminTab\Manage Medicine\SearchMedicineItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\SearchMedicineItem.Designer.cs">
       <DependentUpon>SearchMedicineItem.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="AdminTab\Manage Medicine\SearchSupplierItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\SearchSupplierItem.Designer.cs">
+      <DependentUpon>SearchSupplierItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\StockDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\StockDetail.Designer.cs">
+      <DependentUpon>StockDetail.cs</DependentUpon>
+    </Compile>
+>>>>>>> develop
     <Compile Include="AdminTab\Manage Medicine\UpdateMedicine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,17 +270,17 @@
     <Compile Include="StaffSubtab\StaffProfile.Designer.cs">
       <DependentUpon>StaffProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffSubtab\StaffReport.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="StaffSubtab\StaffReport.Designer.cs">
-      <DependentUpon>StaffReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="StaffSubtab\MedicineItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="StaffSubtab\MedicineItem.Designer.cs">
       <DependentUpon>MedicineItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffSubtab\StaffReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffSubtab\StaffReport.Designer.cs">
+      <DependentUpon>StaffReport.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -252,11 +294,20 @@
     <EmbeddedResource Include="AdminTab\Manage Medicine\AddMedicine.resx">
       <DependentUpon>AddMedicine.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\AddStock.resx">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\CheckExpiryDate.resx">
       <DependentUpon>CheckExpiryDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\DetailMedicine.resx">
       <DependentUpon>DetailMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\ImportMedicine.resx">
+      <DependentUpon>ImportMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\ManageMedicine.resx">
       <DependentUpon>ManageMedicine.cs</DependentUpon>
@@ -264,15 +315,30 @@
     <EmbeddedResource Include="AdminTab\Manage Medicine\medicine.resx">
       <DependentUpon>medicine.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\MedicineItem.resx">
+      <DependentUpon>MedicineItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\Sample.resx">
       <DependentUpon>Sample.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="AdminTab\Manage Medicine\SampleMedicineItem.resx">
       <DependentUpon>SampleMedicineItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\SearchMedicineItem.resx">
       <DependentUpon>SearchMedicineItem.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="AdminTab\Manage Medicine\SearchMedicineItem.resx">
+      <DependentUpon>SearchMedicineItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\SearchSupplierItem.resx">
+      <DependentUpon>SearchSupplierItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\StockDetail.resx">
+      <DependentUpon>StockDetail.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> develop
     <EmbeddedResource Include="AdminTab\Manage Medicine\UpdateMedicine.resx">
       <DependentUpon>UpdateMedicine.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,9 +395,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffSubtab\StaffProfile.resx">
       <DependentUpon>StaffProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StaffSubtab\StaffReport.resx">
-      <DependentUpon>StaffReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffSubtab\MedicineItem.resx">
       <DependentUpon>MedicineItem.cs</DependentUpon>

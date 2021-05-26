@@ -52,7 +52,7 @@ namespace Pharmacy
             }
             else if (c == 2)
             {
-                Staff f = new Staff(guna2TextBox1.Text.ToLower());
+                Staff f = new Staff(_BLL.Instance.getUserByUserName(guna2TextBox1.Text.ToLower()));
                 f.Show();
                 this.Hide();
             }

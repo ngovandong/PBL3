@@ -23,7 +23,7 @@ namespace BLL
                 return _Instance;
             }
         }
-        public _BLL() { }
+        private _BLL() { }
 
         public USER getUser(int ID)
         {
@@ -176,11 +176,88 @@ namespace BLL
                         location = item.LOCATION,
                         Barcode = item.BARCODE,
                         Ingredient = item.INGREDIENT,
-                        type = item.MEDICINE_TYPE.TypeName
+                        type = item.MEDICINE_TYPE.TypeName,
+                        quantysell=1
                     }) ;
                 }
             }
             return l;
+        }
+        public List<MedicineStock> getlistMedicineSearchinStock(string s)
+        {
+            List<MedicineStock> ls = new List<MedicineStock>();
+            foreach (var item in _DAL.Instance.getListMedicine())
+            {
+                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                {
+                    ls.Add(new MedicineStock
+                    {
+                        ID = item.ID,
+                        name = item.MEDICINE_NAME,
+                        original_price = item.ORIGINAL_PRICE,
+                        unit = item.UNIT.NAME,
+                        quantityInKho = item.QUANTITY,
+                        sale_price = item.SALE_PRICE
+                    });
+                }
+            }
+            return ls;
+        }
+        public void addSupplier(SUPPLIER m)
+        {
+            _DAL.Instance.addSupplier(m);
+        }
+        public List<SupplierView> getListSupplierView(string name)
+        {
+            return _DAL.Instance.getListSupplier().Where(p => p.NAME.ToLower().Contains(name.ToLower())).Select(p => new SupplierView() { ID = p.ID, Name = p.NAME, Phone = p.PHONE_NUMBER }).ToList();
+        }
+        public bool checkSupplier(int id)
+        {
+            foreach (var item in _DAL.Instance.getListSupplier())
+            {
+                if (id == item.ID)
+                    return true;
+            }
+            return false;
+        }
+        public bool checkSupplier(string name)
+        {
+            foreach (var item in _DAL.Instance.getListSupplier())
+            {
+                if (name == item.NAME)
+                    return true;
+            }
+            return false;
+        }
+        public SUPPLIER getSupplier(int id)
+        {
+            foreach (var item in _DAL.Instance.getListSupplier())
+            {
+                if (id == item.ID)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+        public void addStock(STOCK stock)
+        {
+            _DAL.Instance.addStock(stock);
+        }
+        public MEDICINE getMedicineStocktoMedicine(MedicineStock m)
+        {
+            return _DAL.Instance.getMedicine(m.ID)[0];
+        }
+        public bool checkNameStock(string name)
+        {
+            foreach (var item in _DAL.Instance.getListStock())
+            {
+                if (name == item.Name)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public List<COMBOBOX_ITEM> getListCBBMedicine_Type()
@@ -213,6 +290,44 @@ namespace BLL
             return l;
         }
 
+        public List<SAMPLE_VIEW> getListSampleView(string text)
+        {
+            return _DAL.Instance.getListSample().Where(p=>p.NAME.Contains(text)).Select(p=> new SAMPLE_VIEW { 
+                ID=p.SAMPLEID,
+                Name=p.NAME
+            }).ToList();
+
+        }
+
+        public SAMPLE getSample(int ID)
+        {
+            return _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
+        }
+
+        public List<medicineSell> getlistMedicineSearch(int  ID)
+        {
+            SAMPLE a = _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
+            List<medicineSell> l = new List<medicineSell>();
+
+            foreach (var item in a.SAMPLE_DETAIL)
+            {
+                l.Add(new medicineSell
+                {
+                    ID = item.MEDICINE.ID,
+                    code = item.MEDICINE.MEDICINE_CODE,
+                    name = item.MEDICINE.MEDICINE_NAME,
+                    Qty = item.MEDICINE.QUANTITY,
+                    sell_price = item.MEDICINE.SALE_PRICE,
+                    unit = item.MEDICINE.UNIT.NAME,
+                    STOCK_DETAIL = item.MEDICINE.STOCK_DETAIL,
+                    quantysell=item.QTY,
+                });
+            }
+            
+            return l;
+        }
+
+
         public void addMedicine(MEDICINE m)
         {
             _DAL.Instance.addMedicine(m);
@@ -231,6 +346,29 @@ namespace BLL
                     sale_Price = item.SALE_PRICE,
                 });
             }
+            return l;
+        }
+
+        public List<medicineSell> getlistMedicineSearch2(int id)
+        {
+            INVOICE I=_DAL.Instance.getListInvoice().Where(p=>p.ID_INVOICE==id).Select(p=>p).Single();
+            List<medicineSell> l = new List<medicineSell>();
+
+            foreach (var item in I.INVOICE_DETAIL)
+            {
+                l.Add(new medicineSell
+                {
+                    ID = item.MEDICINE.ID,
+                    code = item.MEDICINE.MEDICINE_CODE,
+                    name = item.MEDICINE.MEDICINE_NAME,
+                    Qty = item.MEDICINE.QUANTITY,
+                    sell_price = item.MEDICINE.SALE_PRICE,
+                    unit = item.MEDICINE.UNIT.NAME,
+                    STOCK_DETAIL = item.MEDICINE.STOCK_DETAIL,
+                    quantysell = item.QUANTITY,
+                });
+            }
+
             return l;
         }
 
@@ -266,6 +404,11 @@ namespace BLL
             }
         }
 
+        public void AddInvoice(INVOICE i)
+        {
+            _DAL.Instance.AddInvoice(i);
+        }
+
         public void updateMedicine(MEDICINE md)
         {
             _DAL.Instance.updateMedicine(md);
@@ -277,10 +420,46 @@ namespace BLL
             return _DAL.Instance.getProfile();
 
         }
+<<<<<<< HEAD
 
         public void addSample(SAMPLE s)
         {
             _DAL.Instance.addSample(s);
+=======
+        public STOCK_VIEW stockToStockView(STOCK temp)
+        {
+            return new STOCK_VIEW()
+            {
+                id = temp.ID,
+                nameStock = temp.Name,
+                nameSupplier = temp.SUPPLIER.NAME,
+                dateImport = temp.DATE.Value.Date,
+                priceTotal = temp.PRICETOTAL
+            };
+        }
+        public List<STOCK_VIEW> getListStockView(string name, string option)
+        {
+            List<STOCK_VIEW> results = new List<STOCK_VIEW>();
+            if ("NAME" == option)
+            {
+                foreach(var item in _DAL.Instance.getListStock().Where(p => p.Name.ToLower().Contains(name.ToLower())))
+                {
+                    results.Add(stockToStockView(item));
+                }
+            }
+            else if ("SUPPLIER" == option)
+            {
+                foreach(var item in _DAL.Instance.getListStock().Where(p => p.SUPPLIER.NAME.ToLower().Contains(name.ToLower())))
+                {
+                    results.Add(stockToStockView(item));
+                }
+            }
+            else
+            {
+                
+            }
+            return results;
+>>>>>>> develop
         }
     }
 }

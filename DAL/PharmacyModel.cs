@@ -18,7 +18,11 @@ namespace DAL
             var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
         public PharmacyModel()
+<<<<<<< HEAD
             : base("data source=LAPTOP-OTJR83LF\\SQLEXPRESS;initial catalog=doan3;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+=======
+            : base("data source=dongdong\\SQLEXPRESS;initial catalog=doan3;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+>>>>>>> develop
         {
             Database.SetInitializer<PharmacyModel>(new InitializerPharmacyModel());
             this.Configuration.LazyLoadingEnabled = false;
@@ -93,6 +97,21 @@ namespace DAL
                 .HasMany(e => e.MEDICINEs)
                 .WithRequired(e => e.UNIT)
                 .HasForeignKey(e => e.UNIT_ID);
+
+            modelBuilder.Entity<INVOICE_DETAIL>()
+                .HasIndex(e => new { e.ID_MEDICINE, e.ID_INVOICE })
+                .IsUnique(true);
+
+            modelBuilder.Entity<SAMPLE_DETAIL>()
+                .HasKey(e => new { e.MEDICINE_ID, e.SAMPLE_ID });
+
+            modelBuilder.Entity<INVOICE_DETAIL>()
+                .HasKey(e => new { e.ID_INVOICE, e.ID_MEDICINE });
+
+            modelBuilder.Entity<STOCK_DETAIL>()
+                .HasKey(e => new { e.ID_MEDICINE, e.ID_STOCK });
+
+
         }
     }
 }

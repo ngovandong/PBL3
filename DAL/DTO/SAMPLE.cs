@@ -11,6 +11,10 @@ namespace DAL.DTO
     [Table("SAMPLE")]
     public class SAMPLE
     {
+        public SAMPLE()
+        {
+            SAMPLE_DETAIL = new HashSet<SAMPLE_DETAIL>();
+        }
         [Key]
         public int SAMPLEID { get; set; }
         
@@ -19,6 +23,6 @@ namespace DAL.DTO
 
         public string PRESCRIPTION { get; set; }
 
-        public virtual ICollection<SAMPLE_DETAIL> SAMPLE_DETAILs { get; set; }
+        public virtual ICollection<SAMPLE_DETAIL> SAMPLE_DETAIL { get; set; }
     }
 }

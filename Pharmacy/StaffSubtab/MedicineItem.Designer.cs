@@ -74,10 +74,16 @@ namespace Pharmacy.StaffSubtab
             // 
             this.StockDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StockDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+<<<<<<< HEAD
             this.StockDetailLabel.Location = new System.Drawing.Point(292, 6);
             this.StockDetailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StockDetailLabel.Name = "StockDetailLabel";
             this.StockDetailLabel.Size = new System.Drawing.Size(308, 23);
+=======
+            this.StockDetailLabel.Location = new System.Drawing.Point(389, 8);
+            this.StockDetailLabel.Name = "StockDetailLabel";
+            this.StockDetailLabel.Size = new System.Drawing.Size(410, 28);
+>>>>>>> develop
             this.StockDetailLabel.TabIndex = 16;
             // 
             // ComboBoxStock
@@ -279,7 +285,12 @@ namespace Pharmacy.StaffSubtab
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MedicineItem";
+<<<<<<< HEAD
             this.Size = new System.Drawing.Size(859, 72);
+=======
+            this.Size = new System.Drawing.Size(1145, 88);
+            this.Load += new System.EventHandler(this.MedicineItem_Load);
+>>>>>>> develop
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);

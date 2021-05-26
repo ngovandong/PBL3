@@ -9,19 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL.Model_View;
+using DAL.DTO;
+using DAL;
 
 namespace Pharmacy.StaffSubtab
 {
     public partial class Sell : Form
     {
+        private CUSTOMER customer;
+        private USER user;
         private int Ntotal;
         private int Ncharge;
         private int Ndiscount;
         private List<MedicineItem> ListMe;
-        public Sell()
+        public Sell(USER u)
         {
             InitializeComponent();
             setStart();
+            this.user = u;
         }
 
         private void Sell_FormClosed(object sender, FormClosedEventArgs e)
@@ -31,10 +36,36 @@ namespace Pharmacy.StaffSubtab
         }
         public void setStart()
         {
-            Ndiscount = 0;
+            discount.Text = "0";
+            Total.Text = "0";
             ListMe = new List<MedicineItem>();
-            guna2TextBox1_TextChanged(null, new EventArgs());
-            
+            guna2TextBox1_TextChanged(null, null);
+            SearchSampleTextbox_TextChanged(null, null);
+            searchList1.d = new SearchCustomer.Mydel(setCus);
+        }
+
+        public void setCus(CUSTOMER c)
+        {
+            this.customer = c;
+            NameCustomerLabel.Text = c.Customer_name;
+            customerInvoiceHistoryDatagridview.DataSource = this.customer.INVOICEs.Select(p => new INVOICE_VIEW  { ID = p.ID_INVOICE, date = p.DATE.ToString() }).ToList();
+            customerInvoiceHistoryDatagridview.Columns[0].Visible = false;
+        }
+        public void refresh()
+        {
+            ListMe = new List<MedicineItem>();
+            flowLayoutPanel1.Controls.Clear();
+            Total.Text = "0";
+            discount.Text = "0";
+            charge.Text = "0";
+            receive.Text = "";
+            change.Text = "";
+            Ntotal = 0;
+            Ndiscount = 0;
+            Ncharge = 0;
+            searchList1 = new SearchCustomer();
+            Note.Text = "";
+            TextBoxSearchMedicine.Text = "";
         }
 
         public void changeNumber()
@@ -123,7 +154,7 @@ namespace Pharmacy.StaffSubtab
             flowLayoutPanel2.SuspendLayout();
             try
             {
-                foreach (var item in _BLL.Instance.getlistMedicineSearch(TextBoxSearchMedicine.Text))
+                foreach (medicineSell item in _BLL.Instance.getlistMedicineSearch(TextBoxSearchMedicine.Text))
                 {
                     SearchMedicineItem s = new SearchMedicineItem(item);
                     s.d = new SearchMedicineItem.Mydel(addToSell);
@@ -159,6 +190,7 @@ namespace Pharmacy.StaffSubtab
                     Ndiscount = a;
                     discount.Text = a.ToString();
                     int s = (int)(Ntotal - Ntotal * (Ndiscount / 100.0));
+                    Ncharge = s;
                     charge.Text = s.ToString();
                     changeNumber();
                 }
@@ -193,5 +225,118 @@ namespace Pharmacy.StaffSubtab
             
         }
 
+        private void checkoutButton_Click(object sender, EventArgs e)
+        {
+            if (ListMe.Count > 0)
+            {
+                INVOICE I;
+                if (this.customer == null)
+                {
+                    I = new INVOICE
+                    {
+                        DATE = DateTime.Now,
+                        DISCOUNT = Ndiscount / 100.0,
+                        PRESCRIPTION = Note.Text,
+                        User_ID = this.user.ID,
+                        TOTAL = Ntotal,
+                        CHARGE = Ncharge,
+                    };
+                }
+                else
+                {
+                    I = new INVOICE
+                    {
+                        DATE = DateTime.Now,
+                        DISCOUNT = Ndiscount / 100.0,
+                        ID_CUSTOMER = this.customer.ID,
+                        PRESCRIPTION = Note.Text,
+                        User_ID = this.user.ID,
+                        TOTAL = Ntotal,
+                        CHARGE = Ncharge,
+                    };
+                }
+                
+                foreach (MedicineItem item in ListMe)
+                {
+                    int oprice = item.medicine.stock_detail.ORGIGINAL_PRICE * item.medicine.quantysell;
+                    int total = item.medicine.sell_price * item.medicine.quantysell;
+                    int sprice = (int)(total - total * Ndiscount / 100.0);
+                    I.INVOICE_DETAIL.Add(new INVOICE_DETAIL
+                    {
+                        ID_MEDICINE = item.medicine.ID,
+                        QUANTITY = item.medicine.quantysell,
+                        ORIGINAL_PRICE = oprice,
+                        SALE_PRICE = sprice,
+                    });
+                }
+                _BLL.Instance.AddInvoice(I);
+                MessageBox.Show("Thanh toán thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refresh();
+            }
+            else
+            {
+                MessageBox.Show("Không có gì để thanh toán!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SearchSampleTextbox_TextChanged(object sender, EventArgs e)
+        {
+            SampleDataGridView.DataSource = _BLL.Instance.getListSampleView(SearchSampleTextbox.Text);
+            SampleDataGridView.Columns[0].Visible = false;
+        }
+
+
+        private void SampleDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            ListMe.Clear();
+            int id = (int)SampleDataGridView.SelectedRows[0].Cells[0].Value;
+            SAMPLE s = _BLL.Instance.getSample(id);
+            Note.Text = s.PRESCRIPTION;
+            foreach (var item in _BLL.Instance.getlistMedicineSearch(id))
+            {
+                if (item.STOCK_DETAIL.Count > 0 && item.Qty >item.quantysell)
+                {
+                        MedicineItem i = new MedicineItem(item);
+                        i.d1 = new MedicineItem.Mydel1(delItem);
+                        i.d2 = new MedicineItem.Mydel2(getTotal);
+                        ListMe.Add(i);
+                        i.No = (ListMe.Count).ToString();
+                        flowLayoutPanel1.Controls.Add(i);
+                        getTotal();
+                }
+                else
+                {
+                    MessageBox.Show("Hết hàng!");
+                }
+            }
+        }
+
+        private void customerInvoiceHistoryDatagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            ListMe.Clear();
+            int id = (int)customerInvoiceHistoryDatagridview.SelectedRows[0].Cells[0].Value;
+
+            INVOICE I = customer.INVOICEs.Where(p => p.ID_INVOICE == id).Select(p => p).Single();
+            Note.Text = I.PRESCRIPTION;
+            foreach (var item in _BLL.Instance.getlistMedicineSearch2(id))
+            {
+                if (item.STOCK_DETAIL.Count > 0 && item.Qty > item.quantysell)
+                {
+                    MedicineItem i = new MedicineItem(item);
+                    i.d1 = new MedicineItem.Mydel1(delItem);
+                    i.d2 = new MedicineItem.Mydel2(getTotal);
+                    ListMe.Add(i);
+                    i.No = (ListMe.Count).ToString();
+                    flowLayoutPanel1.Controls.Add(i);
+                    getTotal();
+                }
+                else
+                {
+                    MessageBox.Show("Hết hàng!");
+                }
+            }
+        }
     }
 }

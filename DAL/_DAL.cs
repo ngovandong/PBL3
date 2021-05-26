@@ -97,7 +97,7 @@ namespace DAL
         {
             using (PharmacyModel P=new PharmacyModel())
             {
-                return P.CUSTOMERs.ToList();
+                return P.CUSTOMERs.Include("INVOICEs").ToList();
             }
         }
 
@@ -158,6 +158,43 @@ namespace DAL
                 return P.PHARMARCY_PROFILEs.OrderByDescending(f => f.PHARMACY_PROFILEID).FirstOrDefault();
             }
         }
+        public void addSupplier(SUPPLIER s)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                P.SUPPLIERs.Add(s);
+                P.SaveChanges();
+            }
+        }
+        public List<SUPPLIER> getListSupplier()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.SUPPLIERs.ToList();
+            }
+        }
+        public void addStock(STOCK stock)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                P.STOCKs.Add(stock);
+                P.SaveChanges();
+            }
+        }
+        public List<STOCK> getListStock()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.STOCKs.Include("SUPPLIER").Include("STOCK_DETAIL.MEDICINE.MEDICINE_TYPE").Include("STOCK_DETAIL.MEDICINE.UNIT").ToList();
+            }
+        }
+        public List<MEDICINE> getMedicine(int id)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.MEDICINEs.Where(p => id == p.ID).ToList();
+            }
+        }
 
         public void UpdateProfile(PHARMACY_PROFILE f)
         {
@@ -169,6 +206,7 @@ namespace DAL
             }
         }
 
+<<<<<<< HEAD
         public void addSample(SAMPLE s)
         {
             using(PharmacyModel P =new PharmacyModel())
@@ -177,5 +215,31 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+=======
+        public void AddInvoice(INVOICE i)
+        {
+            using(PharmacyModel P=new PharmacyModel())
+            {
+                P.INVOICEs.Add(i);
+                P.SaveChanges();
+            }
+        }
+
+        public List<SAMPLE> getListSample()
+        {
+            using(PharmacyModel P= new PharmacyModel())
+            {
+                return P.SAMPLEs.Include("SAMPLE_DETAIL.MEDICINE.STOCK_DETAIL.STOCK").Include("SAMPLE_DETAIL.MEDICINE.UNIT").ToList();
+            }
+        }
+
+        public List<INVOICE> getListInvoice()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.INVOICEs.Include("INVOICE_DETAIL.MEDICINE.UNIT").Include("INVOICE_DETAIL.MEDICINE.STOCK_DETAIL.STOCK").ToList();
+            }
+        }
+>>>>>>> develop
     }
 }

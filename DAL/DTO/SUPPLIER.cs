@@ -9,7 +9,7 @@ namespace DAL.DTO
     using System.Data.Entity.Spatial;
 
     [Table("SUPPLIER")]
-    public class SUPPLIER
+    public partial class SUPPLIER
     {
         [Key]
         public int ID { get; set; }

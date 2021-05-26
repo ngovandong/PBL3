@@ -20,9 +20,11 @@ namespace DAL
 
         public DateTime DATE { get; set; }
 
-        public int? TOTAL { get; set; }
+        public int TOTAL { get; set; }
 
         public double? DISCOUNT { get; set; }
+
+        public int CHARGE { get; set; }
 
         public string PRESCRIPTION { get; set; }
 
@@ -32,7 +34,7 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INVOICE_DETAIL> INVOICE_DETAIL { get; set; }
 
-        public int? User_ID { get; set; }
+        public int User_ID { get; set; }
         public virtual USER USER { get; set; }
     }
 }

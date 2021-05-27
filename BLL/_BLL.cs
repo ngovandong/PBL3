@@ -35,6 +35,31 @@ namespace BLL
             return null;
         }
 
+        public List<reportStaff> getListReportStaff()
+        {
+            List<reportStaff> l = new List<reportStaff>();
+            foreach (var item in _DAL.Instance.getListStaff())
+            {
+                int s1 = 0;
+                int s2 = 0;
+                foreach (var i in item.INVOICEs)
+                {
+                    if (i.DATE.ToString("MM/yyyy") == DateTime.Now.ToString("MM/yyyy"))
+                    {
+                        s1 += i.TOTAL;
+                        s2++;
+                    }
+                }
+                l.Add(new reportStaff
+                {
+                    StaffName = item.NAME,
+                    TotalSold = s1,
+                    NumberOfInvoice = s2
+                });
+            }
+            return l;
+        }
+
         public int checkUser(string username, string pass)
         {
             int i = 0;
@@ -70,6 +95,40 @@ namespace BLL
                 }
             }
             return null;
+        }
+
+        public int getProgressValue1()
+        {
+            return _DAL.Instance.getListStockDetail().Where(p => p.dateExpire < DateTime.Now && p.QUANTITY > 0).Count();
+        }
+        public int getProgressValue2()
+        {
+            return  _DAL.Instance.getListStockDetail().Where(p => p.QUANTITY > 0).Count();
+        }
+
+        public int getProgressValue3()
+        {
+            return _DAL.Instance.getListMedicine().Where(p=>p.QUANTITY==0).Count();
+        }
+        public int getProgressValue4()
+        {
+            return _DAL.Instance.getListMedicine().Count();
+        }
+
+        public List<stockDetailView> getListStockDetailView()
+        {
+            List<stockDetailView> l = new List<stockDetailView>();
+            foreach (STOCK_DETAIL item in _DAL.Instance.getListStockDetail())
+            {
+                l.Add(new stockDetailView
+                {
+                    StockName = item.STOCK.Name,
+                    MedicineName = item.MEDICINE.MEDICINE_NAME,
+                    Available = item.QUANTITY,
+                    EXP = item.dateExpire.ToShortDateString()
+                }) ;
+            }
+            return l;
         }
 
         public void UpdateUser(USER u)
@@ -460,6 +519,19 @@ namespace BLL
                 
             }
             return results;
+        }
+
+        public List<chart> getListChart0()
+        {
+            List<chart> l=_DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.Date.ToShortDateString()).Select(c=>new chart { date=c.Key,originalPrice=c.Sum(p=>p.ORIGINAL_PRICE),sellPrice=c.Sum(p=>p.SALE_PRICE)}).OrderByDescending(p=>p.date).Take(7).Reverse().ToList();
+
+            return l;
+        }
+        public List<chart> getListChart1()
+        {
+            List<chart> l = _DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.ToString("MM/yyyy")).Select(c => new chart { date = c.Key, originalPrice = c.Sum(p => p.ORIGINAL_PRICE), sellPrice = c.Sum(p => p.SALE_PRICE) }).OrderByDescending(p => p.date).Take(7).Reverse().ToList();
+
+            return l;
         }
     }
 }

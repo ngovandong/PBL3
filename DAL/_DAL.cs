@@ -43,6 +43,14 @@ namespace DAL
             }
         }
 
+        public List<USER> getListStaff()
+        {
+            using (PharmacyModel p = new PharmacyModel())
+            {
+                return p.USERs.Include("INVOICEs").Where(e => e.ROLE == false).ToList();
+            }
+        }
+
         public void DelUser(int i)
         {
             using(PharmacyModel P= new PharmacyModel())
@@ -74,6 +82,14 @@ namespace DAL
                 P.CUSTOMERs.Add(c);
                 P.SaveChanges();
                 return P.CUSTOMERs.OrderByDescending(f => f.ID).FirstOrDefault();
+            }
+        }
+
+        public List<STOCK_DETAIL> getListStockDetail()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.STOCK_DETAIL.Include("STOCK").Include("MEDICINE").ToList();
             }
         }
 
@@ -248,6 +264,14 @@ namespace DAL
                 MEDICINE m=P.MEDICINEs.Find(iD_MEDICINE);
                 m.QUANTITY -= quantysell;
                 P.SaveChanges();
+            }
+        }
+
+        public List<INVOICE_DETAIL> getListInvoiceDetail()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.INVOICE_DETAIL.Include("INVOICE").ToList();
             }
         }
     }

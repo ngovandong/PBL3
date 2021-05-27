@@ -28,7 +28,6 @@ namespace DAL
 
         public int PRICETOTAL { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
 
         [ForeignKey("SUPPLIER")]

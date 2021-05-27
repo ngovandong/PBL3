@@ -13,6 +13,8 @@ namespace Pharmacy.StaffSubtab
 {
     public partial class SearchCustomer : UserControl
     {
+        public delegate void Mydel(CUSTOMER c);
+        public Mydel d;
         private List<CustomerItem> ListSearch;
         public CUSTOMER Customer;
         public SearchCustomer()
@@ -36,6 +38,7 @@ namespace Pharmacy.StaffSubtab
             this.Size = new System.Drawing.Size(425, 46);
             panel2.Visible = false;
             flowLayoutPanel1.Visible = false;
+            d(c);
         }
 
         private void SearchList_Leave(object sender, EventArgs e)

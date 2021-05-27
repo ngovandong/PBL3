@@ -97,7 +97,7 @@ namespace DAL
         {
             using (PharmacyModel P=new PharmacyModel())
             {
-                return P.CUSTOMERs.ToList();
+                return P.CUSTOMERs.Include("INVOICEs").ToList();
             }
         }
 
@@ -185,9 +185,7 @@ namespace DAL
         {
             using (PharmacyModel P = new PharmacyModel())
             {
-                //return P.STOCKs.ToList();
                 return P.STOCKs.Include("SUPPLIER").Include("STOCK_DETAIL.MEDICINE.MEDICINE_TYPE").Include("STOCK_DETAIL.MEDICINE.UNIT").ToList();
-                //return P.MEDICINEs.Include("UNIT").Include("STOCK_DETAIL.STOCK").Include("MEDICINE_TYPE").ToList();
             }
         }
         public List<MEDICINE> getMedicine(int id)
@@ -236,6 +234,31 @@ namespace DAL
                 STOCK_DETAIL stNew = p.STOCK_DETAIL.Find(id_stock);
                 p.STOCK_DETAIL.Remove(stNew);
                 p.SaveChanges();
+            }
+        }
+
+        public List<SAMPLE> getListSample()
+        {
+            using(PharmacyModel P= new PharmacyModel())
+            {
+                return P.SAMPLEs.Include("SAMPLE_DETAIL.MEDICINE.STOCK_DETAIL.STOCK").Include("SAMPLE_DETAIL.MEDICINE.UNIT").ToList();
+            }
+        }
+
+        public List<INVOICE> getListInvoice()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.INVOICEs.Include("INVOICE_DETAIL.MEDICINE.UNIT").Include("INVOICE_DETAIL.MEDICINE.STOCK_DETAIL.STOCK").ToList();
+            }
+        }
+        
+        public void addSample(SAMPLE sample)
+        {
+            using(PharmacyModel P =new PharmacyModel())
+            {
+                P.SAMPLEs.Add(sample);
+                P.SaveChanges();
             }
         }
     }

@@ -166,6 +166,12 @@
     <Compile Include="AdminTab\Manage Medicine\UpdateMedicine.Designer.cs">
       <DependentUpon>UpdateMedicine.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminTab\Manage Medicine\UpdateStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\UpdateStock.Designer.cs">
+      <DependentUpon>UpdateStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminTab\ManageUser\AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\UpdateMedicine.resx">
       <DependentUpon>UpdateMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\UpdateStock.resx">
+      <DependentUpon>UpdateStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\ManageUser\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>

@@ -186,7 +186,7 @@ namespace DAL
             using (PharmacyModel P = new PharmacyModel())
             {
                 //return P.STOCKs.ToList();
-                return P.STOCKs.Include("SUPPLIER").Include("STOCK_DETAIL.MEDICINE").Include("UNIT").Include("MEDICINE_TYPE").ToList();
+                return P.STOCKs.Include("SUPPLIER").Include("STOCK_DETAIL.MEDICINE.MEDICINE_TYPE").Include("STOCK_DETAIL.MEDICINE.UNIT").ToList();
                 //return P.MEDICINEs.Include("UNIT").Include("STOCK_DETAIL.STOCK").Include("MEDICINE_TYPE").ToList();
             }
         }
@@ -214,6 +214,28 @@ namespace DAL
             {
                 P.INVOICEs.Add(i);
                 P.SaveChanges();
+            }
+        }
+        public void UpdateStock(STOCK stock)
+        {
+            using(PharmacyModel p = new PharmacyModel())
+            {
+                STOCK sNew = p.STOCKs.Find(stock.ID);
+                sNew.Name = stock.Name;
+                sNew.DATE = stock.DATE.Value.Date;
+                sNew.NOTE = stock.NOTE;
+                sNew.PRICETOTAL = stock.PRICETOTAL;
+                sNew.supplierId = stock.supplierId;
+                p.SaveChanges();
+            }
+        }
+        public void DeleteSTOCK_DETAIL(int id_stock)
+        {
+            using(PharmacyModel p = new PharmacyModel())
+            {
+                STOCK_DETAIL stNew = p.STOCK_DETAIL.Find(id_stock);
+                p.STOCK_DETAIL.Remove(stNew);
+                p.SaveChanges();
             }
         }
     }

@@ -13,6 +13,7 @@ namespace BLL.Model_View
         public string name { get; set; }
         public string unit { get; set; }
         public int original_price { get; set; }
+        public int import_price { get; set; }
         public int final_price { get; set; }
         public int sale_price { get; set; }
         public int quantityInStock { get; set; }

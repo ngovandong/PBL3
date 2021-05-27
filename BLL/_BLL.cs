@@ -444,7 +444,6 @@ namespace BLL
         }
         public void UpdateStock(STOCK stock)
         {
-            _DAL.Instance.Updat
         }
         
     }

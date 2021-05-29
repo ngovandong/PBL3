@@ -8,7 +8,7 @@ using DAL.DTO;
 
 namespace DAL
 {
-    class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
+    class InitializerPharmacyModel:DropCreateDatabaseIfModelChanges<PharmacyModel>
     {
         protected override void Seed(PharmacyModel context)
         {
@@ -112,12 +112,20 @@ namespace DAL
 
             context.MEDICINEs.AddRange(new MEDICINE[] { m1, m2,m3 });
 
-            SUPPLIER sup1 = new SUPPLIER()
+            SUPPLIER su1 = new SUPPLIER
             {
-                NAME = "cengroup",
-                PHONE_NUMBER = "23432",
-                ADDRESS = "01 le loi",
-                EMAIL = "hello@gmail.com"
+                NAME = "Vinmec",
+                EMAIL = "vinmec@gmail.com",
+                ADDRESS = "177 Trường Chinh, Đà Nẵng",
+                PHONE_NUMBER = "097834753"
+            };
+
+            SUPPLIER su2 = new SUPPLIER
+            {
+                NAME = "ACBmedicine",
+                EMAIL = "ACB@gmail.com",
+                ADDRESS = "10 Nguyễn Tất Thành, Đà Nẵng",
+                PHONE_NUMBER = "097833453"
             };
 
             STOCK s1 = new STOCK
@@ -126,7 +134,8 @@ namespace DAL
                 NOTE = "nhap ngay hom qua",
                 DATE = DateTime.Now,
                 PRICETOTAL = 1000000,
-                SUPPLIER = sup1
+                SUPPLIER=su1
+
             };
 
             STOCK s2 = new STOCK
@@ -135,7 +144,7 @@ namespace DAL
                 DATE = DateTime.Now,
                 PRICETOTAL = 2000000,
                 Name="lo A",
-                SUPPLIER = sup1
+                SUPPLIER = su2
             };
 
       

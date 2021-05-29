@@ -51,13 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model View\chart.cs" />
     <Compile Include="Model View\COMBOBOX_ITEM.cs" />
     <Compile Include="Model View\INVOICE_VIEW.cs" />
+    <Compile Include="Model View\INVOICE_VIEW_REPORT.cs" />
     <Compile Include="Model View\MEDICINEinSTOCK_VIEW.cs" />
+    <Compile Include="Model View\medicineView.cs" />
     <Compile Include="Model View\MEDICINE_VIEW.cs" />
     <Compile Include="Model View\medicineSell.cs" />
     <Compile Include="Model View\MedicineStock.cs" />
+    <Compile Include="Model View\reportStaff.cs" />
     <Compile Include="Model View\SAMPLE_VIEW.cs" />
+    <Compile Include="Model View\staffChart.cs" />
+    <Compile Include="Model View\stockDetailView.cs" />
     <Compile Include="Model View\STOCK_VIEW.cs" />
     <Compile Include="Model View\SupplierView.cs" />
     <Compile Include="Model View\USER_VIEW.cs" />

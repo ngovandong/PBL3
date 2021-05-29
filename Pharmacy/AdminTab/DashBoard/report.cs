@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL;
 namespace Pharmacy.AdminTab.DashBoard
 {
     public partial class report : UserControl
@@ -19,8 +19,12 @@ namespace Pharmacy.AdminTab.DashBoard
 
         private void report_Load(object sender, EventArgs e)
         {
-            chart1.Series["Revenue"].Points.AddXY("January", 100);
-            chart1.Series["Profit"].Points.AddXY("January", 34);
+            guna2DataGridView2.DataSource = _BLL.Instance.getListStockDetailView();
+            guna2DataGridView2.Columns[0].Visible = false;
+            guna2DataGridView2.Columns[1].Visible = false;
+            guna2DataGridView1.DataSource = _BLL.Instance.getListReportStaff();
+            guna2TextBox1.Text = DateTime.Now.ToString("MM/yyyy");
+
         }
     }
 }

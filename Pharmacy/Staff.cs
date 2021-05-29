@@ -48,9 +48,15 @@ namespace Pharmacy
             staffProfile1.BringToFront();
         }
 
+        public void reloadDashBoard()
+        {
+            this.staffDashBoard1.setForm();
+            this.staffReport1.setStart();
+        }
         private void ButtonSell_Click(object sender, EventArgs e)
         {
             Sell f = new Sell(this.user);
+            f.d = new Sell.Mydel(reloadDashBoard);
             f.ShowDialog();
         }
 

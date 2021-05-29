@@ -63,14 +63,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtUnit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUnit.HoverState.Parent = this.txtUnit;
-            this.txtUnit.Location = new System.Drawing.Point(787, 9);
+            this.txtUnit.Location = new System.Drawing.Point(481, 9);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.PasswordChar = '\0';
             this.txtUnit.PlaceholderText = "";
             this.txtUnit.ReadOnly = true;
             this.txtUnit.SelectedText = "";
             this.txtUnit.ShadowDecoration.Parent = this.txtUnit;
-            this.txtUnit.Size = new System.Drawing.Size(134, 29);
+            this.txtUnit.Size = new System.Drawing.Size(111, 29);
             this.txtUnit.TabIndex = 1;
             // 
             // label2
@@ -78,7 +78,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label2.Location = new System.Drawing.Point(707, 13);
+            this.label2.Location = new System.Drawing.Point(401, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 22);
             this.label2.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label3.Location = new System.Drawing.Point(960, 13);
+            this.label3.Location = new System.Drawing.Point(605, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 22);
             this.label3.TabIndex = 4;
@@ -109,13 +109,13 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
-            this.txtQuantity.Location = new System.Drawing.Point(1059, 9);
+            this.txtQuantity.Location = new System.Drawing.Point(709, 9);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
             this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
-            this.txtQuantity.Size = new System.Drawing.Size(82, 29);
+            this.txtQuantity.Size = new System.Drawing.Size(62, 29);
             this.txtQuantity.TabIndex = 3;
             this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
@@ -129,7 +129,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnDelete.HoverState.Parent = this.btnDelete;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDelete.Location = new System.Drawing.Point(1197, -1);
+            this.btnDelete.Location = new System.Drawing.Point(777, -1);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
             this.btnDelete.Size = new System.Drawing.Size(60, 47);
@@ -149,7 +149,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.Controls.Add(this.txtUnit);
             this.Controls.Add(this.lbName);
             this.Name = "SampleMedicineItem";
-            this.Size = new System.Drawing.Size(1256, 47);
+            this.Size = new System.Drawing.Size(854, 47);
             this.ResumeLayout(false);
             this.PerformLayout();
 

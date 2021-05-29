@@ -26,7 +26,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             AddStock stock = new AddStock();
-            stock.Refresh = new AddStock.Mydel(setDataGridView);
+            stock.d = new AddStock.Mydel(setDataGridView);
             stock.ShowDialog();
         }
 
@@ -65,7 +65,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 int idStock = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells[0].Value);
                 STOCK stock = _BLL.Instance.getStock(idStock);
                 UpdateStock updateStock = new UpdateStock(stock);
-                updateStock.Refresh = new UpdateStock.Mydel(setDataGridView);
+                updateStock.d = new UpdateStock.Mydel(setDataGridView);
                 updateStock.ShowDialog();
             }
 

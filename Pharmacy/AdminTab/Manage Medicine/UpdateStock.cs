@@ -16,7 +16,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
     public partial class UpdateStock : Form
     {
         public delegate void Mydel();
-        public Mydel Refresh;
+        public Mydel d;
         private List<MedicineItem> listMedicineItem;
         private SupplierView supplierView;
         private STOCK stock;
@@ -242,7 +242,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                     });
                     _BLL.Instance.addMedicineQuantity(item.medicine);
                 }
-                Refresh();
+                d();
                 this.Dispose();
             }
         }

@@ -30,7 +30,7 @@ namespace DAL
 
             using (PharmacyModel P = new PharmacyModel())
             {
-                return P.USERs.ToList();
+                return P.USERs.Include("INVOICEs.CUSTOMER").ToList();
             }
         }
 
@@ -40,6 +40,14 @@ namespace DAL
             {
                 p.USERs.Add(u);
                 p.SaveChanges();
+            }
+        }
+
+        public List<USER> getListStaff()
+        {
+            using (PharmacyModel p = new PharmacyModel())
+            {
+                return p.USERs.Include("INVOICEs").Where(e => e.ROLE == false).ToList();
             }
         }
 
@@ -74,6 +82,14 @@ namespace DAL
                 P.CUSTOMERs.Add(c);
                 P.SaveChanges();
                 return P.CUSTOMERs.OrderByDescending(f => f.ID).FirstOrDefault();
+            }
+        }
+
+        public List<STOCK_DETAIL> getListStockDetail()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.STOCK_DETAIL.Include("STOCK").Include("MEDICINE").ToList();
             }
         }
 
@@ -215,25 +231,7 @@ namespace DAL
             }
         }
 
-        public void addMedicinefromStockDetail(int id, int quantityInStock)
-        {
-            using(PharmacyModel p = new PharmacyModel())
-            {
-                MEDICINE nMedicine = p.MEDICINEs.Find(id);
-                nMedicine.QUANTITY += quantityInStock;
-                p.SaveChanges();
-            }
-        }
-
-        public void subMEdicinefromStockDetail(int iD, int quantityInStock)
-        {
-            using(PharmacyModel p = new PharmacyModel())
-            {
-                MEDICINE nMedicine = p.MEDICINEs.Find(iD);
-                nMedicine.QUANTITY -= quantityInStock;
-                p.SaveChanges();
-            }
-        }
+        
 
         public void UpdateStock(STOCK stock)
         {
@@ -248,19 +246,7 @@ namespace DAL
                 p.SaveChanges();
             }
         }
-        public void UpdateStockDetail(STOCK_DETAIL stDetail)
-        {
-            using (PharmacyModel p = new PharmacyModel())
-            {
-                STOCK_DETAIL newDetail = p.STOCK_DETAIL.Find(stDetail.ID_MEDICINE, stDetail.ID_STOCK);
-                newDetail.ORGIGINAL_PRICE = stDetail.ORGIGINAL_PRICE;
-                newDetail.QUANTITY = stDetail.QUANTITY;
-                newDetail.dateExpire = stDetail.dateExpire;
-                newDetail.ID_MEDICINE = stDetail.ID_MEDICINE;
-                newDetail.ID_STOCK = stDetail.ID_STOCK;
-                p.SaveChanges();
-            }
-        }
+        
         public void AddStockDetail(STOCK_DETAIL stDetail)
         {
             using (PharmacyModel p = new PharmacyModel())
@@ -304,12 +290,64 @@ namespace DAL
                 return P.INVOICEs.Include("INVOICE_DETAIL.MEDICINE.UNIT").Include("INVOICE_DETAIL.MEDICINE.STOCK_DETAIL.STOCK").ToList();
             }
         }
+
+        public void UpdateStockDetailQuantity(STOCK_DETAIL stock_detail)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                STOCK_DETAIL s= P.STOCK_DETAIL.Find(stock_detail.ID_MEDICINE, stock_detail.ID_STOCK);
+                s.QUANTITY = stock_detail.QUANTITY;
+                P.SaveChanges();
+            }
+        }
+
+        public void UpdateMedicine(int iD_MEDICINE, int quantysell)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                MEDICINE m=P.MEDICINEs.Find(iD_MEDICINE);
+                m.QUANTITY += quantysell;
+                P.SaveChanges();
+            }
+        }
+
+        public List<INVOICE_DETAIL> getListInvoiceDetail()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.INVOICE_DETAIL.Include("INVOICE").ToList();
+            }
+        }
         
         public void addSample(SAMPLE sample)
         {
             using(PharmacyModel P =new PharmacyModel())
             {
                 P.SAMPLEs.Add(sample);
+                P.SaveChanges();
+            }
+        }
+
+        public void addMedicineUnit(string name)
+        {
+            using(PharmacyModel P = new PharmacyModel())
+            {
+                P.UNITs.Add(new UNIT
+                {
+                    NAME = name,
+                });
+                P.SaveChanges();
+            }
+        }
+
+        public void addMedicineType(string name)
+        {
+            using(PharmacyModel P = new PharmacyModel())
+            {
+                P.MEDICINE_TYPE.Add(new MEDICINE_TYPE
+                {
+                    TypeName = name,
+                });
                 P.SaveChanges();
             }
         }

@@ -12,5 +12,6 @@ namespace BLL.Model_View
         public string Name { get; set;}
         public int? original_Price { get; set;}
         public int? sale_Price { get; set; }
+        public int Quantity { get; set; }
     }
 }

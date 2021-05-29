@@ -35,6 +35,115 @@ namespace BLL
             return null;
         }
 
+        public List<INVOICE_VIEW_REPORT> getListInvoice(int id)
+        {
+            USER u = _DAL.Instance.getListUser().Where(p => p.ID == id).FirstOrDefault();
+            return u.INVOICEs.Select(p => new INVOICE_VIEW_REPORT
+            {
+                Date = p.DATE,
+                Charge = p.CHARGE,
+                Discount = p.DISCOUNT,
+                CustomerName = p.CUSTOMER == null ? "" : p.CUSTOMER.Customer_name
+            }).Reverse().ToList();
+        }
+
+        public void DeleteMedicineExpired()
+        {
+            foreach (var item in _DAL.Instance.getListStockDetail())
+            {
+                if (item.dateExpire < DateTime.Now)
+                {
+                    _DAL.Instance.DeleteStockDetail(item);
+                }
+            }
+        }
+
+        public void CheckExpiredMedicine()
+        {
+            foreach (var item in _DAL.Instance.getListStockDetail())
+            {
+                if (item.dateExpire < DateTime.Now)
+                {
+                    _BLL.Instance.subMedicineQuantity(item);
+                    _BLL.Instance.UpdateStockDetail(item, item.QUANTITY);
+                }
+            }
+        }
+
+        public List<staffChart> getListChartStaffDate(int id)
+        {
+            USER u= _DAL.Instance.getListStaff().Where(p => p.ID == id).Single();
+
+            return u.INVOICEs.GroupBy(p => p.DATE.ToShortDateString()).Select(c => new staffChart { date = c.Key, sale = c.Sum(p => p.CHARGE),qty=c.Count() }).OrderByDescending(p=>p.date).Take(7).Reverse().ToList();
+        }
+
+        public List<staffChart> getListChartStaffMonth(int id)
+        {
+            USER u = _DAL.Instance.getListStaff().Where(p => p.ID == id).Single();
+
+            return u.INVOICEs.GroupBy(p => p.DATE.ToString("MM/yyyy")).Select(c => new staffChart { date = c.Key, sale = c.Sum(p => p.CHARGE), qty = c.Count() }).OrderByDescending(p => p.date).Take(7).Reverse().ToList();
+        }
+
+        public List<reportStaff> getListReportStaff()
+        {
+            List<reportStaff> l = new List<reportStaff>();
+            foreach (var item in _DAL.Instance.getListStaff())
+            {
+                int s1 = 0;
+                int s2 = 0;
+                foreach (var i in item.INVOICEs)
+                {
+                    if (i.DATE.ToString("MM/yyyy") == DateTime.Now.ToString("MM/yyyy"))
+                    {
+                        s1 += i.TOTAL;
+                        s2++;
+                    }
+                }
+                l.Add(new reportStaff
+                {
+                    StaffName = item.NAME,
+                    TotalSold = s1,
+                    NumberOfInvoice = s2
+                });
+            }
+            return l;
+        }
+
+        public reportStaff getReportStaff(int id, bool b)
+        {
+            USER u = _DAL.Instance.getListStaff().Where(p => p.ID == id).Single();
+            int s1 = 0;
+            int s2 = 0;
+            if (b)
+            {
+                foreach (var i in u.INVOICEs)
+                {
+                    if (i.DATE.ToShortDateString() == DateTime.Now.ToShortDateString())
+                    {
+                        s1 += i.TOTAL;
+                        s2++;
+                    }
+                }
+            }
+            else
+            {
+                foreach (var i in u.INVOICEs)
+                {
+                    if (i.DATE.ToString("MM/yyyy") == DateTime.Now.ToString("MM/yyyy"))
+                    {
+                        s1 += i.TOTAL;
+                        s2++;
+                    }
+                }
+            }
+            return (new reportStaff
+            {
+                StaffName = u.NAME,
+                TotalSold = s1,
+                NumberOfInvoice = s2
+            });
+        }
+
         public int checkUser(string username, string pass)
         {
             int i = 0;
@@ -70,6 +179,44 @@ namespace BLL
                 }
             }
             return null;
+        }
+
+        public int getProgressValue1()
+        {
+            return _DAL.Instance.getListStockDetail().Where(p => p.dateExpire < DateTime.Now).Count();
+        }
+
+        public int getProgressValue2()
+        {
+            return _DAL.Instance.getListStockDetail().Count();
+        }
+
+        public int getProgressValue3()
+        {
+            return _DAL.Instance.getListMedicine().Where(p=>p.QUANTITY==0).Count();
+        }
+        public int getProgressValue4()
+        {
+            return _DAL.Instance.getListMedicine().Count();
+        }
+
+        public List<stockDetailView> getListStockDetailView()
+        {
+            List<stockDetailView> l = new List<stockDetailView>();
+            foreach (STOCK_DETAIL item in _DAL.Instance.getListStockDetail())
+            {
+                l.Add(new stockDetailView
+                {
+                    idStock = item.ID_STOCK,
+                    idMedicine = item.ID_MEDICINE,
+                    StockName = item.STOCK.Name,
+                    MedicineName = item.MEDICINE.MEDICINE_NAME,
+                    Available = item.QUANTITY,
+                    EXP = item.dateExpire.ToShortDateString(),
+                    Expired = item.dateExpire < DateTime.Now
+                }) ;
+            }
+            return l;
         }
 
         public void UpdateUser(USER u)
@@ -209,11 +356,11 @@ namespace BLL
 
         public void addMedicineQuantity(MedicineStock medicine)
         {
-            _DAL.Instance.addMedicinefromStockDetail(medicine.ID, medicine.quantityInStock);
+            _DAL.Instance.UpdateMedicine(medicine.ID, medicine.quantityInStock);
         }
         public void subMedicineQuantity(STOCK_DETAIL stDetail)
         {
-            _DAL.Instance.subMEdicinefromStockDetail(stDetail.ID_MEDICINE, stDetail.QUANTITY);
+            _DAL.Instance.UpdateMedicine(stDetail.ID_MEDICINE, -stDetail.QUANTITY);
         }
 
         public void addSupplier(SUPPLIER m)
@@ -317,6 +464,13 @@ namespace BLL
             return _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
         }
 
+        public void UpdateStockDetail(STOCK_DETAIL stock_detail, int quantysell)
+        {
+            stock_detail.QUANTITY -= quantysell;
+            _DAL.Instance.UpdateStockDetailQuantity(stock_detail);
+            _DAL.Instance.UpdateMedicine(stock_detail.ID_MEDICINE, -quantysell);
+        }
+
         public List<medicineSell> getlistMedicineSearch(int  ID)
         {
             SAMPLE a = _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
@@ -357,9 +511,15 @@ namespace BLL
                     Name = item.MEDICINE_NAME,
                     original_Price = item.ORIGINAL_PRICE,
                     sale_Price = item.SALE_PRICE,
+                    Quantity=item.QUANTITY
                 });
             }
             return l;
+        }
+
+        public List<medicineView> getListMedicineViewReport()
+        {
+            return _DAL.Instance.getListMedicine().Where(p => p.QUANTITY == 0).Select(p => new medicineView { ID = p.MEDICINE_CODE, Name = p.MEDICINE_NAME }).ToList();
         }
 
         public List<medicineSell> getlistMedicineSearch2(int id)
@@ -532,18 +692,43 @@ namespace BLL
             return results;
         }
 
+        public List<chart> getListChart0()
+        {
+            List<chart> l=_DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.Date.ToShortDateString()).Select(c=>new chart { date=c.Key,originalPrice=c.Sum(p=>p.ORIGINAL_PRICE),sellPrice=c.Sum(p=>p.SALE_PRICE)}).OrderByDescending(p=>p.date).Take(7).Reverse().ToList();
+
+            return l;
+        }
+        public List<chart> getListChart1()
+        {
+            List<chart> l = _DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.ToString("MM/yyyy")).Select(c => new chart { date = c.Key, originalPrice = c.Sum(p => p.ORIGINAL_PRICE), sellPrice = c.Sum(p => p.SALE_PRICE) }).OrderByDescending(p => p.date).Take(7).Reverse().ToList();
+
+            return l;
+        }
+
         public void addSample(SAMPLE sample)
         {
             _DAL.Instance.addSample(sample);
         }
+
+
+        public void addMedicineUnit(string name)
+        {
+            _DAL.Instance.addMedicineUnit(name);
+        }
+
+        public void addMedicineType(string name)
+        {
+
+            _DAL.Instance.addMedicineType(name);
+        }
+      
+      
+      
         public void UpdateStock(STOCK stock)
         {
-            _DAL.Instance.UpdateStock(stock);
+           _DAL.Instance.UpdateStock(stock);
         }
-        public void UpdateStockDetail(STOCK_DETAIL stDetail)
-        {
-            _DAL.Instance.UpdateStockDetail(stDetail);
-        }
+        
         public void DeleteStockDetail(STOCK_DETAIL stDetail)
         {
             _DAL.Instance.DeleteStockDetail(stDetail);
@@ -556,5 +741,6 @@ namespace BLL
         {
             _DAL.Instance.DeleteStock(id);
         }
+
     }
 }

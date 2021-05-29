@@ -34,10 +34,10 @@ namespace Pharmacy.StaffSubtab
             NameMedicine.Text = medicine.name;
             Unit.Text = medicine.unit;
             price.Text = medicine.sell_price.ToString();
-            ComboBoxStock.Items.AddRange(medicine.STOCK_DETAIL.ToArray());
+            ComboBoxStock.Items.AddRange(medicine.STOCK_DETAIL.Where(p=>p.QUANTITY>0).ToArray());
             ComboBoxStock.SelectedIndex = 0;
             Total.Text = medicine.sell_price.ToString();
-            Qty.Text = medicine.quantysell.ToString();
+            QuantiyUpDown.Value = medicine.quantysell;
         }
 
         private string _no;
@@ -66,47 +66,9 @@ namespace Pharmacy.StaffSubtab
             this.guna2ShadowPanel1.FillColor = Color.White;
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!"".Equals(this.Qty.Text))
-                {
-                    int a = Convert.ToInt32(Qty.Text);
-                    if (a < 1)
-                        throw new Exception();
-                    if (a > ((STOCK_DETAIL)ComboBoxStock.SelectedItem).QUANTITY)
-                    {
-                        MessageBox.Show("Số lượng mua lớn hơn số lượng còn trong lô!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        throw new Exception();
-                    }
-                    int t = a * medicine.sell_price;
-                    this.Total.Text = t.ToString();
-                    medicine.quantysell = a;
-                    d2();
-                }
-                
-            }
-            catch (Exception)
-            {
-                this.Qty.Text = "1";
-                this.Total.Text = medicine.sell_price.ToString();
-                medicine.quantysell = 1;
-                d2();
-            }
-            
-        }
+        
 
-        private void Qty_Leave_1(object sender, EventArgs e)
-        {
-            if ("".Equals(this.Qty.Text))
-            {
-                this.Qty.Text = "1";
-                this.Total.Text = medicine.sell_price.ToString();
-                medicine.quantysell = 1;
-                d2();
-            }
-        }
+        
 
         private void ComboBoxStock_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -114,6 +76,28 @@ namespace Pharmacy.StaffSubtab
             StockDetailLabel.Text = medicine.stock_detail.dateExpire.ToShortDateString() + " Tồn: " + medicine.stock_detail.QUANTITY.ToString();
         }
 
-        
+        private void QuantiyUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (QuantiyUpDown.Value > ((STOCK_DETAIL)ComboBoxStock.SelectedItem).QUANTITY)
+            {
+                MessageBox.Show("Số lượng mua lớn hơn số lượng còn trong lô!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                QuantiyUpDown.Value = 1;
+            }
+            else if (QuantiyUpDown.Value == 0)
+            {
+                QuantiyUpDown.Value = 1;
+                medicine.quantysell = 1;
+                Total.Text = medicine.sell_price.ToString();
+                d2();
+            }
+            else
+            {
+                int t = (int)(QuantiyUpDown.Value * medicine.sell_price);
+                this.Total.Text = t.ToString();
+                medicine.quantysell = (int)QuantiyUpDown.Value;
+                d2();
+            }
+        }
+
     }
 }

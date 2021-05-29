@@ -20,6 +20,8 @@ namespace Pharmacy.AdminTab.DashBoard
         private void report_Load(object sender, EventArgs e)
         {
             guna2DataGridView2.DataSource = _BLL.Instance.getListStockDetailView();
+            guna2DataGridView2.Columns[0].Visible = false;
+            guna2DataGridView2.Columns[1].Visible = false;
             guna2DataGridView1.DataSource = _BLL.Instance.getListReportStaff();
             guna2TextBox1.Text = DateTime.Now.ToString("MM/yyyy");
 

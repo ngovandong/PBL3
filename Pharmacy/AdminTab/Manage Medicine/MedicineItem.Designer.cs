@@ -253,11 +253,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.numericUpDownSoluong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownSoluong.Location = new System.Drawing.Point(38, 20);
-            this.numericUpDownSoluong.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numericUpDownSoluong.Name = "numericUpDownSoluong";
             this.numericUpDownSoluong.Size = new System.Drawing.Size(59, 34);
             this.numericUpDownSoluong.TabIndex = 0;

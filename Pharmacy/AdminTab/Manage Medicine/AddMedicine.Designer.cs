@@ -60,8 +60,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtIngredient = new System.Windows.Forms.TextBox();
             this.btnAddMedicineType = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddUnit = new Guna.UI2.WinForms.Guna2Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
             // btnSave
@@ -69,18 +67,18 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.Animated = true;
             this.btnSave.AutoRoundedCorners = true;
-            this.btnSave.BorderRadius = 16;
+            this.btnSave.BorderRadius = 14;
             this.btnSave.CheckedState.Parent = this.btnSave;
             this.btnSave.CustomImages.Parent = this.btnSave;
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(108)))));
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Location = new System.Drawing.Point(204, 581);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(272, 715);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
-            this.btnSave.Size = new System.Drawing.Size(87, 35);
+            this.btnSave.Size = new System.Drawing.Size(110, 30);
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -90,18 +88,18 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExit.Animated = true;
             this.btnExit.AutoRoundedCorners = true;
-            this.btnExit.BorderRadius = 16;
+            this.btnExit.BorderRadius = 14;
             this.btnExit.CheckedState.Parent = this.btnExit;
             this.btnExit.CustomImages.Parent = this.btnExit;
             this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(108)))));
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.Location = new System.Drawing.Point(372, 581);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(496, 715);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(87, 35);
+            this.btnExit.Size = new System.Drawing.Size(110, 30);
             this.btnExit.TabIndex = 50;
             this.btnExit.Text = "Thoát";
             // 
@@ -111,10 +109,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label14.Location = new System.Drawing.Point(38, 78);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(51, 96);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 19);
+            this.label14.Size = new System.Drawing.Size(89, 23);
             this.label14.TabIndex = 13;
             this.label14.Text = "Mã thuốc";
             // 
@@ -132,11 +129,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.cbBoxType.HoverState.Parent = this.cbBoxType;
             this.cbBoxType.ItemHeight = 30;
             this.cbBoxType.ItemsAppearance.Parent = this.cbBoxType;
-            this.cbBoxType.Location = new System.Drawing.Point(37, 238);
-            this.cbBoxType.Margin = new System.Windows.Forms.Padding(2);
+            this.cbBoxType.Location = new System.Drawing.Point(49, 293);
+            this.cbBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbBoxType.Name = "cbBoxType";
             this.cbBoxType.ShadowDecoration.Parent = this.cbBoxType;
-            this.cbBoxType.Size = new System.Drawing.Size(216, 36);
+            this.cbBoxType.Size = new System.Drawing.Size(287, 36);
             this.cbBoxType.TabIndex = 19;
             // 
             // txtName
@@ -154,14 +151,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(37, 169);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Location = new System.Drawing.Point(49, 208);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(254, 29);
+            this.txtName.Size = new System.Drawing.Size(339, 36);
             this.txtName.TabIndex = 20;
             // 
             // txtMedicineCode
@@ -179,14 +176,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtMedicineCode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMedicineCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMedicineCode.HoverState.Parent = this.txtMedicineCode;
-            this.txtMedicineCode.Location = new System.Drawing.Point(37, 100);
-            this.txtMedicineCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMedicineCode.Location = new System.Drawing.Point(49, 123);
+            this.txtMedicineCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMedicineCode.Name = "txtMedicineCode";
             this.txtMedicineCode.PasswordChar = '\0';
             this.txtMedicineCode.PlaceholderText = "";
             this.txtMedicineCode.SelectedText = "";
             this.txtMedicineCode.ShadowDecoration.Parent = this.txtMedicineCode;
-            this.txtMedicineCode.Size = new System.Drawing.Size(254, 29);
+            this.txtMedicineCode.Size = new System.Drawing.Size(339, 36);
             this.txtMedicineCode.TabIndex = 20;
             // 
             // txtSubcribe
@@ -204,14 +201,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtSubcribe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSubcribe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSubcribe.HoverState.Parent = this.txtSubcribe;
-            this.txtSubcribe.Location = new System.Drawing.Point(37, 445);
-            this.txtSubcribe.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSubcribe.Location = new System.Drawing.Point(49, 548);
+            this.txtSubcribe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSubcribe.Name = "txtSubcribe";
             this.txtSubcribe.PasswordChar = '\0';
             this.txtSubcribe.PlaceholderText = "";
             this.txtSubcribe.SelectedText = "";
             this.txtSubcribe.ShadowDecoration.Parent = this.txtSubcribe;
-            this.txtSubcribe.Size = new System.Drawing.Size(254, 29);
+            this.txtSubcribe.Size = new System.Drawing.Size(339, 36);
             this.txtSubcribe.TabIndex = 21;
             // 
             // txtLocation
@@ -229,14 +226,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtLocation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLocation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLocation.HoverState.Parent = this.txtLocation;
-            this.txtLocation.Location = new System.Drawing.Point(37, 515);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLocation.Location = new System.Drawing.Point(49, 634);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.PasswordChar = '\0';
             this.txtLocation.PlaceholderText = "";
             this.txtLocation.SelectedText = "";
             this.txtLocation.ShadowDecoration.Parent = this.txtLocation;
-            this.txtLocation.Size = new System.Drawing.Size(254, 29);
+            this.txtLocation.Size = new System.Drawing.Size(339, 36);
             this.txtLocation.TabIndex = 21;
             // 
             // txtBrand
@@ -254,14 +251,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtBrand.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBrand.HoverState.Parent = this.txtBrand;
-            this.txtBrand.Location = new System.Drawing.Point(37, 376);
-            this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBrand.Location = new System.Drawing.Point(49, 463);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.PasswordChar = '\0';
             this.txtBrand.PlaceholderText = "";
             this.txtBrand.SelectedText = "";
             this.txtBrand.ShadowDecoration.Parent = this.txtBrand;
-            this.txtBrand.Size = new System.Drawing.Size(254, 29);
+            this.txtBrand.Size = new System.Drawing.Size(339, 36);
             this.txtBrand.TabIndex = 21;
             // 
             // txtBarcode
@@ -279,24 +276,24 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtBarcode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBarcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBarcode.HoverState.Parent = this.txtBarcode;
-            this.txtBarcode.Location = new System.Drawing.Point(37, 307);
-            this.txtBarcode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBarcode.Location = new System.Drawing.Point(49, 378);
+            this.txtBarcode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.PasswordChar = '\0';
             this.txtBarcode.PlaceholderText = "";
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.ShadowDecoration.Parent = this.txtBarcode;
-            this.txtBarcode.Size = new System.Drawing.Size(254, 29);
+            this.txtBarcode.Size = new System.Drawing.Size(339, 36);
             this.txtBarcode.TabIndex = 21;
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
-            this.panel1.Location = new System.Drawing.Point(333, 78);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(444, 96);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(4, 480);
+            this.panel1.Size = new System.Drawing.Size(5, 591);
             this.panel1.TabIndex = 26;
             // 
             // label1
@@ -305,10 +302,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label1.Location = new System.Drawing.Point(204, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(272, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 48);
+            this.label1.Size = new System.Drawing.Size(388, 59);
             this.label1.TabIndex = 30;
             this.label1.Text = "Thêm thuốc";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -327,11 +323,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.cbBoxUnit.HoverState.Parent = this.cbBoxUnit;
             this.cbBoxUnit.ItemHeight = 30;
             this.cbBoxUnit.ItemsAppearance.Parent = this.cbBoxUnit;
-            this.cbBoxUnit.Location = new System.Drawing.Point(367, 369);
-            this.cbBoxUnit.Margin = new System.Windows.Forms.Padding(2);
+            this.cbBoxUnit.Location = new System.Drawing.Point(489, 454);
+            this.cbBoxUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbBoxUnit.Name = "cbBoxUnit";
             this.cbBoxUnit.ShadowDecoration.Parent = this.cbBoxUnit;
-            this.cbBoxUnit.Size = new System.Drawing.Size(142, 36);
+            this.cbBoxUnit.Size = new System.Drawing.Size(188, 36);
             this.cbBoxUnit.TabIndex = 31;
             // 
             // txtOriginalPrice
@@ -349,14 +345,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtOriginalPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtOriginalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOriginalPrice.HoverState.Parent = this.txtOriginalPrice;
-            this.txtOriginalPrice.Location = new System.Drawing.Point(368, 515);
-            this.txtOriginalPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtOriginalPrice.Location = new System.Drawing.Point(491, 546);
+            this.txtOriginalPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOriginalPrice.Name = "txtOriginalPrice";
             this.txtOriginalPrice.PasswordChar = '\0';
             this.txtOriginalPrice.PlaceholderText = "";
             this.txtOriginalPrice.SelectedText = "";
             this.txtOriginalPrice.ShadowDecoration.Parent = this.txtOriginalPrice;
-            this.txtOriginalPrice.Size = new System.Drawing.Size(141, 29);
+            this.txtOriginalPrice.Size = new System.Drawing.Size(188, 36);
             this.txtOriginalPrice.TabIndex = 33;
             // 
             // txtSalePrice
@@ -374,24 +370,24 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtSalePrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSalePrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSalePrice.HoverState.Parent = this.txtSalePrice;
-            this.txtSalePrice.Location = new System.Drawing.Point(550, 515);
-            this.txtSalePrice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSalePrice.Location = new System.Drawing.Point(733, 546);
+            this.txtSalePrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalePrice.Name = "txtSalePrice";
             this.txtSalePrice.PasswordChar = '\0';
             this.txtSalePrice.PlaceholderText = "";
             this.txtSalePrice.SelectedText = "";
             this.txtSalePrice.ShadowDecoration.Parent = this.txtSalePrice;
-            this.txtSalePrice.Size = new System.Drawing.Size(130, 29);
+            this.txtSalePrice.Size = new System.Drawing.Size(173, 36);
             this.txtSalePrice.TabIndex = 35;
             // 
             // txtDescription
             // 
             this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescription.Location = new System.Drawing.Point(368, 239);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescription.Location = new System.Drawing.Point(491, 294);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(308, 97);
+            this.txtDescription.Size = new System.Drawing.Size(409, 118);
             this.txtDescription.TabIndex = 37;
             // 
             // label8
@@ -400,10 +396,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label8.Location = new System.Drawing.Point(38, 148);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(51, 182);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 19);
+            this.label8.Size = new System.Drawing.Size(93, 23);
             this.label8.TabIndex = 38;
             this.label8.Text = "Tên thuốc";
             // 
@@ -413,10 +408,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label2.Location = new System.Drawing.Point(38, 216);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(51, 266);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 19);
+            this.label2.Size = new System.Drawing.Size(99, 23);
             this.label2.TabIndex = 39;
             this.label2.Text = "Loại thuốc";
             // 
@@ -426,10 +420,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label3.Location = new System.Drawing.Point(38, 286);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(51, 352);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 19);
+            this.label3.Size = new System.Drawing.Size(82, 23);
             this.label3.TabIndex = 40;
             this.label3.Text = "Mã vạch";
             // 
@@ -439,10 +432,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label4.Location = new System.Drawing.Point(38, 355);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(51, 437);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 19);
+            this.label4.Size = new System.Drawing.Size(116, 23);
             this.label4.TabIndex = 41;
             this.label4.Text = "Thương hiệu";
             // 
@@ -452,10 +444,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label9.Location = new System.Drawing.Point(38, 494);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(51, 608);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 19);
+            this.label9.Size = new System.Drawing.Size(55, 23);
             this.label9.TabIndex = 42;
             this.label9.Text = "Vị trí";
             // 
@@ -465,10 +456,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label10.Location = new System.Drawing.Point(368, 79);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(491, 97);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 19);
+            this.label10.Size = new System.Drawing.Size(108, 23);
             this.label10.TabIndex = 43;
             this.label10.Text = "Thành phần";
             // 
@@ -478,10 +468,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label6.Location = new System.Drawing.Point(368, 218);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(491, 268);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 19);
+            this.label6.Size = new System.Drawing.Size(60, 23);
             this.label6.TabIndex = 44;
             this.label6.Text = "Mô tả";
             // 
@@ -491,10 +480,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label7.Location = new System.Drawing.Point(367, 348);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(489, 428);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 19);
+            this.label7.Size = new System.Drawing.Size(65, 23);
             this.label7.TabIndex = 45;
             this.label7.Text = "Đơn vị";
             // 
@@ -504,10 +492,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label11.Location = new System.Drawing.Point(368, 494);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(491, 520);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 19);
+            this.label11.Size = new System.Drawing.Size(76, 23);
             this.label11.TabIndex = 46;
             this.label11.Text = "Giá vốn";
             // 
@@ -517,10 +504,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label15.Location = new System.Drawing.Point(549, 494);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(732, 520);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 19);
+            this.label15.Size = new System.Drawing.Size(76, 23);
             this.label15.TabIndex = 47;
             this.label15.Text = "Giá bán";
             // 
@@ -530,21 +516,20 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label5.Location = new System.Drawing.Point(38, 424);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(51, 522);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 19);
+            this.label5.Size = new System.Drawing.Size(102, 23);
             this.label5.TabIndex = 49;
             this.label5.Text = "Số đăng ký";
             // 
             // txtIngredient
             // 
             this.txtIngredient.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIngredient.Location = new System.Drawing.Point(368, 100);
-            this.txtIngredient.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIngredient.Location = new System.Drawing.Point(491, 123);
+            this.txtIngredient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIngredient.Multiline = true;
             this.txtIngredient.Name = "txtIngredient";
-            this.txtIngredient.Size = new System.Drawing.Size(308, 97);
+            this.txtIngredient.Size = new System.Drawing.Size(409, 118);
             this.txtIngredient.TabIndex = 51;
             // 
             // btnAddMedicineType
@@ -556,10 +541,12 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnAddMedicineType.ForeColor = System.Drawing.Color.White;
             this.btnAddMedicineType.HoverState.Parent = this.btnAddMedicineType;
             this.btnAddMedicineType.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMedicineType.Image")));
-            this.btnAddMedicineType.Location = new System.Drawing.Point(258, 238);
+            this.btnAddMedicineType.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnAddMedicineType.Location = new System.Drawing.Point(344, 293);
+            this.btnAddMedicineType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddMedicineType.Name = "btnAddMedicineType";
             this.btnAddMedicineType.ShadowDecoration.Parent = this.btnAddMedicineType;
-            this.btnAddMedicineType.Size = new System.Drawing.Size(36, 36);
+            this.btnAddMedicineType.Size = new System.Drawing.Size(48, 44);
             this.btnAddMedicineType.TabIndex = 52;
             this.btnAddMedicineType.Click += new System.EventHandler(this.btnAddMedicineType_Click);
             // 
@@ -572,58 +559,20 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnAddUnit.ForeColor = System.Drawing.Color.White;
             this.btnAddUnit.HoverState.Parent = this.btnAddUnit;
             this.btnAddUnit.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUnit.Image")));
-            this.btnAddUnit.Location = new System.Drawing.Point(514, 369);
+            this.btnAddUnit.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnAddUnit.Location = new System.Drawing.Point(685, 454);
+            this.btnAddUnit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddUnit.Name = "btnAddUnit";
             this.btnAddUnit.ShadowDecoration.Parent = this.btnAddUnit;
-            this.btnAddUnit.Size = new System.Drawing.Size(36, 36);
+            this.btnAddUnit.Size = new System.Drawing.Size(48, 44);
             this.btnAddUnit.TabIndex = 53;
             this.btnAddUnit.Click += new System.EventHandler(this.btnAddUnit_Click);
             // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label12.Location = new System.Drawing.Point(368, 424);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 19);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "Số lượng";
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantity.DefaultText = "";
-            this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantity.DisabledState.Parent = this.txtQuantity;
-            this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.FocusedState.Parent = this.txtQuantity;
-            this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.HoverState.Parent = this.txtQuantity;
-            this.txtQuantity.Location = new System.Drawing.Point(368, 445);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.PasswordChar = '\0';
-            this.txtQuantity.PlaceholderText = "";
-            this.txtQuantity.SelectedText = "";
-            this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
-            this.txtQuantity.Size = new System.Drawing.Size(182, 29);
-            this.txtQuantity.TabIndex = 55;
-            // 
             // AddMedicine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 627);
-            this.Controls.Add(this.txtQuantity);
-            this.Controls.Add(this.label12);
+            this.ClientSize = new System.Drawing.Size(949, 772);
             this.Controls.Add(this.btnAddUnit);
             this.Controls.Add(this.btnAddMedicineType);
             this.Controls.Add(this.txtIngredient);
@@ -654,7 +603,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.cbBoxType);
             this.Controls.Add(this.label14);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddMedicine";
             this.Text = "AddMedicine";
             this.ResumeLayout(false);
@@ -693,7 +642,5 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private System.Windows.Forms.TextBox txtIngredient;
         private Guna.UI2.WinForms.Guna2Button btnAddMedicineType;
         private Guna.UI2.WinForms.Guna2Button btnAddUnit;
-        private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
     }
 }

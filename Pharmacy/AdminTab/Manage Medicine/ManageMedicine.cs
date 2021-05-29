@@ -36,9 +36,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             importMedicine1.BringToFront();
         }
 
-        private void sample1_Load(object sender, EventArgs e)
-        {
 
+
+        private void ButtonCheckExpiryDate_Click(object sender, EventArgs e)
+        {
+            checkExpiredMedicine1.BringToFront();
         }
     }
 }

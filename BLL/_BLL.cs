@@ -47,6 +47,29 @@ namespace BLL
             }).Reverse().ToList();
         }
 
+        public void DeleteMedicineExpired()
+        {
+            foreach (var item in _DAL.Instance.getListStockDetail())
+            {
+                if (item.dateExpire < DateTime.Now)
+                {
+                    _DAL.Instance.DeleteStockDetail(item);
+                }
+            }
+        }
+
+        public void CheckExpiredMedicine()
+        {
+            foreach (var item in _DAL.Instance.getListStockDetail())
+            {
+                if (item.dateExpire < DateTime.Now)
+                {
+                    _BLL.Instance.subMedicineQuantity(item);
+                    _BLL.Instance.UpdateStockDetail(item, item.QUANTITY);
+                }
+            }
+        }
+
         public List<staffChart> getListChartStaffDate(int id)
         {
             USER u= _DAL.Instance.getListStaff().Where(p => p.ID == id).Single();
@@ -160,11 +183,12 @@ namespace BLL
 
         public int getProgressValue1()
         {
-            return _DAL.Instance.getListStockDetail().Where(p => p.dateExpire < DateTime.Now && p.QUANTITY > 0).Count();
+            return _DAL.Instance.getListStockDetail().Where(p => p.dateExpire < DateTime.Now).Count();
         }
+
         public int getProgressValue2()
         {
-            return  _DAL.Instance.getListStockDetail().Where(p => p.QUANTITY > 0).Count();
+            return _DAL.Instance.getListStockDetail().Count();
         }
 
         public int getProgressValue3()
@@ -183,10 +207,13 @@ namespace BLL
             {
                 l.Add(new stockDetailView
                 {
+                    idStock = item.ID_STOCK,
+                    idMedicine = item.ID_MEDICINE,
                     StockName = item.STOCK.Name,
                     MedicineName = item.MEDICINE.MEDICINE_NAME,
                     Available = item.QUANTITY,
-                    EXP = item.dateExpire.ToShortDateString()
+                    EXP = item.dateExpire.ToShortDateString(),
+                    Expired = item.dateExpire < DateTime.Now
                 }) ;
             }
             return l;
@@ -329,11 +356,11 @@ namespace BLL
 
         public void addMedicineQuantity(MedicineStock medicine)
         {
-            _DAL.Instance.addMedicinefromStockDetail(medicine.ID, medicine.quantityInStock);
+            _DAL.Instance.UpdateMedicine(medicine.ID, medicine.quantityInStock);
         }
         public void subMedicineQuantity(STOCK_DETAIL stDetail)
         {
-            _DAL.Instance.subMEdicinefromStockDetail(stDetail.ID_MEDICINE, stDetail.QUANTITY);
+            _DAL.Instance.UpdateMedicine(stDetail.ID_MEDICINE, -stDetail.QUANTITY);
         }
 
         public void addSupplier(SUPPLIER m)
@@ -440,8 +467,8 @@ namespace BLL
         public void UpdateStockDetail(STOCK_DETAIL stock_detail, int quantysell)
         {
             stock_detail.QUANTITY -= quantysell;
-            _DAL.Instance.UpdateStockDetail(stock_detail);
-            _DAL.Instance.UpdateMedicine(stock_detail.ID_MEDICINE, quantysell);
+            _DAL.Instance.UpdateStockDetailQuantity(stock_detail);
+            _DAL.Instance.UpdateMedicine(stock_detail.ID_MEDICINE, -quantysell);
         }
 
         public List<medicineSell> getlistMedicineSearch(int  ID)
@@ -484,9 +511,15 @@ namespace BLL
                     Name = item.MEDICINE_NAME,
                     original_Price = item.ORIGINAL_PRICE,
                     sale_Price = item.SALE_PRICE,
+                    Quantity=item.QUANTITY
                 });
             }
             return l;
+        }
+
+        public List<medicineView> getListMedicineViewReport()
+        {
+            return _DAL.Instance.getListMedicine().Where(p => p.QUANTITY == 0).Select(p => new medicineView { ID = p.MEDICINE_CODE, Name = p.MEDICINE_NAME }).ToList();
         }
 
         public List<medicineSell> getlistMedicineSearch2(int id)
@@ -695,10 +728,7 @@ namespace BLL
         {
            _DAL.Instance.UpdateStock(stock);
         }
-        public void UpdateStockDetail(STOCK_DETAIL stDetail)
-        {
-            _DAL.Instance.UpdateStockDetail(stDetail);
-        }
+        
         public void DeleteStockDetail(STOCK_DETAIL stDetail)
         {
             _DAL.Instance.DeleteStockDetail(stDetail);

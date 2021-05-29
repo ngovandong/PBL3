@@ -112,11 +112,11 @@
     <Compile Include="AdminTab\Manage Medicine\AddSupplier.Designer.cs">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminTab\Manage Medicine\CheckExpiryDate.cs">
+    <Compile Include="AdminTab\Manage Medicine\CheckExpiredMedicine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AdminTab\Manage Medicine\CheckExpiryDate.Designer.cs">
-      <DependentUpon>CheckExpiryDate.cs</DependentUpon>
+    <Compile Include="AdminTab\Manage Medicine\CheckExpiredMedicine.Designer.cs">
+      <DependentUpon>CheckExpiredMedicine.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\DetailMedicine.cs">
       <SubType>Form</SubType>
@@ -324,8 +324,8 @@
     <EmbeddedResource Include="AdminTab\Manage Medicine\AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminTab\Manage Medicine\CheckExpiryDate.resx">
-      <DependentUpon>CheckExpiryDate.cs</DependentUpon>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\CheckExpiredMedicine.resx">
+      <DependentUpon>CheckExpiredMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\DetailMedicine.resx">
       <DependentUpon>DetailMedicine.cs</DependentUpon>

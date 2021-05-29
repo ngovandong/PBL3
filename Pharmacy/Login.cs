@@ -28,6 +28,7 @@ namespace Pharmacy
         public Login()
         {
             InitializeComponent();
+            _BLL.Instance.CheckExpiredMedicine();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)

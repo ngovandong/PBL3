@@ -51,7 +51,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                     INGREDIENT = txtIngredient.Text,
                     CONTENT = txtDescription.Text,
                     BRAND = txtBrand.Text,
-                    QUANTITY = Convert.ToInt32(txtQuantity.Text),
+                    QUANTITY = 0,
                     ORIGINAL_PRICE = Convert.ToInt32(txtOriginalPrice.Text),
                     SALE_PRICE = Convert.ToInt32(txtSalePrice.Text),
                     TYPEID = ((BLL.Model_View.COMBOBOX_ITEM)cbBoxType.SelectedItem).ID,
@@ -67,7 +67,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if((txtMedicineCode.Text!="")&& (txtName.Text != "") && (cbBoxType.Text != "") && (txtBarcode.Text != "") && (txtBrand.Text != "") && (txtSubcribe.Text != "") && (txtLocation.Text != "") && (txtIngredient.Text != "") && (txtDescription.Text != "") && (cbBoxUnit.Text != "") && (txtQuantity.Text != "") && (txtOriginalPrice.Text != "") && (txtSalePrice.Text != ""))
+            if((txtMedicineCode.Text!="")&& (txtName.Text != "") && (cbBoxType.Text != "") && (txtBarcode.Text != "") && (txtBrand.Text != "") && (txtSubcribe.Text != "") && (txtLocation.Text != "") && (txtIngredient.Text != "") && (txtDescription.Text != "") && (cbBoxUnit.Text != "")&& (txtOriginalPrice.Text != "") && (txtSalePrice.Text != ""))
             {
                 MEDICINE m = getInforFromForm();
                 if (m != null)

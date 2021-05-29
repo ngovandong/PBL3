@@ -15,6 +15,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 {
     public partial class UpdateStock : Form
     {
+        public delegate void Mydel();
+        public Mydel Refresh;
         private List<MedicineItem> listMedicineItem;
         private SupplierView supplierView;
         private STOCK stock;
@@ -89,6 +91,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         public void setSupplier(string name)
         {
             textboxSupplier.Text = name.Trim();
+            supplierView = _BLL.Instance.getListSupplierView(name)[0];
         }
 
         private void buttonAddSupplier_Click(object sender, EventArgs e)
@@ -197,7 +200,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if (flowLayoutPanel2.Controls.Count == 0 || !_BLL.Instance.checkSupplier(textboxSupplier.Text.Trim()) || _BLL.Instance.checkNameStock(textboxNameStock.Text.Trim()) || "" == textboxNameStock.Text.Trim())
+            if (flowLayoutPanel2.Controls.Count == 0 || !_BLL.Instance.checkSupplier(textboxSupplier.Text.Trim()))
             {
                 if (flowLayoutPanel2.Controls.Count == 0)
                 {
@@ -211,42 +214,34 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 {
                     lbRed.Visible = false;
                 }
-                if (_BLL.Instance.checkNameStock(textboxNameStock.Text.Trim()))
-                {
-                    lbRedName.Visible = true;
-                    lbRedName.Text = "Đã có lô này rồi!";
-                }
-                else if ("" == textboxNameStock.Text.Trim())
-                {
-                    lbRed.Visible = true;
-                    lbRedName.Text = "Nhập tên lô";
-                }
-                else
-                {
-                    lbRedName.Visible = false;
-                }
             }
             else
             {
-                STOCK newStock = new STOCK()
+                stock.DATE = guna2DateTimePicker1.Value.Date;
+                stock.Name = textboxNameStock.Text.Trim();
+                stock.NOTE = richTextBox1.Text.Trim();
+                stock.PRICETOTAL = Convert.ToInt32(textboxPriceTotalAfter.Text);
+                stock.supplierId = supplierView.ID;
+                stock.SUPPLIER = _BLL.Instance.getSupplier(supplierView.ID);
+                _BLL.Instance.UpdateStock(stock);
+
+                foreach(var item in stock.STOCK_DETAIL)
                 {
-                    DATE = guna2DateTimePicker1.Value.Date,
-                    Name = textboxNameStock.Text.Trim(),
-                    NOTE = richTextBox1.Text.Trim(),
-                    PRICETOTAL = Convert.ToInt32(textboxPriceTotalAfter.Text),
-                    supplierId = supplierView.ID
-                };
-                foreach (var item in listMedicineItem)
+                    _BLL.Instance.subMedicineQuantity(item);
+                    _BLL.Instance.DeleteStockDetail(item);
+                }
+                foreach(var item in listMedicineItem)
                 {
-                    newStock.STOCK_DETAIL.Add(new STOCK_DETAIL()
+                    _BLL.Instance.AddStockDetail(new STOCK_DETAIL()
                     {
                         ORGIGINAL_PRICE = item.medicine.import_price,
                         QUANTITY = item.medicine.quantityInStock,
                         dateExpire = item.medicine.HSD,
                         ID_MEDICINE = item.medicine.ID,
+                        ID_STOCK = stock.ID
                     });
+                    _BLL.Instance.addMedicineQuantity(item.medicine);
                 }
-                _BLL.Instance.addStock(newStock);
                 Refresh();
                 this.Dispose();
             }
@@ -259,6 +254,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             for(int i = 0; i < listMedicineItem.Count; i++)
             {
                 flowLayoutPanel2.Controls.Add(listMedicineItem[i]);
+                setTotalPrice();
             }
             textboxSupplier.Text = supplierView.Name;
             textboxNameStock.Text = stock.Name;

@@ -30,14 +30,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.id = medicine.ID;
             this.code.Text = medicine.ID.ToString();
             this.Available.Text = medicine.quantityInKho.ToString();
-            this.Price.Text = "Price: " + medicine.original_price.ToString();
+            this.Price.Text = "Price: " + medicine.original_price.ToString("#,##0");
         }
-
-        private void SearchMedicineItem_MouseClick(object sender, MouseEventArgs e)
-        {
-            d(medicine);
-        }
-
         private void SearchMedicineItem_MouseMove(object sender, MouseEventArgs e)
         {
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(244)))), ((int)(((byte)(252)))));
@@ -65,16 +59,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         }
 
         private void NameMedicine_MouseClick(object sender, MouseEventArgs e)
-        {
-            d(medicine);
-        }
-
-        private void SearchMedicineItem_Click(object sender, EventArgs e)
-        {
-            d(medicine);
-        }
-
-        private void buttonAddMedicine_Click(object sender, EventArgs e)
         {
             d(medicine);
         }

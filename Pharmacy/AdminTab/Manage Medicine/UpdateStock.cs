@@ -13,19 +13,43 @@ using System.Windows.Forms;
 
 namespace Pharmacy.AdminTab.Manage_Medicine
 {
-    public partial class AddStock : Form
+    public partial class UpdateStock : Form
     {
-        public delegate void Mydel();
-        public Mydel Refresh;
         private List<MedicineItem> listMedicineItem;
         private SupplierView supplierView;
-        public AddStock()
+        private STOCK stock;
+        public UpdateStock(STOCK s)
         {
             InitializeComponent();
             listMedicineItem = new List<MedicineItem>();
-            supplierView = new SupplierView();
+            stock = s;
             flowLayoutPanel3.Size = new System.Drawing.Size(245, 1);
-            guna2DateTimePicker1.Value = DateTime.Now.Date;
+        }
+        private void setListMedicineItem()
+        {
+            for(int i = 0; i < stock.STOCK_DETAIL.Count; i++)
+            {
+                listMedicineItem.Add(new MedicineItem(_BLL.Instance.STOCKtoMedicineStock(stock)[i]));
+            }
+            foreach (var item in listMedicineItem)
+            {
+                item.d = new MedicineItem.Mydel(delToBoard);
+                item.d2 = new MedicineItem.Mydel2(setTotalPrice);
+            }
+        }
+        private void setsupplierView()
+        {
+            supplierView = new SupplierView()
+            {
+                ID = stock.SUPPLIER.ID,
+                Name = stock.SUPPLIER.NAME,
+                Phone = stock.SUPPLIER.PHONE_NUMBER
+            };
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
         public void delToBoard(MedicineItem m)
         {
@@ -66,7 +90,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             textboxSupplier.Text = name.Trim();
         }
-        private void guna2ImageButton2_Click(object sender, EventArgs e)
+
+        private void buttonAddSupplier_Click(object sender, EventArgs e)
         {
             AddSupplier sup = new AddSupplier();
             sup.d = new AddSupplier.Mydel(setSupplier);
@@ -93,11 +118,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             }
         }
 
-        private void buttonAddMedicine_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void textBoxSearchMedicine_Leave(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -108,74 +128,13 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             textBoxSearchMedicine_TextChanged(sender, e);
         }
+
         private void textboxPriceTotalBefore_TextChanged(object sender, EventArgs e)
         {
             int total_before = Convert.ToInt32(textboxPriceTotalBefore.Text);
             int sale = Convert.ToInt32(textboxSale.Text);
             int total_after = (total_before * (100 - sale)) / 100;
             textboxPriceTotalAfter.Text = total_after.ToString();
-        }
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void buttonOK_Click_1(object sender, EventArgs e)
-        {
-            if (flowLayoutPanel2.Controls.Count == 0 || !_BLL.Instance.checkSupplier(textboxSupplier.Text.Trim()) || _BLL.Instance.checkNameStock(textboxNameStock.Text.Trim()) || "" == textboxNameStock.Text.Trim())
-            {
-                if(flowLayoutPanel2.Controls.Count == 0)
-                {
-                    MessageBox.Show("Chưa thêm thuốc!");
-                }
-                if(!_BLL.Instance.checkSupplier(textboxSupplier.Text.Trim()))
-                {
-                    lbRed.Visible = true;
-                }
-                else
-                {
-                    lbRed.Visible = false;
-                }
-                if(_BLL.Instance.checkNameStock(textboxNameStock.Text.Trim()))
-                {
-                    lbRedName.Visible = true;
-                    lbRedName.Text = "Đã có lô này rồi!";
-                }
-                else if("" == textboxNameStock.Text.Trim())
-                {
-                    lbRed.Visible = true;
-                    lbRedName.Text = "Nhập tên lô";
-                }
-                else
-                {
-                    lbRedName.Visible = false;
-                }
-            }
-            else
-            {
-                STOCK newStock = new STOCK()
-                {
-                    DATE = guna2DateTimePicker1.Value.Date,
-                    Name = textboxNameStock.Text.Trim(),
-                    NOTE = richTextBox1.Text.Trim(),
-                    PRICETOTAL = Convert.ToInt32(textboxPriceTotalAfter.Text),
-                    supplierId = supplierView.ID
-                };
-                foreach(var item in listMedicineItem)
-                {
-                    newStock.STOCK_DETAIL.Add(new STOCK_DETAIL()
-                    {
-                        ORGIGINAL_PRICE = item.medicine.import_price,
-                        QUANTITY = item.medicine.quantityInStock,
-                        dateExpire = item.medicine.HSD,
-                        ID_MEDICINE = item.medicine.ID,
-                    });
-                }
-                _BLL.Instance.addStock(newStock);
-                Refresh();
-                this.Dispose();
-            }
         }
         public void addSup(SupplierView s)
         {
@@ -184,7 +143,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             flowLayoutPanel3.Controls.Clear();
             flowLayoutPanel3.Size = new System.Drawing.Size(245, 1);
         }
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+
+        private void textboxSupplier_TextChanged(object sender, EventArgs e)
         {
             flowLayoutPanel3.Visible = true;
             flowLayoutPanel3.Size = new System.Drawing.Size(245, 100);
@@ -205,7 +165,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             }
         }
 
-        private void flowLayoutPanel3_MouseLeave(object sender, EventArgs e)
+        private void textboxSupplier_Leave(object sender, EventArgs e)
         {
             flowLayoutPanel3.Controls.Clear();
             flowLayoutPanel3.Size = new System.Drawing.Size(245, 1);
@@ -226,13 +186,85 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             else
             {
                 int sale = Convert.ToInt32(textboxSale.Text);
-                if(sale > 100)
+                if (sale > 100)
                 {
                     sale = 100;
                     textboxSale.Text = sale.ToString();
                 }
             }
             textboxPriceTotalBefore_TextChanged(sender, e);
+        }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            if (flowLayoutPanel2.Controls.Count == 0 || !_BLL.Instance.checkSupplier(textboxSupplier.Text.Trim()) || _BLL.Instance.checkNameStock(textboxNameStock.Text.Trim()) || "" == textboxNameStock.Text.Trim())
+            {
+                if (flowLayoutPanel2.Controls.Count == 0)
+                {
+                    MessageBox.Show("Chưa thêm thuốc!");
+                }
+                if (!_BLL.Instance.checkSupplier(textboxSupplier.Text.Trim()))
+                {
+                    lbRed.Visible = true;
+                }
+                else
+                {
+                    lbRed.Visible = false;
+                }
+                if (_BLL.Instance.checkNameStock(textboxNameStock.Text.Trim()))
+                {
+                    lbRedName.Visible = true;
+                    lbRedName.Text = "Đã có lô này rồi!";
+                }
+                else if ("" == textboxNameStock.Text.Trim())
+                {
+                    lbRed.Visible = true;
+                    lbRedName.Text = "Nhập tên lô";
+                }
+                else
+                {
+                    lbRedName.Visible = false;
+                }
+            }
+            else
+            {
+                STOCK newStock = new STOCK()
+                {
+                    DATE = guna2DateTimePicker1.Value.Date,
+                    Name = textboxNameStock.Text.Trim(),
+                    NOTE = richTextBox1.Text.Trim(),
+                    PRICETOTAL = Convert.ToInt32(textboxPriceTotalAfter.Text),
+                    supplierId = supplierView.ID
+                };
+                foreach (var item in listMedicineItem)
+                {
+                    newStock.STOCK_DETAIL.Add(new STOCK_DETAIL()
+                    {
+                        ORGIGINAL_PRICE = item.medicine.import_price,
+                        QUANTITY = item.medicine.quantityInStock,
+                        dateExpire = item.medicine.HSD,
+                        ID_MEDICINE = item.medicine.ID,
+                    });
+                }
+                _BLL.Instance.addStock(newStock);
+                Refresh();
+                this.Dispose();
+            }
+        }
+
+        private void UpdateStock_Load(object sender, EventArgs e)
+        {
+            setListMedicineItem();
+            setsupplierView();
+            for(int i = 0; i < listMedicineItem.Count; i++)
+            {
+                flowLayoutPanel2.Controls.Add(listMedicineItem[i]);
+            }
+            textboxSupplier.Text = supplierView.Name;
+            textboxNameStock.Text = stock.Name;
+            richTextBox1.Text = stock.NOTE;
+            guna2DateTimePicker1.Value = stock.DATE.Value.Date;
+
         }
     }
 }

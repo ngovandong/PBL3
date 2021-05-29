@@ -230,6 +230,28 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+        public void UpdateStock(STOCK stock)
+        {
+            using(PharmacyModel p = new PharmacyModel())
+            {
+                STOCK sNew = p.STOCKs.Find(stock.ID);
+                sNew.Name = stock.Name;
+                sNew.DATE = stock.DATE.Value.Date;
+                sNew.NOTE = stock.NOTE;
+                sNew.PRICETOTAL = stock.PRICETOTAL;
+                sNew.supplierId = stock.supplierId;
+                p.SaveChanges();
+            }
+        }
+        public void DeleteSTOCK_DETAIL(int id_stock)
+        {
+            using(PharmacyModel p = new PharmacyModel())
+            {
+                STOCK_DETAIL stNew = p.STOCK_DETAIL.Find(id_stock);
+                p.STOCK_DETAIL.Remove(stNew);
+                p.SaveChanges();
+            }
+        }
 
         public List<SAMPLE> getListSample()
         {
@@ -280,6 +302,30 @@ namespace DAL
             using(PharmacyModel P =new PharmacyModel())
             {
                 P.SAMPLEs.Add(sample);
+                P.SaveChanges();
+            }
+        }
+
+        public void addMedicineUnit(string name)
+        {
+            using(PharmacyModel P = new PharmacyModel())
+            {
+                P.UNITs.Add(new UNIT
+                {
+                    NAME = name,
+                });
+                P.SaveChanges();
+            }
+        }
+
+        public void addMedicineType(string name)
+        {
+            using(PharmacyModel P = new PharmacyModel())
+            {
+                P.MEDICINE_TYPE.Add(new MEDICINE_TYPE
+                {
+                    TypeName = name,
+                });
                 P.SaveChanges();
             }
         }

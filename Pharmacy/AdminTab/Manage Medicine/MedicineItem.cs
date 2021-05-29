@@ -37,9 +37,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             lbName.Text = medicine.name;
             lbID.Text = medicine.ID.ToString();
             textBoxDonVi.Text = medicine.unit;
-            textBoxDonGia.Text = medicine.original_price.ToString();
-            numericUpDownSoluong.Value = 1;
-            medicine.HSD = guna2DateTimePicker1.Value.Date;
+            textBoxDonGia.Text = medicine.import_price.ToString();
+            numericUpDownSoluong.Value = medicine.quantityInStock;
+            guna2DateTimePicker1.Value = medicine.HSD.Date;
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -82,7 +82,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 giam_gia = 100;
             }
             textBoxThanhTien.Text = (don_gia * so_luong * (100 - giam_gia) / 100).ToString();
-            medicine.final_price = don_gia * (100 - giam_gia) / 100;
+            medicine.final_price = don_gia * so_luong * (100 - giam_gia) / 100;
+            medicine.import_price = don_gia * (100 - giam_gia) / 100;
             d2();
         }
 

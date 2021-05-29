@@ -214,6 +214,28 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+        public void UpdateStock(STOCK stock)
+        {
+            using(PharmacyModel p = new PharmacyModel())
+            {
+                STOCK sNew = p.STOCKs.Find(stock.ID);
+                sNew.Name = stock.Name;
+                sNew.DATE = stock.DATE.Value.Date;
+                sNew.NOTE = stock.NOTE;
+                sNew.PRICETOTAL = stock.PRICETOTAL;
+                sNew.supplierId = stock.supplierId;
+                p.SaveChanges();
+            }
+        }
+        public void DeleteSTOCK_DETAIL(int id_stock)
+        {
+            using(PharmacyModel p = new PharmacyModel())
+            {
+                STOCK_DETAIL stNew = p.STOCK_DETAIL.Find(id_stock);
+                p.STOCK_DETAIL.Remove(stNew);
+                p.SaveChanges();
+            }
+        }
 
         public List<SAMPLE> getListSample()
         {

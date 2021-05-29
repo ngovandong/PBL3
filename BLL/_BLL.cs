@@ -195,9 +195,12 @@ namespace BLL
                         ID = item.ID,
                         name = item.MEDICINE_NAME,
                         original_price = item.ORIGINAL_PRICE,
+                        import_price = item.ORIGINAL_PRICE,
                         unit = item.UNIT.NAME,
+                        quantityInStock = 1,
                         quantityInKho = item.QUANTITY,
-                        sale_price = item.SALE_PRICE
+                        sale_price = item.SALE_PRICE,
+                        HSD = DateTime.Now.Date
                     });
                 }
             }
@@ -450,7 +453,54 @@ namespace BLL
             }
             else
             {
-                
+                foreach(var item in _DAL.Instance.getListStock().Where(p => p.STOCK_DETAIL == _DAL.Instance.getListMedicine().Where(o => o.MEDICINE_NAME.ToLower().Contains(name.ToLower())).Select(u => u.STOCK_DETAIL)))
+                {
+                    results.Add(stockToStockView(item));
+                }
+            }
+            return results;
+        }
+        public STOCK getStock(int id)
+        {
+            return _DAL.Instance.getListStock().Where(o => o.ID == id).ToList()[0];
+        }
+        public List<MEDICINEinSTOCK_VIEW> getListMEDICINEinStockView(int id)
+        {
+            List<MEDICINEinSTOCK_VIEW> results = new List<MEDICINEinSTOCK_VIEW>();
+            foreach(var item in getStock(id).STOCK_DETAIL)
+            {
+                results.Add(new MEDICINEinSTOCK_VIEW
+                {
+                    id = item.ID,
+                    idMedicine = item.ID_MEDICINE,
+                    nameMedicine = item.MEDICINE.MEDICINE_NAME,
+                    quantity = item.QUANTITY,
+                    import_price = item.ORGIGINAL_PRICE,
+                    total_price = item.ORGIGINAL_PRICE * item.QUANTITY,
+                    dateExpire = item.dateExpire.Date
+                });
+
+            }
+            return results;
+        }
+        public List<MedicineStock> STOCKtoMedicineStock(STOCK stock)
+        {
+            List<MedicineStock> results = new List<MedicineStock>();
+            foreach (var item in stock.STOCK_DETAIL)
+            {
+                results.Add(new MedicineStock
+                {
+                    ID = item.ID_MEDICINE,
+                    name = item.MEDICINE.MEDICINE_NAME,
+                    unit = item.MEDICINE.UNIT.NAME,
+                    original_price = item.MEDICINE.ORIGINAL_PRICE,
+                    import_price = item.ORGIGINAL_PRICE,
+                    final_price = item.ORGIGINAL_PRICE * item.QUANTITY,
+                    sale_price = 0,
+                    quantityInStock = item.QUANTITY,
+                    HSD = item.dateExpire.Date,
+                    ID_STOCK = item.ID_STOCK
+                });
             }
             return results;
         }
@@ -459,6 +509,7 @@ namespace BLL
         {
             _DAL.Instance.addSample(sample);
         }
+
 
         public void addMedicineUnit(string name)
         {
@@ -469,5 +520,6 @@ namespace BLL
         {
             _DAL.Instance.addMedicineType(name);
         }
+
     }
 }

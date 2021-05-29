@@ -112,13 +112,21 @@ namespace DAL
 
             context.MEDICINEs.AddRange(new MEDICINE[] { m1, m2,m3 });
 
+            SUPPLIER sup1 = new SUPPLIER()
+            {
+                NAME = "cengroup",
+                PHONE_NUMBER = "23432",
+                ADDRESS = "01 le loi",
+                EMAIL = "hello@gmail.com"
+            };
+
             STOCK s1 = new STOCK
             {
                 Name="lo B",
                 NOTE = "nhap ngay hom qua",
                 DATE = DateTime.Now,
                 PRICETOTAL = 1000000,
-
+                SUPPLIER = sup1
             };
 
             STOCK s2 = new STOCK
@@ -126,7 +134,8 @@ namespace DAL
                 NOTE = "nhap ngay hom chu nhat",
                 DATE = DateTime.Now,
                 PRICETOTAL = 2000000,
-                Name="lo A"
+                Name="lo A",
+                SUPPLIER = sup1
             };
 
       

@@ -28,7 +28,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             textboxIDStock.Text = stock.ID.ToString();
             textboxSupplier.Text = stock.SUPPLIER.NAME;
             guna2DateTimePicker1.Value = stock.DATE.Value.Date;
-            richTextBoxNote.Text = stock.NOTE;
+            textBoxNOTE.Text = stock.NOTE;
             textboxPriceTotalStock.Text = stock.PRICETOTAL.ToString();
             textboxQuantityMedicineinStock.Text = stock.STOCK_DETAIL.Count().ToString();
             int quantity = 0;

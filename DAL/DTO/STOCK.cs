@@ -23,7 +23,8 @@ namespace DAL
         [StringLength(40)]
         public string Name { get; set; }
 
-        [Column(TypeName = "text")]
+        [Column(TypeName = "nvarchar")]
+        [MaxLength(150)]
         public string NOTE { get; set; }
 
         public int PRICETOTAL { get; set; }

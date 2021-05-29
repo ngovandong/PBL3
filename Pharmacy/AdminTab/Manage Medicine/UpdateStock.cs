@@ -219,7 +219,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             {
                 stock.DATE = guna2DateTimePicker1.Value.Date;
                 stock.Name = textboxNameStock.Text.Trim();
-                stock.NOTE = richTextBox1.Text.Trim();
+                stock.NOTE = textboxNote.Text.Trim();
                 stock.PRICETOTAL = Convert.ToInt32(textboxPriceTotalAfter.Text);
                 stock.supplierId = supplierView.ID;
                 stock.SUPPLIER = _BLL.Instance.getSupplier(supplierView.ID);
@@ -258,7 +258,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             }
             textboxSupplier.Text = supplierView.Name;
             textboxNameStock.Text = stock.Name;
-            richTextBox1.Text = stock.NOTE;
+            textboxNote.Text = stock.NOTE;
             guna2DateTimePicker1.Value = stock.DATE.Value.Date;
 
         }

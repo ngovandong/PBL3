@@ -37,6 +37,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             {
                 MessageBox.Show("Vui lòng chỉ chọn một lô hàng");
             }
+            else if (0 == count)
+            {
+                MessageBox.Show("Hiện không có lô hàng nào");
+            }
             else
             {
                 int index = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells[0].Value);
@@ -51,6 +55,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             if (count > 1)
             {
                 MessageBox.Show("Vui lòng chỉ chọn một lô hàng");
+            }
+            else if(0 == count)
+            {
+                MessageBox.Show("Hiện không có lô hàng nào");
             }
             else
             {

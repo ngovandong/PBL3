@@ -163,6 +163,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxThanhTien.Size = new System.Drawing.Size(145, 36);
             this.textBoxThanhTien.TabIndex = 2;
             this.textBoxThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxThanhTien.TextChanged += new System.EventHandler(this.textBoxThanhTien_TextChanged);
             // 
             // panel13
             // 
@@ -198,6 +199,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxGiamGia.Size = new System.Drawing.Size(71, 36);
             this.textboxGiamGia.TabIndex = 1;
             this.textboxGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textboxGiamGia.TextChanged += new System.EventHandler(this.textboxGiamGia_TextChanged);
             this.textboxGiamGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxGiamGia_KeyPress);
             this.textboxGiamGia.Leave += new System.EventHandler(this.textboxGiamGia_MouseLeave);
             this.textboxGiamGia.MouseLeave += new System.EventHandler(this.textboxGiamGia_MouseLeave);
@@ -236,6 +238,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxDonGia.Size = new System.Drawing.Size(147, 36);
             this.textBoxDonGia.TabIndex = 0;
             this.textBoxDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxDonGia.TextChanged += new System.EventHandler(this.textBoxDonGia_TextChanged);
             this.textBoxDonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDonGia_KeyPress);
             this.textBoxDonGia.Leave += new System.EventHandler(this.textBoxDonGia_MouseLeave);
             this.textBoxDonGia.MouseLeave += new System.EventHandler(this.textBoxDonGia_MouseLeave);

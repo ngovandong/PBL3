@@ -122,5 +122,20 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+
+        private void textBoxThanhTien_TextChanged(object sender, EventArgs e)
+        {
+            d2();
+        }
+
+        private void textBoxDonGia_TextChanged(object sender, EventArgs e)
+        {
+            textBoxDonGia_MouseLeave(sender, e);
+        }
+
+        private void textboxGiamGia_TextChanged(object sender, EventArgs e)
+        {
+            textboxGiamGia_MouseLeave(sender, e);
+        }
     }
 }

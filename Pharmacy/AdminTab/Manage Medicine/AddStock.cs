@@ -153,7 +153,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 {
                     DATE = guna2DateTimePicker1.Value.Date,
                     Name = textboxNameStock.Text.Trim(),
-                    NOTE = richTextBox1.Text.Trim(),
+                    NOTE = textboxNote.Text.Trim(),
                     PRICETOTAL = Convert.ToInt32(textboxPriceTotalAfter.Text),
                     supplierId = supplierView.ID
                 };

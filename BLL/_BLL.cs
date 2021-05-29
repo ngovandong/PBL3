@@ -536,9 +536,24 @@ namespace BLL
         {
             _DAL.Instance.addSample(sample);
         }
+
+
+        public void addMedicineUnit(string name)
+        {
+            _DAL.Instance.addMedicineUnit(name);
+        }
+
+        public void addMedicineType(string name)
+        {
+
+            _DAL.Instance.addMedicineType(name);
+        }
+      
+      
+      
         public void UpdateStock(STOCK stock)
         {
-            _DAL.Instance.UpdateStock(stock);
+           _DAL.Instance.UpdateStock(stock);
         }
         public void UpdateStockDetail(STOCK_DETAIL stDetail)
         {
@@ -556,5 +571,6 @@ namespace BLL
         {
             _DAL.Instance.DeleteStock(id);
         }
+
     }
 }

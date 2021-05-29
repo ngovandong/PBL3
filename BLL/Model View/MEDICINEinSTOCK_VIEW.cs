@@ -8,7 +8,6 @@ namespace BLL.Model_View
 {
     public class MEDICINEinSTOCK_VIEW
     {
-        public int id { get; set; }
         public int idMedicine { get; set; }
         public string nameMedicine { get; set; }
         public int quantity { get; set; }

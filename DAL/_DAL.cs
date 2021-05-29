@@ -230,6 +230,27 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+
+        public void addMedicinefromStockDetail(int id, int quantityInStock)
+        {
+            using(PharmacyModel p = new PharmacyModel())
+            {
+                MEDICINE nMedicine = p.MEDICINEs.Find(id);
+                nMedicine.QUANTITY += quantityInStock;
+                p.SaveChanges();
+            }
+        }
+
+        public void subMEdicinefromStockDetail(int iD, int quantityInStock)
+        {
+            using(PharmacyModel p = new PharmacyModel())
+            {
+                MEDICINE nMedicine = p.MEDICINEs.Find(iD);
+                nMedicine.QUANTITY -= quantityInStock;
+                p.SaveChanges();
+            }
+        }
+
         public void UpdateStock(STOCK stock)
         {
             using(PharmacyModel p = new PharmacyModel())
@@ -243,12 +264,43 @@ namespace DAL
                 p.SaveChanges();
             }
         }
-        public void DeleteSTOCK_DETAIL(int id_stock)
+        public void UpdateStockDetail(STOCK_DETAIL stDetail)
+        {
+            using (PharmacyModel p = new PharmacyModel())
+            {
+                STOCK_DETAIL newDetail = p.STOCK_DETAIL.Find(stDetail.ID_MEDICINE, stDetail.ID_STOCK);
+                newDetail.ORGIGINAL_PRICE = stDetail.ORGIGINAL_PRICE;
+                newDetail.QUANTITY = stDetail.QUANTITY;
+                newDetail.dateExpire = stDetail.dateExpire;
+                newDetail.ID_MEDICINE = stDetail.ID_MEDICINE;
+                newDetail.ID_STOCK = stDetail.ID_STOCK;
+                p.SaveChanges();
+            }
+        }
+        public void AddStockDetail(STOCK_DETAIL stDetail)
+        {
+            using (PharmacyModel p = new PharmacyModel())
+            {
+                p.STOCK_DETAIL.Add(stDetail);
+                p.SaveChanges();
+
+            }
+        }
+        public void DeleteStockDetail(STOCK_DETAIL stDetail)
         {
             using(PharmacyModel p = new PharmacyModel())
             {
-                STOCK_DETAIL stNew = p.STOCK_DETAIL.Find(id_stock);
+                STOCK_DETAIL stNew = p.STOCK_DETAIL.Find(stDetail.ID_MEDICINE, stDetail.ID_STOCK);
                 p.STOCK_DETAIL.Remove(stNew);
+                p.SaveChanges();
+            }
+        }
+        public void DeleteStock(int idStock)
+        {
+            using (PharmacyModel p = new PharmacyModel())
+            {
+                STOCK newStock = p.STOCKs.Find(idStock);
+                p.STOCKs.Remove(newStock);
                 p.SaveChanges();
             }
         }

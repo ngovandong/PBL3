@@ -39,6 +39,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             textBoxDonVi.Text = medicine.unit;
             textBoxDonGia.Text = medicine.import_price.ToString();
             numericUpDownSoluong.Value = medicine.quantityInStock;
+            textBoxThanhTien.Text = (medicine.import_price * Convert.ToInt32(numericUpDownSoluong.Value)).ToString();
             guna2DateTimePicker1.Value = medicine.HSD.Date;
         }
 

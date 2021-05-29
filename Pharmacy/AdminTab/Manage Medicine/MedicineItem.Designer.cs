@@ -199,6 +199,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxGiamGia.TabIndex = 1;
             this.textboxGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textboxGiamGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxGiamGia_KeyPress);
+            this.textboxGiamGia.Leave += new System.EventHandler(this.textboxGiamGia_MouseLeave);
             this.textboxGiamGia.MouseLeave += new System.EventHandler(this.textboxGiamGia_MouseLeave);
             // 
             // panel12
@@ -236,6 +237,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxDonGia.TabIndex = 0;
             this.textBoxDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxDonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDonGia_KeyPress);
+            this.textBoxDonGia.Leave += new System.EventHandler(this.textBoxDonGia_MouseLeave);
             this.textBoxDonGia.MouseLeave += new System.EventHandler(this.textBoxDonGia_MouseLeave);
             // 
             // panel11

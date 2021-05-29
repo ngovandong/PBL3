@@ -29,9 +29,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -46,8 +46,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comboboxItem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dateTimeFinish = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dateTimeBegin = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel1.SuspendLayout();
@@ -84,30 +84,30 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.guna2DataGridView1.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
@@ -256,8 +256,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel2.Controls.Add(this.guna2HtmlLabel3);
             this.panel2.Controls.Add(this.comboboxItem);
             this.panel2.Controls.Add(this.textBoxSearch);
-            this.panel2.Controls.Add(this.guna2DateTimePicker2);
-            this.panel2.Controls.Add(this.guna2DateTimePicker1);
+            this.panel2.Controls.Add(this.dateTimeFinish);
+            this.panel2.Controls.Add(this.dateTimeBegin);
             this.panel2.Controls.Add(this.guna2HtmlLabel1);
             this.panel2.Controls.Add(this.guna2HtmlLabel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -319,38 +319,41 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxSearch.ShadowDecoration.Parent = this.textBoxSearch;
             this.textBoxSearch.Size = new System.Drawing.Size(412, 47);
             this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
-            // guna2DateTimePicker2
+            // dateTimeFinish
             // 
-            this.guna2DateTimePicker2.CheckedState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.HoverState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(32, 137);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.ShadowDecoration.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(228, 36);
-            this.guna2DateTimePicker2.TabIndex = 6;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2021, 5, 21, 8, 56, 14, 248);
+            this.dateTimeFinish.CheckedState.Parent = this.dateTimeFinish;
+            this.dateTimeFinish.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
+            this.dateTimeFinish.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimeFinish.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimeFinish.HoverState.Parent = this.dateTimeFinish;
+            this.dateTimeFinish.Location = new System.Drawing.Point(32, 137);
+            this.dateTimeFinish.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimeFinish.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimeFinish.Name = "dateTimeFinish";
+            this.dateTimeFinish.ShadowDecoration.Parent = this.dateTimeFinish;
+            this.dateTimeFinish.Size = new System.Drawing.Size(259, 36);
+            this.dateTimeFinish.TabIndex = 6;
+            this.dateTimeFinish.Value = new System.DateTime(2021, 5, 21, 8, 56, 14, 248);
+            this.dateTimeFinish.ValueChanged += new System.EventHandler(this.dateTimeFinish_ValueChanged);
             // 
-            // guna2DateTimePicker1
+            // dateTimeBegin
             // 
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(32, 71);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(228, 36);
-            this.guna2DateTimePicker1.TabIndex = 5;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 21, 8, 56, 14, 248);
+            this.dateTimeBegin.CheckedState.Parent = this.dateTimeBegin;
+            this.dateTimeBegin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
+            this.dateTimeBegin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimeBegin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimeBegin.HoverState.Parent = this.dateTimeBegin;
+            this.dateTimeBegin.Location = new System.Drawing.Point(32, 71);
+            this.dateTimeBegin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimeBegin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimeBegin.Name = "dateTimeBegin";
+            this.dateTimeBegin.ShadowDecoration.Parent = this.dateTimeBegin;
+            this.dateTimeBegin.Size = new System.Drawing.Size(259, 36);
+            this.dateTimeBegin.TabIndex = 5;
+            this.dateTimeBegin.Value = new System.DateTime(2021, 5, 21, 8, 56, 14, 248);
+            this.dateTimeBegin.ValueChanged += new System.EventHandler(this.dateTimeBegin_ValueChanged);
             // 
             // guna2HtmlLabel1
             // 
@@ -405,8 +408,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private Guna.UI2.WinForms.Guna2Button buttonAdd;
         private Guna.UI2.WinForms.Guna2TextBox textBoxSearch;
         private Guna.UI2.WinForms.Guna2ComboBox comboboxItem;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimeFinish;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimeBegin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;

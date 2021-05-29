@@ -326,6 +326,16 @@ namespace BLL
             }
             return ls;
         }
+
+        public void addMedicineQuantity(MedicineStock medicine)
+        {
+            _DAL.Instance.addMedicinefromStockDetail(medicine.ID, medicine.quantityInStock);
+        }
+        public void subMedicineQuantity(STOCK_DETAIL stDetail)
+        {
+            _DAL.Instance.subMEdicinefromStockDetail(stDetail.ID_MEDICINE, stDetail.QUANTITY);
+        }
+
         public void addSupplier(SUPPLIER m)
         {
             _DAL.Instance.addSupplier(m);
@@ -561,7 +571,7 @@ namespace BLL
                 priceTotal = temp.PRICETOTAL
             };
         }
-        public List<STOCK_VIEW> getListStockView(string name, string option)
+        public List<STOCK_VIEW> getListStockView(string name, string option, DateTime begin, DateTime finish)
         {
             List<STOCK_VIEW> results = new List<STOCK_VIEW>();
             if ("NAME" == option)
@@ -580,12 +590,30 @@ namespace BLL
             }
             else
             {
-                foreach(var item in _DAL.Instance.getListStock().Where(p => p.STOCK_DETAIL == _DAL.Instance.getListMedicine().Where(o => o.MEDICINE_NAME.ToLower().Contains(name.ToLower())).Select(u => u.STOCK_DETAIL)))
+                List<STOCK> listStock = _DAL.Instance.getListStock();
+                foreach(STOCK stock in listStock)
                 {
-                    results.Add(stockToStockView(item));
+                    foreach(STOCK_DETAIL stockDetail in stock.STOCK_DETAIL)
+                    {
+                        if (stockDetail.MEDICINE.MEDICINE_NAME.ToLower().Contains(name.ToLower()))
+                        {
+                            results.Add(stockToStockView(stock));
+                            break;
+                        }
+                    }
                 }
             }
-            return results;
+            List<STOCK_VIEW> final_results = new List<STOCK_VIEW>();
+            final_results.AddRange(results);
+
+            foreach (STOCK_VIEW stock_view in results)
+            {
+                if (DateTime.Compare(stock_view.dateImport, begin) < 0 || DateTime.Compare(stock_view.dateImport, finish) > 0)
+                {
+                    final_results.Remove(stock_view);
+                }
+            }
+            return final_results;
         }
         public STOCK getStock(int id)
         {
@@ -598,7 +626,6 @@ namespace BLL
             {
                 results.Add(new MEDICINEinSTOCK_VIEW
                 {
-                    id = item.ID,
                     idMedicine = item.ID_MEDICINE,
                     nameMedicine = item.MEDICINE.MEDICINE_NAME,
                     quantity = item.QUANTITY,
@@ -658,7 +685,31 @@ namespace BLL
 
         public void addMedicineType(string name)
         {
+
             _DAL.Instance.addMedicineType(name);
+        }
+      
+      
+      
+        public void UpdateStock(STOCK stock)
+        {
+           _DAL.Instance.UpdateStock(stock);
+        }
+        public void UpdateStockDetail(STOCK_DETAIL stDetail)
+        {
+            _DAL.Instance.UpdateStockDetail(stDetail);
+        }
+        public void DeleteStockDetail(STOCK_DETAIL stDetail)
+        {
+            _DAL.Instance.DeleteStockDetail(stDetail);
+        }
+        public void AddStockDetail(STOCK_DETAIL stDetail)
+        {
+            _DAL.Instance.AddStockDetail(stDetail);
+        }
+        public void DeleteStock(int id)
+        {
+            _DAL.Instance.DeleteStock(id);
         }
 
     }

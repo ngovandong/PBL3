@@ -27,11 +27,13 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         public void setComboBoxMedicine_Type()
         {
+            cbBoxType.Items.Clear();
             cbBoxType.Items.AddRange(_BLL.Instance.getListCBBMedicine_Type().ToArray());
         }
 
         public void setComboBoxUnit()
         {
+            cbBoxUnit.Items.Clear();
             cbBoxUnit.Items.AddRange(_BLL.Instance.getListCBBUnit().ToArray());
         }
 
@@ -85,5 +87,21 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 MessageBox.Show("Please enter all property!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnAddMedicineType_Click(object sender, EventArgs e)
+        {
+            AddMedicineType addForm = new AddMedicineType();
+            addForm.updateFunc = new AddMedicineType.UpdateCBBUnitDelegate(setComboBoxMedicine_Type);
+            addForm.Show();
+        }
+
+        private void btnAddUnit_Click(object sender, EventArgs e)
+        {
+            AddMedicineUnit addForm = new AddMedicineUnit();
+            addForm.updateFunc = new AddMedicineUnit.UpdateCBBUnitDelegate(setComboBoxUnit);
+            addForm.Show();
+        }
+
+ 
     }
 }

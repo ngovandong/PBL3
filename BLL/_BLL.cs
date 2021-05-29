@@ -509,9 +509,17 @@ namespace BLL
         {
             _DAL.Instance.addSample(sample);
         }
-        public void UpdateStock(STOCK stock)
+
+
+        public void addMedicineUnit(string name)
         {
+            _DAL.Instance.addMedicineUnit(name);
         }
-        
+
+        public void addMedicineType(string name)
+        {
+            _DAL.Instance.addMedicineType(name);
+        }
+
     }
 }

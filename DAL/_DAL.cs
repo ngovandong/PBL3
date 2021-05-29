@@ -261,5 +261,29 @@ namespace DAL
                 P.SaveChanges();
             }
         }
+
+        public void addMedicineUnit(string name)
+        {
+            using(PharmacyModel P = new PharmacyModel())
+            {
+                P.UNITs.Add(new UNIT
+                {
+                    NAME = name,
+                });
+                P.SaveChanges();
+            }
+        }
+
+        public void addMedicineType(string name)
+        {
+            using(PharmacyModel P = new PharmacyModel())
+            {
+                P.MEDICINE_TYPE.Add(new MEDICINE_TYPE
+                {
+                    TypeName = name,
+                });
+                P.SaveChanges();
+            }
+        }
     }
 }

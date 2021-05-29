@@ -29,24 +29,59 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMedicine = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPrescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelSearch = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPrescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelMedicine = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelMedicine
+            // panel1
             // 
-            this.panelMedicine.BackColor = System.Drawing.Color.White;
-            this.panelMedicine.Location = new System.Drawing.Point(0, 99);
-            this.panelMedicine.Name = "panelMedicine";
-            this.panelMedicine.Size = new System.Drawing.Size(1262, 855);
-            this.panelMedicine.TabIndex = 0;
-            this.panelMedicine.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
+            this.panel1.Controls.Add(this.panelSearch);
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.txtPrescription);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1348, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(391, 743);
+            this.panel1.TabIndex = 8;
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
+            // 
+            // panelSearch
+            // 
+            this.panelSearch.AutoScroll = true;
+            this.panelSearch.Location = new System.Drawing.Point(30, 212);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(338, 172);
+            this.panelSearch.TabIndex = 11;
+            // 
+            // btnSave
+            // 
+            this.btnSave.CheckedState.Parent = this.btnSave;
+            this.btnSave.CustomImages.Parent = this.btnSave;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.HoverState.Parent = this.btnSave;
+            this.btnSave.Location = new System.Drawing.Point(102, 649);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.ShadowDecoration.Parent = this.btnSave;
+            this.btnSave.Size = new System.Drawing.Size(180, 45);
+            this.btnSave.TabIndex = 11;
+            this.btnSave.Text = "Lưu đơn mẫu";
+            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
             // 
             // txtSearch
             // 
@@ -62,61 +97,15 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(25, 26);
+            this.txtSearch.Location = new System.Drawing.Point(30, 177);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên thuốc cần tìm";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(356, 36);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.Size = new System.Drawing.Size(338, 36);
+            this.txtSearch.TabIndex = 10;
             this.txtSearch.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(1288, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tên đơn thuốc";
-            this.label1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(1288, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Kê đơn";
-            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
-            // 
-            // txtName
-            // 
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.Parent = this.txtName;
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.FocusedState.Parent = this.txtName;
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(1292, 130);
-            this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
-            this.txtName.PlaceholderText = "";
-            this.txtName.SelectedText = "";
-            this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(338, 36);
-            this.txtName.TabIndex = 4;
-            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
             // 
             // txtPrescription
             // 
@@ -132,69 +121,124 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtPrescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrescription.HoverState.Parent = this.txtPrescription;
-            this.txtPrescription.Location = new System.Drawing.Point(1292, 227);
+            this.txtPrescription.Location = new System.Drawing.Point(30, 447);
             this.txtPrescription.Name = "txtPrescription";
             this.txtPrescription.PasswordChar = '\0';
             this.txtPrescription.PlaceholderText = "";
             this.txtPrescription.SelectedText = "";
             this.txtPrescription.ShadowDecoration.Parent = this.txtPrescription;
-            this.txtPrescription.Size = new System.Drawing.Size(338, 288);
-            this.txtPrescription.TabIndex = 5;
+            this.txtPrescription.Size = new System.Drawing.Size(338, 163);
+            this.txtPrescription.TabIndex = 10;
             this.txtPrescription.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
             // 
-            // btnSave
+            // txtName
             // 
-            this.btnSave.CheckedState.Parent = this.btnSave;
-            this.btnSave.CustomImages.Parent = this.btnSave;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Location = new System.Drawing.Point(1374, 889);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.ShadowDecoration.Parent = this.btnSave;
-            this.btnSave.Size = new System.Drawing.Size(180, 45);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Lưu đơn mẫu";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.Parent = this.txtName;
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.FocusedState.Parent = this.txtName;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.HoverState.Parent = this.txtName;
+            this.txtName.Location = new System.Drawing.Point(30, 90);
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.PlaceholderText = "";
+            this.txtName.SelectedText = "";
+            this.txtName.ShadowDecoration.Parent = this.txtName;
+            this.txtName.Size = new System.Drawing.Size(338, 36);
+            this.txtName.TabIndex = 9;
+            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
             // 
-            // panelSearch
+            // label2
             // 
-            this.panelSearch.Location = new System.Drawing.Point(25, 60);
-            this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(356, 172);
-            this.panelSearch.TabIndex = 7;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(26, 420);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 24);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Kê đơn";
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(26, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 24);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Tên đơn thuốc";
+            this.label1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1348, 87);
+            this.panel2.TabIndex = 9;
+            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
+            // 
+            // panelMedicine
+            // 
+            this.panelMedicine.BackColor = System.Drawing.Color.White;
+            this.panelMedicine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMedicine.Location = new System.Drawing.Point(0, 87);
+            this.panelMedicine.Name = "panelMedicine";
+            this.panelMedicine.Size = new System.Drawing.Size(1348, 656);
+            this.panelMedicine.TabIndex = 10;
+            this.panelMedicine.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(57, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(206, 31);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Đơn Thuốc Mẫu";
             // 
             // Sample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelSearch);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtPrescription);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.panelMedicine);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Sample";
-            this.Size = new System.Drawing.Size(1730, 957);
+            this.Size = new System.Drawing.Size(1739, 743);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel panelMedicine;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private Guna.UI2.WinForms.Guna2TextBox txtPrescription;
+        private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrescription;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel panelMedicine;
         private System.Windows.Forms.FlowLayoutPanel panelSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.Label label3;
     }
 }

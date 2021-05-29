@@ -30,6 +30,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
             panelSearch.Visible = true;
+            panelSearch.BringToFront();
             panelSearch.Controls.Clear();
             panelSearch.SuspendLayout();
             try
@@ -120,5 +121,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             panelSearch.Visible = false;
         }
+
     }
 }

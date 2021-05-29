@@ -44,8 +44,8 @@ namespace Pharmacy
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.staffProfile1 = new Pharmacy.StaffSubtab.StaffProfile(this.user.USER_NAME);
-            this.staffReport1 = new Pharmacy.StaffSubtab.StaffReport();
-            this.staffDashBoard1 = new Pharmacy.StaffSubtab.StaffDashBoard();
+            this.staffReport1 = new Pharmacy.StaffSubtab.StaffReport(this.user);
+            this.staffDashBoard1 = new Pharmacy.StaffSubtab.StaffDashBoard(this.user);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();

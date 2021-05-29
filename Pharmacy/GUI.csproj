@@ -396,6 +396,9 @@
     <EmbeddedResource Include="StaffSubtab\MedicineItem.resx">
       <DependentUpon>MedicineItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaffSubtab\StaffReport.resx">
+      <DependentUpon>StaffReport.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="AdminTab\ManageUser\App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

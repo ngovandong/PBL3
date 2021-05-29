@@ -30,7 +30,7 @@ namespace DAL
 
             using (PharmacyModel P = new PharmacyModel())
             {
-                return P.USERs.ToList();
+                return P.USERs.Include("INVOICEs.CUSTOMER").ToList();
             }
         }
 

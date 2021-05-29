@@ -35,6 +35,32 @@ namespace BLL
             return null;
         }
 
+        public List<INVOICE_VIEW_REPORT> getListInvoice(int id)
+        {
+            USER u = _DAL.Instance.getListUser().Where(p => p.ID == id).FirstOrDefault();
+            return u.INVOICEs.Select(p => new INVOICE_VIEW_REPORT
+            {
+                Date = p.DATE,
+                Charge = p.CHARGE,
+                Discount = p.DISCOUNT,
+                CustomerName = p.CUSTOMER == null ? "" : p.CUSTOMER.Customer_name
+            }).Reverse().ToList();
+        }
+
+        public List<staffChart> getListChartStaffDate(int id)
+        {
+            USER u= _DAL.Instance.getListStaff().Where(p => p.ID == id).Single();
+
+            return u.INVOICEs.GroupBy(p => p.DATE.ToShortDateString()).Select(c => new staffChart { date = c.Key, sale = c.Sum(p => p.CHARGE),qty=c.Count() }).OrderByDescending(p=>p.date).Take(7).Reverse().ToList();
+        }
+
+        public List<staffChart> getListChartStaffMonth(int id)
+        {
+            USER u = _DAL.Instance.getListStaff().Where(p => p.ID == id).Single();
+
+            return u.INVOICEs.GroupBy(p => p.DATE.ToString("MM/yyyy")).Select(c => new staffChart { date = c.Key, sale = c.Sum(p => p.CHARGE), qty = c.Count() }).OrderByDescending(p => p.date).Take(7).Reverse().ToList();
+        }
+
         public List<reportStaff> getListReportStaff()
         {
             List<reportStaff> l = new List<reportStaff>();
@@ -58,6 +84,41 @@ namespace BLL
                 });
             }
             return l;
+        }
+
+        public reportStaff getReportStaff(int id, bool b)
+        {
+            USER u = _DAL.Instance.getListStaff().Where(p => p.ID == id).Single();
+            int s1 = 0;
+            int s2 = 0;
+            if (b)
+            {
+                foreach (var i in u.INVOICEs)
+                {
+                    if (i.DATE.ToShortDateString() == DateTime.Now.ToShortDateString())
+                    {
+                        s1 += i.TOTAL;
+                        s2++;
+                    }
+                }
+            }
+            else
+            {
+                foreach (var i in u.INVOICEs)
+                {
+                    if (i.DATE.ToString("MM/yyyy") == DateTime.Now.ToString("MM/yyyy"))
+                    {
+                        s1 += i.TOTAL;
+                        s2++;
+                    }
+                }
+            }
+            return (new reportStaff
+            {
+                StaffName = u.NAME,
+                TotalSold = s1,
+                NumberOfInvoice = s2
+            });
         }
 
         public int checkUser(string username, string pass)

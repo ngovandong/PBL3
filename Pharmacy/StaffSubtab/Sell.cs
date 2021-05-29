@@ -16,6 +16,8 @@ namespace Pharmacy.StaffSubtab
 {
     public partial class Sell : Form
     {
+        public delegate void Mydel();
+        public Mydel d;
         private CUSTOMER customer;
         private USER user;
         private int Ntotal;
@@ -120,7 +122,6 @@ namespace Pharmacy.StaffSubtab
                     flowLayoutPanel1.Controls.Add(i);
                     getTotal();
                 }
-                
             }
             else
             {
@@ -146,6 +147,7 @@ namespace Pharmacy.StaffSubtab
         private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            d();
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -292,8 +294,7 @@ namespace Pharmacy.StaffSubtab
             flowLayoutPanel1.Controls.Clear();
             ListMe.Clear();
             int id = (int)SampleDataGridView.SelectedRows[0].Cells[0].Value;
-            SAMPLE s = _BLL.Instance.getSample(id);
-            Note.Text = s.PRESCRIPTION;
+            
             foreach (var item in _BLL.Instance.getlistMedicineSearch(id))
             {
                 if (item.STOCK_DETAIL.Count > 0 && item.Qty >item.quantysell)
@@ -309,7 +310,12 @@ namespace Pharmacy.StaffSubtab
                 else
                 {
                     MessageBox.Show("Hết hàng!");
+                    flowLayoutPanel1.Controls.Clear();
+                    ListMe.Clear();
+                    return;
                 }
+                SAMPLE s = _BLL.Instance.getSample(id);
+                Note.Text = s.PRESCRIPTION;
             }
         }
 
@@ -318,9 +324,6 @@ namespace Pharmacy.StaffSubtab
             flowLayoutPanel1.Controls.Clear();
             ListMe.Clear();
             int id = (int)customerInvoiceHistoryDatagridview.SelectedRows[0].Cells[0].Value;
-
-            INVOICE I = customer.INVOICEs.Where(p => p.ID_INVOICE == id).Select(p => p).Single();
-            Note.Text = I.PRESCRIPTION;
             foreach (var item in _BLL.Instance.getlistMedicineSearch2(id))
             {
                 if (item.STOCK_DETAIL.Count > 0 && item.Qty > item.quantysell)
@@ -336,7 +339,12 @@ namespace Pharmacy.StaffSubtab
                 else
                 {
                     MessageBox.Show("Hết hàng!");
+                    flowLayoutPanel1.Controls.Clear();
+                    ListMe.Clear();
+                    return;
                 }
+                INVOICE I = customer.INVOICEs.Where(p => p.ID_INVOICE == id).Select(p => p).Single();
+                Note.Text = I.PRESCRIPTION;
             }
         }
     }

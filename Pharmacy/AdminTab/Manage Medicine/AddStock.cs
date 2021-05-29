@@ -65,6 +65,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         public void setSupplier(string name)
         {
             textboxSupplier.Text = name.Trim();
+            supplierView = _BLL.Instance.getListSupplierView(name)[0];
         }
         private void guna2ImageButton2_Click(object sender, EventArgs e)
         {
@@ -92,12 +93,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 flowLayoutPanel1.ResumeLayout();
             }
         }
-
-        private void buttonAddMedicine_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void textBoxSearchMedicine_Leave(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -144,7 +139,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 }
                 else if("" == textboxNameStock.Text.Trim())
                 {
-                    lbRed.Visible = true;
+                    lbRedName.Visible = true;
                     lbRedName.Text = "Nhập tên lô";
                 }
                 else
@@ -171,8 +166,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                         dateExpire = item.medicine.HSD,
                         ID_MEDICINE = item.medicine.ID,
                     });
+
+                    _BLL.Instance.addMedicineQuantity(item.medicine);
                 }
                 _BLL.Instance.addStock(newStock);
+
                 Refresh();
                 this.Dispose();
             }
@@ -233,6 +231,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 }
             }
             textboxPriceTotalBefore_TextChanged(sender, e);
+        }
+
+        private void textboxSupplier_Enter(object sender, EventArgs e)
+        {
+            guna2TextBox1_TextChanged(sender, e);
         }
     }
 }

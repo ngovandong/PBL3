@@ -57,10 +57,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonAddMedicine = new Guna.UI2.WinForms.Guna2ImageButton();
             this.textBoxSearchMedicine = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.textboxSupplier = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbRedName = new System.Windows.Forms.Label();
@@ -80,7 +80,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxSale = new Guna.UI2.WinForms.Guna2TextBox();
             this.textboxPriceTotalBefore = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -348,7 +347,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // panel3
             // 
             this.panel3.Controls.Add(this.flowLayoutPanel1);
-            this.panel3.Controls.Add(this.buttonAddMedicine);
             this.panel3.Controls.Add(this.textBoxSearchMedicine);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -364,24 +362,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(559, 180);
             this.flowLayoutPanel1.TabIndex = 39;
-            // 
-            // buttonAddMedicine
-            // 
-            this.buttonAddMedicine.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonAddMedicine.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.buttonAddMedicine.CheckedState.Parent = this.buttonAddMedicine;
-            this.buttonAddMedicine.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.buttonAddMedicine.HoverState.Parent = this.buttonAddMedicine;
-            this.buttonAddMedicine.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddMedicine.Image")));
-            this.buttonAddMedicine.ImageRotate = 0F;
-            this.buttonAddMedicine.ImageSize = new System.Drawing.Size(38, 38);
-            this.buttonAddMedicine.Location = new System.Drawing.Point(1021, 3);
-            this.buttonAddMedicine.Name = "buttonAddMedicine";
-            this.buttonAddMedicine.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.buttonAddMedicine.PressedState.Parent = this.buttonAddMedicine;
-            this.buttonAddMedicine.Size = new System.Drawing.Size(40, 40);
-            this.buttonAddMedicine.TabIndex = 37;
-            this.buttonAddMedicine.Click += new System.EventHandler(this.buttonAddMedicine_Click);
             // 
             // textBoxSearchMedicine
             // 
@@ -451,6 +431,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel2.Size = new System.Drawing.Size(436, 1055);
             this.panel2.TabIndex = 0;
             // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillColor = System.Drawing.Color.DimGray;
+            this.guna2Separator2.Location = new System.Drawing.Point(44, 210);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(316, 10);
+            this.guna2Separator2.TabIndex = 50;
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoScroll = true;
@@ -490,6 +478,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxSupplier.Size = new System.Drawing.Size(326, 40);
             this.textboxSupplier.TabIndex = 48;
             this.textboxSupplier.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.textboxSupplier.Enter += new System.EventHandler(this.textboxSupplier_Enter);
             this.textboxSupplier.Leave += new System.EventHandler(this.flowLayoutPanel3_MouseLeave);
             // 
             // lbRedName
@@ -758,7 +747,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(169, 84);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(123, 84);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -766,14 +755,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(237, 36);
             this.guna2DateTimePicker1.TabIndex = 0;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 21, 10, 15, 19, 861);
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.FillColor = System.Drawing.Color.DimGray;
-            this.guna2Separator2.Location = new System.Drawing.Point(44, 210);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(316, 10);
-            this.guna2Separator2.TabIndex = 50;
             // 
             // AddStock
             // 
@@ -836,7 +817,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Button buttonOK;
         private Guna.UI2.WinForms.Guna2Button buttonCancel;
-        private Guna.UI2.WinForms.Guna2ImageButton buttonAddMedicine;
         private Guna.UI2.WinForms.Guna2TextBox textBoxSearchMedicine;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;

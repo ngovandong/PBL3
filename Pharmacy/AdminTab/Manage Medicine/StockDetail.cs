@@ -38,7 +38,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             }
             textboxQuantityMedicine.Text = quantity.ToString();
             guna2DataGridView1.DataSource = _BLL.Instance.getListMEDICINEinStockView(stock.ID);
-            guna2DataGridView1.Columns["id"].Visible = false;
             guna2DataGridView1.Columns["idMedicine"].Visible = false;
             guna2DataGridView1.Columns["nameMedicine"].HeaderText = "Tên thuốc";
             guna2DataGridView1.Columns["quantity"].HeaderText = "Số lượng";

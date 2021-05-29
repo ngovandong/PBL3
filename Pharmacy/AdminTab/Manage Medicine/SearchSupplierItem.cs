@@ -36,5 +36,15 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             d(supplier);
         }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = System.Drawing.Color.White;
+        }
     }
 }

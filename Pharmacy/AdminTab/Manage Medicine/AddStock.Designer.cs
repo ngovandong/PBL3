@@ -60,6 +60,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxSearchMedicine = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textboxNote = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.textboxSupplier = new Guna.UI2.WinForms.Guna2TextBox();
@@ -71,7 +72,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.buttonOK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.buttonAddSupplier = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -405,6 +405,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.textboxNote);
             this.panel2.Controls.Add(this.guna2Separator2);
             this.panel2.Controls.Add(this.flowLayoutPanel3);
             this.panel2.Controls.Add(this.textboxSupplier);
@@ -416,7 +417,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel2.Controls.Add(this.buttonOK);
             this.panel2.Controls.Add(this.guna2Separator1);
             this.panel2.Controls.Add(this.buttonAddSupplier);
-            this.panel2.Controls.Add(this.richTextBox1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -430,6 +430,32 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(436, 1055);
             this.panel2.TabIndex = 0;
+            // 
+            // textboxNote
+            // 
+            this.textboxNote.BorderThickness = 0;
+            this.textboxNote.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textboxNote.DefaultText = "";
+            this.textboxNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textboxNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textboxNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxNote.DisabledState.Parent = this.textboxNote;
+            this.textboxNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxNote.FillColor = System.Drawing.SystemColors.Control;
+            this.textboxNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textboxNote.FocusedState.Parent = this.textboxNote;
+            this.textboxNote.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textboxNote.HoverState.Parent = this.textboxNote;
+            this.textboxNote.Location = new System.Drawing.Point(34, 565);
+            this.textboxNote.Multiline = true;
+            this.textboxNote.Name = "textboxNote";
+            this.textboxNote.PasswordChar = '\0';
+            this.textboxNote.PlaceholderText = "Ghi chú...";
+            this.textboxNote.SelectedText = "";
+            this.textboxNote.ShadowDecoration.Parent = this.textboxNote;
+            this.textboxNote.Size = new System.Drawing.Size(372, 199);
+            this.textboxNote.TabIndex = 52;
             // 
             // guna2Separator2
             // 
@@ -548,7 +574,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.buttonCancel.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
             this.buttonCancel.HoverState.Parent = this.buttonCancel;
-            this.buttonCancel.Location = new System.Drawing.Point(52, 747);
+            this.buttonCancel.Location = new System.Drawing.Point(52, 787);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.ShadowDecoration.Parent = this.buttonCancel;
             this.buttonCancel.Size = new System.Drawing.Size(127, 87);
@@ -567,7 +593,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.buttonOK.HoverState.Parent = this.buttonOK;
             this.buttonOK.Image = ((System.Drawing.Image)(resources.GetObject("buttonOK.Image")));
             this.buttonOK.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonOK.Location = new System.Drawing.Point(225, 747);
+            this.buttonOK.Location = new System.Drawing.Point(225, 787);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.ShadowDecoration.Parent = this.buttonOK;
             this.buttonOK.Size = new System.Drawing.Size(181, 87);
@@ -600,16 +626,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.buttonAddSupplier.Size = new System.Drawing.Size(40, 40);
             this.buttonAddSupplier.TabIndex = 38;
             this.buttonAddSupplier.Click += new System.EventHandler(this.guna2ImageButton2_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(34, 553);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(372, 153);
-            this.richTextBox1.TabIndex = 37;
-            this.richTextBox1.Text = "";
             // 
             // label4
             // 
@@ -707,6 +723,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxSale.Size = new System.Drawing.Size(214, 36);
             this.textboxSale.TabIndex = 12;
             this.textboxSale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textboxSale.TextChanged += new System.EventHandler(this.textboxSale_TextChanged);
             this.textboxSale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxSale_KeyPress);
             this.textboxSale.MouseLeave += new System.EventHandler(this.textboxSale_MouseLeave);
             // 
@@ -811,7 +828,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel8;
         private Guna.UI2.WinForms.Guna2ImageButton buttonAddSupplier;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
@@ -846,5 +862,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private Guna.UI2.WinForms.Guna2TextBox textboxSupplier;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private Guna.UI2.WinForms.Guna2TextBox textboxNote;
     }
 }

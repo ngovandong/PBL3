@@ -37,9 +37,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             lbName.Text = medicine.name;
             lbID.Text = medicine.ID.ToString();
             textBoxDonVi.Text = medicine.unit;
-            textBoxDonGia.Text = medicine.import_price.ToString();
+            textBoxDonGia.Text = medicine.import_price.ToString("#,##0");
             numericUpDownSoluong.Value = medicine.quantityInStock;
-            textBoxThanhTien.Text = (medicine.import_price * Convert.ToInt32(numericUpDownSoluong.Value)).ToString();
+            textBoxThanhTien.Text = (medicine.import_price * Convert.ToInt32(numericUpDownSoluong.Value)).ToString("#,##0");
             guna2DateTimePicker1.Value = medicine.HSD.Date;
         }
 
@@ -71,7 +71,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             {
                 textBoxDonGia.Text = "0";
             }
-            int don_gia = Convert.ToInt32(textBoxDonGia.Text);
+            
+            int don_gia = Convert.ToInt32(textBoxDonGia.Text.Replace(",",""));
+            textBoxDonGia.Text = don_gia.ToString("#,##0");
+            textBoxDonGia.SelectionStart = textBoxDonGia.TextLength;
             int so_luong = Convert.ToInt32(numericUpDownSoluong.Value);
             if(textboxGiamGia.Text == "")
             {
@@ -82,9 +85,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             {
                 giam_gia = 100;
             }
-            textBoxThanhTien.Text = (don_gia * so_luong * (100 - giam_gia) / 100).ToString();
-            medicine.final_price = don_gia * so_luong * (100 - giam_gia) / 100;
-            medicine.import_price = don_gia * (100 - giam_gia) / 100;
+            medicine.final_price = Convert.ToInt32((don_gia * so_luong * (1 - giam_gia / 100.0)));
+            textBoxThanhTien.Text = medicine.final_price.ToString("#,##0");
+            medicine.import_price = Convert.ToInt32((don_gia * (1 - giam_gia / 100.0)));
             d2();
         }
 
@@ -101,6 +104,12 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 {
                     sale = 100;
                     textboxGiamGia.Text = sale.ToString();
+                    textboxGiamGia.SelectionStart = textboxGiamGia.TextLength;
+                }
+                else
+                {
+                    textboxGiamGia.Text = sale.ToString();
+                    textboxGiamGia.SelectionStart = textboxGiamGia.TextLength;
                 }
             }
             textBoxDonGia_MouseLeave(sender, e);
@@ -121,6 +130,21 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void textBoxThanhTien_TextChanged(object sender, EventArgs e)
+        {
+            d2();
+        }
+
+        private void textBoxDonGia_TextChanged(object sender, EventArgs e)
+        {
+            textBoxDonGia_MouseLeave(sender, e);
+        }
+
+        private void textboxGiamGia_TextChanged(object sender, EventArgs e)
+        {
+            textboxGiamGia_MouseLeave(sender, e);
         }
     }
 }

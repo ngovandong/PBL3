@@ -47,8 +47,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxNOTE = new System.Windows.Forms.TextBox();
             this.textboxNameStock = new Guna.UI2.WinForms.Guna2TextBox();
-            this.richTextBoxNote = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textboxSupplier = new Guna.UI2.WinForms.Guna2TextBox();
@@ -74,7 +74,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1195, 629);
+            this.panel1.Size = new System.Drawing.Size(1295, 665);
             this.panel1.TabIndex = 0;
             // 
             // panel6
@@ -83,7 +83,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(25, 215);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(833, 389);
+            this.panel6.Size = new System.Drawing.Size(879, 425);
             this.panel6.TabIndex = 4;
             // 
             // guna2DataGridView1
@@ -125,7 +125,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(833, 389);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(879, 425);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -153,9 +153,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(25, 604);
+            this.panel5.Location = new System.Drawing.Point(25, 640);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(833, 25);
+            this.panel5.Size = new System.Drawing.Size(879, 25);
             this.panel5.TabIndex = 3;
             // 
             // panel4
@@ -168,9 +168,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(858, 215);
+            this.panel4.Location = new System.Drawing.Point(904, 215);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(337, 414);
+            this.panel4.Size = new System.Drawing.Size(391, 450);
             this.panel4.TabIndex = 2;
             // 
             // buttonOK
@@ -214,7 +214,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxPriceTotalStock.ReadOnly = true;
             this.textboxPriceTotalStock.SelectedText = "";
             this.textboxPriceTotalStock.ShadowDecoration.Parent = this.textboxPriceTotalStock;
-            this.textboxPriceTotalStock.Size = new System.Drawing.Size(96, 36);
+            this.textboxPriceTotalStock.Size = new System.Drawing.Size(155, 36);
             this.textboxPriceTotalStock.TabIndex = 16;
             this.textboxPriceTotalStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -240,7 +240,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxQuantityMedicineinStock.ReadOnly = true;
             this.textboxQuantityMedicineinStock.SelectedText = "";
             this.textboxQuantityMedicineinStock.ShadowDecoration.Parent = this.textboxQuantityMedicineinStock;
-            this.textboxQuantityMedicineinStock.Size = new System.Drawing.Size(96, 36);
+            this.textboxQuantityMedicineinStock.Size = new System.Drawing.Size(155, 36);
             this.textboxQuantityMedicineinStock.TabIndex = 15;
             this.textboxQuantityMedicineinStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -266,7 +266,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxQuantityMedicine.ReadOnly = true;
             this.textboxQuantityMedicine.SelectedText = "";
             this.textboxQuantityMedicine.ShadowDecoration.Parent = this.textboxQuantityMedicine;
-            this.textboxQuantityMedicine.Size = new System.Drawing.Size(96, 36);
+            this.textboxQuantityMedicine.Size = new System.Drawing.Size(155, 36);
             this.textboxQuantityMedicine.TabIndex = 14;
             this.textboxQuantityMedicine.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -305,13 +305,13 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 215);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(25, 414);
+            this.panel3.Size = new System.Drawing.Size(25, 450);
             this.panel3.TabIndex = 1;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBoxNOTE);
             this.panel2.Controls.Add(this.textboxNameStock);
-            this.panel2.Controls.Add(this.richTextBoxNote);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textboxSupplier);
@@ -323,8 +323,16 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1195, 215);
+            this.panel2.Size = new System.Drawing.Size(1295, 215);
             this.panel2.TabIndex = 0;
+            // 
+            // textBoxNOTE
+            // 
+            this.textBoxNOTE.Location = new System.Drawing.Point(843, 21);
+            this.textBoxNOTE.Multiline = true;
+            this.textBoxNOTE.Name = "textBoxNOTE";
+            this.textBoxNOTE.Size = new System.Drawing.Size(247, 165);
+            this.textBoxNOTE.TabIndex = 19;
             // 
             // textboxNameStock
             // 
@@ -353,15 +361,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxNameStock.Size = new System.Drawing.Size(206, 36);
             this.textboxNameStock.TabIndex = 18;
             this.textboxNameStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // richTextBoxNote
-            // 
-            this.richTextBoxNote.Location = new System.Drawing.Point(839, 21);
-            this.richTextBoxNote.Name = "richTextBoxNote";
-            this.richTextBoxNote.ReadOnly = true;
-            this.richTextBoxNote.Size = new System.Drawing.Size(247, 165);
-            this.richTextBoxNote.TabIndex = 17;
-            this.richTextBoxNote.Text = "";
             // 
             // label8
             // 
@@ -486,7 +485,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 629);
+            this.ClientSize = new System.Drawing.Size(1295, 665);
             this.Controls.Add(this.panel1);
             this.Name = "StockDetail";
             this.Text = "StockDetail";
@@ -526,7 +525,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button buttonOK;
-        private System.Windows.Forms.RichTextBox richTextBoxNote;
         private Guna.UI2.WinForms.Guna2TextBox textboxNameStock;
+        private System.Windows.Forms.TextBox textBoxNOTE;
     }
 }

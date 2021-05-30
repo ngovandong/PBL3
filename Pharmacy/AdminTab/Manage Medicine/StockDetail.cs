@@ -28,8 +28,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             textboxIDStock.Text = stock.ID.ToString();
             textboxSupplier.Text = stock.SUPPLIER.NAME;
             guna2DateTimePicker1.Value = stock.DATE.Value.Date;
-            richTextBoxNote.Text = stock.NOTE;
-            textboxPriceTotalStock.Text = stock.PRICETOTAL.ToString();
+            textBoxNOTE.Text = stock.NOTE;
+            textboxPriceTotalStock.Text = stock.PRICETOTAL.ToString("#,##0");
             textboxQuantityMedicineinStock.Text = stock.STOCK_DETAIL.Count().ToString();
             int quantity = 0;
             foreach(var item in stock.STOCK_DETAIL)
@@ -42,7 +42,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             guna2DataGridView1.Columns["nameMedicine"].HeaderText = "Tên thuốc";
             guna2DataGridView1.Columns["quantity"].HeaderText = "Số lượng";
             guna2DataGridView1.Columns["import_price"].HeaderText = "Giá nhập";
+            guna2DataGridView1.Columns["import_price"].DefaultCellStyle.Format = "#,##0";
             guna2DataGridView1.Columns["total_price"].HeaderText = "Tổng cộng";
+            guna2DataGridView1.Columns["total_price"].DefaultCellStyle.Format = "#,##0";
             guna2DataGridView1.Columns["dateExpire"].HeaderText = "Hạn sử dụng";
             
         }

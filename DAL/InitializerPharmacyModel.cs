@@ -8,7 +8,7 @@ using DAL.DTO;
 
 namespace DAL
 {
-    class InitializerPharmacyModel:DropCreateDatabaseIfModelChanges<PharmacyModel>
+    class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
     {
         protected override void Seed(PharmacyModel context)
         {

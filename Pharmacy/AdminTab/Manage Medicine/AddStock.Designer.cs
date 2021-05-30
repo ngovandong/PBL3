@@ -60,6 +60,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textBoxSearchMedicine = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textboxNote = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.textboxSupplier = new Guna.UI2.WinForms.Guna2TextBox();
@@ -79,7 +80,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxSale = new Guna.UI2.WinForms.Guna2TextBox();
             this.textboxPriceTotalBefore = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.textboxNote = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -431,6 +431,32 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel2.Size = new System.Drawing.Size(436, 1055);
             this.panel2.TabIndex = 0;
             // 
+            // textboxNote
+            // 
+            this.textboxNote.BorderThickness = 0;
+            this.textboxNote.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textboxNote.DefaultText = "";
+            this.textboxNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textboxNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textboxNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxNote.DisabledState.Parent = this.textboxNote;
+            this.textboxNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxNote.FillColor = System.Drawing.SystemColors.Control;
+            this.textboxNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textboxNote.FocusedState.Parent = this.textboxNote;
+            this.textboxNote.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textboxNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textboxNote.HoverState.Parent = this.textboxNote;
+            this.textboxNote.Location = new System.Drawing.Point(34, 565);
+            this.textboxNote.Multiline = true;
+            this.textboxNote.Name = "textboxNote";
+            this.textboxNote.PasswordChar = '\0';
+            this.textboxNote.PlaceholderText = "Ghi chú...";
+            this.textboxNote.SelectedText = "";
+            this.textboxNote.ShadowDecoration.Parent = this.textboxNote;
+            this.textboxNote.Size = new System.Drawing.Size(372, 199);
+            this.textboxNote.TabIndex = 52;
+            // 
             // guna2Separator2
             // 
             this.guna2Separator2.FillColor = System.Drawing.Color.DimGray;
@@ -697,6 +723,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxSale.Size = new System.Drawing.Size(214, 36);
             this.textboxSale.TabIndex = 12;
             this.textboxSale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textboxSale.TextChanged += new System.EventHandler(this.textboxSale_TextChanged);
             this.textboxSale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxSale_KeyPress);
             this.textboxSale.MouseLeave += new System.EventHandler(this.textboxSale_MouseLeave);
             // 
@@ -745,32 +772,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(237, 36);
             this.guna2DateTimePicker1.TabIndex = 0;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 21, 10, 15, 19, 861);
-            // 
-            // textboxNote
-            // 
-            this.textboxNote.BorderThickness = 0;
-            this.textboxNote.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textboxNote.DefaultText = "";
-            this.textboxNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textboxNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textboxNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textboxNote.DisabledState.Parent = this.textboxNote;
-            this.textboxNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textboxNote.FillColor = System.Drawing.SystemColors.Control;
-            this.textboxNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textboxNote.FocusedState.Parent = this.textboxNote;
-            this.textboxNote.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textboxNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textboxNote.HoverState.Parent = this.textboxNote;
-            this.textboxNote.Location = new System.Drawing.Point(34, 565);
-            this.textboxNote.Multiline = true;
-            this.textboxNote.Name = "textboxNote";
-            this.textboxNote.PasswordChar = '\0';
-            this.textboxNote.PlaceholderText = "Ghi chú...";
-            this.textboxNote.SelectedText = "";
-            this.textboxNote.ShadowDecoration.Parent = this.textboxNote;
-            this.textboxNote.Size = new System.Drawing.Size(372, 199);
-            this.textboxNote.TabIndex = 52;
             // 
             // AddStock
             // 

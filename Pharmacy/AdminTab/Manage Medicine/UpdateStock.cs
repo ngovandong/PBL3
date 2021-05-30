@@ -71,9 +71,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             int total = 0;
             foreach (var item in listMedicineItem)
             {
-                total += item.medicine.final_price;
+                float temp = item.medicine.final_price;
+                total += Convert.ToInt32(temp);
             }
-            textboxPriceTotalBefore.Text = total.ToString();
+            textboxPriceTotalBefore.Text = total.ToString("#,##0");
         }
         public void addToBoard(MedicineStock m)
         {
@@ -134,10 +135,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private void textboxPriceTotalBefore_TextChanged(object sender, EventArgs e)
         {
-            int total_before = Convert.ToInt32(textboxPriceTotalBefore.Text);
+            int total_before = Convert.ToInt32(textboxPriceTotalBefore.Text.Replace(",",""));
             int sale = Convert.ToInt32(textboxSale.Text);
-            int total_after = (total_before * (100 - sale)) / 100;
-            textboxPriceTotalAfter.Text = total_after.ToString();
+            int total_after = Convert.ToInt32(total_before * (1 - sale / 100.0));
+            textboxPriceTotalAfter.Text = total_after.ToString("#,##0");
         }
         public void addSup(SupplierView s)
         {
@@ -193,6 +194,12 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 {
                     sale = 100;
                     textboxSale.Text = sale.ToString();
+                    textboxSale.SelectionStart = textboxSale.TextLength;
+                }
+                else
+                {
+                    textboxSale.Text = sale.ToString();
+                    textboxSale.SelectionStart = textboxSale.TextLength;
                 }
             }
             textboxPriceTotalBefore_TextChanged(sender, e);
@@ -220,7 +227,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 stock.DATE = guna2DateTimePicker1.Value.Date;
                 stock.Name = textboxNameStock.Text.Trim();
                 stock.NOTE = textboxNote.Text.Trim();
-                stock.PRICETOTAL = Convert.ToInt32(textboxPriceTotalAfter.Text);
+                stock.PRICETOTAL = Convert.ToInt32(textboxPriceTotalAfter.Text.Replace(",", ""));
                 stock.supplierId = supplierView.ID;
                 stock.SUPPLIER = _BLL.Instance.getSupplier(supplierView.ID);
                 _BLL.Instance.UpdateStock(stock);

@@ -29,9 +29,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockDetail));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -47,6 +47,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxNOTE = new System.Windows.Forms.TextBox();
             this.textboxNameStock = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNOTE = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -74,7 +74,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1195, 629);
+            this.panel1.Size = new System.Drawing.Size(1295, 665);
             this.panel1.TabIndex = 0;
             // 
             // panel6
@@ -83,7 +83,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(25, 215);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(833, 389);
+            this.panel6.Size = new System.Drawing.Size(879, 425);
             this.panel6.TabIndex = 4;
             // 
             // guna2DataGridView1
@@ -91,30 +91,30 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
@@ -125,7 +125,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(833, 389);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(879, 425);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -153,9 +153,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(25, 604);
+            this.panel5.Location = new System.Drawing.Point(25, 640);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(833, 25);
+            this.panel5.Size = new System.Drawing.Size(879, 25);
             this.panel5.TabIndex = 3;
             // 
             // panel4
@@ -168,9 +168,9 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(858, 215);
+            this.panel4.Location = new System.Drawing.Point(904, 215);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(337, 414);
+            this.panel4.Size = new System.Drawing.Size(391, 450);
             this.panel4.TabIndex = 2;
             // 
             // buttonOK
@@ -214,7 +214,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxPriceTotalStock.ReadOnly = true;
             this.textboxPriceTotalStock.SelectedText = "";
             this.textboxPriceTotalStock.ShadowDecoration.Parent = this.textboxPriceTotalStock;
-            this.textboxPriceTotalStock.Size = new System.Drawing.Size(96, 36);
+            this.textboxPriceTotalStock.Size = new System.Drawing.Size(155, 36);
             this.textboxPriceTotalStock.TabIndex = 16;
             this.textboxPriceTotalStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -240,7 +240,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxQuantityMedicineinStock.ReadOnly = true;
             this.textboxQuantityMedicineinStock.SelectedText = "";
             this.textboxQuantityMedicineinStock.ShadowDecoration.Parent = this.textboxQuantityMedicineinStock;
-            this.textboxQuantityMedicineinStock.Size = new System.Drawing.Size(96, 36);
+            this.textboxQuantityMedicineinStock.Size = new System.Drawing.Size(155, 36);
             this.textboxQuantityMedicineinStock.TabIndex = 15;
             this.textboxQuantityMedicineinStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -266,7 +266,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.textboxQuantityMedicine.ReadOnly = true;
             this.textboxQuantityMedicine.SelectedText = "";
             this.textboxQuantityMedicine.ShadowDecoration.Parent = this.textboxQuantityMedicine;
-            this.textboxQuantityMedicine.Size = new System.Drawing.Size(96, 36);
+            this.textboxQuantityMedicine.Size = new System.Drawing.Size(155, 36);
             this.textboxQuantityMedicine.TabIndex = 14;
             this.textboxQuantityMedicine.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -305,7 +305,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 215);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(25, 414);
+            this.panel3.Size = new System.Drawing.Size(25, 450);
             this.panel3.TabIndex = 1;
             // 
             // panel2
@@ -323,8 +323,16 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1195, 215);
+            this.panel2.Size = new System.Drawing.Size(1295, 215);
             this.panel2.TabIndex = 0;
+            // 
+            // textBoxNOTE
+            // 
+            this.textBoxNOTE.Location = new System.Drawing.Point(843, 21);
+            this.textBoxNOTE.Multiline = true;
+            this.textBoxNOTE.Name = "textBoxNOTE";
+            this.textBoxNOTE.Size = new System.Drawing.Size(247, 165);
+            this.textBoxNOTE.TabIndex = 19;
             // 
             // textboxNameStock
             // 
@@ -473,19 +481,11 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label1.TabIndex = 8;
             this.label1.Text = "Ngày:";
             // 
-            // textBoxNOTE
-            // 
-            this.textBoxNOTE.Location = new System.Drawing.Point(843, 21);
-            this.textBoxNOTE.Multiline = true;
-            this.textBoxNOTE.Name = "textBoxNOTE";
-            this.textBoxNOTE.Size = new System.Drawing.Size(247, 165);
-            this.textBoxNOTE.TabIndex = 19;
-            // 
             // StockDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 629);
+            this.ClientSize = new System.Drawing.Size(1295, 665);
             this.Controls.Add(this.panel1);
             this.Name = "StockDetail";
             this.Text = "StockDetail";

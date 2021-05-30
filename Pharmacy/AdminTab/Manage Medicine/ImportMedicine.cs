@@ -108,6 +108,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             guna2DataGridView1.Columns["nameSupplier"].HeaderText = "Nhà cung cấp";
             guna2DataGridView1.Columns["dateImport"].HeaderText = "Ngày nhập hàng";
             guna2DataGridView1.Columns["priceTotal"].HeaderText = "Tổng tiền";
+            guna2DataGridView1.Columns["priceTotal"].DefaultCellStyle.Format = "#,##0";
         }
 
         private void ImportMedicine_Load(object sender, EventArgs e)

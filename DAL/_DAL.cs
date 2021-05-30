@@ -156,6 +156,7 @@ namespace DAL
                 oldMedicine.QUANTITY = newMedicine.QUANTITY;
                 oldMedicine.ORIGINAL_PRICE = newMedicine.ORIGINAL_PRICE;
                 oldMedicine.SALE_PRICE = newMedicine.SALE_PRICE;
+                P.SaveChanges();
             }
         }
 

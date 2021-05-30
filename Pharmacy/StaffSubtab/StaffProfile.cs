@@ -16,6 +16,11 @@ namespace Pharmacy.StaffSubtab
     {
         private string User_name;
         private USER u;
+
+        public StaffProfile()
+        {
+            InitializeComponent();
+        }
         public StaffProfile(string s)
         {
             this.User_name = s;

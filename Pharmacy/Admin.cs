@@ -23,7 +23,8 @@ namespace Pharmacy
             InitializeComponent();
             label2.Text = s;
             ButtonDashBoard.PerformClick();
-            
+            this.WindowState = FormWindowState.Maximized;
+
         }
         private void guna2Button5_Click(object sender, EventArgs e)
         {
@@ -31,6 +32,7 @@ namespace Pharmacy
             f.Show();
             this.Hide();
         }
+
 
         private void Admin_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 
@@ -54,5 +56,12 @@ namespace Pharmacy
             manageMedicine1.BringToFront();
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string s = label2.Text;
+            Admin f = new Admin(s);
+            f.Show();
+            this.Hide();
+        }
     }
 }

@@ -33,12 +33,12 @@ namespace Pharmacy.StaffSubtab
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -50,23 +50,34 @@ namespace Pharmacy.StaffSubtab
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(959, 178);
+            this.panel1.Size = new System.Drawing.Size(959, 92);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(60, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hóa đơn đã bán";
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(891, 178);
+            this.panel2.Location = new System.Drawing.Point(891, 92);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(68, 517);
+            this.panel2.Size = new System.Drawing.Size(68, 603);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 178);
+            this.panel3.Location = new System.Drawing.Point(0, 92);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(61, 517);
+            this.panel3.Size = new System.Drawing.Size(61, 603);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -81,9 +92,9 @@ namespace Pharmacy.StaffSubtab
             // 
             this.panel5.Controls.Add(this.guna2DataGridView1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(61, 178);
+            this.panel5.Location = new System.Drawing.Point(61, 92);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(830, 439);
+            this.panel5.Size = new System.Drawing.Size(830, 525);
             this.panel5.TabIndex = 4;
             // 
             // guna2DataGridView1
@@ -121,7 +132,7 @@ namespace Pharmacy.StaffSubtab
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(830, 439);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(830, 525);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -145,17 +156,6 @@ namespace Pharmacy.StaffSubtab
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(60, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hóa đơn đã bán";
             // 
             // StaffReport
             // 

@@ -21,6 +21,11 @@ namespace Pharmacy.StaffSubtab
             this.u = u;
             setStart();
         }
+
+        public StaffReport()
+        {
+            InitializeComponent();
+        }
         public void setStart()
         {
             this.guna2DataGridView1.DataSource = _BLL.Instance.getListInvoice(this.u.ID);

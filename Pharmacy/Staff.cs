@@ -20,6 +20,7 @@ namespace Pharmacy
             InitializeComponent();
             ButtonDashBoard.PerformClick();
             NameStaffLabel.Text = u.USER_NAME;
+            this.WindowState = FormWindowState.Maximized;
         }
 
 
@@ -33,22 +34,23 @@ namespace Pharmacy
         private void ButtonDashBoard_Click(object sender, EventArgs e)
         {
             titleLabel.Text = "Dashboard";
-            staffDashBoard1.BringToFront();
+            this.staffDashBoard1.BringToFront();
+            
         }
 
         private void ButtonReport_Click(object sender, EventArgs e)
         {
             titleLabel.Text = "Report";
-            staffReport1.BringToFront();
+            this.staffReport1.BringToFront();
         }
 
         private void ButtonProfile_Click(object sender, EventArgs e)
         {
             titleLabel.Text = "Profile";
-            staffProfile1.BringToFront();
+            this.staffProfile1.BringToFront();
         }
 
-        public void reloadDashBoard()
+        public void reload()
         {
             this.staffDashBoard1.setForm();
             this.staffReport1.setStart();
@@ -56,13 +58,21 @@ namespace Pharmacy
         private void ButtonSell_Click(object sender, EventArgs e)
         {
             Sell f = new Sell(this.user);
-            f.d = new Sell.Mydel(reloadDashBoard);
+            f.d = new Sell.Mydel(reload);
             f.ShowDialog();
         }
 
         private void Staff_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            USER u = this.user;
+            Staff f = new Staff(u);
+            f.Show();
+            this.Hide();
         }
     }
 }

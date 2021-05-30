@@ -63,8 +63,8 @@ namespace Pharmacy.AdminTab.DashBoard
             int d = _BLL.Instance.getProgressValue4();
             int percent2 = (int)(((float)c / d)*100);
             guna2CircleProgressBar2.Value = percent2;
-            label4.Text = "Thuốc hết hàng: " + c.ToString();
-            label5.Text = "Thuốc còn hàng: " + (d - c).ToString();
+            label5.Text = "Thuốc hết hàng: " + c.ToString();
+            label4.Text = "Thuốc còn hàng: " + (d - c).ToString();
         }
     }
 }

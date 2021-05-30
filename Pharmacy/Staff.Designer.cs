@@ -31,6 +31,7 @@ namespace Pharmacy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonSell = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonProfile = new Guna.UI2.WinForms.Guna2Button();
@@ -44,9 +45,10 @@ namespace Pharmacy
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.staffProfile1 = new Pharmacy.StaffSubtab.StaffProfile(this.user.USER_NAME);
-            this.staffReport1 = new Pharmacy.StaffSubtab.StaffReport(this.user);
             this.staffDashBoard1 = new Pharmacy.StaffSubtab.StaffDashBoard(this.user);
+            this.staffReport1 = new Pharmacy.StaffSubtab.StaffReport(this.user);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -56,6 +58,7 @@ namespace Pharmacy
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.guna2Button5);
             this.panel1.Controls.Add(this.ButtonSell);
             this.panel1.Controls.Add(this.ButtonProfile);
@@ -67,6 +70,17 @@ namespace Pharmacy
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(361, 743);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(140, 672);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(73, 49);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // guna2Button5
             // 
@@ -258,9 +272,9 @@ namespace Pharmacy
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.staffProfile1);
             this.panel2.Controls.Add(this.staffReport1);
             this.panel2.Controls.Add(this.staffDashBoard1);
+            this.panel2.Controls.Add(this.staffProfile1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(361, 48);
             this.panel2.Name = "panel2";
@@ -273,15 +287,7 @@ namespace Pharmacy
             this.staffProfile1.Location = new System.Drawing.Point(0, 0);
             this.staffProfile1.Name = "staffProfile1";
             this.staffProfile1.Size = new System.Drawing.Size(959, 695);
-            this.staffProfile1.TabIndex = 2;
-            // 
-            // staffReport1
-            // 
-            this.staffReport1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffReport1.Location = new System.Drawing.Point(0, 0);
-            this.staffReport1.Name = "staffReport1";
-            this.staffReport1.Size = new System.Drawing.Size(959, 695);
-            this.staffReport1.TabIndex = 1;
+            this.staffProfile1.TabIndex = 0;
             // 
             // staffDashBoard1
             // 
@@ -289,9 +295,18 @@ namespace Pharmacy
             this.staffDashBoard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.staffDashBoard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffDashBoard1.Location = new System.Drawing.Point(0, 0);
+            this.staffDashBoard1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.staffDashBoard1.Name = "staffDashBoard1";
             this.staffDashBoard1.Size = new System.Drawing.Size(959, 695);
-            this.staffDashBoard1.TabIndex = 0;
+            this.staffDashBoard1.TabIndex = 1;
+            // 
+            // staffReport1
+            // 
+            this.staffReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffReport1.Location = new System.Drawing.Point(0, 0);
+            this.staffReport1.Name = "staffReport1";
+            this.staffReport1.Size = new System.Drawing.Size(959, 695);
+            this.staffReport1.TabIndex = 2;
             // 
             // Staff
             // 
@@ -305,6 +320,7 @@ namespace Pharmacy
             this.Text = "Staff";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Staff_FormClosed);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -329,6 +345,7 @@ namespace Pharmacy
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private StaffSubtab.StaffProfile staffProfile1;
         private StaffSubtab.StaffReport staffReport1;
         private StaffSubtab.StaffDashBoard staffDashBoard1;

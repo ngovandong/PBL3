@@ -51,6 +51,9 @@ namespace DAL
 
         public int SALE_PRICE { get; set; }
 
+        [Required]
+        public bool DELETED { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INVOICE_DETAIL> INVOICE_DETAIL { get; set; }
 
@@ -65,6 +68,8 @@ namespace DAL
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
 
         public virtual ICollection<SAMPLE_DETAIL> SAMPLE_DETAIL { get; set; }
+
+
 
     }
 }

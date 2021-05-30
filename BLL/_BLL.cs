@@ -64,7 +64,6 @@ namespace BLL
             {
                 if (item.dateExpire < DateTime.Now)
                 {
-                    _BLL.Instance.subMedicineQuantity(item);
                     _BLL.Instance.UpdateStockDetail(item, item.QUANTITY);
                 }
             }

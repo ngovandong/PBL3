@@ -22,6 +22,10 @@ namespace Pharmacy.StaffSubtab
             this.u = u;
             setForm();
         }
+        public StaffDashBoard()
+        {
+            InitializeComponent();
+        }
         public void setForm()
         {
             reportStaff s1 = _BLL.Instance.getReportStaff(u.ID, true);

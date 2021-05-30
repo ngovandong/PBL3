@@ -70,7 +70,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnSave.BorderRadius = 14;
             this.btnSave.CheckedState.Parent = this.btnSave;
             this.btnSave.CustomImages.Parent = this.btnSave;
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(108)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.btnSave.HoverState.Parent = this.btnSave;
@@ -91,7 +91,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnExit.BorderRadius = 14;
             this.btnExit.CheckedState.Parent = this.btnExit;
             this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(108)))));
+            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.btnExit.HoverState.Parent = this.btnExit;
@@ -536,17 +536,17 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.btnAddMedicineType.CheckedState.Parent = this.btnAddMedicineType;
             this.btnAddMedicineType.CustomImages.Parent = this.btnAddMedicineType;
-            this.btnAddMedicineType.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(108)))));
+            this.btnAddMedicineType.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnAddMedicineType.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddMedicineType.ForeColor = System.Drawing.Color.White;
             this.btnAddMedicineType.HoverState.Parent = this.btnAddMedicineType;
             this.btnAddMedicineType.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMedicineType.Image")));
             this.btnAddMedicineType.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAddMedicineType.Location = new System.Drawing.Point(344, 293);
-            this.btnAddMedicineType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddMedicineType.Location = new System.Drawing.Point(350, 293);
+            this.btnAddMedicineType.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMedicineType.Name = "btnAddMedicineType";
             this.btnAddMedicineType.ShadowDecoration.Parent = this.btnAddMedicineType;
-            this.btnAddMedicineType.Size = new System.Drawing.Size(48, 44);
+            this.btnAddMedicineType.Size = new System.Drawing.Size(38, 36);
             this.btnAddMedicineType.TabIndex = 52;
             this.btnAddMedicineType.Click += new System.EventHandler(this.btnAddMedicineType_Click);
             // 
@@ -554,17 +554,17 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.btnAddUnit.CheckedState.Parent = this.btnAddUnit;
             this.btnAddUnit.CustomImages.Parent = this.btnAddUnit;
-            this.btnAddUnit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(108)))));
+            this.btnAddUnit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnAddUnit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddUnit.ForeColor = System.Drawing.Color.White;
             this.btnAddUnit.HoverState.Parent = this.btnAddUnit;
             this.btnAddUnit.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUnit.Image")));
             this.btnAddUnit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAddUnit.Location = new System.Drawing.Point(685, 454);
-            this.btnAddUnit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddUnit.Location = new System.Drawing.Point(694, 454);
+            this.btnAddUnit.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddUnit.Name = "btnAddUnit";
             this.btnAddUnit.ShadowDecoration.Parent = this.btnAddUnit;
-            this.btnAddUnit.Size = new System.Drawing.Size(48, 44);
+            this.btnAddUnit.Size = new System.Drawing.Size(39, 36);
             this.btnAddUnit.TabIndex = 53;
             this.btnAddUnit.Click += new System.EventHandler(this.btnAddUnit_Click);
             // 

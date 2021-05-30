@@ -133,7 +133,7 @@ namespace DAL
             using(PharmacyModel P=new PharmacyModel())
             {
                 MEDICINE m = P.MEDICINEs.Find(ID);
-                P.MEDICINEs.Remove(m);
+                m.DELETED = true;
                 P.SaveChanges();
             }
         }
@@ -163,7 +163,7 @@ namespace DAL
         {
             using (PharmacyModel P = new PharmacyModel())
             {
-                return P.MEDICINEs.Include("UNIT").Include("STOCK_DETAIL.STOCK").Include("MEDICINE_TYPE").ToList();
+                return P.MEDICINEs.Include("UNIT").Include("STOCK_DETAIL.STOCK").Include("MEDICINE_TYPE").Where(p=>p.DELETED==false).ToList();
             }
         }
 

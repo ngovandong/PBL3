@@ -114,10 +114,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExit.Animated = true;
             this.btnExit.AutoRoundedCorners = true;
-            this.btnExit.BorderRadius = 20;
+            this.btnExit.BorderRadius = 14;
             this.btnExit.CheckedState.Parent = this.btnExit;
             this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(108)))));
+            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.btnExit.HoverState.Parent = this.btnExit;
@@ -125,7 +125,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(116, 43);
+            this.btnExit.Size = new System.Drawing.Size(110, 30);
             this.btnExit.TabIndex = 82;
             this.btnExit.Text = "Thoát";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -361,10 +361,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.Animated = true;
             this.btnSave.AutoRoundedCorners = true;
-            this.btnSave.BorderRadius = 20;
+            this.btnSave.BorderRadius = 14;
             this.btnSave.CheckedState.Parent = this.btnSave;
             this.btnSave.CustomImages.Parent = this.btnSave;
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(108)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.btnSave.HoverState.Parent = this.btnSave;
@@ -372,7 +372,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
-            this.btnSave.Size = new System.Drawing.Size(116, 43);
+            this.btnSave.Size = new System.Drawing.Size(110, 30);
             this.btnSave.TabIndex = 65;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);

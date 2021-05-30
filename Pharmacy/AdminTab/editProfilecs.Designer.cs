@@ -78,9 +78,9 @@ namespace Pharmacy.AdminTab
             this.buttonProfile.Location = new System.Drawing.Point(0, 0);
             this.buttonProfile.Name = "buttonProfile";
             this.buttonProfile.ShadowDecoration.Parent = this.buttonProfile;
-            this.buttonProfile.Size = new System.Drawing.Size(200, 48);
+            this.buttonProfile.Size = new System.Drawing.Size(335, 48);
             this.buttonProfile.TabIndex = 2;
-            this.buttonProfile.Text = "Profile";
+            this.buttonProfile.Text = "Thông tin cửa hàng";
             // 
             // panel1
             // 

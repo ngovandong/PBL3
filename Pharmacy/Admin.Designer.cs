@@ -31,6 +31,7 @@ namespace Pharmacy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonManageMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonMangeUser = new Guna.UI2.WinForms.Guna2Button();
@@ -41,16 +42,15 @@ namespace Pharmacy
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.manageUser1 = new Pharmacy.AdminTab.ManageUser();
             this.manageMedicine1 = new Pharmacy.AdminTab.Manage_Medicine.ManageMedicine();
             this.editProfilecs1 = new Pharmacy.AdminTab.editProfilecs();
             this.dashBoard1 = new Pharmacy.AdminTab.dashBoard();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,6 +69,17 @@ namespace Pharmacy
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(361, 743);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(137, 677);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(73, 49);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // guna2Button5
             // 
@@ -92,7 +103,7 @@ namespace Pharmacy
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(295, 46);
             this.guna2Button5.TabIndex = 2;
-            this.guna2Button5.Text = "Log out";
+            this.guna2Button5.Text = "Đăng xuất";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // ButtonManageMedicine
@@ -117,7 +128,7 @@ namespace Pharmacy
             this.ButtonManageMedicine.ShadowDecoration.Parent = this.ButtonManageMedicine;
             this.ButtonManageMedicine.Size = new System.Drawing.Size(295, 46);
             this.ButtonManageMedicine.TabIndex = 2;
-            this.ButtonManageMedicine.Text = "Manage medicine";
+            this.ButtonManageMedicine.Text = "Quản lý thuốc";
             this.ButtonManageMedicine.Click += new System.EventHandler(this.ButtonManageMedicine_Click);
             // 
             // ButtonMangeUser
@@ -142,7 +153,7 @@ namespace Pharmacy
             this.ButtonMangeUser.ShadowDecoration.Parent = this.ButtonMangeUser;
             this.ButtonMangeUser.Size = new System.Drawing.Size(295, 46);
             this.ButtonMangeUser.TabIndex = 2;
-            this.ButtonMangeUser.Text = "Manage user";
+            this.ButtonMangeUser.Text = "Quản lý người dùng";
             this.ButtonMangeUser.Click += new System.EventHandler(this.ButtonMangeUser_Click);
             // 
             // ButtonProfile
@@ -167,7 +178,7 @@ namespace Pharmacy
             this.ButtonProfile.ShadowDecoration.Parent = this.ButtonProfile;
             this.ButtonProfile.Size = new System.Drawing.Size(295, 46);
             this.ButtonProfile.TabIndex = 2;
-            this.ButtonProfile.Text = "Profile";
+            this.ButtonProfile.Text = "Thông tin cửa hàng";
             this.ButtonProfile.Click += new System.EventHandler(this.ButtonProfile_Click);
             // 
             // ButtonDashBoard
@@ -256,17 +267,6 @@ namespace Pharmacy
             this.panel3.Size = new System.Drawing.Size(959, 743);
             this.panel3.TabIndex = 3;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(137, 677);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(73, 49);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // manageUser1
             // 
             this.manageUser1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -317,10 +317,10 @@ namespace Pharmacy
             this.Text = "Admin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Admin_FormClosed);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

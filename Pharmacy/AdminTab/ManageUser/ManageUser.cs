@@ -22,6 +22,10 @@ namespace Pharmacy.AdminTab
         public void refresh()
         {
             guna2DataGridView1.DataSource = _BLL.Instance.getListUser();
+            guna2DataGridView1.Columns[0].Visible = false;
+            guna2DataGridView1.Columns[1].HeaderText = "Tên";
+            guna2DataGridView1.Columns[2].HeaderText = "Tên đăng nhập";
+            guna2DataGridView1.Columns[3].HeaderText = "Quyền";
         }
 
         private void buttonDetail_Click_1(object sender, EventArgs e)

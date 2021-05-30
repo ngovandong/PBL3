@@ -35,10 +35,10 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.buttonSample = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkExpiredMedicine1 = new Pharmacy.AdminTab.Manage_Medicine.CheckExpiredMedicine();
             this.importMedicine1 = new Pharmacy.AdminTab.Manage_Medicine.ImportMedicine();
             this.sample1 = new Pharmacy.AdminTab.Manage_Medicine.Sample();
             this.medicine1 = new Pharmacy.AdminTab.medicine();
-            this.checkExpiredMedicine1 = new Pharmacy.AdminTab.Manage_Medicine.CheckExpiredMedicine();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(225, 48);
             this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Import Medicine";
+            this.guna2Button1.Text = "Nhập lô";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // ButtonCheckExpiryDate
@@ -96,7 +96,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.ButtonCheckExpiryDate.ShadowDecoration.Parent = this.ButtonCheckExpiryDate;
             this.ButtonCheckExpiryDate.Size = new System.Drawing.Size(299, 48);
             this.ButtonCheckExpiryDate.TabIndex = 3;
-            this.ButtonCheckExpiryDate.Text = "Check Expiry Date";
+            this.ButtonCheckExpiryDate.Text = "Kiểm tra hạn sử dụng";
             this.ButtonCheckExpiryDate.Click += new System.EventHandler(this.ButtonCheckExpiryDate_Click);
             // 
             // buttonSample
@@ -117,7 +117,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.buttonSample.ShadowDecoration.Parent = this.buttonSample;
             this.buttonSample.Size = new System.Drawing.Size(277, 48);
             this.buttonSample.TabIndex = 2;
-            this.buttonSample.Text = "Prescription Sample";
+            this.buttonSample.Text = "Đơn thuốc mẫu";
             this.buttonSample.Click += new System.EventHandler(this.buttonSample_Click);
             // 
             // ButtonMedicine
@@ -138,7 +138,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.ButtonMedicine.ShadowDecoration.Parent = this.ButtonMedicine;
             this.ButtonMedicine.Size = new System.Drawing.Size(157, 48);
             this.ButtonMedicine.TabIndex = 2;
-            this.ButtonMedicine.Text = "Medicine";
+            this.ButtonMedicine.Text = "Thuốc";
             this.ButtonMedicine.Click += new System.EventHandler(this.ButtonMedicine_Click);
             // 
             // panel1
@@ -153,6 +153,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(959, 626);
             this.panel1.TabIndex = 11;
+            // 
+            // checkExpiredMedicine1
+            // 
+            this.checkExpiredMedicine1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkExpiredMedicine1.Location = new System.Drawing.Point(0, 0);
+            this.checkExpiredMedicine1.Name = "checkExpiredMedicine1";
+            this.checkExpiredMedicine1.Size = new System.Drawing.Size(959, 626);
+            this.checkExpiredMedicine1.TabIndex = 3;
             // 
             // importMedicine1
             // 
@@ -180,14 +188,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.medicine1.Name = "medicine1";
             this.medicine1.Size = new System.Drawing.Size(959, 626);
             this.medicine1.TabIndex = 0;
-            // 
-            // checkExpiredMedicine1
-            // 
-            this.checkExpiredMedicine1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkExpiredMedicine1.Location = new System.Drawing.Point(0, 0);
-            this.checkExpiredMedicine1.Name = "checkExpiredMedicine1";
-            this.checkExpiredMedicine1.Size = new System.Drawing.Size(959, 626);
-            this.checkExpiredMedicine1.TabIndex = 3;
             // 
             // ManageMedicine
             // 

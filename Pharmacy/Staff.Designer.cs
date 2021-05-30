@@ -44,9 +44,9 @@ namespace Pharmacy
             this.titleLabel = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.staffProfile1 = new Pharmacy.StaffSubtab.StaffProfile(this.user.USER_NAME);
             this.staffDashBoard1 = new Pharmacy.StaffSubtab.StaffDashBoard(this.user);
             this.staffReport1 = new Pharmacy.StaffSubtab.StaffReport(this.user);
+            this.staffProfile1 = new Pharmacy.StaffSubtab.StaffProfile(this.user.USER_NAME);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -103,7 +103,7 @@ namespace Pharmacy
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(295, 45);
             this.guna2Button5.TabIndex = 2;
-            this.guna2Button5.Text = "Log out";
+            this.guna2Button5.Text = "Đăng xuất";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // ButtonSell
@@ -127,7 +127,7 @@ namespace Pharmacy
             this.ButtonSell.ShadowDecoration.Parent = this.ButtonSell;
             this.ButtonSell.Size = new System.Drawing.Size(295, 45);
             this.ButtonSell.TabIndex = 2;
-            this.ButtonSell.Text = "Sell";
+            this.ButtonSell.Text = "Bán";
             this.ButtonSell.Click += new System.EventHandler(this.ButtonSell_Click);
             // 
             // ButtonProfile
@@ -151,7 +151,7 @@ namespace Pharmacy
             this.ButtonProfile.ShadowDecoration.Parent = this.ButtonProfile;
             this.ButtonProfile.Size = new System.Drawing.Size(295, 45);
             this.ButtonProfile.TabIndex = 2;
-            this.ButtonProfile.Text = "Profile";
+            this.ButtonProfile.Text = "Thông tin cá nhân";
             this.ButtonProfile.Click += new System.EventHandler(this.ButtonProfile_Click);
             // 
             // ButtonReport
@@ -175,7 +175,7 @@ namespace Pharmacy
             this.ButtonReport.ShadowDecoration.Parent = this.ButtonReport;
             this.ButtonReport.Size = new System.Drawing.Size(295, 45);
             this.ButtonReport.TabIndex = 2;
-            this.ButtonReport.Text = "Report";
+            this.ButtonReport.Text = "Báo cáo";
             this.ButtonReport.Click += new System.EventHandler(this.ButtonReport_Click);
             // 
             // ButtonDashBoard
@@ -272,22 +272,14 @@ namespace Pharmacy
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.staffProfile1);
             this.panel2.Controls.Add(this.staffReport1);
             this.panel2.Controls.Add(this.staffDashBoard1);
-            this.panel2.Controls.Add(this.staffProfile1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(361, 48);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(959, 695);
             this.panel2.TabIndex = 31;
-            // 
-            // staffProfile1
-            // 
-            this.staffProfile1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffProfile1.Location = new System.Drawing.Point(0, 0);
-            this.staffProfile1.Name = "staffProfile1";
-            this.staffProfile1.Size = new System.Drawing.Size(959, 695);
-            this.staffProfile1.TabIndex = 0;
             // 
             // staffDashBoard1
             // 
@@ -298,7 +290,7 @@ namespace Pharmacy
             this.staffDashBoard1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.staffDashBoard1.Name = "staffDashBoard1";
             this.staffDashBoard1.Size = new System.Drawing.Size(959, 695);
-            this.staffDashBoard1.TabIndex = 1;
+            this.staffDashBoard1.TabIndex = 0;
             // 
             // staffReport1
             // 
@@ -306,7 +298,15 @@ namespace Pharmacy
             this.staffReport1.Location = new System.Drawing.Point(0, 0);
             this.staffReport1.Name = "staffReport1";
             this.staffReport1.Size = new System.Drawing.Size(959, 695);
-            this.staffReport1.TabIndex = 2;
+            this.staffReport1.TabIndex = 1;
+            // 
+            // staffProfile1
+            // 
+            this.staffProfile1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffProfile1.Location = new System.Drawing.Point(0, 0);
+            this.staffProfile1.Name = "staffProfile1";
+            this.staffProfile1.Size = new System.Drawing.Size(959, 695);
+            this.staffProfile1.TabIndex = 2;
             // 
             // Staff
             // 

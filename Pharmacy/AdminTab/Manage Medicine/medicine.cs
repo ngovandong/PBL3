@@ -24,6 +24,13 @@ namespace Pharmacy.AdminTab
         public void setDataGridView()
         {
             dataGridView.DataSource = _BLL.Instance.getListMedicineView();
+            dataGridView.Columns["ID"].Visible = false;
+            dataGridView.Columns["Name"].HeaderText = "Tên thuốc";
+            dataGridView.Columns["original_Price"].HeaderText = "Giá gốc";
+            dataGridView.Columns["original_Price"].DefaultCellStyle.Format = "#,##0";
+            dataGridView.Columns["sale_Price"].HeaderText = "Giá bán";
+            dataGridView.Columns["sale_Price"].DefaultCellStyle.Format = "#,##0";
+            dataGridView.Columns["Quantity"].HeaderText = "Tồn kho";
         }
 
         public void setDataTextBoxSearch()

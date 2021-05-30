@@ -56,7 +56,7 @@ namespace Pharmacy.AdminTab
             this.ButtonDashBoard.ShadowDecoration.Parent = this.ButtonDashBoard;
             this.ButtonDashBoard.Size = new System.Drawing.Size(201, 48);
             this.ButtonDashBoard.TabIndex = 2;
-            this.ButtonDashBoard.Text = "General";
+            this.ButtonDashBoard.Text = "Tổng quan";
             this.ButtonDashBoard.Click += new System.EventHandler(this.ButtonDashBoard_Click);
             // 
             // guna2Button10
@@ -76,7 +76,7 @@ namespace Pharmacy.AdminTab
             this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
             this.guna2Button10.Size = new System.Drawing.Size(177, 48);
             this.guna2Button10.TabIndex = 2;
-            this.guna2Button10.Text = "Report";
+            this.guna2Button10.Text = "Báo cáo";
             this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
             // 
             // panel6

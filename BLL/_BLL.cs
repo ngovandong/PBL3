@@ -289,7 +289,7 @@ namespace BLL
             List<USER_VIEW> l = new List<USER_VIEW>();
             foreach (var item in _DAL.Instance.getListUser())
             {
-                if (item.NAME.Contains(s) || item.USER_NAME.Contains(s))
+                if (item.NAME.ToLower().Contains(s.ToLower()) || item.USER_NAME.ToLower().Contains(s.ToLower()))
                 {
                     l.Add(new USER_VIEW
                     {

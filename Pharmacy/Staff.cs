@@ -40,13 +40,13 @@ namespace Pharmacy
 
         private void ButtonReport_Click(object sender, EventArgs e)
         {
-            titleLabel.Text = "Report";
+            titleLabel.Text = "Báo cáo";
             this.staffReport1.BringToFront();
         }
 
         private void ButtonProfile_Click(object sender, EventArgs e)
         {
-            titleLabel.Text = "Profile";
+            titleLabel.Text = "Thông tin cá nhân";
             this.staffProfile1.BringToFront();
         }
 

@@ -36,7 +36,6 @@ namespace Pharmacy.StaffSubtab
             role.Text = "Staff";
             guna2DateTimePicker1.Value = u.DateOfBirth.Value;
             address.Text = u.ADDRESS;
-            password.Text = u.PASSWORD;
             name.Text = u.NAME;
         }
 

@@ -44,7 +44,7 @@ namespace Pharmacy
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            int c = _BLL.Instance.checkUser(guna2TextBox1.Text.ToLower(), guna2TextBox2.Text.ToLower());
+            int c = _BLL.Instance.checkUser(guna2TextBox1.Text.ToLower(), guna2TextBox2.Text);
             if (c==1)
             {
                 Admin f = new Admin(guna2TextBox1.Text.ToLower());

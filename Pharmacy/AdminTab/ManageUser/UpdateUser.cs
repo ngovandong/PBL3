@@ -83,7 +83,7 @@ namespace Pharmacy.AdminTab
                     PHONE = guna2TextBox2.Text,
                     ADDRESS = guna2TextBox3.Text,
                     USER_NAME = "",
-                    PASSWORD = guna2TextBox5.Text.ToLower(),
+                    PASSWORD = guna2TextBox5.Text,
                 };
             }
             catch (Exception)

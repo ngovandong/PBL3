@@ -70,7 +70,7 @@ namespace Pharmacy.StaffSubtab
             this.id = medicine.ID;
             this.code.Text = medicine.code;
             this.Available.Text = medicine.Qty.ToString();
-            this.Price.Text = medicine.sell_price.ToString();
+            this.Price.Text = medicine.sell_price.ToString("#,##0");
         }
     }
 }

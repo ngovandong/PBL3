@@ -54,13 +54,13 @@ namespace Pharmacy.StaffSubtab
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label7.Location = new System.Drawing.Point(114, 295);
+            this.label7.Location = new System.Drawing.Point(79, 295);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(267, 46);
+            this.label7.Size = new System.Drawing.Size(354, 46);
             this.label7.TabIndex = 41;
-            this.label7.Text = "Update user";
+            this.label7.Text = "Cập nhật tài khoản";
             // 
             // pictureBox1
             // 
@@ -108,7 +108,7 @@ namespace Pharmacy.StaffSubtab
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(112, 29);
             this.guna2Button1.TabIndex = 38;
-            this.guna2Button1.Text = "Update";
+            this.guna2Button1.Text = "Cập nhật";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // password
@@ -164,9 +164,9 @@ namespace Pharmacy.StaffSubtab
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label8.Location = new System.Drawing.Point(522, 447);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 18);
+            this.label8.Size = new System.Drawing.Size(77, 18);
             this.label8.TabIndex = 34;
-            this.label8.Text = "Password";
+            this.label8.Text = "Mật khẩu";
             // 
             // label6
             // 
@@ -175,9 +175,9 @@ namespace Pharmacy.StaffSubtab
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label6.Location = new System.Drawing.Point(518, 274);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 18);
+            this.label6.Size = new System.Drawing.Size(60, 18);
             this.label6.TabIndex = 35;
-            this.label6.Text = "Address";
+            this.label6.Text = "Địa chỉ";
             // 
             // guna2DateTimePicker1
             // 
@@ -248,9 +248,9 @@ namespace Pharmacy.StaffSubtab
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label5.Location = new System.Drawing.Point(518, 176);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 18);
+            this.label5.Size = new System.Drawing.Size(107, 18);
             this.label5.TabIndex = 26;
-            this.label5.Text = "Phone number";
+            this.label5.Text = "Số điện thoại";
             // 
             // label4
             // 
@@ -259,9 +259,9 @@ namespace Pharmacy.StaffSubtab
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label4.Location = new System.Drawing.Point(518, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 18);
+            this.label4.Size = new System.Drawing.Size(82, 18);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Date Of Birth";
+            this.label4.Text = "Ngày sinh";
             // 
             // label3
             // 
@@ -270,9 +270,9 @@ namespace Pharmacy.StaffSubtab
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label3.Location = new System.Drawing.Point(100, 399);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 18);
+            this.label3.Size = new System.Drawing.Size(36, 18);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Name";
+            this.label3.Text = "Tên";
             // 
             // label2
             // 
@@ -281,9 +281,9 @@ namespace Pharmacy.StaffSubtab
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label2.Location = new System.Drawing.Point(99, 506);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 18);
+            this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Role";
+            this.label2.Text = "Vai trò";
             // 
             // label1
             // 
@@ -293,9 +293,9 @@ namespace Pharmacy.StaffSubtab
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(522, 361);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 18);
+            this.label1.Size = new System.Drawing.Size(118, 18);
             this.label1.TabIndex = 34;
-            this.label1.Text = "Username";
+            this.label1.Text = "Tên đăng nhập";
             // 
             // userNane
             // 

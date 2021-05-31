@@ -227,7 +227,7 @@ namespace Pharmacy.AdminTab
             this.buttonAdd.ShadowDecoration.Parent = this.buttonAdd;
             this.buttonAdd.Size = new System.Drawing.Size(103, 29);
             this.buttonAdd.TabIndex = 10;
-            this.buttonAdd.Text = "Add";
+            this.buttonAdd.Text = "Thêm";
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click_1);
             // 
             // buttonDetail
@@ -247,7 +247,7 @@ namespace Pharmacy.AdminTab
             this.buttonDetail.ShadowDecoration.Parent = this.buttonDetail;
             this.buttonDetail.Size = new System.Drawing.Size(103, 29);
             this.buttonDetail.TabIndex = 10;
-            this.buttonDetail.Text = "Detail";
+            this.buttonDetail.Text = "Chi tiết";
             this.buttonDetail.Click += new System.EventHandler(this.buttonDetail_Click_1);
             // 
             // buttonUpdate
@@ -267,7 +267,7 @@ namespace Pharmacy.AdminTab
             this.buttonUpdate.ShadowDecoration.Parent = this.buttonUpdate;
             this.buttonUpdate.Size = new System.Drawing.Size(103, 29);
             this.buttonUpdate.TabIndex = 10;
-            this.buttonUpdate.Text = "Upadate";
+            this.buttonUpdate.Text = "Cập nhật";
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click_1);
             // 
             // guna2Button2
@@ -287,7 +287,7 @@ namespace Pharmacy.AdminTab
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(103, 29);
             this.guna2Button2.TabIndex = 10;
-            this.guna2Button2.Text = "Delete";
+            this.guna2Button2.Text = "Xóa";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // panel7
@@ -317,7 +317,7 @@ namespace Pharmacy.AdminTab
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(113, 43);
             this.guna2Button1.TabIndex = 11;
-            this.guna2Button1.Text = "Search";
+            this.guna2Button1.Text = "Tim";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2TextBox3
@@ -340,7 +340,7 @@ namespace Pharmacy.AdminTab
             this.guna2TextBox3.Location = new System.Drawing.Point(221, 57);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "Search";
+            this.guna2TextBox3.PlaceholderText = "Tìm kiếm";
             this.guna2TextBox3.SelectedText = "";
             this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
             this.guna2TextBox3.Size = new System.Drawing.Size(297, 43);

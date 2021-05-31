@@ -123,7 +123,6 @@ namespace Pharmacy.AdminTab
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(482, 55);
             this.LabelName.TabIndex = 40;
-            this.LabelName.Text = "Add User";
             this.LabelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Button2
@@ -160,7 +159,7 @@ namespace Pharmacy.AdminTab
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(112, 29);
             this.guna2Button1.TabIndex = 38;
-            this.guna2Button1.Text = "Update";
+            this.guna2Button1.Text = "Cập nhật";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // hours
@@ -249,9 +248,9 @@ namespace Pharmacy.AdminTab
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(516, 422);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 18);
+            this.label1.Size = new System.Drawing.Size(115, 18);
             this.label1.TabIndex = 33;
-            this.label1.Text = "Business hours";
+            this.label1.Text = "Giờ hoạt động";
             // 
             // label6
             // 
@@ -317,9 +316,9 @@ namespace Pharmacy.AdminTab
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label5.Location = new System.Drawing.Point(514, 254);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 18);
+            this.label5.Size = new System.Drawing.Size(107, 18);
             this.label5.TabIndex = 27;
-            this.label5.Text = "Phone number";
+            this.label5.Text = "Số điện thoại";
             // 
             // label4
             // 
@@ -328,9 +327,9 @@ namespace Pharmacy.AdminTab
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label4.Location = new System.Drawing.Point(514, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 18);
+            this.label4.Size = new System.Drawing.Size(60, 18);
             this.label4.TabIndex = 28;
-            this.label4.Text = "Address";
+            this.label4.Text = "Địa chỉ";
             // 
             // label3
             // 
@@ -339,9 +338,9 @@ namespace Pharmacy.AdminTab
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label3.Location = new System.Drawing.Point(514, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 18);
+            this.label3.Size = new System.Drawing.Size(120, 18);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Pharmacy name";
+            this.label3.Text = "Tên tiệm thuốc";
             // 
             // editProfilecs
             // 

@@ -127,7 +127,7 @@ namespace Pharmacy
             this.ButtonSell.ShadowDecoration.Parent = this.ButtonSell;
             this.ButtonSell.Size = new System.Drawing.Size(295, 45);
             this.ButtonSell.TabIndex = 2;
-            this.ButtonSell.Text = "Bán";
+            this.ButtonSell.Text = "Bán hàng";
             this.ButtonSell.Click += new System.EventHandler(this.ButtonSell_Click);
             // 
             // ButtonProfile

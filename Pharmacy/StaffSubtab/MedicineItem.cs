@@ -33,10 +33,10 @@ namespace Pharmacy.StaffSubtab
             MedicinCode.Text = medicine.code;
             NameMedicine.Text = medicine.name;
             Unit.Text = medicine.unit;
-            price.Text = medicine.sell_price.ToString();
+            price.Text = medicine.sell_price.ToString("#,##0");
             ComboBoxStock.Items.AddRange(medicine.STOCK_DETAIL.Where(p=>p.QUANTITY>0).ToArray());
             ComboBoxStock.SelectedIndex = 0;
-            Total.Text = medicine.sell_price.ToString();
+            Total.Text = medicine.sell_price.ToString("#,##0");
             QuantiyUpDown.Value = medicine.quantysell;
         }
 
@@ -87,7 +87,7 @@ namespace Pharmacy.StaffSubtab
             {
                 QuantiyUpDown.Value = 1;
                 medicine.quantysell = 1;
-                Total.Text = medicine.sell_price.ToString();
+                Total.Text = medicine.sell_price.ToString("#,##0");
                 d2();
             }
             else

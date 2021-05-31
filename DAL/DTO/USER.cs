@@ -40,7 +40,7 @@ namespace DAL
         public string USER_NAME { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(100)]
         public string PASSWORD { get; set; }
 
         [Required]

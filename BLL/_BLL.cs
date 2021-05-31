@@ -146,11 +146,12 @@ namespace BLL
         public int checkUser(string username, string pass)
         {
             int i = 0;
-            foreach (var item in _DAL.Instance.getListUser())
+            var user = _DAL.Instance.getListUser().Where(p => p.USER_NAME == username).FirstOrDefault();
+            if (user != null)
             {
-                if (item.PASSWORD.Equals(pass) && username.Equals(item.USER_NAME))
+                if (BCrypt.Net.BCrypt.Verify(pass, user.PASSWORD))
                 {
-                    if (item.ROLE)
+                    if (user.ROLE)
                     {
                         i = 1;
                     }
@@ -220,6 +221,8 @@ namespace BLL
 
         public void UpdateUser(USER u)
         {
+            int costParameter = 12;
+            u.PASSWORD = BCrypt.Net.BCrypt.HashPassword(u.PASSWORD,costParameter);
             _DAL.Instance.UpdateUser(u);
         }
 
@@ -269,6 +272,8 @@ namespace BLL
 
         public void AddUser(USER u)
         {
+            int costParameter = 12;
+            u.PASSWORD = BCrypt.Net.BCrypt.HashPassword(u.PASSWORD,costParameter);
             _DAL.Instance.AddUser(u);
         }
 

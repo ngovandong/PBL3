@@ -27,7 +27,6 @@ namespace Pharmacy.AdminTab
             guna2TextBox2.Text = u.PHONE;
             guna2TextBox3.Text = u.ADDRESS;
             guna2TextBox4.Text = u.USER_NAME;
-            guna2TextBox5.Text = u.PASSWORD;
             guna2ComboBox1.Items.Add( u.ROLE ? "Admin" : "Staff");
             guna2ComboBox1.SelectedIndex = 0;
             guna2DateTimePicker1.Value = u.DateOfBirth.Value;

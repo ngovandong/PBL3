@@ -79,7 +79,7 @@ namespace Pharmacy.AdminTab
                     ID_CMND = guna2TextBox6.Text,
                     ADDRESS = guna2TextBox3.Text,
                     USER_NAME = guna2TextBox4.Text.ToLower(),
-                    PASSWORD = guna2TextBox5.Text.ToLower(),
+                    PASSWORD = guna2TextBox5.Text,
                 };
             }
             catch (Exception)

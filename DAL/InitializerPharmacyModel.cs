@@ -8,7 +8,7 @@ using DAL.DTO;
 
 namespace DAL
 {
-    class InitializerPharmacyModel:DropCreateDatabaseAlways<PharmacyModel>
+    class InitializerPharmacyModel:DropCreateDatabaseIfModelChanges<PharmacyModel>
     {
         protected override void Seed(PharmacyModel context)
         {
@@ -16,7 +16,7 @@ namespace DAL
             USER addmin1 = new USER
             {
                 ADDRESS = "k144 Nguyễn Lương Bằng",
-                PASSWORD = "1234",
+                PASSWORD = "$2a$12$0iSplYFIdfT1jumcE0Akhe5eNvMKDIFjfmj0NsgOMaxVCiM7eYupa",
                 USER_NAME = "admin1",
                 NAME = "Ngô Văn Đông",
                 DateOfBirth = DateTime.Now,
@@ -26,7 +26,7 @@ namespace DAL
             USER staff1 = new USER
             {
                 ADDRESS = "k144 Nguyễn Lương Bằng",
-                PASSWORD = "1234",
+                PASSWORD = "$2a$12$0iSplYFIdfT1jumcE0Akhe5eNvMKDIFjfmj0NsgOMaxVCiM7eYupa",
                 USER_NAME = "staff1",
                 NAME = "Nguyễn Minh Đức",
                 DateOfBirth = DateTime.Now,
@@ -36,8 +36,6 @@ namespace DAL
             context.USERs.Add(addmin1);
             context.USERs.Add(staff1);
 
-
-            
 
             MEDICINE_TYPE t1 = new MEDICINE_TYPE
             {

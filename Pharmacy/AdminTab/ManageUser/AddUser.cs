@@ -70,7 +70,7 @@ namespace Pharmacy.AdminTab
             {
                 Convert.ToInt64(guna2TextBox2.Text);
                 Convert.ToInt64(guna2TextBox6.Text);
-                return  new USER
+                return new USER
                 {
                     ROLE = (guna2ComboBox1.SelectedIndex == 0),
                     NAME = guna2TextBox1.Text,
@@ -80,6 +80,7 @@ namespace Pharmacy.AdminTab
                     ADDRESS = guna2TextBox3.Text,
                     USER_NAME = guna2TextBox4.Text.ToLower(),
                     PASSWORD = guna2TextBox5.Text,
+                    DELETED = false,
                 };
             }
             catch (Exception)

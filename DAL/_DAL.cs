@@ -30,7 +30,7 @@ namespace DAL
 
             using (PharmacyModel P = new PharmacyModel())
             {
-                return P.USERs.Include("INVOICEs.CUSTOMER").ToList();
+                return P.USERs.Where(e=>e.DELETED==false).Include("INVOICEs.CUSTOMER").ToList();
             }
         }
 
@@ -56,7 +56,7 @@ namespace DAL
             using(PharmacyModel P= new PharmacyModel())
             {
                 USER u = P.USERs.Find(i);
-                P.USERs.Remove(u);
+                u.DELETED = true;
                 P.SaveChanges();
             }
         }

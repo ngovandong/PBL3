@@ -93,7 +93,7 @@ namespace Pharmacy.StaffSubtab
             else
             {
                 int t = (int)(QuantiyUpDown.Value * medicine.sell_price);
-                this.Total.Text = t.ToString();
+                this.Total.Text = t.ToString("#,##0");
                 medicine.quantysell = (int)QuantiyUpDown.Value;
                 d2();
             }

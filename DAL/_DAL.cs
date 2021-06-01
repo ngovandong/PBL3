@@ -160,6 +160,14 @@ namespace DAL
             }
         }
 
+        public List<LISTMEDICINE> getListSuggest()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.LISTMEDICINEs.ToList();
+            }
+        }
+
         public List<MEDICINE> getListMedicine()
         {
             using (PharmacyModel P = new PharmacyModel())

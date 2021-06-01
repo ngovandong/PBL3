@@ -1,4 +1,5 @@
-﻿using Pharmacy.StaffSubtab;
+﻿using Pharmacy.AdminTab.Manage_Medicine;
+using Pharmacy.StaffSubtab;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Pharmacy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new AddMedicine());
         }
     }
 }

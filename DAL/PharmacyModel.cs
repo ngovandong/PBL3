@@ -106,7 +106,12 @@ namespace DAL
 
             modelBuilder.Entity<STOCK_DETAIL>()
                 .HasKey(e => new { e.ID_MEDICINE, e.ID_STOCK });
-
+            modelBuilder.Entity<MEDICINE>()
+                .HasIndex(e => new { e.BARCODE})
+                .IsUnique(true);
+            modelBuilder.Entity<MEDICINE>()
+                .HasIndex(e => new { e.MEDICINE_CODE })
+                .IsUnique(true);
 
         }
     }

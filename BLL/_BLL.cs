@@ -143,6 +143,20 @@ namespace BLL
             });
         }
 
+        public List<LISTMEDICINE> getListSuggest(string s)
+        {
+            s = s.ToLower();
+            List<LISTMEDICINE> l = new List<LISTMEDICINE>();
+            foreach (var item in _DAL.Instance.getListSuggest())
+            {
+                if (item.medicine_name.ToLower().Contains(s))
+                {
+                    l.Add(item);
+                }
+            }
+            return l;
+        }
+
         public int checkUser(string username, string pass)
         {
             int i = 0;
@@ -162,6 +176,18 @@ namespace BLL
                 }
             }
             return i;
+        }
+
+        public bool checkBarcode(string s)
+        {
+            s.ToLower();
+            return _DAL.Instance.getListMedicine().Where(p => p.BARCODE.ToLower() == s).Count() == 0;
+        }
+
+        public bool checkNameMedicine(string s)
+        {
+            s.ToLower();
+            return _DAL.Instance.getListMedicine().Where(p => p.MEDICINE_CODE.ToLower() == s).Count() == 0;
         }
 
         public CUSTOMER AddCustomer(CUSTOMER c)

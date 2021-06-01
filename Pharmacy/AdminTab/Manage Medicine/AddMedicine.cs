@@ -23,6 +23,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             InitializeComponent();
             setComboBoxMedicine_Type();
             setComboBoxUnit();
+            panel2.Visible = false;
         }
 
         public void setComboBoxMedicine_Type()
@@ -67,7 +68,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if((txtMedicineCode.Text!="")&& (txtName.Text != "") && (cbBoxType.Text != "") && (txtBarcode.Text != "") && (txtBrand.Text != "") && (txtSubcribe.Text != "") && (txtLocation.Text != "") && (txtIngredient.Text != "") && (txtDescription.Text != "") && (cbBoxUnit.Text != "")&& (txtOriginalPrice.Text != "") && (txtSalePrice.Text != ""))
+            if((txtMedicineCode.Text!="")&& (txtName.Text != "") && (cbBoxType.Text != "") && (txtBarcode.Text != "") && (txtBrand.Text != "") && (txtSubcribe.Text != "") && (txtLocation.Text != "") && (txtIngredient.Text != "") && (txtDescription.Text != "") && (cbBoxUnit.Text != "")&& (txtOriginalPrice.Text != "") && (txtSalePrice.Text != "")&&guna2CheckBox2.Checked&&guna2CheckBox1.Checked)
             {
                 MEDICINE m = getInforFromForm();
                 if (m != null)
@@ -102,6 +103,56 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             addForm.Show();
         }
 
- 
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+        }
+
+
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            //ListBox.ObjectCollection oc = new ListBox.ObjectCollection(this.listBox1, _BLL.Instance.getListSuggest(txtName.Text).Take(30).ToArray());
+            listBox1.DataSource = _BLL.Instance.getListSuggest(txtName.Text).Take(30).ToArray();
+        }
+
+        private void listBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (listBox1.SelectedItems.Count > 0)
+            {
+                LISTMEDICINE L = (LISTMEDICINE)listBox1.SelectedItem;
+                txtName.Text = L.medicine_name;
+                txtIngredient.Text = L.chemicals;
+                txtBrand.Text = L.branch;
+                txtSubcribe.Text = L.no_subscribe;
+                txtDescription.Text = L.content;
+                txtMedicineCode.Text = L.medicine_code;
+            }
+            panel2.Visible = false;
+        }
+
+        private void txtMedicineCode_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMedicineCode.Text != "" && _BLL.Instance.checkNameMedicine(txtMedicineCode.Text))
+            {
+                guna2CheckBox1.Checked = true;
+            }
+            else
+            {
+                guna2CheckBox1.Checked = false;
+            }
+        }
+
+        private void txtBarcode_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBarcode.Text != "" && _BLL.Instance.checkBarcode(txtBarcode.Text))
+            {
+                guna2CheckBox2.Checked = true;
+            }
+            else
+            {
+                guna2CheckBox2.Checked = false;
+            }
+        }
     }
 }

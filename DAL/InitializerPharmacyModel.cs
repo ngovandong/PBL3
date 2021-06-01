@@ -65,7 +65,7 @@ namespace DAL
                 BRAND = "medico",
                 CONTENT = "nuoc mieng",
                 INGREDIENT = "thuoc loc 200 mL",
-                MEDICINE_CODE = "pc45cdfd",
+                MEDICINE_CODE = "ppdd22",
                 MEDICINE_TYPE = t1,
                 ORIGINAL_PRICE = 54000,
                 SALE_PRICE = 63000,
@@ -96,7 +96,7 @@ namespace DAL
             {
                 BARCODE = "1234134",
                 MEDICINE_NAME = "Thuốc ho con cop",
-                MEDICINE_CODE = "acbs121",
+                MEDICINE_CODE = "ccdd22ss",
                 LOCATION = "Kệ b",
                 ID_SUB = "145263",
                 INGREDIENT = "pllplpplllpl",

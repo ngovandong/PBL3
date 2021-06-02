@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="Model View\chart.cs" />
     <Compile Include="Model View\COMBOBOX_ITEM.cs" />
+    <Compile Include="Model View\InvoiceView.cs" />
     <Compile Include="Model View\INVOICE_VIEW.cs" />
     <Compile Include="Model View\INVOICE_VIEW_REPORT.cs" />
     <Compile Include="Model View\MEDICINEinSTOCK_VIEW.cs" />

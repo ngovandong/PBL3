@@ -258,6 +258,7 @@
     <Compile Include="StaffSubtab\CustomerItem.Designer.cs">
       <DependentUpon>CustomerItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffSubtab\DGVPrinter.cs" />
     <Compile Include="StaffSubtab\SearchCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>

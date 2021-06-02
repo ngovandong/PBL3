@@ -30,12 +30,12 @@ namespace Pharmacy.StaffSubtab
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BackButton = new Guna.UI2.WinForms.Guna2Button();
             this.TextBoxSearchMedicine = new Guna.UI2.WinForms.Guna2TextBox();
@@ -67,6 +67,7 @@ namespace Pharmacy.StaffSubtab
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.customerInvoiceHistoryDatagridview = new Guna.UI2.WinForms.Guna2DataGridView();
             this.NameCustomerLabel = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -99,8 +100,8 @@ namespace Pharmacy.StaffSubtab
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.customerInvoiceHistoryDatagridview = new Guna.UI2.WinForms.Guna2DataGridView();
             this.searchList1 = new Pharmacy.StaffSubtab.SearchCustomer();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -114,18 +115,20 @@ namespace Pharmacy.StaffSubtab
             this.guna2ShadowPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerInvoiceHistoryDatagridview)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SampleDataGridView)).BeginInit();
             this.guna2ShadowPanel3.SuspendLayout();
             this.guna2ShadowPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerInvoiceHistoryDatagridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.BackButton);
             this.panel1.Controls.Add(this.TextBoxSearchMedicine);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -595,6 +598,66 @@ namespace Pharmacy.StaffSubtab
             this.panel15.Size = new System.Drawing.Size(270, 314);
             this.panel15.TabIndex = 7;
             // 
+            // customerInvoiceHistoryDatagridview
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.customerInvoiceHistoryDatagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.customerInvoiceHistoryDatagridview.BackgroundColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customerInvoiceHistoryDatagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.customerInvoiceHistoryDatagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customerInvoiceHistoryDatagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.customerInvoiceHistoryDatagridview.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.customerInvoiceHistoryDatagridview.DefaultCellStyle = dataGridViewCellStyle9;
+            this.customerInvoiceHistoryDatagridview.EnableHeadersVisualStyles = false;
+            this.customerInvoiceHistoryDatagridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.customerInvoiceHistoryDatagridview.Location = new System.Drawing.Point(22, 98);
+            this.customerInvoiceHistoryDatagridview.Name = "customerInvoiceHistoryDatagridview";
+            this.customerInvoiceHistoryDatagridview.RowHeadersVisible = false;
+            this.customerInvoiceHistoryDatagridview.RowHeadersWidth = 51;
+            this.customerInvoiceHistoryDatagridview.RowTemplate.Height = 24;
+            this.customerInvoiceHistoryDatagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.customerInvoiceHistoryDatagridview.Size = new System.Drawing.Size(345, 204);
+            this.customerInvoiceHistoryDatagridview.TabIndex = 2;
+            this.customerInvoiceHistoryDatagridview.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.Height = 25;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.ReadOnly = false;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.Height = 24;
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.customerInvoiceHistoryDatagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerInvoiceHistoryDatagridview_CellContentClick);
+            // 
             // NameCustomerLabel
             // 
             this.NameCustomerLabel.AutoSize = true;
@@ -865,30 +928,30 @@ namespace Pharmacy.StaffSubtab
             // 
             // SampleDataGridView
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.SampleDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.SampleDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.SampleDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SampleDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.SampleDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SampleDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.SampleDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SampleDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SampleDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.SampleDataGridView.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SampleDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SampleDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
             this.SampleDataGridView.EnableHeadersVisualStyles = false;
             this.SampleDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SampleDataGridView.Location = new System.Drawing.Point(12, 76);
@@ -994,66 +1057,6 @@ namespace Pharmacy.StaffSubtab
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1036, 685);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
-            // customerInvoiceHistoryDatagridview
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.customerInvoiceHistoryDatagridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.customerInvoiceHistoryDatagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.customerInvoiceHistoryDatagridview.BackgroundColor = System.Drawing.Color.White;
-            this.customerInvoiceHistoryDatagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.customerInvoiceHistoryDatagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.customerInvoiceHistoryDatagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customerInvoiceHistoryDatagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.customerInvoiceHistoryDatagridview.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.customerInvoiceHistoryDatagridview.DefaultCellStyle = dataGridViewCellStyle3;
-            this.customerInvoiceHistoryDatagridview.EnableHeadersVisualStyles = false;
-            this.customerInvoiceHistoryDatagridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.customerInvoiceHistoryDatagridview.Location = new System.Drawing.Point(22, 98);
-            this.customerInvoiceHistoryDatagridview.Name = "customerInvoiceHistoryDatagridview";
-            this.customerInvoiceHistoryDatagridview.RowHeadersVisible = false;
-            this.customerInvoiceHistoryDatagridview.RowHeadersWidth = 51;
-            this.customerInvoiceHistoryDatagridview.RowTemplate.Height = 24;
-            this.customerInvoiceHistoryDatagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.customerInvoiceHistoryDatagridview.Size = new System.Drawing.Size(345, 204);
-            this.customerInvoiceHistoryDatagridview.TabIndex = 2;
-            this.customerInvoiceHistoryDatagridview.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.HeaderStyle.Height = 25;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.ReadOnly = false;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.Height = 24;
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.customerInvoiceHistoryDatagridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.customerInvoiceHistoryDatagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerInvoiceHistoryDatagridview_CellContentClick);
-            // 
             // searchList1
             // 
             this.searchList1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -1062,6 +1065,17 @@ namespace Pharmacy.StaffSubtab
             this.searchList1.Name = "searchList1";
             this.searchList1.Size = new System.Drawing.Size(449, 46);
             this.searchList1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(665, 10);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(42, 21);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Visible = false;
             // 
             // Sell
             // 
@@ -1093,6 +1107,7 @@ namespace Pharmacy.StaffSubtab
             this.panel11.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerInvoiceHistoryDatagridview)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -1100,7 +1115,7 @@ namespace Pharmacy.StaffSubtab
             ((System.ComponentModel.ISupportInitialize)(this.SampleDataGridView)).EndInit();
             this.guna2ShadowPanel3.ResumeLayout(false);
             this.guna2ShadowPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customerInvoiceHistoryDatagridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1172,5 +1187,6 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2DataGridView customerInvoiceHistoryDatagridview;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using BLL.Model_View;
 using DAL.DTO;
 using DAL;
+using DGVPrinterHelper;
+using Guna.UI2.WinForms;
 
 namespace Pharmacy.StaffSubtab
 {
@@ -257,7 +259,7 @@ namespace Pharmacy.StaffSubtab
                         CHARGE = Ncharge,
                     };
                 }
-                
+                List<InvoiceView> L = new List<InvoiceView>();
                 foreach (MedicineItem item in ListMe)
                 {
                     int oprice = item.medicine.stock_detail.ORGIGINAL_PRICE * item.medicine.quantysell;
@@ -271,9 +273,34 @@ namespace Pharmacy.StaffSubtab
                         SALE_PRICE = sprice,
                     });
                     _BLL.Instance.UpdateStockDetail(item.medicine.stock_detail,item.medicine.quantysell);
+
+                    L.Add(new InvoiceView
+                    {
+                        name = item.medicine.name,
+                        pricePerUnit = item.medicine.sell_price.ToString("#.##0"),
+                        quantity= item.medicine.quantysell,
+                        EXP=item.medicine.stock_detail.dateExpire.ToString()
+                    }) ;
+
                 }
                 _BLL.Instance.AddInvoice(I);
-                MessageBox.Show("Thanh toán thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult dr = MessageBox.Show("Bạn có muốn in hóa đơn không?", "Thanh toán thành công?", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    DGVPrinter print = new DGVPrinter();
+                    PHARMACY_PROFILE p = _BLL.Instance.getProfile();
+                    print.Title = "Hóa đơn";
+                    print.SubTitle = String.Format("Tiệm thuốc: {0}\nĐịa chỉ: {1}\nĐiện thoại: {2}\nGiờ mở cửa: {3}\n\n\nNgày: {4}\n\n\n", p.PharmacyName,p.Address,p.PhoneNumber,p.BusinessHours, DateTime.Now.ToString());
+                    print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                    print.PageNumbers = false;
+                    print.PageNumberInHeader = false;
+                    print.PorportionalColumns = true;
+                    print.HeaderCellAlignment = StringAlignment.Near;
+                    print.Footer = String.Format("Chú thích:\n\t{0}\n\n\nTổng: {1}\nGiảm giá: {2}%\nCần trả: {3}", Note.Text, Ntotal.ToString("#,##0"), Ndiscount.ToString(), Ncharge.ToString("#,##0"));
+                    print.FooterSpacing = 15;
+                    dataGridView1.DataSource = L;
+                    print.PrintDataGridView(dataGridView1);
+                }
                 refresh();
             }
             else

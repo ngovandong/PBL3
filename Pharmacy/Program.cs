@@ -18,7 +18,7 @@ namespace Pharmacy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddMedicine());
+            Application.Run(new Login());
         }
     }
 }

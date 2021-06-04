@@ -65,7 +65,7 @@ namespace Pharmacy
                 }
                 else
                 {
-                    MessageBox.Show("Wrong user or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

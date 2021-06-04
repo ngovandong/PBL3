@@ -51,7 +51,7 @@ namespace Pharmacy.StaffSubtab
             this.Phone.Location = new System.Drawing.Point(39, 108);
             this.Phone.Name = "Phone";
             this.Phone.PasswordChar = '\0';
-            this.Phone.PlaceholderText = "Phonenumber";
+            this.Phone.PlaceholderText = "Số điện thoại";
             this.Phone.SelectedText = "";
             this.Phone.ShadowDecoration.Parent = this.Phone;
             this.Phone.Size = new System.Drawing.Size(265, 36);
@@ -74,7 +74,7 @@ namespace Pharmacy.StaffSubtab
             this.CusName.Location = new System.Drawing.Point(39, 39);
             this.CusName.Name = "CusName";
             this.CusName.PasswordChar = '\0';
-            this.CusName.PlaceholderText = "Customer name";
+            this.CusName.PlaceholderText = "Tên";
             this.CusName.SelectedText = "";
             this.CusName.ShadowDecoration.Parent = this.CusName;
             this.CusName.Size = new System.Drawing.Size(265, 36);
@@ -94,7 +94,7 @@ namespace Pharmacy.StaffSubtab
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(101, 45);
             this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Save";
+            this.guna2Button1.Text = "Lưu";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // addCustomer

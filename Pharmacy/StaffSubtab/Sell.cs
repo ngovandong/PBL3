@@ -202,8 +202,7 @@ namespace Pharmacy.StaffSubtab
             catch (Exception)
             {
                 discount.Text = "0";
-                int s = (int)(Convert.ToInt32(Total.Text) - Convert.ToInt32(Total.Text) * (Convert.ToInt32(discount.Text) / 100.0));
-                charge.Text = s.ToString();
+                
             }
         }
 

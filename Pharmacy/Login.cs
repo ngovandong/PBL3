@@ -44,22 +44,29 @@ namespace Pharmacy
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            int c = _BLL.Instance.checkUser(guna2TextBox1.Text.ToLower(), guna2TextBox2.Text);
-            if (c==1)
+            if (guna2TextBox1.Text == "" || guna2TextBox2.Text == "")
             {
-                Admin f = new Admin(guna2TextBox1.Text.ToLower());
-                f.Show();
-                this.Hide();
-            }
-            else if (c == 2)
-            {
-                Staff f = new Staff(_BLL.Instance.getUserByUserName(guna2TextBox1.Text.ToLower()));
-                f.Show();
-                this.Hide();
+                MessageBox.Show("Vui lòng nhập đầy đủ!", "error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Wrong user or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int c = _BLL.Instance.checkUser(guna2TextBox1.Text.ToLower(), guna2TextBox2.Text);
+                if (c == 1)
+                {
+                    Admin f = new Admin(guna2TextBox1.Text.ToLower());
+                    f.Show();
+                    this.Hide();
+                }
+                else if (c == 2)
+                {
+                    Staff f = new Staff(_BLL.Instance.getUserByUserName(guna2TextBox1.Text.ToLower()));
+                    f.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong user or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

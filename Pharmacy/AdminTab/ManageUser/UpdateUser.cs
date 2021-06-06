@@ -63,7 +63,6 @@ namespace Pharmacy.AdminTab
             guna2TextBox1.Text = u.NAME;
             guna2TextBox2.Text = u.PHONE;
             guna2TextBox3.Text = u.ADDRESS;
-            guna2TextBox5.Text = u.PASSWORD;
             guna2ComboBox1.SelectedIndex = u.ROLE ? 0 : 1;
             guna2DateTimePicker1.Value = u.DateOfBirth.Value;
 

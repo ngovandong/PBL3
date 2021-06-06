@@ -335,7 +335,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(388, 59);
             this.label1.TabIndex = 66;
-            this.label1.Text = "Thêm thuốc";
+            this.label1.Text = "Chi tiết";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1

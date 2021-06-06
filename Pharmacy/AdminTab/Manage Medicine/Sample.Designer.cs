@@ -55,7 +55,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(1798, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(521, 914);
             this.panel1.TabIndex = 8;
@@ -65,7 +65,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.panelSearch.AutoScroll = true;
             this.panelSearch.Location = new System.Drawing.Point(40, 261);
-            this.panelSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSearch.Margin = new System.Windows.Forms.Padding(4);
             this.panelSearch.Name = "panelSearch";
             this.panelSearch.Size = new System.Drawing.Size(451, 212);
             this.panelSearch.TabIndex = 11;
@@ -78,12 +78,13 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
             this.btnSave.Location = new System.Drawing.Point(136, 799);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(240, 55);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Lưu đơn mẫu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMedicine_MouseClick);
             // 
             // txtSearch
@@ -101,7 +102,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.Location = new System.Drawing.Point(40, 218);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên thuốc cần tìm";
@@ -126,7 +127,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtPrescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrescription.HoverState.Parent = this.txtPrescription;
             this.txtPrescription.Location = new System.Drawing.Point(40, 550);
-            this.txtPrescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrescription.Name = "txtPrescription";
             this.txtPrescription.PasswordChar = '\0';
             this.txtPrescription.PlaceholderText = "";
@@ -151,7 +152,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.Location = new System.Drawing.Point(40, 111);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -190,7 +191,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1798, 107);
             this.panel2.TabIndex = 9;
@@ -213,7 +214,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.panelMedicine.BackColor = System.Drawing.Color.White;
             this.panelMedicine.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMedicine.Location = new System.Drawing.Point(0, 107);
-            this.panelMedicine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMedicine.Margin = new System.Windows.Forms.Padding(4);
             this.panelMedicine.Name = "panelMedicine";
             this.panelMedicine.Size = new System.Drawing.Size(1798, 807);
             this.panelMedicine.TabIndex = 10;

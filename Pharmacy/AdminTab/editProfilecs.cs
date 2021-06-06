@@ -24,12 +24,16 @@ namespace Pharmacy.AdminTab
         public void setForm()
         {
             PHARMACY_PROFILE f = _BLL.Instance.getProfile();
-            ñame.Text = f.PharmacyName;
-            phone.Text = f.PhoneNumber;
-            address.Text = f.Address;
-            hours.Text = f.BusinessHours;
-            email.Text = f.Email;
-            LabelName.Text = f.PharmacyName;
+            if (f != null)
+            {
+                ñame.Text = f.PharmacyName == null ? "" : f.PharmacyName;
+                phone.Text = f.PhoneNumber;
+                address.Text = f.Address;
+                hours.Text = f.BusinessHours;
+                email.Text = f.Email;
+                LabelName.Text = f.PharmacyName;
+            }
+            
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

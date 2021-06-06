@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,6 +71,13 @@ namespace Pharmacy.AdminTab
             {
                 Convert.ToInt64(guna2TextBox2.Text);
                 Convert.ToInt64(guna2TextBox6.Text);
+                string FileName = pictureBox1.ImageLocation;
+                byte[] ImageData;
+                FileStream fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                ImageData = br.ReadBytes((int)fs.Length);
+                br.Close();
+                fs.Close();
                 return new USER
                 {
                     ROLE = (guna2ComboBox1.SelectedIndex == 0),
@@ -81,6 +89,7 @@ namespace Pharmacy.AdminTab
                     USER_NAME = guna2TextBox4.Text.ToLower(),
                     PASSWORD = guna2TextBox5.Text,
                     DELETED = false,
+                    IMAGE = ImageData
                 };
             }
             catch (Exception)
@@ -99,6 +108,19 @@ namespace Pharmacy.AdminTab
             else
             {
                 guna2CheckBox1.Checked = false;
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+            openFileDialog1.Filter= "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            openFileDialog1.Multiselect = false;
+            DialogResult result;
+            result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = openFileDialog1.FileName;
             }
         }
     }

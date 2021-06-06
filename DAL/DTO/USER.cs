@@ -30,7 +30,7 @@ namespace DAL
         public string ADDRESS { get; set; }
 
         [Column(TypeName = "image")]
-        public byte?[] IMAGE { get; set; }
+        public byte[] IMAGE { get; set; }
 
         [StringLength(20)]
         public string ID_CMND { get; set; }

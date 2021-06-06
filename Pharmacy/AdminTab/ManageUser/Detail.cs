@@ -30,6 +30,11 @@ namespace Pharmacy.AdminTab
             guna2ComboBox1.Items.Add( u.ROLE ? "Admin" : "Staff");
             guna2ComboBox1.SelectedIndex = 0;
             guna2DateTimePicker1.Value = u.DateOfBirth.Value;
+            if (u.IMAGE != null)
+            {
+                pictureBox1.Image = (Bitmap)((new ImageConverter()).ConvertFrom(u.IMAGE));
+            }
+            
         }
     }
 }

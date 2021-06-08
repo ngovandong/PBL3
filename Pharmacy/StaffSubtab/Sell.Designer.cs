@@ -37,9 +37,9 @@ namespace Pharmacy.StaffSubtab
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BackButton = new Guna.UI2.WinForms.Guna2Button();
             this.TextBoxSearchMedicine = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -65,6 +65,7 @@ namespace Pharmacy.StaffSubtab
             this.panel3 = new System.Windows.Forms.Panel();
             this.checkoutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.searchList1 = new Pharmacy.StaffSubtab.SearchCustomer();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -101,7 +102,6 @@ namespace Pharmacy.StaffSubtab
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.searchList1 = new Pharmacy.StaffSubtab.SearchCustomer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -136,18 +136,6 @@ namespace Pharmacy.StaffSubtab
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 56);
             this.panel1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1697, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(42, 21);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.Visible = false;
             // 
             // BackButton
             // 
@@ -191,6 +179,18 @@ namespace Pharmacy.StaffSubtab
             this.TextBoxSearchMedicine.Size = new System.Drawing.Size(426, 36);
             this.TextBoxSearchMedicine.TabIndex = 0;
             this.TextBoxSearchMedicine.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1697, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(42, 21);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Visible = false;
             // 
             // guna2ShadowPanel1
             // 
@@ -571,6 +571,15 @@ namespace Pharmacy.StaffSubtab
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(449, 1);
             this.panel2.TabIndex = 2;
+            // 
+            // searchList1
+            // 
+            this.searchList1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.searchList1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchList1.Location = new System.Drawing.Point(0, 0);
+            this.searchList1.Name = "searchList1";
+            this.searchList1.Size = new System.Drawing.Size(449, 46);
+            this.searchList1.TabIndex = 1;
             // 
             // guna2ShadowPanel2
             // 
@@ -1069,15 +1078,6 @@ namespace Pharmacy.StaffSubtab
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1036, 685);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
-            // searchList1
-            // 
-            this.searchList1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.searchList1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchList1.Location = new System.Drawing.Point(0, 0);
-            this.searchList1.Name = "searchList1";
-            this.searchList1.Size = new System.Drawing.Size(449, 46);
-            this.searchList1.TabIndex = 1;
-            // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1090,6 +1090,7 @@ namespace Pharmacy.StaffSubtab
             this.Controls.Add(this.panel1);
             this.Name = "Sell";
             this.Text = "Sell";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Sell_FormClosed);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -339,6 +339,7 @@ namespace Pharmacy.StaffSubtab
             this.role.Name = "role";
             this.role.PasswordChar = '\0';
             this.role.PlaceholderText = "";
+            this.role.ReadOnly = true;
             this.role.SelectedText = "";
             this.role.ShadowDecoration.Parent = this.role;
             this.role.Size = new System.Drawing.Size(301, 36);

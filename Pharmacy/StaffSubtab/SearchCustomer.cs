@@ -16,7 +16,7 @@ namespace Pharmacy.StaffSubtab
         public delegate void Mydel(CUSTOMER c);
         public Mydel d;
         private List<CustomerItem> ListSearch;
-        public CUSTOMER Customer;
+        private CUSTOMER Customer;
         public SearchCustomer()
         {
             InitializeComponent();
@@ -83,6 +83,11 @@ namespace Pharmacy.StaffSubtab
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.AddRange(ListSearch.ToArray());
             flowLayoutPanel1.Visible = true;
+        }
+
+        public  void clearTextbox()
+        {
+            Searchbox.Text = "";
         }
     }
 }

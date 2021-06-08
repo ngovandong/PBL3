@@ -134,6 +134,7 @@ namespace DAL
             {
                 MEDICINE m = P.MEDICINEs.Find(ID);
                 m.DELETED = true;
+                m.QUANTITY = 0;
                 P.SaveChanges();
             }
         }

@@ -67,9 +67,18 @@ namespace Pharmacy.StaffSubtab
             Ntotal = 0;
             Ndiscount = 0;
             Ncharge = 0;
-            searchList1 = new SearchCustomer();
             Note.Text = "";
+
+            TextBoxSearchMedicine.Text = "";
             guna2TextBox1_TextChanged(null, null);
+            SearchSampleTextbox_TextChanged(null, null);
+            SearchSampleTextbox.Text = "";
+
+            this.customer = null;
+            NameCustomerLabel.Text = "";
+            customerInvoiceHistoryDatagridview.DataSource = 0;
+            searchList1.clearTextbox();
+            
         }
 
         public void changeNumber()

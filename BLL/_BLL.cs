@@ -35,18 +35,49 @@ namespace BLL
             return null;
         }
 
-        public List<INVOICE_VIEW_REPORT> getListInvoice(int id)
+        public List<INVOICE_VIEW_REPORT> getListInvoice(int id, string nameCustomer, string nameMedicine)
         {
-            USER u = _DAL.Instance.getListUser().Where(p => p.ID == id).FirstOrDefault();
-            return u.INVOICEs.Select(p => new INVOICE_VIEW_REPORT
+            List<INVOICE> listInvoice = _DAL.Instance.getListInvoiceIncludeCustomer().Where(p => p.User_ID == id).ToList().Where(o => o.CUSTOMER.Customer_name.ToLower().Contains(nameCustomer.ToLower())).ToList();
+            List<INVOICE> results = new List<INVOICE>();
+            foreach(var invoice in listInvoice)
             {
+                foreach(var invoiceDetail in invoice.INVOICE_DETAIL)
+                {
+                    if(invoiceDetail.MEDICINE.MEDICINE_NAME.ToLower().Contains(nameMedicine.ToLower()))
+                    {
+                        results.Add(invoice);
+                        break;
+                    }
+                }
+            }
+            return results.Select(p => new INVOICE_VIEW_REPORT
+            {
+                Id = p.ID_INVOICE,
                 Date = p.DATE,
                 Charge = p.CHARGE,
                 Discount = p.DISCOUNT,
                 CustomerName = p.CUSTOMER == null ? "" : p.CUSTOMER.Customer_name
             }).Reverse().ToList();
         }
-
+        public INVOICE getINVOICE(int id)
+        {
+            return _DAL.Instance.getListInvoiceIncludeCustomer().Where(p => p.ID_INVOICE == id).ToList()[0];
+        }
+        public List<INVOICE_DETAIL_VIEW> getListInvoice_Detail(int id)
+        {
+            List<INVOICE_DETAIL> listInvoice_detail = _DAL.Instance.getListInvoiceDetail().Where(p => p.ID_INVOICE == id).ToList();
+            List<INVOICE_DETAIL_VIEW> results = new List<INVOICE_DETAIL_VIEW>();
+            foreach(var invoice_detail in listInvoice_detail)
+            {
+                results.Add(new INVOICE_DETAIL_VIEW()
+                {
+                    nameMedicine = invoice_detail.MEDICINE.MEDICINE_NAME,
+                    quantity = invoice_detail.QUANTITY,
+                    total = invoice_detail.SALE_PRICE,
+                });
+            }
+            return results;
+        }
         public void DeleteMedicineExpired()
         {
             foreach (var item in _DAL.Instance.getListStockDetail())

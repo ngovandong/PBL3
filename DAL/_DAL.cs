@@ -325,7 +325,7 @@ namespace DAL
         {
             using (PharmacyModel P = new PharmacyModel())
             {
-                return P.INVOICE_DETAIL.Include("INVOICE").ToList();
+                return P.INVOICE_DETAIL.Include("INVOICE").Include("MEDICINE").ToList();
             }
         }
         
@@ -359,6 +359,13 @@ namespace DAL
                     TypeName = name,
                 });
                 P.SaveChanges();
+            }
+        }
+        public List<INVOICE> getListInvoiceIncludeCustomer()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.INVOICEs.Include("INVOICE_DETAIL.MEDICINE").Include("CUSTOMER").ToList();
             }
         }
     }

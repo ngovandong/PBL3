@@ -259,6 +259,12 @@
       <DependentUpon>CustomerItem.cs</DependentUpon>
     </Compile>
     <Compile Include="StaffSubtab\DGVPrinter.cs" />
+    <Compile Include="StaffSubtab\Invoice_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffSubtab\Invoice_Detail.Designer.cs">
+      <DependentUpon>Invoice_Detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffSubtab\SearchCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -405,6 +411,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffSubtab\CustomerItem.resx">
       <DependentUpon>CustomerItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffSubtab\Invoice_Detail.resx">
+      <DependentUpon>Invoice_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffSubtab\SearchCustomer.resx">
       <DependentUpon>SearchCustomer.cs</DependentUpon>

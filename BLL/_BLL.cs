@@ -37,7 +37,19 @@ namespace BLL
 
         public List<INVOICE_VIEW_REPORT> getListInvoice(int id, string nameCustomer, string nameMedicine)
         {
-            List<INVOICE> listInvoice = _DAL.Instance.getListInvoiceIncludeCustomer().Where(p => p.User_ID == id).ToList().Where(o => o.CUSTOMER.Customer_name.ToLower().Contains(nameCustomer.ToLower())).ToList();
+            List<INVOICE> ds = _DAL.Instance.getListInvoiceIncludeCustomer().Where(p => p.User_ID == id).ToList();
+            List<INVOICE> listInvoice = new List<INVOICE>();
+            if ("" == nameCustomer) listInvoice = ds;
+            else
+            {
+                foreach(var invoice in ds)
+                {
+                    if(invoice.CUSTOMER != null && invoice.CUSTOMER.Customer_name.ToLower().Contains(nameCustomer.ToLower()))
+                    {
+                        listInvoice.Add(invoice);
+                    }
+                }
+            }
             List<INVOICE> results = new List<INVOICE>();
             foreach(var invoice in listInvoice)
             {

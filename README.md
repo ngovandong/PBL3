@@ -6,14 +6,12 @@
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
+* [Design](#Design)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
+
+
 
 
 ## General Information
@@ -30,60 +28,138 @@
 
 
 ## Features
-Project is divided into three layor:
+
+- Manager: 
+  - CRUD Staff
+  - CRUD medicine
+  - View revenue
+  - Edit pharmacy infor
+  - Check validate medicine
+  - Import stock
+  - Create prescription sample
+- Staff:
+  - Edit theirs profile
+  - View personal revenue
+  - Sell medicine
+ 
+
+## Design
+
+### Project is divided into three layor:
   1. DAL(Data access layer)
   2. BLL(Business logic layer)
   3. UI(User interface)
-Project has two part one is for manager, the other is for staff.
+### Project has two part one is for manager, the other is for staff.
+
+### Usercase:
+  
+  
+  
+![Manager](./Image/Usecase1.png)
+
+
+
+
+![Staff](./Image/Usecase2.png)
+
+
+
+
+### Class diagram
+
+
+
+
+![class diagram](./Image/classDiagram.png)
+
+
+
+
+### Schema
+
+
+
+![schema](./Image/schema.png)
+
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+
+
+
+### Login Form
+
+
+
+
+
+![login](./Image/login.png)
+
+
+
+
+
+### Admin Form
+
+
+
+
+![admin](./Image/admin.png)
+
+
+
+
+
+### Staff Form
+
+
+
+
+![staff](./Image/staff.png)
+
+
+
+
+### Sell Form
+
+
+
+
+![sell](./Image/sale.png)
+
+
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+**How to run the Project:**
 
+1. Clone this repo using
+
+  ```git clone https://github.com/ngovandong/PBL3```
+  
+2. Run file data/backup.sql in sql server
+3. Change connection string in file /DAL/PharmacyModel.cs
+
+
+  ``` 
+    public PharmacyModel()
+            : base("data source=dongdong\\SQLEXPRESS;initial catalog=doan3;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+  ```
+ 
+  Change `dongdong` to your desktop user
+ 4. Debug
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
 
-`write-your-code-here`
-
-
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
-
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+**Default Admin account**
+  > User: `Admin1`
+  > 
+  > Password: `1234`
+  
+  
+**Default Staff account**
+  > User: `Staff1`
+  > 
+  > Password: `1234`
+  

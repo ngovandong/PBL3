@@ -12,6 +12,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 {
     public partial class ManageMedicine : UserControl
     {
+        public delegate void myDel();
+        public myDel d;
         public ManageMedicine()
         {
             InitializeComponent();
@@ -20,14 +22,24 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private void ButtonMedicine_Click(object sender, EventArgs e)
         {
-            medicine1.Visible = true;
             medicine1.BringToFront();
         }
 
         private void buttonSample_Click(object sender, EventArgs e)
         {
-            sample1.Visible = true;
             sample1.BringToFront();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            importMedicine1.BringToFront();
+        }
+
+
+
+        private void ButtonCheckExpiryDate_Click(object sender, EventArgs e)
+        {
+            checkExpiredMedicine1.BringToFront();
         }
     }
 }

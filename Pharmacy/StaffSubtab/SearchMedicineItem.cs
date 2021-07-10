@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.Model_View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,15 @@ namespace Pharmacy.StaffSubtab
 {
     public partial class SearchMedicineItem : UserControl
     {
-        public delegate void Mydel(SearchMedicineItem s);
+        public int id;
+        public medicineSell medicine;
+        public delegate void Mydel(medicineSell m);
         public Mydel d;
-        public SearchMedicineItem()
+        public SearchMedicineItem(medicineSell m)
         {
             InitializeComponent();
+            this.medicine = m;
+            setValue();
         }
 
 
@@ -36,7 +41,7 @@ namespace Pharmacy.StaffSubtab
 
         private void SearchMedicineItem_MouseClick(object sender, MouseEventArgs e)
         {
-            d(this);
+            d(medicine);
         }
 
         private void SearchMedicineItem_MouseEnter(object sender, EventArgs e)
@@ -55,7 +60,17 @@ namespace Pharmacy.StaffSubtab
 
         private void NameMedicine_MouseClick(object sender, MouseEventArgs e)
         {
-            d(this);
+            d(medicine);
+        }
+
+        public void setValue()
+        {
+            this.NameMedicine.Text = medicine.name;
+            this.Unit.Text = medicine.unit;
+            this.id = medicine.ID;
+            this.code.Text = medicine.code;
+            this.Available.Text = medicine.Qty.ToString();
+            this.Price.Text = medicine.sell_price.ToString("#,##0");
         }
     }
 }

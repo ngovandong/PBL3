@@ -1,4 +1,5 @@
-﻿using Pharmacy.StaffSubtab;
+﻿using Pharmacy.AdminTab.Manage_Medicine;
+using Pharmacy.StaffSubtab;
 using System;
 using System.Collections.Generic;
 using System.Linq;

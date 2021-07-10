@@ -31,7 +31,7 @@ namespace Pharmacy.StaffSubtab
         {
             this.NameMedicine = new System.Windows.Forms.Label();
             this.Unit = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.Label();
+            this.code = new System.Windows.Forms.Label();
             this.Price = new System.Windows.Forms.Label();
             this.Available = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -60,16 +60,16 @@ namespace Pharmacy.StaffSubtab
             this.Unit.MouseEnter += new System.EventHandler(this.NameMedicine_MouseEnter);
             this.Unit.MouseLeave += new System.EventHandler(this.NameMedicine_MouseLeave);
             // 
-            // Id
+            // code
             // 
-            this.Id.Location = new System.Drawing.Point(9, 43);
-            this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(98, 17);
-            this.Id.TabIndex = 0;
-            this.Id.Text = "SP000555";
-            this.Id.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NameMedicine_MouseClick);
-            this.Id.MouseEnter += new System.EventHandler(this.NameMedicine_MouseEnter);
-            this.Id.MouseLeave += new System.EventHandler(this.NameMedicine_MouseLeave);
+            this.code.Location = new System.Drawing.Point(9, 43);
+            this.code.Name = "code";
+            this.code.Size = new System.Drawing.Size(98, 17);
+            this.code.TabIndex = 0;
+            this.code.Text = "SP000555";
+            this.code.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NameMedicine_MouseClick);
+            this.code.MouseEnter += new System.EventHandler(this.NameMedicine_MouseEnter);
+            this.code.MouseLeave += new System.EventHandler(this.NameMedicine_MouseLeave);
             // 
             // Price
             // 
@@ -100,7 +100,7 @@ namespace Pharmacy.StaffSubtab
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Available);
             this.Controls.Add(this.Price);
-            this.Controls.Add(this.Id);
+            this.Controls.Add(this.code);
             this.Controls.Add(this.Unit);
             this.Controls.Add(this.NameMedicine);
             this.Name = "SearchMedicineItem";
@@ -116,7 +116,7 @@ namespace Pharmacy.StaffSubtab
 
         private System.Windows.Forms.Label NameMedicine;
         private System.Windows.Forms.Label Unit;
-        private System.Windows.Forms.Label Id;
+        private System.Windows.Forms.Label code;
         private System.Windows.Forms.Label Price;
         private System.Windows.Forms.Label Available;
     }

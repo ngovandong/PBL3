@@ -1,5 +1,6 @@
 namespace DAL
 {
+    using DAL.DTO;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -18,16 +19,20 @@ namespace DAL
         public int ID { get; set; }
 
         public DateTime? DATE { get; set; }
+        
+        [StringLength(40)]
+        public string Name { get; set; }
 
-        [StringLength(100)]
-        public string SUPPLIERNAME { get; set; }
-
-        [Column(TypeName = "text")]
+        [Column(TypeName = "nvarchar")]
+        [MaxLength(150)]
         public string NOTE { get; set; }
 
-        public int? PRICETOTAL { get; set; }
+        public int PRICETOTAL { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
+
+        [ForeignKey("SUPPLIER")]
+        public int? supplierId { get; set; }
+        public virtual SUPPLIER SUPPLIER { get; set; }
     }
 }

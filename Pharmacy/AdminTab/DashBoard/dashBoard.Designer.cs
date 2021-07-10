@@ -29,8 +29,6 @@ namespace Pharmacy.AdminTab
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ButtonDashBoard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -40,10 +38,6 @@ namespace Pharmacy.AdminTab
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
             // 
             // ButtonDashBoard
             // 
@@ -62,7 +56,7 @@ namespace Pharmacy.AdminTab
             this.ButtonDashBoard.ShadowDecoration.Parent = this.ButtonDashBoard;
             this.ButtonDashBoard.Size = new System.Drawing.Size(201, 48);
             this.ButtonDashBoard.TabIndex = 2;
-            this.ButtonDashBoard.Text = "DashBoard";
+            this.ButtonDashBoard.Text = "Tổng quan";
             this.ButtonDashBoard.Click += new System.EventHandler(this.ButtonDashBoard_Click);
             // 
             // guna2Button10
@@ -82,7 +76,7 @@ namespace Pharmacy.AdminTab
             this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
             this.guna2Button10.Size = new System.Drawing.Size(177, 48);
             this.guna2Button10.TabIndex = 2;
-            this.guna2Button10.Text = "Report";
+            this.guna2Button10.Text = "Báo cáo";
             this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
             // 
             // panel6
@@ -103,7 +97,7 @@ namespace Pharmacy.AdminTab
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(959, 659);
+            this.panel1.Size = new System.Drawing.Size(959, 695);
             this.panel1.TabIndex = 10;
             // 
             // report1
@@ -111,7 +105,7 @@ namespace Pharmacy.AdminTab
             this.report1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.report1.Location = new System.Drawing.Point(0, 0);
             this.report1.Name = "report1";
-            this.report1.Size = new System.Drawing.Size(959, 659);
+            this.report1.Size = new System.Drawing.Size(959, 695);
             this.report1.TabIndex = 1;
             // 
             // genneral1
@@ -119,7 +113,7 @@ namespace Pharmacy.AdminTab
             this.genneral1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.genneral1.Location = new System.Drawing.Point(0, 0);
             this.genneral1.Name = "genneral1";
-            this.genneral1.Size = new System.Drawing.Size(959, 659);
+            this.genneral1.Size = new System.Drawing.Size(959, 695);
             this.genneral1.TabIndex = 0;
             // 
             // dashBoard
@@ -129,7 +123,7 @@ namespace Pharmacy.AdminTab
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Name = "dashBoard";
-            this.Size = new System.Drawing.Size(959, 707);
+            this.Size = new System.Drawing.Size(959, 743);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -137,7 +131,6 @@ namespace Pharmacy.AdminTab
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;

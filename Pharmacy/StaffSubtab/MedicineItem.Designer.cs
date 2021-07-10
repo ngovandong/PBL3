@@ -31,29 +31,32 @@ namespace Pharmacy.StaffSubtab
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicineItem));
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.QuantiyUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.StockDetailLabel = new System.Windows.Forms.Label();
+            this.ComboBoxStock = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Total = new Guna.UI2.WinForms.Guna2TextBox();
-            this.OriginPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.price = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NameMedicine = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Unit = new System.Windows.Forms.Label();
             this.MedicinCode = new System.Windows.Forms.Label();
             this.NoMedicine = new System.Windows.Forms.Label();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuantiyUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2ComboBox1);
+            this.guna2ShadowPanel1.Controls.Add(this.QuantiyUpDown);
+            this.guna2ShadowPanel1.Controls.Add(this.StockDetailLabel);
+            this.guna2ShadowPanel1.Controls.Add(this.ComboBoxStock);
             this.guna2ShadowPanel1.Controls.Add(this.Total);
-            this.guna2ShadowPanel1.Controls.Add(this.OriginPrice);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2TextBox1);
+            this.guna2ShadowPanel1.Controls.Add(this.price);
             this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.Controls.Add(this.NameMedicine);
-            this.guna2ShadowPanel1.Controls.Add(this.label2);
+            this.guna2ShadowPanel1.Controls.Add(this.Unit);
             this.guna2ShadowPanel1.Controls.Add(this.MedicinCode);
             this.guna2ShadowPanel1.Controls.Add(this.NoMedicine);
             this.guna2ShadowPanel1.Controls.Add(this.guna2ImageButton1);
@@ -67,26 +70,63 @@ namespace Pharmacy.StaffSubtab
             this.guna2ShadowPanel1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.guna2ShadowPanel1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
-            // guna2ComboBox1
+            // QuantiyUpDown
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 23;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(473, 32);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(140, 29);
-            this.guna2ComboBox1.TabIndex = 15;
-            this.guna2ComboBox1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
-            this.guna2ComboBox1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
+            this.QuantiyUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.QuantiyUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.QuantiyUpDown.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.QuantiyUpDown.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.QuantiyUpDown.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.QuantiyUpDown.DisabledState.Parent = this.QuantiyUpDown;
+            this.QuantiyUpDown.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.QuantiyUpDown.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.QuantiyUpDown.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.QuantiyUpDown.FocusedState.Parent = this.QuantiyUpDown;
+            this.QuantiyUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.QuantiyUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.QuantiyUpDown.Location = new System.Drawing.Point(632, 39);
+            this.QuantiyUpDown.Name = "QuantiyUpDown";
+            this.QuantiyUpDown.ShadowDecoration.Parent = this.QuantiyUpDown;
+            this.QuantiyUpDown.Size = new System.Drawing.Size(100, 36);
+            this.QuantiyUpDown.TabIndex = 17;
+            this.QuantiyUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            this.QuantiyUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.QuantiyUpDown.ValueChanged += new System.EventHandler(this.QuantiyUpDown_ValueChanged);
+            // 
+            // StockDetailLabel
+            // 
+            this.StockDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            this.StockDetailLabel.Location = new System.Drawing.Point(389, 8);
+            this.StockDetailLabel.Name = "StockDetailLabel";
+            this.StockDetailLabel.Size = new System.Drawing.Size(410, 28);
+            this.StockDetailLabel.TabIndex = 16;
+            // 
+            // ComboBoxStock
+            // 
+            this.ComboBoxStock.BackColor = System.Drawing.Color.Transparent;
+            this.ComboBoxStock.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxStock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxStock.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBoxStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBoxStock.FocusedState.Parent = this.ComboBoxStock;
+            this.ComboBoxStock.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ComboBoxStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.ComboBoxStock.HoverState.Parent = this.ComboBoxStock;
+            this.ComboBoxStock.ItemHeight = 23;
+            this.ComboBoxStock.ItemsAppearance.Parent = this.ComboBoxStock;
+            this.ComboBoxStock.Location = new System.Drawing.Point(473, 39);
+            this.ComboBoxStock.Name = "ComboBoxStock";
+            this.ComboBoxStock.ShadowDecoration.Parent = this.ComboBoxStock;
+            this.ComboBoxStock.Size = new System.Drawing.Size(140, 29);
+            this.ComboBoxStock.TabIndex = 15;
+            this.ComboBoxStock.SelectedIndexChanged += new System.EventHandler(this.ComboBoxStock_SelectedIndexChanged);
+            this.ComboBoxStock.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
+            this.ComboBoxStock.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
             // Total
             // 
@@ -117,65 +157,39 @@ namespace Pharmacy.StaffSubtab
             this.Total.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.Total.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
-            // OriginPrice
+            // price
             // 
-            this.OriginPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.OriginPrice.DefaultText = "50000";
-            this.OriginPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.OriginPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.OriginPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.OriginPrice.DisabledState.Parent = this.OriginPrice;
-            this.OriginPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.OriginPrice.Enabled = false;
-            this.OriginPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.OriginPrice.FocusedState.Parent = this.OriginPrice;
-            this.OriginPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.OriginPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.OriginPrice.HoverState.Parent = this.OriginPrice;
-            this.OriginPrice.Location = new System.Drawing.Point(834, 32);
-            this.OriginPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.OriginPrice.Name = "OriginPrice";
-            this.OriginPrice.PasswordChar = '\0';
-            this.OriginPrice.PlaceholderText = "";
-            this.OriginPrice.SelectedText = "";
-            this.OriginPrice.SelectionStart = 5;
-            this.OriginPrice.ShadowDecoration.Parent = this.OriginPrice;
-            this.OriginPrice.Size = new System.Drawing.Size(119, 36);
-            this.OriginPrice.TabIndex = 13;
-            this.OriginPrice.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
-            this.OriginPrice.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(643, 32);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Qty";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(77, 36);
-            this.guna2TextBox1.TabIndex = 14;
-            this.guna2TextBox1.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
-            this.guna2TextBox1.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
+            this.price.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.price.DefaultText = "50000";
+            this.price.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.price.DisabledState.Parent = this.price;
+            this.price.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.price.Enabled = false;
+            this.price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.price.FocusedState.Parent = this.price;
+            this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.price.HoverState.Parent = this.price;
+            this.price.Location = new System.Drawing.Point(834, 32);
+            this.price.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.price.Name = "price";
+            this.price.PasswordChar = '\0';
+            this.price.PlaceholderText = "";
+            this.price.SelectedText = "";
+            this.price.SelectionStart = 5;
+            this.price.ShadowDecoration.Parent = this.price;
+            this.price.Size = new System.Drawing.Size(119, 36);
+            this.price.TabIndex = 13;
+            this.price.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
+            this.price.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
-            this.label1.Location = new System.Drawing.Point(389, 43);
+            this.label1.Location = new System.Drawing.Point(389, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 36);
             this.label1.TabIndex = 7;
@@ -194,17 +208,17 @@ namespace Pharmacy.StaffSubtab
             this.NameMedicine.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
             this.NameMedicine.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
-            // label2
+            // Unit
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
-            this.label2.Location = new System.Drawing.Point(722, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 38);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Đơn vị";
-            this.label2.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
-            this.label2.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
+            this.Unit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
+            this.Unit.Location = new System.Drawing.Point(746, 54);
+            this.Unit.Name = "Unit";
+            this.Unit.Size = new System.Drawing.Size(126, 38);
+            this.Unit.TabIndex = 9;
+            this.Unit.Text = "Đơn vị";
+            this.Unit.MouseEnter += new System.EventHandler(this.guna2ShadowPanel1_MouseEnter_1);
+            this.Unit.MouseLeave += new System.EventHandler(this.guna2ShadowPanel1_MouseLeave_1);
             // 
             // MedicinCode
             // 
@@ -255,8 +269,10 @@ namespace Pharmacy.StaffSubtab
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Name = "MedicineItem";
             this.Size = new System.Drawing.Size(1145, 88);
+            this.Load += new System.EventHandler(this.MedicineItem_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuantiyUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,14 +281,15 @@ namespace Pharmacy.StaffSubtab
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2TextBox Total;
-        private Guna.UI2.WinForms.Guna2TextBox OriginPrice;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox price;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label NameMedicine;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Unit;
         private System.Windows.Forms.Label MedicinCode;
         private System.Windows.Forms.Label NoMedicine;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox ComboBoxStock;
+        private System.Windows.Forms.Label StockDetailLabel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown QuantiyUpDown;
     }
 }

@@ -55,6 +55,9 @@
   <ItemGroup>
     <Compile Include="DTO\CUSTOMER.cs" />
     <Compile Include="DTO\PHARMACY_PROFILE.cs" />
+    <Compile Include="DTO\SAMPLE.cs" />
+    <Compile Include="DTO\SAMPLE_DETAIL.cs" />
+    <Compile Include="DTO\SUPPLIER.cs" />
     <Compile Include="InitializerPharmacyModel.cs" />
     <Compile Include="DTO\INVOICE.cs" />
     <Compile Include="DTO\INVOICE_DETAIL.cs" />

@@ -60,9 +60,9 @@ namespace Pharmacy.AdminTab
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label2.Location = new System.Drawing.Point(82, 177);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 18);
+            this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Role";
+            this.label2.Text = "Vai trò";
             // 
             // label3
             // 
@@ -71,9 +71,9 @@ namespace Pharmacy.AdminTab
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label3.Location = new System.Drawing.Point(80, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 18);
+            this.label3.Size = new System.Drawing.Size(36, 18);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Name";
+            this.label3.Text = "Tên";
             // 
             // label4
             // 
@@ -82,9 +82,9 @@ namespace Pharmacy.AdminTab
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label4.Location = new System.Drawing.Point(80, 361);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 18);
+            this.label4.Size = new System.Drawing.Size(82, 18);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Date Of Birth";
+            this.label4.Text = "Ngày sinh";
             // 
             // label5
             // 
@@ -93,9 +93,9 @@ namespace Pharmacy.AdminTab
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label5.Location = new System.Drawing.Point(80, 461);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 18);
+            this.label5.Size = new System.Drawing.Size(107, 18);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Phone number";
+            this.label5.Text = "Số điện thoại";
             // 
             // label6
             // 
@@ -104,9 +104,9 @@ namespace Pharmacy.AdminTab
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label6.Location = new System.Drawing.Point(490, 269);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 18);
+            this.label6.Size = new System.Drawing.Size(60, 18);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Email";
+            this.label6.Text = "Địa chỉ";
             // 
             // label7
             // 
@@ -115,9 +115,9 @@ namespace Pharmacy.AdminTab
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label7.Location = new System.Drawing.Point(486, 364);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 18);
+            this.label7.Size = new System.Drawing.Size(118, 18);
             this.label7.TabIndex = 3;
-            this.label7.Text = "User name";
+            this.label7.Text = "Tên đăng nhập";
             // 
             // label8
             // 
@@ -126,9 +126,9 @@ namespace Pharmacy.AdminTab
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label8.Location = new System.Drawing.Point(490, 463);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 18);
+            this.label8.Size = new System.Drawing.Size(77, 18);
             this.label8.TabIndex = 3;
-            this.label8.Text = "Password";
+            this.label8.Text = "Mật khẩu";
             // 
             // guna2ComboBox1
             // 
@@ -142,6 +142,9 @@ namespace Pharmacy.AdminTab
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "Admin",
+            "Staff"});
             this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Location = new System.Drawing.Point(82, 206);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
@@ -240,6 +243,7 @@ namespace Pharmacy.AdminTab
             this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
             this.guna2TextBox4.Size = new System.Drawing.Size(301, 36);
             this.guna2TextBox4.TabIndex = 5;
+            this.guna2TextBox4.TextChanged += new System.EventHandler(this.guna2TextBox4_TextChanged);
             // 
             // guna2TextBox5
             // 
@@ -304,7 +308,7 @@ namespace Pharmacy.AdminTab
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(112, 29);
             this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Sign up";
+            this.guna2Button1.Text = "Đăng kí";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Button2
@@ -350,9 +354,9 @@ namespace Pharmacy.AdminTab
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(299, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 59);
+            this.label1.Size = new System.Drawing.Size(260, 59);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Add User";
+            this.label1.Text = "Thêm User";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2TextBox6
@@ -385,9 +389,9 @@ namespace Pharmacy.AdminTab
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.label9.Location = new System.Drawing.Point(490, 177);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(195, 18);
+            this.label9.Size = new System.Drawing.Size(84, 18);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Identity number definition";
+            this.label9.Text = "Số CMND";
             // 
             // AddUser
             // 

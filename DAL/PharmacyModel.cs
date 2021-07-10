@@ -18,9 +18,10 @@ namespace DAL
             var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
         public PharmacyModel()
-            : base("name=PharmacyModel")
+            : base("data source=dongdong\\SQLEXPRESS;initial catalog=doan3;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
         {
             Database.SetInitializer<PharmacyModel>(new InitializerPharmacyModel());
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<CUSTOMER> CUSTOMERs { get; set; }
@@ -33,7 +34,10 @@ namespace DAL
         public virtual DbSet<STOCK> STOCKs { get; set; }
         public virtual DbSet<STOCK_DETAIL> STOCK_DETAIL { get; set; }
         public virtual DbSet<UNIT> UNITs { get; set; }
+        public virtual DbSet<SUPPLIER> SUPPLIERs { get; set; }
         public virtual DbSet<PHARMACY_PROFILE> PHARMARCY_PROFILEs { get; set; }
+        public virtual DbSet<SAMPLE> SAMPLEs { get; set; }
+        public virtual DbSet<SAMPLE_DETAIL> SAMPLE_DETAILs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CUSTOMER>()
@@ -89,6 +93,26 @@ namespace DAL
                 .HasMany(e => e.MEDICINEs)
                 .WithRequired(e => e.UNIT)
                 .HasForeignKey(e => e.UNIT_ID);
+
+            modelBuilder.Entity<INVOICE_DETAIL>()
+                .HasIndex(e => new { e.ID_MEDICINE, e.ID_INVOICE })
+                .IsUnique(true);
+
+            modelBuilder.Entity<SAMPLE_DETAIL>()
+                .HasKey(e => new { e.MEDICINE_ID, e.SAMPLE_ID });
+
+            modelBuilder.Entity<INVOICE_DETAIL>()
+                .HasKey(e => new { e.ID_INVOICE, e.ID_MEDICINE });
+
+            modelBuilder.Entity<STOCK_DETAIL>()
+                .HasKey(e => new { e.ID_MEDICINE, e.ID_STOCK });
+            modelBuilder.Entity<MEDICINE>()
+                .HasIndex(e => new { e.BARCODE})
+                .IsUnique(true);
+            modelBuilder.Entity<MEDICINE>()
+                .HasIndex(e => new { e.MEDICINE_CODE })
+                .IsUnique(true);
+
         }
     }
 }

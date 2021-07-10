@@ -46,8 +46,7 @@ namespace Pharmacy.AdminTab
             this.buttonUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -84,9 +83,9 @@ namespace Pharmacy.AdminTab
             this.buttonManageUser.Location = new System.Drawing.Point(0, 0);
             this.buttonManageUser.Name = "buttonManageUser";
             this.buttonManageUser.ShadowDecoration.Parent = this.buttonManageUser;
-            this.buttonManageUser.Size = new System.Drawing.Size(226, 48);
+            this.buttonManageUser.Size = new System.Drawing.Size(320, 48);
             this.buttonManageUser.TabIndex = 2;
-            this.buttonManageUser.Text = "Manage User";
+            this.buttonManageUser.Text = "Quản lý người dùng";
             // 
             // panel1
             // 
@@ -121,6 +120,9 @@ namespace Pharmacy.AdminTab
             // 
             // guna2DataGridView1
             // 
+            this.guna2DataGridView1.AllowUserToAddRows = false;
+            this.guna2DataGridView1.AllowUserToDeleteRows = false;
+            this.guna2DataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -136,7 +138,7 @@ namespace Pharmacy.AdminTab
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
+            this.guna2DataGridView1.ColumnHeadersHeight = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -146,6 +148,7 @@ namespace Pharmacy.AdminTab
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -169,7 +172,7 @@ namespace Pharmacy.AdminTab
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 30;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -224,7 +227,7 @@ namespace Pharmacy.AdminTab
             this.buttonAdd.ShadowDecoration.Parent = this.buttonAdd;
             this.buttonAdd.Size = new System.Drawing.Size(103, 29);
             this.buttonAdd.TabIndex = 10;
-            this.buttonAdd.Text = "Add";
+            this.buttonAdd.Text = "Thêm";
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click_1);
             // 
             // buttonDetail
@@ -244,7 +247,7 @@ namespace Pharmacy.AdminTab
             this.buttonDetail.ShadowDecoration.Parent = this.buttonDetail;
             this.buttonDetail.Size = new System.Drawing.Size(103, 29);
             this.buttonDetail.TabIndex = 10;
-            this.buttonDetail.Text = "Detail";
+            this.buttonDetail.Text = "Chi tiết";
             this.buttonDetail.Click += new System.EventHandler(this.buttonDetail_Click_1);
             // 
             // buttonUpdate
@@ -264,7 +267,7 @@ namespace Pharmacy.AdminTab
             this.buttonUpdate.ShadowDecoration.Parent = this.buttonUpdate;
             this.buttonUpdate.Size = new System.Drawing.Size(103, 29);
             this.buttonUpdate.TabIndex = 10;
-            this.buttonUpdate.Text = "Upadate";
+            this.buttonUpdate.Text = "Cập nhật";
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click_1);
             // 
             // guna2Button2
@@ -284,12 +287,12 @@ namespace Pharmacy.AdminTab
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(103, 29);
             this.guna2Button2.TabIndex = 10;
-            this.guna2Button2.Text = "Delete";
+            this.guna2Button2.Text = "Xóa";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Controls.Add(this.guna2ComboBox1);
+            this.panel7.Controls.Add(this.guna2Button1);
             this.panel7.Controls.Add(this.guna2TextBox3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -297,38 +300,25 @@ namespace Pharmacy.AdminTab
             this.panel7.Size = new System.Drawing.Size(959, 121);
             this.panel7.TabIndex = 7;
             // 
-            // label2
+            // guna2Button1
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            this.label2.Location = new System.Drawing.Point(560, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 25);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Search by";
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DisplayMember = "d";
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(555, 57);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(153, 36);
-            this.guna2ComboBox1.TabIndex = 8;
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(554, 57);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(113, 43);
+            this.guna2Button1.TabIndex = 11;
+            this.guna2Button1.Text = "Tim";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2TextBox3
             // 
@@ -350,7 +340,7 @@ namespace Pharmacy.AdminTab
             this.guna2TextBox3.Location = new System.Drawing.Point(221, 57);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "Search";
+            this.guna2TextBox3.PlaceholderText = "Tìm kiếm";
             this.guna2TextBox3.SelectedText = "";
             this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
             this.guna2TextBox3.Size = new System.Drawing.Size(297, 43);
@@ -371,7 +361,6 @@ namespace Pharmacy.AdminTab
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -392,8 +381,7 @@ namespace Pharmacy.AdminTab
         private Guna.UI2.WinForms.Guna2Button buttonUpdate;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

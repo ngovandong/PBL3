@@ -1,5 +1,6 @@
 namespace DAL
 {
+    using DAL.DTO;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -44,11 +45,14 @@ namespace DAL
 
         
 
-        public int? QUANTITY { get; set; }
+        public int QUANTITY { get; set; }
 
-        public int? ORIGINAL_PRICE { get; set; }
+        public int ORIGINAL_PRICE { get; set; }
 
-        public int? SALE_PRICE { get; set; }
+        public int SALE_PRICE { get; set; }
+
+        [Required]
+        public bool DELETED { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INVOICE_DETAIL> INVOICE_DETAIL { get; set; }
@@ -62,5 +66,10 @@ namespace DAL
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<STOCK_DETAIL> STOCK_DETAIL { get; set; }
+
+        public virtual ICollection<SAMPLE_DETAIL> SAMPLE_DETAIL { get; set; }
+
+
+
     }
 }

@@ -15,6 +15,9 @@ namespace DAL
         [StringLength(300)]
         public string medicine_name { get; set; }
 
+        [StringLength(300)]
+        public string medicine_code { get; set; }
+
         [StringLength(150)]
         public string no_subscribe { get; set; }
 
@@ -27,13 +30,9 @@ namespace DAL
         [StringLength(300)]
         public string branch { get; set; }
 
-        [StringLength(50)]
-        public string country { get; set; }
-
-        [StringLength(300)]
-        public string package { get; set; }
-
-        [StringLength(20)]
-        public string unit { get; set; }
+        public override string ToString()
+        {
+            return this.medicine_name;
+        }
     }
 }

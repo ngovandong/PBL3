@@ -382,7 +382,7 @@ namespace BLL
             List<medicineSell> l = new List<medicineSell>();
             foreach (var item in _DAL.Instance.getListMedicine())
             {
-                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.ToLower().Contains(s.ToLower()))
                 {
                     l.Add(new medicineSell
                     {
@@ -525,16 +525,16 @@ namespace BLL
 
         public List<SAMPLE_VIEW> getListSampleView(string text)
         {
-            return _DAL.Instance.getListSample().Where(p=>p.NAME.Contains(text)).Select(p=> new SAMPLE_VIEW { 
+            return _DAL.Instance.getListSample().Where(p => p.NAME.ToLower().Contains(text.ToLower())).Select(p=> new SAMPLE_VIEW { 
                 ID=p.SAMPLEID,
                 Name=p.NAME
             }).ToList();
 
         }
 
-        public SAMPLE getSample(int ID)
+        public SAMPLE getSampleByID(int ID)
         {
-            return _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
+            return _DAL.Instance.getListSample().Find(obj => obj.SAMPLEID == ID);
         }
 
         public void UpdateStockDetail(STOCK_DETAIL stock_detail, int quantysell)
@@ -544,7 +544,7 @@ namespace BLL
             _DAL.Instance.UpdateMedicine(stock_detail.ID_MEDICINE, -quantysell);
         }
 
-        public List<medicineSell> getlistMedicineSearch(int  ID)
+        public List<medicineSell> getListMedicineBySampleID(int ID)
         {
             SAMPLE a = _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
             List<medicineSell> l = new List<medicineSell>();
@@ -784,6 +784,15 @@ namespace BLL
             _DAL.Instance.addSample(sample);
         }
 
+        public void updateSample(SAMPLE newSample)
+        {
+            _DAL.Instance.updateSample(newSample);
+        }
+
+        public void deleteSample(List<int> listIdOfDeletedItems)
+        {
+            _DAL.Instance.deleteSample(listIdOfDeletedItems);
+        }
 
         public void addMedicineUnit(string name)
         {
@@ -795,9 +804,7 @@ namespace BLL
 
             _DAL.Instance.addMedicineType(name);
         }
-      
-      
-      
+    
         public void UpdateStock(STOCK stock)
         {
            _DAL.Instance.UpdateStock(stock);

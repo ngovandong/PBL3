@@ -126,8 +126,6 @@ namespace DAL
             }
         }
 
-
-
         public void deleteMedicine(int ID)
         {
             using(PharmacyModel P=new PharmacyModel())
@@ -241,8 +239,6 @@ namespace DAL
             }
         }
 
-        
-
         public void UpdateStock(STOCK stock)
         {
             using(PharmacyModel p = new PharmacyModel())
@@ -338,6 +334,54 @@ namespace DAL
             }
         }
 
+        public void updateSample(SAMPLE newSample)
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                SAMPLE oldSample = P.SAMPLEs.Find(newSample.SAMPLEID);
+                Console.WriteLine(oldSample.NAME);
+                oldSample.NAME = newSample.NAME;
+                oldSample.PRESCRIPTION = newSample.PRESCRIPTION;
+
+                List<SAMPLE_DETAIL> listSampleDetail = getListSampleDetail().FindAll(obj => obj.SAMPLE_ID == oldSample.SAMPLEID);
+                for(int i = listSampleDetail.Count - 1; i >= 0; --i)
+                {
+                    SAMPLE_DETAIL sample_detail = P.SAMPLE_DETAILs.Find(listSampleDetail[i].MEDICINE_ID, listSampleDetail[i].SAMPLE_ID);
+                    P.SAMPLE_DETAILs.Remove(sample_detail);
+                }
+                oldSample.SAMPLE_DETAIL = newSample.SAMPLE_DETAIL;
+                P.SaveChanges();
+            }
+        }
+
+        public void deleteSample(List<int> listIdOfDeletedItems)
+        {
+            using (PharmacyModel P = new PharmacyModel() ) 
+            {
+                for (int i = 0; i < listIdOfDeletedItems.Count; ++i)
+                {
+                    SAMPLE sample = P.SAMPLEs.Find(listIdOfDeletedItems[i]);
+                    List<SAMPLE_DETAIL> listSampleDetail = getListSampleDetail().FindAll(obj => obj.SAMPLE_ID == sample.SAMPLEID);
+                    for (int j = listSampleDetail.Count - 1; j > 0; --j)
+                    {
+                        SAMPLE_DETAIL sample_detail = P.SAMPLE_DETAILs.Find(listSampleDetail[i].MEDICINE_ID, sample.SAMPLEID);
+                        P.SAMPLE_DETAILs.Remove(sample_detail);
+                    }
+                    P.SAMPLEs.Remove(sample);
+                }
+                P.SaveChanges();
+            }
+            
+        }
+
+        public List<SAMPLE_DETAIL> getListSampleDetail()
+        {
+            using (PharmacyModel P = new PharmacyModel())
+            {
+                return P.SAMPLE_DETAILs.Include("SAMPLE").Include("MEDICINE").ToList();
+            }
+
+        }
         public void addMedicineUnit(string name)
         {
             using(PharmacyModel P = new PharmacyModel())

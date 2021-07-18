@@ -100,6 +100,12 @@
     <Compile Include="AdminTab\Manage Medicine\AddMedicineUnit.Designer.cs">
       <DependentUpon>AddMedicineUnit.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminTab\Manage Medicine\AddSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\AddSample.Designer.cs">
+      <DependentUpon>AddSample.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminTab\Manage Medicine\AddStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\DetailMedicine.Designer.cs">
       <DependentUpon>DetailMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\DetailSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\DetailSample.Designer.cs">
+      <DependentUpon>DetailSample.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\ImportMedicine.cs">
       <SubType>UserControl</SubType>
@@ -189,6 +201,12 @@
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\UpdateMedicine.Designer.cs">
       <DependentUpon>UpdateMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\UpdateSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTab\Manage Medicine\UpdateSample.Designer.cs">
+      <DependentUpon>UpdateSample.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminTab\Manage Medicine\UpdateStock.cs">
       <SubType>Form</SubType>
@@ -325,6 +343,9 @@
     <EmbeddedResource Include="AdminTab\Manage Medicine\AddMedicineUnit.resx">
       <DependentUpon>AddMedicineUnit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\AddSample.resx">
+      <DependentUpon>AddSample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\AddStock.resx">
       <DependentUpon>AddStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\DetailMedicine.resx">
       <DependentUpon>DetailMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\DetailSample.resx">
+      <DependentUpon>DetailSample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\ImportMedicine.resx">
       <DependentUpon>ImportMedicine.cs</DependentUpon>
@@ -369,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\UpdateMedicine.resx">
       <DependentUpon>UpdateMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTab\Manage Medicine\UpdateSample.resx">
+      <DependentUpon>UpdateSample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTab\Manage Medicine\UpdateStock.resx">
       <DependentUpon>UpdateStock.cs</DependentUpon>

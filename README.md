@@ -1,4 +1,4 @@
-# Pharmacy management sytem
+# Pharmacy management system
 >This is my third project in university with my team.
 
 

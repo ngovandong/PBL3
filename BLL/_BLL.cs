@@ -408,7 +408,7 @@ namespace BLL
             List<MedicineStock> ls = new List<MedicineStock>();
             foreach (var item in _DAL.Instance.getListMedicine())
             {
-                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                if (item.MEDICINE_CODE.ToLower().Contains(s.ToLower()) || item.MEDICINE_NAME.ToLower().Contains(s.ToLower()))
                 {
                     ls.Add(new MedicineStock
                     {

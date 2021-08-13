@@ -766,15 +766,15 @@ namespace BLL
             return results;
         }
 
-        public List<chart> getListChart0()
+        public List<Chart> getListChart0()
         {
-            List<chart> l=_DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.Date.ToShortDateString()).Select(c=>new chart { date=c.Key,originalPrice=c.Sum(p=>p.ORIGINAL_PRICE),sellPrice=c.Sum(p=>p.SALE_PRICE)}).OrderByDescending(p=>p.date).Take(7).Reverse().ToList();
+            List<Chart> l=_DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.Date.ToShortDateString()).Select(c=>new Chart { date=c.Key,originalPrice=c.Sum(p=>p.ORIGINAL_PRICE),sellPrice=c.Sum(p=>p.SALE_PRICE)}).OrderByDescending(p=>p.date).Take(7).Reverse().ToList();
 
             return l;
         }
-        public List<chart> getListChart1()
+        public List<Chart> getListChart1()
         {
-            List<chart> l = _DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.ToString("MM/yyyy")).Select(c => new chart { date = c.Key, originalPrice = c.Sum(p => p.ORIGINAL_PRICE), sellPrice = c.Sum(p => p.SALE_PRICE) }).OrderByDescending(p => p.date).Take(7).Reverse().ToList();
+            List<Chart> l = _DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.ToString("MM/yyyy")).Select(c => new Chart { date = c.Key, originalPrice = c.Sum(p => p.ORIGINAL_PRICE), sellPrice = c.Sum(p => p.SALE_PRICE) }).OrderByDescending(p => p.date).Take(7).Reverse().ToList();
 
             return l;
         }

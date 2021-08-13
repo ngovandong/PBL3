@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Model_View
 {
-    public class chart
+    public class Chart
     {
         public int sellPrice;
         public int originalPrice;

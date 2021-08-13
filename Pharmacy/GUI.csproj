@@ -297,11 +297,11 @@
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffSubtab\addCustomer.cs">
+    <Compile Include="StaffSubtab\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaffSubtab\addCustomer.Designer.cs">
-      <DependentUpon>addCustomer.cs</DependentUpon>
+    <Compile Include="StaffSubtab\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="StaffSubtab\CustomerItem.cs">
       <SubType>UserControl</SubType>
@@ -466,8 +466,8 @@
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffSubtab\addCustomer.resx">
-      <DependentUpon>addCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="StaffSubtab\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffSubtab\CustomerItem.resx">
       <DependentUpon>CustomerItem.cs</DependentUpon>

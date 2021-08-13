@@ -67,7 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model View\chart.cs" />
+    <Compile Include="Model View\Chart.cs" />
     <Compile Include="Model View\COMBOBOX_ITEM.cs" />
     <Compile Include="Model View\InvoiceView.cs" />
     <Compile Include="Model View\INVOICE_DETAIL_VIEW.cs" />

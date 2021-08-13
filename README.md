@@ -1,5 +1,5 @@
-# Pharmacy management sytem
->This is my third project in univerity with my team.
+# Pharmacy management system
+>This is my third project in university with my team.
 
 
 ## Table of Contents
@@ -15,8 +15,8 @@
 
 
 ## General Information
-- Through this project, I cant brush up my knowlege on C#/.NET Winform, OOP, Enity FrameWork
-- Application of project is help owner phamacy can manage pharmacy as well as manage staff. In addition, application also help staff cant sell medicine conviniently.
+- Through this project, I cant brush up my knowledge on C#/.NET Winform, OOP, Entity FrameWork
+- Application of the project is to help the owner pharmacy can manage pharmacy as well as manage staff. In addition, the application also helps staff cant sell medicine conveniently.
 
 
 
@@ -24,7 +24,7 @@
 - Language: C#/.Net
 -  Graphical class library: Windows Forms
 - Entity Framework 6 (.NET Framework)
-- nuget package: guna2
+- nudget package: guna2
 
 
 ## Features
@@ -45,11 +45,11 @@
 
 ## Design
 
-### Project is divided into three layor:
+### Project is divided into three-layer:
   1. DAL(Data access layer)
   2. BLL(Business logic layer)
   3. UI(User interface)
-### Project has two part one is for manager, the other is for staff.
+### Project has two parts one is for a manager, the other is for staff.
 
 ### Usercase:
   

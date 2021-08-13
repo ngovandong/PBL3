@@ -29,7 +29,7 @@ Bug fixing
 Will be handled on case by case basis which will dictate the timeframe for resolving bugs.
 
 Free Trial
-We provide a 30-day free trial for all users. Upon trial expiry, you will need to purchase to continue using the product.
+We provide a 14-day free trial for all users. Upon trial expiry, you will need to purchase to continue using the product.
 
 Activation process
 All activations are online. This means you will need internet to activate. There are no offline activations. During activation process we will collect personal info such as your email so that we activate your code. Please see our privacy policy.
@@ -37,5 +37,5 @@ All activations are online. This means you will need internet to activate. There
 Licensing changes
 We reserve the right to modify the licensing from time to time without notice.Please visit this section of the website to keep up-to-date with latest terms.
 
-Last updated 10 January, 2020
+Last updated 29 May, 2021
 

@@ -382,5 +382,10 @@ namespace Pharmacy.StaffSubtab
                 Note.Text = I.PRESCRIPTION;
             }
         }
+
+        private void BackButton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

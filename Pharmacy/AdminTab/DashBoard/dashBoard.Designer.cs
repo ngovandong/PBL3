@@ -52,9 +52,10 @@ namespace Pharmacy.AdminTab
             this.ButtonDashBoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
             this.ButtonDashBoard.HoverState.Parent = this.ButtonDashBoard;
             this.ButtonDashBoard.Location = new System.Drawing.Point(0, 0);
+            this.ButtonDashBoard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonDashBoard.Name = "ButtonDashBoard";
             this.ButtonDashBoard.ShadowDecoration.Parent = this.ButtonDashBoard;
-            this.ButtonDashBoard.Size = new System.Drawing.Size(201, 48);
+            this.ButtonDashBoard.Size = new System.Drawing.Size(226, 60);
             this.ButtonDashBoard.TabIndex = 2;
             this.ButtonDashBoard.Text = "Tổng quan";
             this.ButtonDashBoard.Click += new System.EventHandler(this.ButtonDashBoard_Click);
@@ -71,10 +72,11 @@ namespace Pharmacy.AdminTab
             this.guna2Button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
             this.guna2Button10.HoverState.Parent = this.guna2Button10;
-            this.guna2Button10.Location = new System.Drawing.Point(201, 0);
+            this.guna2Button10.Location = new System.Drawing.Point(226, 0);
+            this.guna2Button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Button10.Name = "guna2Button10";
             this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
-            this.guna2Button10.Size = new System.Drawing.Size(177, 48);
+            this.guna2Button10.Size = new System.Drawing.Size(199, 60);
             this.guna2Button10.TabIndex = 2;
             this.guna2Button10.Text = "Báo cáo";
             this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
@@ -86,8 +88,9 @@ namespace Pharmacy.AdminTab
             this.panel6.Controls.Add(this.ButtonDashBoard);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(959, 48);
+            this.panel6.Size = new System.Drawing.Size(1079, 60);
             this.panel6.TabIndex = 9;
             // 
             // panel1
@@ -95,35 +98,39 @@ namespace Pharmacy.AdminTab
             this.panel1.Controls.Add(this.report1);
             this.panel1.Controls.Add(this.genneral1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 48);
+            this.panel1.Location = new System.Drawing.Point(0, 60);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(959, 695);
+            this.panel1.Size = new System.Drawing.Size(1079, 869);
             this.panel1.TabIndex = 10;
             // 
             // report1
             // 
             this.report1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.report1.Location = new System.Drawing.Point(0, 0);
+            this.report1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.report1.Name = "report1";
-            this.report1.Size = new System.Drawing.Size(959, 695);
+            this.report1.Size = new System.Drawing.Size(1079, 869);
             this.report1.TabIndex = 1;
             // 
             // genneral1
             // 
             this.genneral1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.genneral1.Location = new System.Drawing.Point(0, 0);
+            this.genneral1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.genneral1.Name = "genneral1";
-            this.genneral1.Size = new System.Drawing.Size(959, 695);
+            this.genneral1.Size = new System.Drawing.Size(1079, 869);
             this.genneral1.TabIndex = 0;
             // 
             // dashBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "dashBoard";
-            this.Size = new System.Drawing.Size(959, 743);
+            this.Size = new System.Drawing.Size(1079, 929);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

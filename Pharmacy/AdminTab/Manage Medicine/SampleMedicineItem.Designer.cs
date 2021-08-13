@@ -41,7 +41,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // lbName
             // 
-            this.lbName.AutoSize = true;
+            this.lbName.AutoEllipsis = true;
             this.lbName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(62)))));
             this.lbName.Location = new System.Drawing.Point(3, 12);
@@ -124,6 +124,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
+            this.btnDelete.DisabledState.Parent = this.btnDelete;
             this.btnDelete.FillColor = System.Drawing.Color.Transparent;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;

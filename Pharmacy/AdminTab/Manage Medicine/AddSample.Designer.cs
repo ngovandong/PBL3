@@ -64,14 +64,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtSearch.PlaceholderText = "Nhập tên thuốc cần tìm";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(325, 32);
+            this.txtSearch.Size = new System.Drawing.Size(359, 32);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Panel2.Location = new System.Drawing.Point(371, 12);
+            this.guna2Panel2.Location = new System.Drawing.Point(425, 12);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(2, 604);
@@ -82,13 +82,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2Button1.BorderRadius = 6;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(174)))), ((int)(((byte)(43)))));
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(62)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.Location = new System.Drawing.Point(303, 644);
+            this.guna2Button1.Location = new System.Drawing.Point(318, 644);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(208, 45);
@@ -101,6 +102,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2Button2.BorderRadius = 6;
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
             this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(174)))), ((int)(((byte)(43)))));
             this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(62)))));
@@ -109,7 +111,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(6, 0);
             this.guna2Button2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button2.Location = new System.Drawing.Point(621, 644);
+            this.guna2Button2.Location = new System.Drawing.Point(636, 644);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
@@ -120,17 +122,18 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // panelContainMedicine
             // 
             this.panelContainMedicine.BackColor = System.Drawing.Color.White;
-            this.panelContainMedicine.Location = new System.Drawing.Point(397, 54);
+            this.panelContainMedicine.Location = new System.Drawing.Point(451, 54);
             this.panelContainMedicine.Name = "panelContainMedicine";
             this.panelContainMedicine.Size = new System.Drawing.Size(660, 563);
             this.panelContainMedicine.TabIndex = 8;
             // 
             // panelSearch
             // 
+            this.panelSearch.AutoScroll = true;
             this.panelSearch.BackColor = System.Drawing.Color.White;
             this.panelSearch.Location = new System.Drawing.Point(22, 43);
             this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(325, 246);
+            this.panelSearch.Size = new System.Drawing.Size(359, 246);
             this.panelSearch.TabIndex = 9;
             // 
             // txtPrescription
@@ -153,7 +156,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtPrescription.PlaceholderText = "";
             this.txtPrescription.SelectedText = "";
             this.txtPrescription.ShadowDecoration.Parent = this.txtPrescription;
-            this.txtPrescription.Size = new System.Drawing.Size(325, 194);
+            this.txtPrescription.Size = new System.Drawing.Size(359, 194);
             this.txtPrescription.TabIndex = 3;
             // 
             // txtSampleName
@@ -176,7 +179,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtSampleName.PlaceholderText = "";
             this.txtSampleName.SelectedText = "";
             this.txtSampleName.ShadowDecoration.Parent = this.txtSampleName;
-            this.txtSampleName.Size = new System.Drawing.Size(325, 40);
+            this.txtSampleName.Size = new System.Drawing.Size(359, 40);
             this.txtSampleName.TabIndex = 11;
             // 
             // label2
@@ -206,7 +209,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
-            this.label3.Location = new System.Drawing.Point(507, 22);
+            this.label3.Location = new System.Drawing.Point(561, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(411, 22);
             this.label3.TabIndex = 41;
@@ -217,7 +220,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1072, 706);
+            this.ClientSize = new System.Drawing.Size(1166, 706);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);

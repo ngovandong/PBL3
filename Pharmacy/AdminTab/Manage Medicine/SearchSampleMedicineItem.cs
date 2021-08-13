@@ -22,7 +22,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             InitializeComponent();
             medicineItem = obj;
-            Console.WriteLine(obj.name);
             setInformation();
         }
 

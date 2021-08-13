@@ -52,10 +52,14 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         public void addToPanelContainMedicine(medicineSell medicineItem)
         {
-            listSampleMedicine.Add(medicineItem);
-            SampleMedicineItem sampleMedicineItem = new SampleMedicineItem(medicineItem);
-            sampleMedicineItem.deleteMedicineFromPanel = new SampleMedicineItem.DeleteDelegate(deleteFromPanel);
-            panelContainMedicine.Controls.Add(sampleMedicineItem);
+            bool check = listSampleMedicine.Any(obj => obj.ID == medicineItem.ID);
+            if (!check)
+            {
+                listSampleMedicine.Add(medicineItem);
+                SampleMedicineItem sampleMedicineItem = new SampleMedicineItem(medicineItem);
+                sampleMedicineItem.deleteMedicineFromPanel = new SampleMedicineItem.DeleteDelegate(deleteFromPanel);
+                panelContainMedicine.Controls.Add(sampleMedicineItem);
+            }
         }
 
         public void deleteFromPanel(SampleMedicineItem sampleMedicineItem)

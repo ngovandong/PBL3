@@ -18,7 +18,7 @@ namespace Pharmacy.AdminTab
         {
             InitializeComponent();
             setDataGridView();
-            setDataTextBoxSearch();
+           // setDataTextBoxSearch();
         }
 
         public void setDataGridView()
@@ -101,7 +101,7 @@ namespace Pharmacy.AdminTab
             }
         }
 
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
             dataGridView.DataSource = _BLL.Instance.getListMedicineView().FindAll(o => o.Name.ToLower().Contains(txtSearch.Text.ToLower()));
         }

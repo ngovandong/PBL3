@@ -50,8 +50,8 @@ namespace Pharmacy.StaffSubtab
        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            addCustomer f = new addCustomer();
-            f.d = new addCustomer.Mydel(setText);
+            AddCustomer f = new AddCustomer();
+            f.d = new AddCustomer.Mydel(setText);
             f.Show();
         }
 

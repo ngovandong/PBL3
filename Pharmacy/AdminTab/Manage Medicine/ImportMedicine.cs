@@ -19,7 +19,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             InitializeComponent();
             setCBBItem();
             dateTimeFinish.Value = DateTime.Now;
-            TimeSpan timeSpan = new System.TimeSpan(30, 0, 0, 0);
+            TimeSpan timeSpan = new System.TimeSpan(90, 0, 0, 0);
             dateTimeBegin.Value = DateTime.Now.Subtract(timeSpan);
         }
 

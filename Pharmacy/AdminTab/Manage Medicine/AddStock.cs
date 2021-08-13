@@ -162,7 +162,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 {
                     newStock.STOCK_DETAIL.Add(new STOCK_DETAIL()
                     {
-                        ORGIGINAL_PRICE = item.medicine.import_price,
+                        ORGIGINAL_PRICE = Convert.ToInt32(item.medicine.import_price * (1 - Convert.ToInt32(textboxSale.Text) / 100.0)),
                         QUANTITY = item.medicine.quantityInStock,
                         dateExpire = item.medicine.HSD,
                         ID_MEDICINE = item.medicine.ID,

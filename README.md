@@ -148,7 +148,7 @@
   ```
  
   Change `dongdong` to your desktop user
- 4. Debug
+4. Debug
 
 ## Usage
 

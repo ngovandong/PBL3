@@ -19,7 +19,7 @@ namespace DAL
         }
         public PharmacyModel()
 
-            : base("data source=dongdong\\SQLEXPRESS;initial catalog=doan3;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+            : base("data source=LAPTOP-OTJR83LF\\SQLEXPRESS;initial catalog=doan3;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
 
         {
             Database.SetInitializer<PharmacyModel>(new InitializerPharmacyModel());

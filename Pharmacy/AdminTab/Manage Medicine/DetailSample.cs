@@ -25,7 +25,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         public void setDetailSampleInformation()
         {
-            txtSampleName.Text = sample.SAMPLEID.ToString();
+            txtSampleName.Text = sample.NAME.ToString();
             txtPrescription.Text = sample.PRESCRIPTION.ToString();
             foreach(var item in _BLL.Instance.getListMedicineBySampleID(sample.SAMPLEID))
             {
@@ -34,6 +34,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
                 sampleMedicineItem.TxtQuantity = false;
                 panelContainMedicine.Controls.Add(sampleMedicineItem);
             }
+            txtSampleName.Enabled = false;
+            txtPrescription.Enabled = false;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

@@ -53,7 +53,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.guna2Panel1.Controls.Add(this.txtSearch);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -104,7 +104,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.guna2Panel2.Controls.Add(this.guna2Panel5);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel2.Location = new System.Drawing.Point(1432, 100);
@@ -116,13 +116,13 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel5.BorderRadius = 20;
+            this.guna2Panel5.BorderRadius = 15;
             this.guna2Panel5.BorderThickness = 2;
             this.guna2Panel5.Controls.Add(this.btnViewDetail);
             this.guna2Panel5.Controls.Add(this.btnUpdate);
             this.guna2Panel5.Controls.Add(this.btnDelete);
             this.guna2Panel5.Controls.Add(this.btnAdd);
-            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(243)))), ((int)(((byte)(220)))));
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.guna2Panel5.Location = new System.Drawing.Point(34, 94);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.Depth = 40;
@@ -135,7 +135,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnViewDetail.BorderRadius = 10;
             this.btnViewDetail.CheckedState.Parent = this.btnViewDetail;
             this.btnViewDetail.CustomImages.Parent = this.btnViewDetail;
-            this.btnViewDetail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnViewDetail.DisabledState.Parent = this.btnViewDetail;
+            this.btnViewDetail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnViewDetail.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnViewDetail.ForeColor = System.Drawing.Color.White;
             this.btnViewDetail.HoverState.Parent = this.btnViewDetail;
@@ -156,7 +157,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnUpdate.BorderRadius = 10;
             this.btnUpdate.CheckedState.Parent = this.btnUpdate;
             this.btnUpdate.CustomImages.Parent = this.btnUpdate;
-            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnUpdate.DisabledState.Parent = this.btnUpdate;
+            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
@@ -176,7 +178,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnDelete.BorderRadius = 10;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnDelete.DisabledState.Parent = this.btnDelete;
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
@@ -196,7 +199,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.btnAdd.BorderRadius = 10;
             this.btnAdd.CheckedState.Parent = this.btnAdd;
             this.btnAdd.CustomImages.Parent = this.btnAdd;
-            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnAdd.DisabledState.Parent = this.btnAdd;
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.Parent = this.btnAdd;
@@ -213,7 +217,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 100);
             this.guna2Panel3.Name = "guna2Panel3";
@@ -223,7 +227,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             // 
             // guna2Panel4
             // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel4.Location = new System.Drawing.Point(64, 673);
             this.guna2Panel4.Name = "guna2Panel4";
@@ -267,7 +271,6 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.sampleDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.sampleDataGridView.Size = new System.Drawing.Size(1368, 573);
             this.sampleDataGridView.TabIndex = 4;
-            this.sampleDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.sampleDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.sampleDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.sampleDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;

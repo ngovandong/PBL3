@@ -64,9 +64,17 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             {
                 int idStock = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells[0].Value);
                 STOCK stock = _BLL.Instance.getStock(idStock);
-                UpdateStock updateStock = new UpdateStock(stock);
-                updateStock.d = new UpdateStock.Mydel(setDataGridView);
-                updateStock.ShowDialog();
+                bool checkUsed = _BLL.Instance.checkStockUsed(stock);
+                if(checkUsed)
+                {
+                    UpdateStock updateStock = new UpdateStock(stock);
+                    updateStock.d = new UpdateStock.Mydel(setDataGridView);
+                    updateStock.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Lô hàng đã được đưa vào sử dụng không thể sửa đổi");
+                }
             }
 
         }

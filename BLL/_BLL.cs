@@ -822,6 +822,16 @@ namespace BLL
         {
             _DAL.Instance.DeleteStock(id);
         }
+        public bool checkStockUsed(STOCK stock)
+        {
+            int price = 0;
+            foreach(var stockDetail in stock.STOCK_DETAIL)
+            {
+                price += (stockDetail.ORGIGINAL_PRICE * stockDetail.QUANTITY);
+            }
+            if (price == stock.PRICETOTAL) return true;
+            else return false;
+        }
 
     }
 }

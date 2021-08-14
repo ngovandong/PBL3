@@ -15,112 +15,84 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 {
     public partial class Sample : UserControl
     {
-        List<medicineSell> listSampleMedicine = new List<medicineSell>();
+        
         public Sample()
         {
             InitializeComponent();
-            setPanelSearch();
+            setDataGridView();
         }
 
-        public void setPanelSearch()
+        public void setDataGridView()
         {
-            panelSearch.Visible = false;
+            sampleDataGridView.DataSource = _BLL.Instance.getListSampleView("");
+            sampleDataGridView.Columns["ID"].Visible = false;
+            sampleDataGridView.Columns["Name"].HeaderText = "Tên mẫu";
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            panelSearch.Visible = true;
-            panelSearch.BringToFront();
-            panelSearch.Controls.Clear();
-            panelSearch.SuspendLayout();
-            try
-            {
-                foreach (var item in _BLL.Instance.getlistMedicineSearch(txtSearch.Text))
-                {
-                    SearchSampleMedicineItem searchSample = new SearchSampleMedicineItem(item);
-                    searchSample.AddFunc = new SearchSampleMedicineItem.AddDelegate(AddToPanel);
-                    panelSearch.Controls.Add(searchSample);
-                }
-            }
-            finally
-            {
-                panelSearch.ResumeLayout();
-            }
+            AddSample addForm = new AddSample();
+            addForm.refreshFunc = new AddSample.RefreshDelegate(setDataGridView);
+            addForm.Show();
         }
 
-        public void AddToPanel(medicineSell medicineItem)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            setPanelSearch();
-            listSampleMedicine.Add(medicineItem);
-            SampleMedicineItem sampleMedicine = new SampleMedicineItem(medicineItem);
-            sampleMedicine.DeleteFunc = new SampleMedicineItem.DeleteDelegate(deleteFromPanel);
-            panelMedicine.Controls.Add(sampleMedicine);
-        }
-
-        public void deleteFromPanel(SampleMedicineItem sampleMedicine)
-        {
-            listSampleMedicine.Remove(sampleMedicine.medicineItem);
-            panelMedicine.Controls.Remove(sampleMedicine);
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (panelMedicine.Controls.Count == 0)
+            if(sampleDataGridView.SelectedRows.Count == 1)
             {
-                MessageBox.Show("Vui lòng thêm thuốc vào đơn mẫu");
-            }
-            else if (listSampleMedicine.FindAll(o => o.quantysell == 0).Count != 0)
-            {
-                MessageBox.Show("Vui lòng nhập lại số lượng của thuốc");
-            }
-            else if (txtName.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên mẫu");
-            }
-            else if (txtPrescription.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập kê đơn");
+                UpdateSample updateSample = new UpdateSample(Convert.ToInt32(sampleDataGridView.SelectedRows[0].Cells[0].Value));
+                updateSample.refreshFunc = new UpdateSample.RefreshDelegate(setDataGridView);
+                updateSample.Show();
             }
             else
             {
-                DialogResult dr = MessageBox.Show("Xác nhận", "Bạn có muốn thêm đơn thuốc mẫu này?", MessageBoxButtons.YesNo);
+                MessageBox.Show("Vui lòng chọn một hàng thuốc mẫu để cập nhật thông tin");
+            }
+        }
+
+        private void btnViewDetail_Click(object sender, EventArgs e)
+        {
+            if (sampleDataGridView.SelectedRows.Count == 1)
+            {
+                DetailSample detailSample = new DetailSample(Convert.ToInt32(sampleDataGridView.SelectedRows[0].Cells[0].Value));
+                detailSample.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một hàng thuốc mẫu để xem thông tin chi tiết");
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            sampleDataGridView.DataSource = _BLL.Instance.getListSampleView(txtSearch.Text);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (sampleDataGridView.SelectedRows.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Xác nhận", "Bạn có muốn xóa các đơn thuốc mẫu này?", MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
                 {
-                    SAMPLE sample = new SAMPLE
+                    List<int> listIdOfDeletedItems = new List<int>();
+                    int count = sampleDataGridView.SelectedRows.Count;
+                    for (int i = 0; i < count; ++i)
                     {
-                        NAME = txtName.Text,
-                        PRESCRIPTION = txtPrescription.Text,
-                    };
-                    foreach(var item in listSampleMedicine)
-                    {
-                        sample.SAMPLE_DETAIL.Add(new SAMPLE_DETAIL
-                        {
-                            QTY = item.quantysell,
-                            MEDICINE_ID = item.ID,
-                            SAMPLE_ID = sample.SAMPLEID,
-                        });
+                        listIdOfDeletedItems.Add(Convert.ToInt32(sampleDataGridView.SelectedRows[i].Cells[0].Value));
                     }
-                    _BLL.Instance.addSample(sample);
-                    setClearView();
+                    _BLL.Instance.deleteSample(listIdOfDeletedItems);
+                    setDataGridView();
                 }
                 else
                 {
 
                 }
             }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 hàng đơn thuốc mẫu để xóa");
+            }
         }
-        public void setClearView()
-        {
-            panelMedicine.Controls.Clear();
-            txtName.Text = "";
-            txtPrescription.Text = "";
-            txtSearch.Text = "";
-        }
-
-        private void panelMedicine_MouseClick(object sender, MouseEventArgs e)
-        {
-            panelSearch.Visible = false;
-        }
-
     }
 }

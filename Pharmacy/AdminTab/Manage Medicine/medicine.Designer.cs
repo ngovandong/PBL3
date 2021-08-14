@@ -29,9 +29,16 @@ namespace Pharmacy.AdminTab
         /// </summary>
         private void InitializeComponent()
         {
+
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(medicine));
+
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -60,19 +67,19 @@ namespace Pharmacy.AdminTab
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(959, 674);
+            this.panel1.Size = new System.Drawing.Size(1079, 842);
             this.panel1.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dataGridView);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(63, 114);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(71, 142);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(828, 448);
+            this.panel5.Size = new System.Drawing.Size(932, 560);
             this.panel5.TabIndex = 11;
             // 
             // dataGridView
@@ -109,16 +116,15 @@ namespace Pharmacy.AdminTab
             this.dataGridView.EnableHeadersVisualStyles = false;
             this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(828, 448);
+            this.dataGridView.Size = new System.Drawing.Size(932, 560);
             this.dataGridView.TabIndex = 0;
-            this.dataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -143,52 +149,55 @@ namespace Pharmacy.AdminTab
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 114);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 142);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(63, 448);
+            this.panel2.Size = new System.Drawing.Size(71, 560);
             this.panel2.TabIndex = 10;
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(891, 114);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(1003, 142);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(68, 448);
+            this.panel3.Size = new System.Drawing.Size(76, 560);
             this.panel3.TabIndex = 8;
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.panel4.Controls.Add(this.buttonDetail);
             this.panel4.Controls.Add(this.buttonAdd);
             this.panel4.Controls.Add(this.buttonUpdate);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 562);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(0, 702);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(959, 112);
+            this.panel4.Size = new System.Drawing.Size(1079, 140);
             this.panel4.TabIndex = 9;
             // 
             // buttonDetail
             // 
             this.buttonDetail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonDetail.Animated = true;
-            this.buttonDetail.AutoRoundedCorners = true;
-            this.buttonDetail.BorderRadius = 14;
+            this.buttonDetail.BorderRadius = 10;
             this.buttonDetail.CheckedState.Parent = this.buttonDetail;
             this.buttonDetail.CustomImages.Parent = this.buttonDetail;
+            this.buttonDetail.DisabledState.Parent = this.buttonDetail;
             this.buttonDetail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
-            this.buttonDetail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.buttonDetail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.buttonDetail.HoverState.Parent = this.buttonDetail;
-            this.buttonDetail.Location = new System.Drawing.Point(306, 42);
-            this.buttonDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDetail.Location = new System.Drawing.Point(259, 34);
+            this.buttonDetail.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDetail.Name = "buttonDetail";
             this.buttonDetail.ShadowDecoration.Parent = this.buttonDetail;
-            this.buttonDetail.Size = new System.Drawing.Size(110, 30);
+            this.buttonDetail.Size = new System.Drawing.Size(160, 50);
             this.buttonDetail.TabIndex = 10;
             this.buttonDetail.Text = "Chi tiết";
             this.buttonDetail.Click += new System.EventHandler(this.buttonDetail_Click);
@@ -197,40 +206,40 @@ namespace Pharmacy.AdminTab
             // 
             this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAdd.Animated = true;
-            this.buttonAdd.AutoRoundedCorners = true;
-            this.buttonAdd.BorderRadius = 14;
+            this.buttonAdd.BorderRadius = 10;
             this.buttonAdd.CheckedState.Parent = this.buttonAdd;
             this.buttonAdd.CustomImages.Parent = this.buttonAdd;
+            this.buttonAdd.DisabledState.Parent = this.buttonAdd;
             this.buttonAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
-            this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.buttonAdd.HoverState.Parent = this.buttonAdd;
-            this.buttonAdd.Location = new System.Drawing.Point(150, 42);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAdd.Location = new System.Drawing.Point(53, 34);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.ShadowDecoration.Parent = this.buttonAdd;
-            this.buttonAdd.Size = new System.Drawing.Size(110, 30);
+            this.buttonAdd.Size = new System.Drawing.Size(160, 50);
             this.buttonAdd.TabIndex = 10;
-            this.buttonAdd.Text = "Thêm hàng";
+            this.buttonAdd.Text = "Thêm";
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonUpdate
             // 
             this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonUpdate.Animated = true;
-            this.buttonUpdate.AutoRoundedCorners = true;
-            this.buttonUpdate.BorderRadius = 14;
+            this.buttonUpdate.BorderRadius = 10;
             this.buttonUpdate.CheckedState.Parent = this.buttonUpdate;
             this.buttonUpdate.CustomImages.Parent = this.buttonUpdate;
+            this.buttonUpdate.DisabledState.Parent = this.buttonUpdate;
             this.buttonUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
-            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.buttonUpdate.HoverState.Parent = this.buttonUpdate;
-            this.buttonUpdate.Location = new System.Drawing.Point(469, 42);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonUpdate.Location = new System.Drawing.Point(473, 34);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.ShadowDecoration.Parent = this.buttonUpdate;
-            this.buttonUpdate.Size = new System.Drawing.Size(110, 30);
+            this.buttonUpdate.Size = new System.Drawing.Size(160, 50);
             this.buttonUpdate.TabIndex = 10;
             this.buttonUpdate.Text = "Cập nhật";
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
@@ -239,40 +248,37 @@ namespace Pharmacy.AdminTab
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.Animated = true;
-            this.btnDelete.AutoRoundedCorners = true;
-            this.btnDelete.BorderRadius = 14;
+            this.btnDelete.BorderRadius = 10;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
+            this.btnDelete.DisabledState.Parent = this.btnDelete;
             this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(3)))));
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(644, 42);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(690, 34);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
-            this.btnDelete.Size = new System.Drawing.Size(110, 30);
+            this.btnDelete.Size = new System.Drawing.Size(160, 50);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.panel6.Controls.Add(this.txtSearch);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(959, 114);
+            this.panel6.Size = new System.Drawing.Size(1079, 142);
             this.panel6.TabIndex = 7;
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtSearch.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSearch.BorderThickness = 2;
+            this.txtSearch.BorderRadius = 8;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -285,25 +291,27 @@ namespace Pharmacy.AdminTab
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(332, 41);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconRight")));
+            this.txtSearch.IconRightOffset = new System.Drawing.Point(6, 0);
+            this.txtSearch.Location = new System.Drawing.Point(53, 32);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Tìm kiếm";
+            this.txtSearch.PlaceholderText = "Nhập tên thuốc cần tìm";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(258, 40);
-            this.txtSearch.TabIndex = 7;
-            this.txtSearch.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
+            this.txtSearch.Size = new System.Drawing.Size(356, 45);
+            this.txtSearch.TabIndex = 8;
+            this.txtSearch.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // medicine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "medicine";
-            this.Size = new System.Drawing.Size(959, 674);
+            this.Size = new System.Drawing.Size(1079, 842);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -325,7 +333,7 @@ namespace Pharmacy.AdminTab
         private Guna.UI2.WinForms.Guna2Button buttonUpdate;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button buttonAdd;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }

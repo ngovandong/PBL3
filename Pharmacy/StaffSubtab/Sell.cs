@@ -330,7 +330,7 @@ namespace Pharmacy.StaffSubtab
             ListMe.Clear();
             int id = (int)SampleDataGridView.SelectedRows[0].Cells[0].Value;
             
-            foreach (var item in _BLL.Instance.getlistMedicineSearch(id))
+            foreach (var item in _BLL.Instance.getListMedicineBySampleID(id))
             {
                 if (item.STOCK_DETAIL.Count > 0 && item.Qty >item.quantysell)
                 {
@@ -349,7 +349,7 @@ namespace Pharmacy.StaffSubtab
                     ListMe.Clear();
                     return;
                 }
-                SAMPLE s = _BLL.Instance.getSample(id);
+                SAMPLE s = _BLL.Instance.getSampleByID(id);
                 Note.Text = s.PRESCRIPTION;
             }
         }
@@ -381,6 +381,11 @@ namespace Pharmacy.StaffSubtab
                 INVOICE I = customer.INVOICEs.Where(p => p.ID_INVOICE == id).Select(p => p).Single();
                 Note.Text = I.PRESCRIPTION;
             }
+        }
+
+        private void BackButton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

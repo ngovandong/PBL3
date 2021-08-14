@@ -15,7 +15,24 @@ namespace Pharmacy.AdminTab.Manage_Medicine
     {
         public medicineSell medicineItem;
         public delegate void DeleteDelegate(SampleMedicineItem sampleMedicine);
-        public DeleteDelegate DeleteFunc;
+        public DeleteDelegate deleteMedicineFromPanel;
+
+        public bool BtnDelete
+        {
+            set
+            {
+                btnDelete.Visible = value;
+            }
+        }
+
+        public bool TxtQuantity
+        {
+            set
+            {
+                txtQuantity.Enabled = value;
+            }
+        }
+
         public SampleMedicineItem(medicineSell obj)
         {
             InitializeComponent();
@@ -27,7 +44,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         {
             lbName.Text = medicineItem.name;
             txtUnit.Text = medicineItem.unit;
-            txtQuantity.Text = "1";
+            txtQuantity.Text = medicineItem.quantysell.ToString();
         }
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)
@@ -44,7 +61,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DeleteFunc(this);
+            deleteMedicineFromPanel(this);
         }
     }
 }

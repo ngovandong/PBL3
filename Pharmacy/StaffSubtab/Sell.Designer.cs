@@ -38,6 +38,7 @@ namespace Pharmacy.StaffSubtab
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BackButton = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.TextBoxSearchMedicine = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -129,6 +130,7 @@ namespace Pharmacy.StaffSubtab
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
             this.panel1.Controls.Add(this.BackButton);
+            this.panel1.Controls.Add(this.guna2ControlBox1);
             this.panel1.Controls.Add(this.TextBoxSearchMedicine);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -141,19 +143,33 @@ namespace Pharmacy.StaffSubtab
             // 
             this.BackButton.CheckedState.Parent = this.BackButton;
             this.BackButton.CustomImages.Parent = this.BackButton;
+            this.BackButton.DisabledState.Parent = this.BackButton;
             this.BackButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.BackButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(182)))));
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.HoverState.Parent = this.BackButton;
             this.BackButton.Image = ((System.Drawing.Image)(resources.GetObject("BackButton.Image")));
-            this.BackButton.Location = new System.Drawing.Point(1799, 0);
+            this.BackButton.Location = new System.Drawing.Point(1689, 0);
             this.BackButton.Name = "BackButton";
             this.BackButton.ShadowDecoration.Parent = this.BackButton;
-            this.BackButton.Size = new System.Drawing.Size(125, 56);
-            this.BackButton.TabIndex = 1;
+            this.BackButton.Size = new System.Drawing.Size(174, 56);
+            this.BackButton.TabIndex = 4;
             this.BackButton.Text = "Back";
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click_1);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.CustomIconSize = 20F;
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1863, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(61, 56);
+            this.guna2ControlBox1.TabIndex = 3;
             // 
             // TextBoxSearchMedicine
             // 
@@ -184,7 +200,7 @@ namespace Pharmacy.StaffSubtab
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(218)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1697, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(1505, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -551,6 +567,7 @@ namespace Pharmacy.StaffSubtab
             this.checkoutButton.BorderRadius = 5;
             this.checkoutButton.CheckedState.Parent = this.checkoutButton;
             this.checkoutButton.CustomImages.Parent = this.checkoutButton;
+            this.checkoutButton.DisabledState.Parent = this.checkoutButton;
             this.checkoutButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(173)))), ((int)(((byte)(81)))));
             this.checkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.checkoutButton.ForeColor = System.Drawing.Color.White;
@@ -655,7 +672,6 @@ namespace Pharmacy.StaffSubtab
             this.customerInvoiceHistoryDatagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.customerInvoiceHistoryDatagridview.Size = new System.Drawing.Size(345, 204);
             this.customerInvoiceHistoryDatagridview.TabIndex = 2;
-            this.customerInvoiceHistoryDatagridview.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.customerInvoiceHistoryDatagridview.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -985,7 +1001,6 @@ namespace Pharmacy.StaffSubtab
             this.SampleDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SampleDataGridView.Size = new System.Drawing.Size(415, 226);
             this.SampleDataGridView.TabIndex = 1;
-            this.SampleDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.SampleDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.SampleDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.SampleDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -1088,6 +1103,7 @@ namespace Pharmacy.StaffSubtab
             this.Controls.Add(this.guna2ShadowPanel2);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sell";
             this.Text = "Sell";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1129,7 +1145,6 @@ namespace Pharmacy.StaffSubtab
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
-        private Guna.UI2.WinForms.Guna2Button BackButton;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
@@ -1190,5 +1205,7 @@ namespace Pharmacy.StaffSubtab
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2DataGridView customerInvoiceHistoryDatagridview;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2Button BackButton;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

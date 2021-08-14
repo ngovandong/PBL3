@@ -1,7 +1,7 @@
 ﻿
 namespace Pharmacy.StaffSubtab
 {
-    partial class addCustomer
+    partial class AddCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -85,6 +85,7 @@ namespace Pharmacy.StaffSubtab
             this.guna2Button1.BorderRadius = 5;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(173)))), ((int)(((byte)(81)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
@@ -97,7 +98,7 @@ namespace Pharmacy.StaffSubtab
             this.guna2Button1.Text = "Lưu";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // addCustomer
+            // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,8 +106,8 @@ namespace Pharmacy.StaffSubtab
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.CusName);
             this.Controls.Add(this.Phone);
-            this.Name = "addCustomer";
-            this.Text = "addCustomer";
+            this.Name = "AddCustomer";
+            this.Text = "Add Customer";
             this.ResumeLayout(false);
 
         }

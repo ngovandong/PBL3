@@ -9,6 +9,6 @@ namespace BLL.Model_View
     public class SAMPLE_VIEW
     {
         public int ID { get; set; }
-        public string Name{get;set;}
+        public string Name {get; set;}
     }
 }

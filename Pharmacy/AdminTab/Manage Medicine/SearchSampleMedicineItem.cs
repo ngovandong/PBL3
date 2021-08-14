@@ -16,7 +16,8 @@ namespace Pharmacy.AdminTab.Manage_Medicine
         medicineSell medicineItem;
 
         public delegate void AddDelegate(medicineSell medicineItem);
-        public AddDelegate AddFunc;
+        public AddDelegate addMedicineToPanel;
+
         public SearchSampleMedicineItem(medicineSell obj)
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
 
         private void lbUnit_MouseClick(object sender, MouseEventArgs e)
         {
-            AddFunc(medicineItem);
+            addMedicineToPanel(medicineItem);
         }
         
         public void setInformation()

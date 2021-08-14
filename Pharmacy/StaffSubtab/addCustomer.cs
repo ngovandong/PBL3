@@ -12,11 +12,11 @@ using DAL;
 namespace Pharmacy.StaffSubtab
 {
     
-    public partial class addCustomer : Form
+    public partial class AddCustomer : Form
     {
         public delegate void Mydel(CUSTOMER c);
         public Mydel d;
-        public addCustomer()
+        public AddCustomer()
         {
             InitializeComponent();
         }

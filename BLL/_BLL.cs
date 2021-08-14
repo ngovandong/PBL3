@@ -382,7 +382,7 @@ namespace BLL
             List<medicineSell> l = new List<medicineSell>();
             foreach (var item in _DAL.Instance.getListMedicine())
             {
-                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.ToLower().Contains(s.ToLower()))
                 {
                     l.Add(new medicineSell
                     {
@@ -408,7 +408,7 @@ namespace BLL
             List<MedicineStock> ls = new List<MedicineStock>();
             foreach (var item in _DAL.Instance.getListMedicine())
             {
-                if (item.MEDICINE_CODE.Contains(s) || item.MEDICINE_NAME.Contains(s))
+                if (item.MEDICINE_CODE.ToLower().Contains(s.ToLower()) || item.MEDICINE_NAME.ToLower().Contains(s.ToLower()))
                 {
                     ls.Add(new MedicineStock
                     {
@@ -525,16 +525,16 @@ namespace BLL
 
         public List<SAMPLE_VIEW> getListSampleView(string text)
         {
-            return _DAL.Instance.getListSample().Where(p=>p.NAME.Contains(text)).Select(p=> new SAMPLE_VIEW { 
+            return _DAL.Instance.getListSample().Where(p => p.NAME.ToLower().Contains(text.ToLower())).Select(p=> new SAMPLE_VIEW { 
                 ID=p.SAMPLEID,
                 Name=p.NAME
             }).ToList();
 
         }
 
-        public SAMPLE getSample(int ID)
+        public SAMPLE getSampleByID(int ID)
         {
-            return _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
+            return _DAL.Instance.getListSample().Find(obj => obj.SAMPLEID == ID);
         }
 
         public void UpdateStockDetail(STOCK_DETAIL stock_detail, int quantysell)
@@ -544,7 +544,7 @@ namespace BLL
             _DAL.Instance.UpdateMedicine(stock_detail.ID_MEDICINE, -quantysell);
         }
 
-        public List<medicineSell> getlistMedicineSearch(int  ID)
+        public List<medicineSell> getListMedicineBySampleID(int ID)
         {
             SAMPLE a = _DAL.Instance.getListSample().Where(p => p.SAMPLEID == ID).Select(p => p).Single();
             List<medicineSell> l = new List<medicineSell>();
@@ -766,15 +766,15 @@ namespace BLL
             return results;
         }
 
-        public List<chart> getListChart0()
+        public List<Chart> getListChart0()
         {
-            List<chart> l=_DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.Date.ToShortDateString()).Select(c=>new chart { date=c.Key,originalPrice=c.Sum(p=>p.ORIGINAL_PRICE),sellPrice=c.Sum(p=>p.SALE_PRICE)}).OrderByDescending(p=>p.date).Take(7).Reverse().ToList();
+            List<Chart> l=_DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.Date.ToShortDateString()).Select(c=>new Chart { date=c.Key,originalPrice=c.Sum(p=>p.ORIGINAL_PRICE),sellPrice=c.Sum(p=>p.SALE_PRICE)}).OrderByDescending(p=>p.date).Take(7).Reverse().ToList();
 
             return l;
         }
-        public List<chart> getListChart1()
+        public List<Chart> getListChart1()
         {
-            List<chart> l = _DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.ToString("MM/yyyy")).Select(c => new chart { date = c.Key, originalPrice = c.Sum(p => p.ORIGINAL_PRICE), sellPrice = c.Sum(p => p.SALE_PRICE) }).OrderByDescending(p => p.date).Take(7).Reverse().ToList();
+            List<Chart> l = _DAL.Instance.getListInvoiceDetail().GroupBy(p => p.INVOICE.DATE.ToString("MM/yyyy")).Select(c => new Chart { date = c.Key, originalPrice = c.Sum(p => p.ORIGINAL_PRICE), sellPrice = c.Sum(p => p.SALE_PRICE) }).OrderByDescending(p => p.date).Take(7).Reverse().ToList();
 
             return l;
         }
@@ -784,6 +784,15 @@ namespace BLL
             _DAL.Instance.addSample(sample);
         }
 
+        public void updateSample(SAMPLE newSample)
+        {
+            _DAL.Instance.updateSample(newSample);
+        }
+
+        public void deleteSample(List<int> listIdOfDeletedItems)
+        {
+            _DAL.Instance.deleteSample(listIdOfDeletedItems);
+        }
 
         public void addMedicineUnit(string name)
         {
@@ -795,9 +804,7 @@ namespace BLL
 
             _DAL.Instance.addMedicineType(name);
         }
-      
-      
-      
+    
         public void UpdateStock(STOCK stock)
         {
            _DAL.Instance.UpdateStock(stock);
@@ -814,6 +821,16 @@ namespace BLL
         public void DeleteStock(int id)
         {
             _DAL.Instance.DeleteStock(id);
+        }
+        public bool checkStockUsed(STOCK stock)
+        {
+            int price = 0;
+            foreach(var stockDetail in stock.STOCK_DETAIL)
+            {
+                price += (stockDetail.ORGIGINAL_PRICE * stockDetail.QUANTITY);
+            }
+            if (price == stock.PRICETOTAL) return true;
+            else return false;
         }
 
     }

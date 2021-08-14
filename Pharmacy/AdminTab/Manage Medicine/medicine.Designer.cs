@@ -29,16 +29,10 @@ namespace Pharmacy.AdminTab
         /// </summary>
         private void InitializeComponent()
         {
-
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(medicine));
-
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(medicine));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -67,9 +61,7 @@ namespace Pharmacy.AdminTab
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
-
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(959, 674);
             this.panel1.TabIndex = 0;
@@ -78,10 +70,8 @@ namespace Pharmacy.AdminTab
             // 
             this.panel5.Controls.Add(this.dataGridView);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-
-            this.panel5.Location = new System.Drawing.Point(47, 93);
+            this.panel5.Location = new System.Drawing.Point(63, 114);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
-
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(828, 448);
             this.panel5.TabIndex = 11;
@@ -120,9 +110,7 @@ namespace Pharmacy.AdminTab
             this.dataGridView.EnableHeadersVisualStyles = false;
             this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
-
             this.dataGridView.Margin = new System.Windows.Forms.Padding(2);
-
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
@@ -157,10 +145,8 @@ namespace Pharmacy.AdminTab
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-
-            this.panel2.Location = new System.Drawing.Point(0, 93);
+            this.panel2.Location = new System.Drawing.Point(0, 114);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
-
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(63, 448);
             this.panel2.TabIndex = 10;
@@ -169,11 +155,8 @@ namespace Pharmacy.AdminTab
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(246)))), ((int)(((byte)(245)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-
-            this.panel3.Location = new System.Drawing.Point(668, 93);
+            this.panel3.Location = new System.Drawing.Point(891, 114);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
-
-
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(68, 448);
             this.panel3.TabIndex = 8;
@@ -186,10 +169,8 @@ namespace Pharmacy.AdminTab
             this.panel4.Controls.Add(this.buttonUpdate);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-
-            this.panel4.Location = new System.Drawing.Point(0, 457);
+            this.panel4.Location = new System.Drawing.Point(0, 562);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
-
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(959, 112);
             this.panel4.TabIndex = 9;
@@ -198,9 +179,7 @@ namespace Pharmacy.AdminTab
             // 
             this.buttonDetail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonDetail.Animated = true;
-
             this.buttonDetail.BorderRadius = 10;
-
             this.buttonDetail.CheckedState.Parent = this.buttonDetail;
             this.buttonDetail.CustomImages.Parent = this.buttonDetail;
             this.buttonDetail.DisabledState.Parent = this.buttonDetail;
@@ -208,13 +187,11 @@ namespace Pharmacy.AdminTab
             this.buttonDetail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.buttonDetail.HoverState.Parent = this.buttonDetail;
-
             this.buttonDetail.Location = new System.Drawing.Point(219, 27);
             this.buttonDetail.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDetail.Name = "buttonDetail";
             this.buttonDetail.ShadowDecoration.Parent = this.buttonDetail;
             this.buttonDetail.Size = new System.Drawing.Size(110, 40);
-
             this.buttonDetail.TabIndex = 10;
             this.buttonDetail.Text = "Chi tiết";
             this.buttonDetail.Click += new System.EventHandler(this.buttonDetail_Click);
@@ -223,9 +200,7 @@ namespace Pharmacy.AdminTab
             // 
             this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAdd.Animated = true;
-
             this.buttonAdd.BorderRadius = 10;
-
             this.buttonAdd.CheckedState.Parent = this.buttonAdd;
             this.buttonAdd.CustomImages.Parent = this.buttonAdd;
             this.buttonAdd.DisabledState.Parent = this.buttonAdd;
@@ -233,13 +208,11 @@ namespace Pharmacy.AdminTab
             this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.buttonAdd.HoverState.Parent = this.buttonAdd;
-
             this.buttonAdd.Location = new System.Drawing.Point(47, 27);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.ShadowDecoration.Parent = this.buttonAdd;
-            this.buttonAdd.Size = new System.Drawing.Size(110, 40);
-
+            this.buttonAdd.Size = new System.Drawing.Size(138, 40);
             this.buttonAdd.TabIndex = 10;
             this.buttonAdd.Text = "Thêm hàng";
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -248,9 +221,7 @@ namespace Pharmacy.AdminTab
             // 
             this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonUpdate.Animated = true;
-
             this.buttonUpdate.BorderRadius = 10;
-
             this.buttonUpdate.CheckedState.Parent = this.buttonUpdate;
             this.buttonUpdate.CustomImages.Parent = this.buttonUpdate;
             this.buttonUpdate.DisabledState.Parent = this.buttonUpdate;
@@ -258,13 +229,11 @@ namespace Pharmacy.AdminTab
             this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.buttonUpdate.HoverState.Parent = this.buttonUpdate;
-
             this.buttonUpdate.Location = new System.Drawing.Point(385, 27);
             this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.ShadowDecoration.Parent = this.buttonUpdate;
-            this.buttonUpdate.Size = new System.Drawing.Size(110, 40);
-
+            this.buttonUpdate.Size = new System.Drawing.Size(123, 40);
             this.buttonUpdate.TabIndex = 10;
             this.buttonUpdate.Text = "Cập nhật";
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
@@ -273,9 +242,7 @@ namespace Pharmacy.AdminTab
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.Animated = true;
-
             this.btnDelete.BorderRadius = 10;
-
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
             this.btnDelete.DisabledState.Parent = this.btnDelete;
@@ -283,13 +250,11 @@ namespace Pharmacy.AdminTab
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             this.btnDelete.HoverState.Parent = this.btnDelete;
-
             this.btnDelete.Location = new System.Drawing.Point(558, 27);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
             this.btnDelete.Size = new System.Drawing.Size(110, 40);
-
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -300,9 +265,7 @@ namespace Pharmacy.AdminTab
             this.panel6.Controls.Add(this.txtSearch);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
-
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(959, 114);
             this.panel6.TabIndex = 7;
@@ -322,30 +285,24 @@ namespace Pharmacy.AdminTab
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-
             this.txtSearch.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconRight")));
             this.txtSearch.IconRightOffset = new System.Drawing.Point(6, 0);
             this.txtSearch.Location = new System.Drawing.Point(47, 26);
-
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên thuốc cần tìm";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-
             this.txtSearch.Size = new System.Drawing.Size(316, 36);
             this.txtSearch.TabIndex = 8;
             this.txtSearch.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-
             // 
             // medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-  
             this.Margin = new System.Windows.Forms.Padding(2);
-
             this.Name = "medicine";
             this.Size = new System.Drawing.Size(959, 674);
             this.panel1.ResumeLayout(false);

@@ -141,7 +141,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.cbBoxType.Name = "cbBoxType";
             this.cbBoxType.ShadowDecoration.Parent = this.cbBoxType;
             this.cbBoxType.Size = new System.Drawing.Size(322, 31);
-            this.cbBoxType.TabIndex = 19;
+            this.cbBoxType.TabIndex = 1;
             // 
             // txtName
             // 
@@ -248,7 +248,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtLocation.SelectedText = "";
             this.txtLocation.ShadowDecoration.Parent = this.txtLocation;
             this.txtLocation.Size = new System.Drawing.Size(381, 45);
-            this.txtLocation.TabIndex = 21;
+            this.txtLocation.TabIndex = 3;
             // 
             // txtBrand
             // 
@@ -299,7 +299,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.ShadowDecoration.Parent = this.txtBarcode;
             this.txtBarcode.Size = new System.Drawing.Size(381, 45);
-            this.txtBarcode.TabIndex = 21;
+            this.txtBarcode.TabIndex = 2;
             this.txtBarcode.TextChanged += new System.EventHandler(this.txtBarcode_TextChanged);
             // 
             // panel1
@@ -344,7 +344,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.cbBoxUnit.Name = "cbBoxUnit";
             this.cbBoxUnit.ShadowDecoration.Parent = this.cbBoxUnit;
             this.cbBoxUnit.Size = new System.Drawing.Size(211, 31);
-            this.cbBoxUnit.TabIndex = 31;
+            this.cbBoxUnit.TabIndex = 4;
             // 
             // txtOriginalPrice
             // 
@@ -369,7 +369,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtOriginalPrice.SelectedText = "";
             this.txtOriginalPrice.ShadowDecoration.Parent = this.txtOriginalPrice;
             this.txtOriginalPrice.Size = new System.Drawing.Size(212, 45);
-            this.txtOriginalPrice.TabIndex = 33;
+            this.txtOriginalPrice.TabIndex = 5;
             // 
             // txtSalePrice
             // 
@@ -394,7 +394,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.txtSalePrice.SelectedText = "";
             this.txtSalePrice.ShadowDecoration.Parent = this.txtSalePrice;
             this.txtSalePrice.Size = new System.Drawing.Size(195, 45);
-            this.txtSalePrice.TabIndex = 35;
+            this.txtSalePrice.TabIndex = 6;
             // 
             // txtDescription
             // 
@@ -608,7 +608,7 @@ namespace Pharmacy.AdminTab.Manage_Medicine
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(381, 186);
-            this.listBox1.TabIndex = 0;
+            this.listBox1.TabIndex = 100;
             this.listBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseClick);
             // 
             // guna2CheckBox1

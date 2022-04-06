@@ -4,10 +4,10 @@
 
 ## Table of Contents
 * [General Info](#general-information)
+* [Screenshots](#screenshots)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Design](#Design)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
 
@@ -17,6 +17,52 @@
 ## General Information
 - Through this project, I cant brush up my knowledge on C#/.NET Winform, OOP, Entity FrameWork
 - Application of the project is to help the owner pharmacy can manage pharmacy as well as manage staff. In addition, the application also helps staff cant sell medicine conveniently.
+
+## Screenshots
+
+
+
+### Login Form
+
+
+
+
+
+![login](./Image/login.png)
+
+
+
+
+
+### Admin Form
+
+
+
+
+![admin](./Image/admin.png)
+
+
+
+
+
+### Staff Form
+
+
+
+
+![staff](./Image/staff.png)
+
+
+
+
+### Sell Form
+
+
+
+
+![sell](./Image/sale.png)
+
+
 
 
 
@@ -80,52 +126,6 @@
 
 
 ![schema](./Image/schema.png)
-
-
-
-## Screenshots
-
-
-
-### Login Form
-
-
-
-
-
-![login](./Image/login.png)
-
-
-
-
-
-### Admin Form
-
-
-
-
-![admin](./Image/admin.png)
-
-
-
-
-
-### Staff Form
-
-
-
-
-![staff](./Image/staff.png)
-
-
-
-
-### Sell Form
-
-
-
-
-![sell](./Image/sale.png)
 
 
 
